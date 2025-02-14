@@ -1,0 +1,33 @@
+/** 
+ *@システム名: 受付システム 
+ *@ファイル名: IUKG01012Dao.java 
+ *@更新日付：: 2011/12/26 
+ *@Copyright: 2011 token corporation All right reserved  
+ */
+package jp.co.token.uketuke.dao;
+
+import java.util.Map;
+
+/**<pre>
+ * [機 能] 受付キャンセル理由登録。
+ * [説 明] 受付キャンセル理由登録データをアクセスするインターフェース。
+ * @author [作 成] 2011/10/25 戴氷馨(SYS)
+ * </pre>
+ */
+public interface IUKG01012Dao {
+	
+	/** <pre>
+	 * [説 明] 受付キャンセル理由登録
+	 * @param kaisyaCd 会社コード
+	 * @param uketukeNo 受付番号
+	 * @param tantousya 担当者
+	 * @param cancleReason キャンセル理由 
+	 * @param kibouFlg 希望条件ラグ
+	 * @param updDate 画面格納日付
+	 * @return なし
+	 * </pre>
+	 */
+	public Map<String, Object> upCancleInfo(String kaisyaCd, String uketukeNo, 
+			String tantousya, String cancleReason, 
+			String kibouFlg, String updDate) throws Exception;
+}

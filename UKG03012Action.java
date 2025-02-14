@@ -5,7 +5,6 @@
  * @Copyright: 2012 token corporation All right reserved
  * 更新履歴 ： 2013/05/17  郭凡(SYS)	   (案件C37109-1)受付システムSTEP2要望対応
  * 更新履歴 ： 2018/02/01  張陽陽(SYS)	   案件C42036デザイン変更新規作成
- * 更新履歴 ： 2021/01/04 楊棟(SYS)    C45019_社長指示デザイン修正
  */
 package jp.co.token.uketuke.action;
 
@@ -18,7 +17,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.struts2.ServletActionContext;
 
 import jp.co.token.fw.base.BaseAction;
@@ -118,34 +116,22 @@ public class UKG03012Action extends BaseAction {
 			// 希望条件指定コード
 			String kibouJyoukenCd = (String) kibouJyoukenInfo.get("out_kibou_jyouken_cd");
 
-			// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-			ukg03012Bean.setKibouJyoukenCd(kibouJyoukenCd);
-			List<Map<String, Object>> tokuteiShisetsu = (List<Map<String, Object>>) kibouJyoukenInfo.get("out_tokuteiShisetsu");
-			List<Map<String, Object>> kibouJoukenList = new ArrayList<Map<String, Object>>();
-			Map<String, Object> dataTitleMap = new HashMap<String, Object>();
-			List<Map<String, Object>> SonotaDataTitleList = new ArrayList<Map<String, Object>>();
-			Map<String, Object> SonotaMap = new HashMap<String, Object>();
-			// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
-
 			if (!Util.isEmpty(kibouJyoukenCd)) {
 
 				List<Map<String, Object>> kibouJyoukenSonota = (List<Map<String, Object>>) kibouJyoukenInfo.get("out_kibousonota");
-				// 2021/01/04 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
-				SonotaDataTitleList = new ArrayList<Map<String, Object>>();
-				SonotaMap = new HashMap<String, Object>();
-				// 2021/01/04 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
+				List<Map<String, Object>> SonotaDataTitleList = new ArrayList<Map<String, Object>>();
+				Map<String, Object> SonotaMap = new HashMap<String, Object>();
+
 				if (kibouJyoukenSonota.size() > 0) {
 					if ("4".equals(kibouJyoukenCd)) {
 						// 路線名
 						List<Map<String, Object>> kibouRosen = (List<Map<String, Object>>) kibouJyoukenInfo.get("out_kibourosen");
 						for (int i = 0; i < kibouJyoukenSonota.size(); i++) {
 							Map<String, Object> sonotaData = (Map<String, Object>)kibouJyoukenSonota.get(i);
+							Map<String, Object> dataTitleMap = new HashMap<String, Object>();
 
 							String strRose1 = sonotaData.get("MOKUTEKIEKICD") + "駅まで" + sonotaData.get("KIBOUTIMECD") + "分以内";
-							// 2021/01/04 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
 							dataTitleMap = new HashMap<String, Object>();
-							Map<String, Object> chiikiMap = new HashMap<String, Object>();
-							// 2021/01/04 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
 							dataTitleMap.put("TITLE", strRose1);
 							dataTitleMap.put("WIDTH", "295px");
 							if (i == 0) {
@@ -159,17 +145,9 @@ public class UKG03012Action extends BaseAction {
 								// 2018/02/02 張陽陽(SYS)  UPD END   案件C42036デザイン変更新規作成
 							}
 							SonotaDataTitleList.add(dataTitleMap);
-							// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-							// 地域
-							chiikiMap.put("chiiki", strRose1);
-							kibouJoukenList.add(chiikiMap);
-							// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 
 							String strRose2 = "乗り換え許容回数" + sonotaData.get("NORIKAEKAISUUCD") + " (" + sonotaData.get("BUSJYOUSHAKB") + ")";
 							dataTitleMap = new HashMap<String, Object>();
-							// 2021/01/04 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
-							chiikiMap = new HashMap<String, Object>();
-							// 2021/01/04 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
 							dataTitleMap.put("TITLE", strRose2);
 							dataTitleMap.put("WIDTH", "295px");
 							// 2013/04/19 SYS_温 UPD Start (案件C37058)受付システム要望対応 // parasoft-suppress UC.ACC "C37109-1JTest対応"
@@ -184,17 +162,9 @@ public class UKG03012Action extends BaseAction {
 							// 2018/02/02 張陽陽(SYS)  UPD END   案件C42036デザイン変更新規作成
 							// 2013/04/19 SYS_温 UPD End
 							SonotaDataTitleList.add(dataTitleMap);
-							// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-							// 地域
-							chiikiMap.put("chiiki", strRose2);
-							kibouJoukenList.add(chiikiMap);
-							// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 
 							if (kibouRosen.size() > 0) {
 								for (Map<String, Object> rosenDataMap : kibouRosen) {
-									// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-									chiikiMap = new HashMap<String, Object>();
-									// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 									dataTitleMap = new HashMap<String, Object>();
 									dataTitleMap.put("TITLE", rosenDataMap.get("ROSENNAME"));
 									dataTitleMap.put("WIDTH", "295px"); // parasoft-suppress UC.ACC "C37109-1JTest対応"
@@ -210,11 +180,6 @@ public class UKG03012Action extends BaseAction {
 									// 2018/02/02 張陽陽(SYS)  UPD END   案件C42036デザイン変更新規作成
 									// 2013/04/19 SYS_温 UPD End
 									SonotaDataTitleList.add(dataTitleMap);
-									// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-									// 地域
-									chiikiMap.put("chiiki", rosenDataMap.get("ROSENNAME"));
-									kibouJoukenList.add(chiikiMap);
-									// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 								}
 							}
 						}
@@ -225,10 +190,7 @@ public class UKG03012Action extends BaseAction {
 					} else {
 						for (int i = 0; i < kibouJyoukenSonota.size(); i++) {
 							Map<String, Object> dataMap = (Map<String, Object>)kibouJyoukenSonota.get(i);
-							// 2021/01/04 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
-							dataTitleMap = new HashMap<String, Object>();
-							Map<String, Object> chiikiMap = new HashMap<String, Object>();
-							// 2021/01/04 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
+							Map<String, Object> dataTitleMap = new HashMap<String, Object>();
 							if ("1".equals(kibouJyoukenCd)) {
 								dataTitleMap.put("TITLE", dataMap.get("SITEIAREANAME")+" "+"周辺");
 								dataTitleMap.put("WIDTH", "295px");
@@ -242,11 +204,6 @@ public class UKG03012Action extends BaseAction {
 									// 2018/02/02 張陽陽(SYS)  UPD END  案件C42036デザイン変更新規作成
 								}
 								SonotaDataTitleList.add(dataTitleMap);
-								// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-								// 地域
-								chiikiMap.put("chiiki", dataMap.get("SITEIAREANAME")+" "+"周辺");
-								kibouJoukenList.add(chiikiMap);
-								// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 							} else if ("2".equals(kibouJyoukenCd)) {
 								dataTitleMap.put("TITLE", dataMap.get("KIBOUCITYNAME"));
 								dataTitleMap.put("WIDTH", "295px");
@@ -260,11 +217,6 @@ public class UKG03012Action extends BaseAction {
 									// 2018/02/02 張陽陽(SYS)  UPD END  案件C42036デザイン変更新規作成
 								}
 								SonotaDataTitleList.add(dataTitleMap);
-								// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-								// 地域
-								chiikiMap.put("chiiki", dataMap.get("KIBOUCITYNAME"));
-								kibouJoukenList.add(chiikiMap);
-								// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 							} else if ("3".equals(kibouJyoukenCd)) {
 								dataTitleMap.put("TITLE", dataMap.get("EKINAME"));
 								dataTitleMap.put("WIDTH", "295px");
@@ -278,14 +230,7 @@ public class UKG03012Action extends BaseAction {
 									// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 								}
 								SonotaDataTitleList.add(dataTitleMap);
-								// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-								// 地域
-								chiikiMap.put("chiiki", dataMap.get("EKINAME"));
-								kibouJoukenList.add(chiikiMap);
-								// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
-							}
-							// 2021/01/13 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
-							/*else if ("5".equals(kibouJyoukenCd)) {
+							} else if ("5".equals(kibouJyoukenCd)) {
 								if("1".equals(dataMap.get("SISETUKB"))) {
 									// 2013/03/12 SYS_胡涛 UPD START 案件C37058
 									//SonotaDataList.add(dataMap.get("SISETUNAME") + " (学区)");
@@ -343,43 +288,23 @@ public class UKG03012Action extends BaseAction {
 										SonotaDataTitleList.add(dataTitleMap);
 									}
 								}
-							}*/
-							// 2021/01/13 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
+							}
 						}
 					}
-					// 2021/01/14 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
 					SonotaMap.put("dataList", SonotaDataTitleList);
 					kibouJyoukenList.add(SonotaMap);
-					// 2021/01/14 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				}
 			}
-
 			// 物件種別
 			List<Map<String, Object>> kibouBukkenSyubetsu = (List<Map<String, Object>>) kibouJyoukenInfo.get("out_bukkensyubetu");
-			// 2021/01/04 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
-			SonotaDataTitleList = new ArrayList<Map<String, Object>>();
+			List<Map<String, Object>> SonotaDataTitleList = new ArrayList<Map<String, Object>>();
 			Map<String, Object> kibouBukkenSyubetsuMap = new HashMap<String, Object>();
-			Map<String, Object> bukkenShubetsuMap = new HashMap<String, Object>();
-			StringBuffer kiboubukkenname = new StringBuffer();
-			// 2021/01/04 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
 			if (kibouBukkenSyubetsu.size() > 0) {
-				// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-				for(int j = 0; j < kibouBukkenSyubetsu.size(); j++) {
-					kiboubukkenname.append(kibouBukkenSyubetsu.get(j).get("KIBOUBUKKENNAME"));
-					if (j < kibouBukkenSyubetsu.size() - 1) {
-						kiboubukkenname.append("、");
-					} else {
-						break;
-					}
-				}
-				// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				Iterator<Map<String, Object>> bukkenSyubetsuIter = kibouBukkenSyubetsu.iterator();
 				while (bukkenSyubetsuIter.hasNext()) {
 					StringBuffer strBuffer = new StringBuffer();
 					int i = 0;
-					// 2021/01/04 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
-					dataTitleMap = new HashMap<String, Object>();
-					// 2021/01/04 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
+					Map<String, Object> dataTitleMap = new HashMap<String, Object>();
 					while(i < 2) {
 						strBuffer.append(bukkenSyubetsuIter.next().get("KIBOUBUKKENNAME"));
 						if (bukkenSyubetsuIter.hasNext()) {
@@ -397,11 +322,6 @@ public class UKG03012Action extends BaseAction {
 					// 2018/02/02 張陽陽(SYS)  UPD END   案件C42036デザイン変更新規作成
 					SonotaDataTitleList.add(dataTitleMap);
 				}
-				// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-				// 物件種別
-				bukkenShubetsuMap.put("bukkenShubetsu", kiboubukkenname);
-				kibouJoukenList.add(bukkenShubetsuMap);
-				// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 			}
 			if (SonotaDataTitleList.size() > 0) {
 				// 2018/02/02 張陽陽(SYS)  UPD START 案件C42036デザイン変更新規作成
@@ -454,10 +374,7 @@ public class UKG03012Action extends BaseAction {
 
 			for (int i = 0; i < kibouJyouken.size(); i++) {
 				Map<String, Object> dataMap = kibouJyouken.get(i);
-				// 2021/01/04 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
-				dataTitleMap = new HashMap<String, Object>();
-				Map<String, Object> chikunensuuMap = new HashMap<String, Object>();
-				// 2021/01/04 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
+				Map<String, Object> dataTitleMap = new HashMap<String, Object>();
 				// 築年数
 				if (dataMap.get("KIBOUTIKUNENSUU") != null) {
 					dataTitleMap.put("TITLE", dataMap.get("KIBOUTIKUNENSUU"));
@@ -468,18 +385,9 @@ public class UKG03012Action extends BaseAction {
 					dataTitleMap.put("DATA",dataMap.get("KIBOUTIKUNENSUU"));
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					tikunenSuuDataList.add(dataTitleMap);
-
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 築年数
-					chikunensuuMap.put("chikunensuu", dataMap.get("KIBOUTIKUNENSUU"));
-					kibouJoukenList.add(chikunensuuMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				}
 				// 家賃
 				if (dataMap.get("YATINFROM") != null && dataMap.get("YATINTO") != null) {
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> yachinMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					dataTitleMap = new HashMap<String, Object>();
 					dataTitleMap.put("TITLE", dataMap.get("YATINFROM") + "～" + dataMap.get("YATINTO"));
 					dataTitleMap.put("WIDTH", "295px");
@@ -489,16 +397,8 @@ public class UKG03012Action extends BaseAction {
 					dataTitleMap.put("DATA",dataMap.get("YATINFROM") + "～" + dataMap.get("YATINTO"));
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					yatinDataList.add(dataTitleMap);
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 家賃
-					yachinMap.put("yachin", dataTitleMap.get("DATA"));
-					kibouJoukenList.add(yachinMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 
 					if (dataMap.get("INCKYOUKAN") != null && dataMap.get("INCPARKING") != null) {
-						// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-						yachinMap = new HashMap<String, Object>();
-						// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 						dataTitleMap = new HashMap<String, Object>();
 						dataTitleMap.put("TITLE", "(" + dataMap.get("INCKYOUKAN") + "、" + dataMap.get("INCPARKING") + ")");
 						dataTitleMap.put("WIDTH", "295px");
@@ -507,16 +407,8 @@ public class UKG03012Action extends BaseAction {
 						dataTitleMap.put("DATA","(" + dataMap.get("INCKYOUKAN") + "、" + dataMap.get("INCPARKING") + ")");
 						// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 						yatinDataList.add(dataTitleMap);
-						// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-						// 家賃
-						yachinMap.put("yachin", dataTitleMap.get("DATA"));
-						kibouJoukenList.add(yachinMap);
-						// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					} else {
 						if (dataMap.get("INCKYOUKAN") != null) {
-							// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-							yachinMap = new HashMap<String, Object>();
-							// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 							dataTitleMap = new HashMap<String, Object>();
 							dataTitleMap.put("TITLE", "(" + dataMap.get("INCKYOUKAN") + ")");
 							dataTitleMap.put("WIDTH", "295px");
@@ -525,16 +417,8 @@ public class UKG03012Action extends BaseAction {
 							dataTitleMap.put("DATA","(" + dataMap.get("INCKYOUKAN") + ")");
 							// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 							yatinDataList.add(dataTitleMap);
-							// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-							// 家賃
-							yachinMap.put("yachin", dataTitleMap.get("DATA"));
-							kibouJoukenList.add(yachinMap);
-							// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 						}
 						if (dataMap.get("INCPARKING") != null) {
-							// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-							yachinMap = new HashMap<String, Object>();
-							// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 							dataTitleMap = new HashMap<String, Object>();
 							dataTitleMap.put("TITLE", "(" + dataMap.get("INCPARKING") + ")");
 							dataTitleMap.put("WIDTH", "295px");
@@ -543,11 +427,6 @@ public class UKG03012Action extends BaseAction {
 							dataTitleMap.put("DATA","(" + dataMap.get("INCPARKING") + ")");
 							// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 							yatinDataList.add(dataTitleMap);
-							// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-							// 家賃
-							yachinMap.put("yachin", dataTitleMap.get("DATA"));
-							kibouJoukenList.add(yachinMap);
-							// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 						}
 					}
 				}
@@ -605,9 +484,6 @@ public class UKG03012Action extends BaseAction {
 				   if(dataMap.get("KIBOUMENSEKIFROM") != null && dataMap.get("KIBOUMENSEKITO") != null) {
 				//2013/05/17    郭凡(SYS)  UPD END 案件C37109-1
 					dataTitleMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> kibouSenyuuMensekiMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					dataTitleMap.put("TITLE", dataMap.get("KIBOUMENSEKIFROM") + "～" + dataMap.get("KIBOUMENSEKITO"));
 					dataTitleMap.put("WIDTH", "295px");
 					// 2018/02/02 張陽陽(SYS)  UPD START 案件C42036デザイン変更新規作成
@@ -617,39 +493,23 @@ public class UKG03012Action extends BaseAction {
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					senyuuMensekiDataList.add(dataTitleMap);
 				  //2013/05/17    郭凡(SYS)  UPD START 案件C37109-1
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 希望専有面積
-					kibouSenyuuMensekiMap.put("kibouSenyuuMenseki", dataMap.get("KIBOUMENSEKIFROM") + "～" + dataMap.get("KIBOUMENSEKITO"));
-					kibouJoukenList.add(kibouSenyuuMensekiMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				   }
 				  //2013/05/17    郭凡(SYS)  UPD END 案件C37109-1
 				}
 				// 駅からの徒歩分
 				if (dataMap.get("STATIONWALKMINUTE") != null) {
 					dataTitleMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> kachiBuMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					dataTitleMap.put("TITLE", dataMap.get("STATIONWALKMINUTE"));
 					dataTitleMap.put("WIDTH", "295px");
 					// 2018/02/02 張陽陽(SYS)  UPD START 案件C42036デザイン変更新規作成
 					dataTitleMap.put("ITEM","駅からの徒歩分");
 					//dataTitleMap.put("DATA","> 駅からの徒歩分 ： " + dataMap.get("STATIONWALKMINUTE"));
-					dataTitleMap.put("DATA", dataMap.get("STATIONWALKMINUTE"));
+					dataTitleMap.put("DATA",dataMap.get("STATIONWALKMINUTE"));
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					stationWalkMinuteDataList.add(dataTitleMap);
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 駅からの徒歩分
-					kachiBuMap.put("kachiBu", dataMap.get("STATIONWALKMINUTE"));
-					kibouJoukenList.add(kachiBuMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				}
 				// 駐車場
 				if ("1".equals(dataMap.get("KIBOUPARKINGFLG"))) {
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> chuushajouMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					dataTitleMap = new HashMap<String, Object>();
 					dataTitleMap.put("TITLE", dataMap.get("KIBOUPARKING") + "" + dataMap.get("KIBOUPARKINGSUU"));
 					dataTitleMap.put("WIDTH", "295px");
@@ -659,15 +519,7 @@ public class UKG03012Action extends BaseAction {
 					dataTitleMap.put("DATA",dataMap.get("KIBOUPARKING") + "" + dataMap.get("KIBOUPARKINGSUU"));
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					cyuuSyaJyouDataList.add(dataTitleMap);
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 駐車場
-					chuushajouMap.put("chuushajou", dataMap.get("KIBOUPARKING") + "" + dataMap.get("KIBOUPARKINGSUU"));
-					kibouJoukenList.add(chuushajouMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				} else if ("0".equals(dataMap.get("KIBOUPARKINGFLG"))) {
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> chuushajouMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					dataTitleMap = new HashMap<String, Object>();
 					dataTitleMap.put("TITLE", dataMap.get("KIBOUPARKING"));
 					dataTitleMap.put("WIDTH", "295px");
@@ -677,18 +529,10 @@ public class UKG03012Action extends BaseAction {
 					dataTitleMap.put("DATA",dataMap.get("KIBOUPARKING"));
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					cyuuSyaJyouDataList.add(dataTitleMap);
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 駐車場
-					chuushajouMap.put("chuushajou", dataMap.get("KIBOUPARKING"));
-					kibouJoukenList.add(chuushajouMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				}
 				// 入居人数
 				if (!Util.isEmpty((String)dataMap.get("KIBOUOTONA")) && !Util.isEmpty((String)dataMap.get("KIBOUKODOMO"))) {
 					dataTitleMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> nyuukyoNinzuuMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					dataTitleMap.put("TITLE", "大人" + dataMap.get("KIBOUOTONA") + "、" + "子供" + (String) dataMap.get("KIBOUKODOMO"));
 					dataTitleMap.put("WIDTH", "295px");
 					// 2018/02/02 張陽陽(SYS)  UPD START 案件C42036デザイン変更新規作成
@@ -697,16 +541,8 @@ public class UKG03012Action extends BaseAction {
 					dataTitleMap.put("DATA","大人" + dataMap.get("KIBOUOTONA") + "、" + "子供" + (String) dataMap.get("KIBOUKODOMO"));
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					ninZuuDataList.add(dataTitleMap);
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 入居人数
-					nyuukyoNinzuuMap.put("nyuukyoNinzuu", "大人" + dataMap.get("KIBOUOTONA") + "、" + "子供" + (String) dataMap.get("KIBOUKODOMO"));
-					kibouJoukenList.add(nyuukyoNinzuuMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				} else if(!Util.isEmpty((String)dataMap.get("KIBOUOTONA")) && Util.isEmpty((String)dataMap.get("KIBOUKODOMO"))){
 					dataTitleMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> nyuukyoNinzuuMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					dataTitleMap.put("TITLE", "大人" + dataMap.get("KIBOUOTONA"));
 					dataTitleMap.put("WIDTH", "295px");
 					// 2018/02/02 張陽陽(SYS)  UPD START 案件C42036デザイン変更新規作成
@@ -715,11 +551,6 @@ public class UKG03012Action extends BaseAction {
 					dataTitleMap.put("DATA","大人" + dataMap.get("KIBOUOTONA"));
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					ninZuuDataList.add(dataTitleMap);
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 入居人数
-					nyuukyoNinzuuMap.put("nyuukyoNinzuu", "大人" + dataMap.get("KIBOUOTONA"));
-					kibouJoukenList.add(nyuukyoNinzuuMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				}
 				// 法人希望部屋数
 				if ("1".equals(dataMap.get("HOUJINKIBOUHEYASUUFLG"))) {
@@ -745,9 +576,6 @@ public class UKG03012Action extends BaseAction {
 				}
 				// 入居時期
 				if(!Util.isEmpty((String)dataMap.get("KIBOUNYUKYODATE")) && !Util.isEmpty((String)dataMap.get("KIBOUJIKI"))) {
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> tejuneriaNyuukyoJikiMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					String  nyukyouDate = ((String)dataMap.get("KIBOUNYUKYODATE")).substring(0, 4) + "年";
 					if(Integer.valueOf(((String)dataMap.get("KIBOUNYUKYODATE")).substring(4, 6)) < 10) {
 						nyukyouDate += ((String)dataMap.get("KIBOUNYUKYODATE")).substring(5, 6)+ "月";
@@ -764,17 +592,9 @@ public class UKG03012Action extends BaseAction {
 					dataTitleMap.put("DATA",nyukyouDate+""+nyukyouJiki);
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					nyuukyoJikiDataList.add(dataTitleMap);
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 入居時期
-					tejuneriaNyuukyoJikiMap.put("nyuukyoJiki", nyukyouDate+""+nyukyouJiki);
-					kibouJoukenList.add(tejuneriaNyuukyoJikiMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				}else if(!Util.isEmpty((String)dataMap.get("KIBOUNYUKYODATE")) && Util.isEmpty((String)dataMap.get("KIBOUJIKI"))) {
 
 					if(Integer.valueOf(((String)dataMap.get("KIBOUNYUKYODATE")).substring(4, 6)) < 10) {
-						// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-						Map<String, Object> tejuneriaNyuukyoJikiMap = new HashMap<String, Object>();
-						// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 						dataTitleMap = new HashMap<String, Object>();
 						dataTitleMap.put("TITLE", ((String)dataMap.get("KIBOUNYUKYODATE")).substring(0, 4) + "年" +((String)dataMap.get("KIBOUNYUKYODATE")).substring(5, 6)+ "月");
 						dataTitleMap.put("WIDTH", "295px");
@@ -784,15 +604,7 @@ public class UKG03012Action extends BaseAction {
 						dataTitleMap.put("DATA",((String)dataMap.get("KIBOUNYUKYODATE")).substring(0, 4) + "年" +((String)dataMap.get("KIBOUNYUKYODATE")).substring(5, 6)+ "月");
 						// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 						nyuukyoJikiDataList.add(dataTitleMap);
-						// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-						// 入居時期
-						tejuneriaNyuukyoJikiMap.put("nyuukyoJiki", ((String)dataMap.get("KIBOUNYUKYODATE")).substring(0, 4) + "年" +((String)dataMap.get("KIBOUNYUKYODATE")).substring(5, 6)+ "月");
-						kibouJoukenList.add(tejuneriaNyuukyoJikiMap);
-						// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					}else{
-						// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-						Map<String, Object> tejuneriaNyuukyoJikiMap = new HashMap<String, Object>();
-						// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 						dataTitleMap = new HashMap<String, Object>();
 						dataTitleMap.put("TITLE", ((String)dataMap.get("KIBOUNYUKYODATE")).substring(0, 4) + "年" +((String)dataMap.get("KIBOUNYUKYODATE")).substring(4, 6)+ "月");
 						dataTitleMap.put("WIDTH", "295px");
@@ -802,16 +614,8 @@ public class UKG03012Action extends BaseAction {
 						dataTitleMap.put("DATA",((String)dataMap.get("KIBOUNYUKYODATE")).substring(0, 4) + "年" +((String)dataMap.get("KIBOUNYUKYODATE")).substring(4, 6)+ "月");
 						// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 						nyuukyoJikiDataList.add(dataTitleMap);
-						// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-						// 入居時期
-						tejuneriaNyuukyoJikiMap.put("nyuukyoJiki", ((String)dataMap.get("KIBOUNYUKYODATE")).substring(0, 4) + "年" +((String)dataMap.get("KIBOUNYUKYODATE")).substring(4, 6)+ "月");
-						kibouJoukenList.add(tejuneriaNyuukyoJikiMap);
-						// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					}
 				}else if(Util.isEmpty((String)dataMap.get("KIBOUNYUKYODATE")) && !Util.isEmpty((String)dataMap.get("KIBOUJIKI"))) {
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					Map<String, Object> tejuneriaNyuukyoJikiMap = new HashMap<String, Object>();
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 					dataTitleMap = new HashMap<String, Object>();
 					dataTitleMap.put("TITLE", dataMap.get("KIBOUJIKI"));
 					dataTitleMap.put("WIDTH", "295px");
@@ -821,11 +625,6 @@ public class UKG03012Action extends BaseAction {
 					dataTitleMap.put("DATA",dataMap.get("KIBOUJIKI"));
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					nyuukyoJikiDataList.add(dataTitleMap);
-					// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-					// 入居時期
-					tejuneriaNyuukyoJikiMap.put("nyuukyoJiki", dataMap.get("KIBOUJIKI"));
-					kibouJoukenList.add(tejuneriaNyuukyoJikiMap);
-					// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				}
 			}
 			if (tikunenSuuDataList.size() > 0) {
@@ -850,28 +649,12 @@ public class UKG03012Action extends BaseAction {
 			List<Map<String, Object>> madoriList = (List<Map<String, Object>>) kibouJyoukenInfo.get("out_madori");
 			Map<String, Object> madoriMap = new HashMap<String, Object>();
 			List<Map<String, Object>> madoriDataList = new ArrayList<Map<String, Object>>();
-			// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-			Map<String, Object> tejuneriaMadoriMap = new HashMap<String, Object>();
-			StringBuffer kiboumadoriName = new StringBuffer();
-			// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 			if (madoriList.size() > 0) {
-				// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-				for(int j = 0; j < madoriList.size(); j++) {
-					kiboumadoriName.append(madoriList.get(j).get("KIBOUMADORINAME"));
-					if (j < madoriList.size() - 1) {
-						kiboumadoriName.append("、");
-					} else {
-						break;
-					}
-				}
-				// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 				Iterator<Map<String, Object>> madoriMapIter = madoriList.iterator();
 				while (madoriMapIter.hasNext()) {
 					int i = 0;
 					StringBuffer strBuffer = new StringBuffer();
-					// 2021/01/04 UPDATE START 楊棟(SYS) C45019_社長指示デザイン修正
-					dataTitleMap = new HashMap<String, Object>();
-					// 2021/01/04 UPDATE END 楊棟(SYS) C45019_社長指示デザイン修正
+					Map<String, Object> dataTitleMap = new HashMap<String, Object>();
 					while (i < 5) {
 						strBuffer.append(madoriMapIter.next().get("KIBOUMADORINAME"));
 						if (madoriMapIter.hasNext()) {
@@ -889,11 +672,6 @@ public class UKG03012Action extends BaseAction {
 					// 2018/02/02 張陽陽(SYS)  UPD END 案件C42036デザイン変更新規作成
 					madoriDataList.add(dataTitleMap);
 				}
-				// 2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-				// 間取り
-				tejuneriaMadoriMap.put("tejuneriaMadori", kiboumadoriName);
-				kibouJoukenList.add(tejuneriaMadoriMap);
-				// 2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 			}
 			if (madoriDataList.size() > 0) {
 				// 2018/02/02 張陽陽(SYS)  UPD START 案件C42036デザイン変更新規作成
@@ -937,69 +715,6 @@ public class UKG03012Action extends BaseAction {
 				nyuukyoJikiMap.put("dataList", nyuukyoJikiDataList);
 				kibouJyoukenList.add(nyuukyoJikiMap);
 			}
-			// 2021/01/13 ADD START 楊棟(SYS) C45019_社長指示デザイン修正
-			if (tokuteiShisetsu.size() > 0) {
-				SonotaDataTitleList = new ArrayList<Map<String, Object>>();
-				SonotaMap = new HashMap<String, Object>();
-				// [希望周辺施設]
-				List<Map<String, Object>> JusyoDataList = (List<Map<String, Object>>) UKG03012Services.getJusyoData("122");
-				List<String> shuuhenShisetsulist = Util.convertShiSeTsu(kibouJyouken.get(0).get("KIBOU_SISETU_CD").toString(), JusyoDataList);
-				String  shuuhenShisetsu = "";
-				if(null!=shuuhenShisetsulist) {
-					shuuhenShisetsu  =  StringUtils.join(shuuhenShisetsulist,"、");
-				}
-				for (int i = 0; i < tokuteiShisetsu.size(); i++) {
-					dataTitleMap = new HashMap<String, Object>();
-					Map<String, Object> dataMap = (Map<String, Object>)tokuteiShisetsu.get(i);
-					Map<String, Object> shisetsuMap = new HashMap<String, Object>();
-
-					if("1".equals(dataMap.get("SISETUKB"))) {
-						String strSisetuName = "";
-						if("31".equals(dataMap.get("SISETU_BUNRUI_CD")) ||
-								"61".equals(dataMap.get("SISETU_BUNRUI_CD"))){
-							strSisetuName = dataMap.get("SISETUNAME").toString() + " (学区)";
-						} else {
-							strSisetuName = dataMap.get("SISETUNAME").toString();
-						}
-						dataTitleMap.put("TITLE", strSisetuName + "、" + shuuhenShisetsu);
-						dataTitleMap.put("WIDTH", "295px");
-						if (i == 0) {
-							dataTitleMap.put("ITEM","希望施設");
-							dataTitleMap.put("DATA",strSisetuName + "、" + shuuhenShisetsu);
-						} else if (i > 0) {
-							dataTitleMap.put("DATA",strSisetuName + "、" + shuuhenShisetsu);
-						}
-						SonotaDataTitleList.add(dataTitleMap);
-
-						// [特定の施設]
-						shisetsuMap.put("tokuteiShisetsu", strSisetuName);
-
-					}else{
-						String kyori = (String)dataMap.get("SISETUKYORI");
-						kyori = kyori.replaceAll(" ", "");
-						String strSisetuName = "";
-						strSisetuName = dataMap.get("SISETUNAME") + " (" + kyori + ")";
-						dataTitleMap.put("TITLE", strSisetuName + shuuhenShisetsu);
-						dataTitleMap.put("WIDTH", "295px");
-						if (i == 0) {
-							dataTitleMap.put("ITEM","希望施設");
-							dataTitleMap.put("DATA",strSisetuName + shuuhenShisetsu);
-						} else if (i > 0) {
-							dataTitleMap.put("DATA",strSisetuName + shuuhenShisetsu);
-						}
-						SonotaDataTitleList.add(dataTitleMap);
-
-						// [特定の施設]
-						shisetsuMap.put("tokuteiShisetsu", strSisetuName);
-					}
-
-					shisetsuMap.put("shuuhenShisetsu", shuuhenShisetsu);
-					kibouJoukenList.add(shisetsuMap);
-				}
-				SonotaMap.put("dataList", SonotaDataTitleList);
-				kibouJyoukenList.add(SonotaMap);
-			}
-			// 2021/01/13 ADD END 楊棟(SYS) C45019_社長指示デザイン修正
 			ukg03012Bean.setKiboujyouken(kibouJyoukenList);
 
 			// こだわり条件
@@ -1014,37 +729,13 @@ public class UKG03012Action extends BaseAction {
 				kodawariCheck(kodawariJyouken, kodawariHissuInfo, kodawariJyoukenInfo);
 				ukg03012Bean.setKodawariJyoukenHissu(kodawariHissuInfo);
 				ukg03012Bean.setKodawariJyouken(kodawariJyoukenInfo);
-
-				/*2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正*/
-				StringBuffer hissuJouken = new StringBuffer();
-				StringBuffer fuhitsuyouJouken = new StringBuffer();
-				Map<String, Object> joukenMap = new HashMap<String, Object>();
-				for(int j = 0; j < kodawariHissuInfo.size(); j++) {
-					hissuJouken.append(kodawariHissuInfo.get(j));
-					if ((j < kodawariHissuInfo.size() - 1 && kodawariHissuInfo.size() > 1) || (kodawariHissuInfo.size() > 0 && kodawariJyoukenInfo.size() > 0)) {
-						hissuJouken.append("、");
-					}
-				}
-				for(int j = 0; j < kodawariJyoukenInfo.size(); j++) {
-					fuhitsuyouJouken.append(kodawariJyoukenInfo.get(j));
-					if (j < kodawariJyoukenInfo.size() - 1 && kodawariJyoukenInfo.size() > 1) {
-						fuhitsuyouJouken.append("、");
-					}
-				}
-				joukenMap.put("hissuJouken", hissuJouken);
-				joukenMap.put("fuhitsuyouJouken", fuhitsuyouJouken);
-				kibouJoukenList.add(joukenMap);
-				/*2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正*/
 			}
-
-			/*2021/01/04 ADD START 楊棟(SYS) C45019_社長指示デザイン修正*/
-			ukg03012Bean.setKibouJouken(kibouJoukenList);
-			/*2021/01/04 ADD END 楊棟(SYS) C45019_社長指示デザイン修正*/
 		}
 		if (ukg03012Bean == null) {
 			ukg03012Bean = new UKG03012Bean();
 		}
 		ukg03012Bean.setTourokuFlg(torokuFlg);
+
 
 		// 画面状況データ
 		session.setAttribute(Consts.UKG03012BEAN_SESSION_KEY, ukg03012Bean);

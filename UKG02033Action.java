@@ -196,11 +196,6 @@ public class UKG02033Action extends BaseAction {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String presetNo = Util.toEmpty(request.getParameter("presetNo"));
 		KibouJyoukennBean kibouJyoukennBean = (KibouJyoukennBean) request.getSession().getAttribute(Consts.KIBOUJYOUKENBEAN + presetNo);
-		// 不具合5対応
-		if (kibouJyoukennBean == null) {
-			kibouJyoukennBean = new KibouJyoukennBean();
-		}
-
 		String jyokenDisp = kibouJyoukennBean.getKiboujyokenDisp();
 		if (Util.isEmpty(jyokenDisp)) {
 			jyokenDisp = "";

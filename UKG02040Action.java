@@ -21,8 +21,13 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+import org.springframework.util.comparator.CompoundComparator;
+
 import jp.co.token.fw.base.BaseAction;
 import jp.co.token.uketuke.common.Consts;
 import jp.co.token.uketuke.common.PropertiesReader;
@@ -30,8 +35,6 @@ import jp.co.token.uketuke.common.Util;
 import jp.co.token.uketuke.exception.DataNotFoundException;
 import jp.co.token.uketuke.formbean.BukkenDataBean;
 import jp.co.token.uketuke.service.IUKG02040Service;
-import org.apache.struts2.ServletActionContext;
-import org.springframework.util.comparator.CompoundComparator;
 
 /**
  * <pre>

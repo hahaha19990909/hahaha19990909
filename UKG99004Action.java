@@ -448,6 +448,9 @@ public class UKG99004Action extends BaseAction {
 			ukg99004Data.put("mailNaiyou", mailNaiyou);
 			ukg99004Data.put("tenpoEMailAddress", tenpoEMailAddress);
 			ukg99004Data.put("tantouEMailAddress", tantouEMailAddress);
+			//2021/03/09 ADD START 南柯創(SYS) C45011_物件チラシメール送信  不具合C45011-007
+			ukg99004Data.put("tantouName", tantouName);
+			//2021/03/09 ADD END 南柯創(SYS) C45011_物件チラシメール送信  不具合C45011-007
 		}
 		ukg99004Data.put("mailTitle", mailTitle);
 		ukg99004Data.put("shoudanrirekiKB", request.getParameter("shoudanrirekiKB"));
@@ -666,6 +669,9 @@ public class UKG99004Action extends BaseAction {
 	public String sendMail() throws Exception {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		// Eメールの送信元アドレス
+		//2021/03/09 ADD START 南柯創(SYS) C45011_物件チラシメール送信  不具合C45011-007
+		String tantouName = request.getParameter("tantouName");
+		//2021/03/09 ADD END 南柯創(SYS) C45011_物件チラシメール送信  不具合C45011-007
         String mailSMTP = PropertiesReader.getIntance().getProperty("mailSMTP");
         // 送信元アドレス
         String AddressFrom = request.getParameter("tantouEMailAddress");
@@ -699,7 +705,10 @@ public class UKG99004Action extends BaseAction {
         //2021/03/03 DELETE END 南柯創(SYS) C45011_物件チラシメール送信  不具合C45011-006
         try {
 			MimeMessage msg = new MimeMessage(session);
-			msg.setFrom(new InternetAddress(AddressFrom));
+			//2021/03/09 UPDATE START 南柯創(SYS) C45011_物件チラシメール送信  不具合C45011-007
+			//msg.setFrom(new InternetAddress(AddressFrom));
+			msg.setFrom(new InternetAddress(AddressFrom,tantouName,"UTF-8"));
+			//2021/03/09 UPDATE END 南柯創(SYS) C45011_物件チラシメール送信  不具合C45011-007
 			msg.setSubject(bukkenGuideMailTitle, "iso-2022-jp");
 			msg.setHeader("Content-Transfer-Encoding", "7bit");
 			msg.setSentDate(new Date());

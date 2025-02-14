@@ -53,7 +53,6 @@ import org.apache.struts2.ServletActionContext;
  * [説 明] お客様の希望条件を入力・登録する。
  * @author [作 成] 2012/06/05 SYS_李鵬飛
  * 履  歴:[修 正]  2014/01/06   謝超(SYS)     オリジナル情報誌リプレース(案件C37075)
- * 履  歴:[修 正]  2020/12/08   梁(SYS)       C45019_社長指示デザイン修正
  * </pre>
  */
 public class UKG02030Action extends BaseAction {
@@ -282,12 +281,7 @@ public class UKG02030Action extends BaseAction {
 		}
 		ukg02030Data.put("POST_JUSYO_CD", prefectureCd);
 		// 2018/01/22 SYS_肖剣生 ADD END (案件番号C42036)デザイン変更
-		// 2020/12/08 ADD START 梁(SYS) C45019_社長指示デザイン修正
-		// 地図
-		ukg02030Data.put("MAP_SERVLETURL", PropertiesReader.getIntance().getProperty(Consts.MAP_SERVLETURL));
-		ukg02030Data.put("MAP_KEY", PropertiesReader.getIntance().getProperty(Consts.MAP_KEY));
-		ukg02030Data.put("MAP_VERSION", PropertiesReader.getIntance().getProperty(Consts.MAP_VERSION));
-		// 2020/12/08 ADD END 梁(SYS) C45019_社長指示デザイン修正
+
 		session.setAttribute("ukg02030Data", ukg02030Data);
 		//2015/02/12 温(SYS) ADD End
 
