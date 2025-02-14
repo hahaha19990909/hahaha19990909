@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<title>11.入居申込書作成</title>
+<!-- 20180408 -->
+<link id="calendar_style" href="../../css/ff/simple.css" media="screen" rel="Stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG99005.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG99008.css"></link>
+<!-- 20180408 -->
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script id="prototype" src="../../js/prototype.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/help.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script src="../../js/protocalendar_min.js" type="text/javascript"></script>
+<script src="../../js/lang_ja.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/UKG99008.js"></script>
+</head>
+
+<body data-font="19.6875">
+    <form>
+        <div id="ukg099005Main">
+            <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <!--<img class="mitsumorisho-innsatsu" src="../../image/ukg99008/nykyomosikomi.png">-->
+            <div class="mitsumorisho-innsatsu">
+                <img src="../../image/ukg99008/nykyomosikomi.svg">
+            </div>
+            <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <div class="ukg099005-content">
+                <div class="ukg099005-content-top">
+                    <div class="nyuukyo-yoteika-div">
+                        <div class="nyuukyo-yoteika">入居予定日</div>
+                        <div class="nyuukyo-yoteika-line"></div>
+                        <div class="nyuukyo-yoteika-content">
+                            <input id="raiten_calendar" class="tr2-input1 txtmode2" name="raiten_calendar" type="text" value="2017/05/18" />
+                        </div>
+                        <div id="mainUpRightFt">
+                            <div class="nyukyo-img">
+                                <span>!</span>
+                            </div>
+                            <div class="nyukyo-table">
+                                <span>以下の賃貸条件で申込みを受付けます。</span><br /> <span>充分に確認して申込書を作成してください。</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shouhizei">
+                        <div class="checkbox-search checked">
+                            <div class="checkbox-checked"></div>
+                        </div>
+                        <span class="font-small">&nbsp;消費税（課税対象）&nbsp;</span>
+                        <div class="setubihelp a_help" pageid="help_ukg99005Tax.html">
+                            <span>?</span> <!-- 20180410 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="table-div">
+                    <div class="ukg099005-left">
+                        <div class="getsugaku-tinryo">
+                            <div class="chouhoukei bg-red"></div>
+                            <div class="title-test color-red">月額賃料</div>
+                        </div>
+                        <table class="getsugaku-tinryo-table">
+                            <tr>
+                                <td>
+                                    <div class="font-local">家&nbsp;&nbsp;賃</div>
+                                </td>
+                                <td><input type="text" class="getsugaku-tinryo-input" value="58,000" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-local">共 益 費</div>
+                                </td>
+                                <td><input type="text" class="getsugaku-tinryo-input" value="5,000" /> <label class="getsugaku-tinryo-label"> <select
+                                        class="getsugaku-tinryo-select getsugaku-tinryo-select-a">
+                                            <option value="1">円</option>
+                                            <option value="2">込</option>
+                                            <option value="3">無料</option>
+                                            <option value="4">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-local">駐車場①</div>
+                                </td>
+                                <td><input type="text" class="getsugaku-tinryo-input" value="5,000" /> <label class="getsugaku-tinryo-label"> <select
+                                        class="getsugaku-tinryo-select getsugaku-tinryo-select-b">
+                                            <option value="1">円</option>
+                                            <option value="2">込</option>
+                                            <option value="3">無料</option>
+                                            <option value="4">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-local">駐車場②</div>
+                                </td>
+                                <td><input type="text" class="getsugaku-tinryo-input" value="5,000" /> <label class="getsugaku-tinryo-label"> <select
+                                        class="getsugaku-tinryo-select getsugaku-tinryo-select-c">
+                                            <option value="1">円</option>
+                                            <option value="2">込</option>
+                                            <option value="3">無料</option>
+                                            <option value="4">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="input-font" value="町内会費" /></td>
+                                <td><input type="text" class="getsugaku-tinryo-input" value="600" /> <label class="getsugaku-tinryo-label"> <select
+                                        class="getsugaku-tinryo-select getsugaku-tinryo-select-c">
+                                            <option value="1">円</option>
+                                            <option value="2">込</option>
+                                            <option value="3">無料</option>
+                                            <option value="4">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="input-font" /></td>
+                                <td><input type="text" class="getsugaku-tinryo-input" value="" /> <label class="getsugaku-tinryo-label"> <select
+                                        class="getsugaku-tinryo-select getsugaku-tinryo-select-c">
+                                            <option value="1">円</option>
+                                            <option value="2">込</option>
+                                            <option value="3">無料</option>
+                                            <option value="4">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="input-font" /></td>
+                                <td><input type="text" class="getsugaku-tinryo-input" value="" /> <label class="getsugaku-tinryo-label"> <select
+                                        class="getsugaku-tinryo-select getsugaku-tinryo-select-c">
+                                            <option value="1">円</option>
+                                            <option value="2">込</option>
+                                            <option value="3">無料</option>
+                                            <option value="4">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="input-font" /></td>
+                                <td><input type="text" class="getsugaku-tinryo-input" value="" /> <label class="getsugaku-tinryo-label"> <select
+                                        class="getsugaku-tinryo-select getsugaku-tinryo-select-c">
+                                            <option value="1">円</option>
+                                            <option value="2">込</option>
+                                            <option value="3">無料</option>
+                                            <option value="4">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                        </table>
+                        <div class="tyuukai-tesuuryou">
+                            <div class="chouhoukei bg-yellow"></div>
+                            <div class="title-test color-yellow">仲介手数料</div>
+                        </div>
+                        <table class="tyuukai-tesuuryou-table">
+                            <tr>
+                                <td>
+                                    <div class="font-local">仲介手数料</div>
+                                </td>
+                                <td><input type="text" class="tyuukai-tesuuryou-input" value="58,000" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                        </table>
+                        <div class="nyuukyo-tyuukai-saabisu">
+                            <div class="chouhoukei bg-green"></div>
+                            <div class="title-test color-green">入居仲介サービス</div>
+                        </div>
+                        <table class="nyuukyo-tyuukai-saabisu-table">
+                            <tr>
+                                <td>
+                                    <div class="font-local">割引サービス</div>
+                                </td>
+                                <td><label class="nyuukyo-tyuukai-saabisu-label"> <select class="nyuukyo-tyuukai-saabisu-select">
+                                            <option value="1">仲介手数料減額100%</option>
+                                            <!-- 2020/03/20 ADD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                            <option value="2">8：法人団体割引サービス50%</option>
+                                            <!-- 2020/03/20 ADD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-local">賃料支援 有/無</div>
+                                </td>
+                                <td>
+                                    <div class="tinryo-shienn">
+                                        <div class="checkbox-search-green checked">
+                                            <div class="checkbox-checked-green"></div>
+                                        </div>
+                                        <span class="font-has font-tinryo-shienn">有</span>
+                                        <div class="checkbox-search-green"></div>
+                                        <span class="font-none font-tinryo-shienn">無</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="ukg099005-right">
+                        <div class="itijikinn">
+                            <div class="chouhoukei bg-blue"></div>
+                            <div class="title-test color-blue">一時金</div>
+                        </div>
+                        <table class="itijikinn-table">
+                            <tr>
+                                <td>
+                                    <div class="font-local">礼 金</div>
+                                </td>
+                                <td><input type="text" class="itijikinn-input" /> <label class="itijikinn-label"> <select class="itijikinn-select itijikinn-select-a">
+                                            <option value="1">円</option>
+                                            <option value="2">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-local">保 証 金</div>
+                                </td>
+                                <td><input type="text" class="itijikinn-input" style="background-color: rgb(230, 230, 230);" disabled="disabled" /> <label class="itijikinn-label"> <select class="itijikinn-select itijikinn-select-a">
+                                            <option value="1">円</option>
+                                            <option value="2" selected="selected">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-local">償 却</div>
+                                </td>
+                                <td><input type="text" class="itijikinn-input" value="5,000" /> <label class="itijikinn-label"> <select class="itijikinn-select itijikinn-select-c">
+                                            <option value="1">円</option>
+                                            <option value="2">無</option>
+                                    </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="itijikinn-input-font" value="あいうえお" /></td>
+                                <td><input type="text" class="itijikinn-input" value="5,000" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="itijikinn-input-font" value="あいうえお" /></td>
+                                <td><input type="text" class="itijikinn-input" value="600" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="itijikinn-input-font" /></td>
+                                <td><input type="text" class="itijikinn-input" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="itijikinn-input-font" /></td>
+                                <td><input type="text" class="itijikinn-input" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="itijikinn-input-font" /></td>
+                                <td><input type="text" class="itijikinn-input" value="5,000" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-local">
+                                        消毒施工料<br>（当社扱）
+                                    </div>
+                                </td>
+                                <td><input type="text" class="itijikinn-input" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="font-local">
+                                        損害保険料<br>（当社扱）
+                                    </div>
+                                </td>
+                                <td><input type="text" class="itijikinn-input" /> <span class="font-local-small">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                	 <!-- 2020/3/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<div class="font-local">入居者家賃保証利用料</div>-->
+                                    <div class="font-local">入居者家賃保証<br>利用料</div>
+                                     <!-- 2020/3/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </td>
+                                <td class="yachinn-hoshou-td">
+                                    <div class="yachinn-hoshou-check">
+                                        <div class="checkbox-search-blue checked">
+                                            <div class="checkbox-checked-blue"></div>
+                                        </div>
+                                        <span class="yachinn-hoshou-text">ホームメイト保証人代行サーピスを利用する</span>
+                                    </div>
+                                    <div class="yachinn-hoshou-div">
+                                        <input type="text" class="itijikinn-input" /> <label class="itijikinn-label"> <select class="itijikinn-select itijikinn-select-d">
+                                                <option value="1" selected="selected">円</option>
+                                                <option value="2">無</option>
+                                        </select>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <img class="innsatsu" src="../../image/common/button/innsatsu.svg">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

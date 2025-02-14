@@ -1,0 +1,558 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG01015.css"></link>
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/artDialog.js"></script>
+<script type="text/javascript" src="../../js/inthickbox.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/message.js"></script>
+<script type="text/javascript" src="../../js/UKG01015.js"></script>
+</head>
+
+<body style="overflow-y: hidden;">
+    <div class="karioue-info">
+        <div class="karioue-info-title">
+            <div class="win_point align-center">
+                <!--2020/06/03 セツ  ADD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+                <img class="title_bgSvg" src="../../image/ukg01015/headBarXLong.svg"/>
+                <!--2020/06/03 セツ  ADD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+                <div class="chuui-img">
+                    <img class="show-img" src="../../image/ukg01015/chuui.svg">
+                </div>
+                <span class="normal-font">&nbsp;仮押え組数：&nbsp;</span>
+                <span class="red-font">8</span>
+                <span class="normal-font">&nbsp;組</span>
+            </div>
+        </div>
+        <div class="karioue-info-setumei">
+            <span>物件の入居申込み前に、一時的に物件を仮押えしているお客様の一覧を表示しています。</span>
+            <span>仮押え有効期限は3日間となりますので、お客様に入居申込み頂けるようご対応ください。</span>
+        </div>
+        <div class="data-list">
+            <div class="content-block">
+                <div class="detail-list">
+                    <table class="karioue-info-table-title">
+                        <colgroup>
+							<!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+							<!-- <col width="11%" />
+                            <col width="14%" />
+                            <col width="25%" />
+                            <col width="9%" />
+                            <col width="5%" />
+                            <col width="11%" />
+                            <col width="11%" />
+                            <col width="7%" />
+                            <col width="7%" /> -->
+							<col width="12%" />
+							<col width="12%" />
+							<col width="24.5%" />
+							<col width="9%" />
+							<col width="5%" />
+							<col width="12.5%" />
+							<col width="10%" />
+							<col width="" />
+							<col width="" />
+							<!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </colgroup>
+                        <tr class="title-tr">
+                            <td rowspan="2">
+                                <div class="updown-title">
+                                    <a class="font_normal_b kokyaku" href="#"
+                                        onfocus="javascript:this.blur();" onclick="updownClick()">ﾎｰﾑﾒｲﾄ物件№</a>
+                                </div>
+                                <div id="updown" class="sort-up"></div>
+                            </td>
+                            <td rowspan="2"><span class="font_normal_b">物件名(号室)</span></td>
+                            <td><span class="font_normal_b">お客様名</span></td>
+                            <td rowspan="2"><span class="font_normal_b">商談メモ</span></td>
+                            <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!--<td rowspan="2">-->
+                            <td rowspan="2" style="line-height: 0.3rem;">
+                            <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <span class="font_normal_b">優先<br />順位</span>
+                            </td>
+                            <td><span class="font_normal_b">仮押え日</span></td>
+							<td rowspan="2"><span class="font_normal_b">仲介店舗</span></td>
+                            <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!--<td rowspan="2" colspan="2">-->
+                            <td rowspan="2" colspan="2" style="line-height: 0.3rem;">
+                            <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <span class="font_normal_b">入居申込み/<br />仮押えキャンセル</span>
+                            </td>
+                        </tr>
+                        <tr class="title-tr">
+                            <td><span class="font_normal_b">連絡先(連絡可能時間)</span></td>
+                            <td><span class="font_normal_b">有効期限</span></td>
+                        </tr>
+                    </table>
+                    <div class="detail-fixed-block">
+                        <table class="karioue-info-table">
+                            <colgroup>
+                                <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!-- <col width="11%" />
+                                <col width="14%" />
+                                <col width="25%" />
+                                <col width="9%" />
+                                <col width="5%" />
+                                <col width="11%" />
+                                <col width="11%" />
+                                <col width="7%" />
+                                <col width="7%" /> -->
+                                <col width="12%" />
+                                <col width="12%" />
+                                <col width="24.5%" />
+                                <col width="9%" />
+                                <col width="5%" />
+                                <col width="12.5%" />
+                                <col width="10%" />
+                                <col width="" />
+                                <col width="" />
+                                <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            </colgroup>
+							<!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+							<!-- <tr> -->
+                            <tr class="tr-white">
+							<!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">ハイツ蝶々(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>顧客 光男 様</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">一宮支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-white">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/telephone.svg" />
+                                    </div>
+                                    <span title="080-1244-4448">052-1244-4448（17時以降）</span>
+                                </td>
+                                <td class="font_normal font_red">期限切れ</td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-grey">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">レジデンス東建(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>山田 花子 様</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">一宮支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-grey">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/phone.svg" />
+                                    </div>
+                                    <span title="080-1244-4448">080-1244-4448</span>
+                                </td>
+                                <td class="font_normal">3日</td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-white">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">ハイツ蝶々(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>株式会社 あいうえお商店 様</span>
+                                    </div>
+                                    <div class="ho_fa">
+                                        <span>法人</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">ひたちなか支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-white">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/phone.svg" />
+                                    </div>
+                                    <span title="080-1244-4448">080-1244-4448</span>
+                                </td>
+                                <td class="font_normal">3日</td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-grey">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">レジデンス東建(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>顧客 光男 様</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">一宮支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-grey">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/telephone.svg" />
+                                    </div>
+<!--                                    <span title="080-1244-4448">052-1244-4448（平日午前、…）</span> -->
+                                    <span title="080-1244-4448">052-1244-4448（平日午前）</span>
+                                </td>
+                                <td class="font_normal">3日</td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-white">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">ハイツ蝶々(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>山田 花子 様</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">一宮支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-white">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/phone.svg" />
+                                    </div>
+                                    <span title="080-1244-4448">080-1244-4448</span>
+                                </td>
+                                <td class="font_normal">3日</td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-grey">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">レジデンス東建(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>株式会社 あいうえお商店 様</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">一宮支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-grey">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/phone.svg" />
+                                    </div>
+                                    <span title="080-1244-4448">080-1244-4448</span>
+                                </td>
+                                <td class="font_normal">3日</td>
+                            </tr>
+                             <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                             <!-- <tr> -->
+                             <tr class="tr-white">
+                             <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">ハイツ蝶々(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>顧客 光男 様</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">一宮支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-white">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/telephone.svg" />
+                                    </div>
+                                    <span title="080-1244-4448">052-1244-4448</span>
+                                </td>
+                                <td class="font_normal">3日</td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-grey">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">レジデンス東建(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>山田 花子 様</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">一宮支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-grey">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/phone.svg" />
+                                    </div>
+                                    <span title="080-1244-4448">080-1244-4448</span>
+                                </td>
+                                <td class="font_normal">3日</td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-white">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td rowspan="2" class="font_normal">A0-1163-303</td>
+                                <td rowspan="2" class="font_normal bukken-left">ハイツ蝶々(102)</td>
+                                <td class="font_normal">
+                                    <div class="kou_d_ys">
+                                        <span>株式会社 あいうえお商店 様</span>
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="shoudan_memo">
+                                        <img class="show-img" src="../../image/ukg01015/soudan_memo.svg">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">1</td>
+                                <td class="font_normal">2017年6月30日</td>
+                                <td rowspan="2" class="font_normal">一宮支店</td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/moushikomi.png" onclick="chuushi(this)">
+                                    </div>
+                                </td>
+                                <td rowspan="2" class="font_normal">
+                                    <div class="cancel">
+                                        <img class="show-img" src="../../image/ukg01015/cancel.png" onclick="chuTa()">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <tr> -->
+                            <tr class="tr-white">
+                            <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <td class="font_normal text-align-left">
+                                    <div class="img_kou_ys">
+                                        <img class="show-img tanchuceng" src="../../image/ukg01015/phone.svg" />
+                                    </div>
+                                    <span title="080-1244-4448">080-1244-4448</span>
+                                </td>
+                                <td class="font_normal">3日</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tail-line"></div>
+                </div>
+                <!-- 隐藏层 -->
+                <div id="dialog0" class="tel-info">
+                    <div class="font_normal telephone-detail">
+                        <div class="tel-img"><img class="show-img" src="../../image/common/icon/telephone.gif" /></div>
+                        <div><span>052-1234-5467（8～9時& 12～1時、土日は以降）</span></div>
+                    </div>
+                    <div class="font_normal telephone-detail">
+                        <div class="tel-img"><img class="show-img" src="../../image/common/icon/mail.gif" /></div>
+                        <div><span>052-1234-5467</span></div>
+                    </div>
+                    <div class="font_normal telephone-detail">
+                        <div class="tel-img"><img class="show-img" src="../../image/common/icon/phone.gif" /></div>
+                        <div><span>hanako@token.co.jp</span></div>
+                    </div>
+                </div>
+                <div id="dialog1" class="tel-info">
+                    <div class="font_normal telephone-detail">
+                        <div class="tel-img"><img class="show-img" src="../../image/common/icon/telephone.gif" /></div>
+                        <div><span>052-1234-5467（8～9時& 12～1時、土日は以降）</span></div>
+                    </div>
+                    <div class="font_normal telephone-detail">
+                        <div class="tel-img"><img class="show-img" src="../../image/common/icon/mail.gif" /></div>
+                        <div><span>052-1234-5467</span></div>
+                    </div>
+                    <div class="font_normal telephone-detail">
+                        <div class="tel-img"><img class="show-img" src="../../image/common/icon/phone.gif" /></div>
+                        <div><span>hanako@token.co.jp</span></div>
+                    </div>
+                </div>
+                <div id="dialogue0" class="memo-info">
+                    <div class="font_normal memo-detail">
+                        <span>ベッド２匹（マルチーズ、柴犬）室内</span><br />
+                        <span>で飼育可能か確認しておくこと。</span>
+                    </div>
+                </div>
+                <div id="dialogue1" class="memo-info">
+                    <div class="font_normal memo-detail">
+                        <span>ベッド２匹（マルチーズ、柴犬）室内</span><br />
+                        <span>で飼育可能か確認しておくこと。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="karioue-info-setumei">
+            <span>※&nbsp;優先順位&nbsp;・・・&nbsp;仮押えの優先順位です。順位が１番のお客様は［申込］ボタンより、入居申込みが行なえます。</span>
+        </div>
+    </div>
+</body>
+
+</html>

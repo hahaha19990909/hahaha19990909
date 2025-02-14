@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG05013.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link id="calendar_style" href="../../css/ff/simple.css" media="screen" rel="Stylesheet" type="text/css" />
+<script id="prototype" src="../../js/prototype.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<link href="../../css/ff/twitter.css" rel="stylesheet" />
+<script src="../../js/protocalendar_min.js" type="text/javascript"></script>
+<script src="../../js/lang_ja.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/UKG05013.js"></script>
+</head>
+
+<body data-font="33.6" class="ukg5013_body">
+    <form>
+        <div class="ukg5013Middle">
+            <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <!--<div class="mitsumorisho-innsatsu">オリジナル情報誌作成</div>-->
+            <div class="mitsumorisho-innsatsu">
+                <img src="../../image/ukg05013/title-img.svg">
+            </div>
+            <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <!-- 2019/10/25 熊振 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+            <input type="hidden" id="hidJudge05013" value="true"/>
+            <!-- 2019/10/25 熊振 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+            <div class="step-div">
+                <img id="step1" src="../../image/ukg05010/step1.svg" />
+                <div id="gazoutable">
+                    <div class="imgSelected divcssAdd">
+                        <img class="imgcssAdd senntaku-naka-img" src="../../image/ukg05011/hyousi1_01.jpg">
+                    </div>
+                    <div class="senntaku-naka"></div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi2_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi3_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi4_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi5_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi6_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi16_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi7_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi8_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi9_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi10_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi11_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi12_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi13_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi14_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <img class="imgcssAdd" src="../../image/ukg05011/hyousi15_01.jpg">
+                    </div>
+                    <div class="divcssAdd">
+                        <!-- 2019/10/21 熊振 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <img class="imgcssAdd hyoushinashi" src="../../image/ukg05010/newhyoushinashi.svg"> -->
+                        <img class="imgcssAdd hyoushinashi" src="../../image/ukg05010/newhyoushinashi.png">
+                        <!-- 2019/10/21 熊振 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+
+                    </div>
+                </div>
+                <div class="tableadd-div">
+                    <table class="tableadd-b">
+                        <tr>
+                            <td class="tdcssAdd">
+                                <div class="fontw">発&nbsp;&nbsp;行&nbsp;&nbsp;日</div>
+                                <div class="hissu">必&nbsp;須</div>
+                            </td>
+                            <td class="tdcssAdd-right"><input id="txtRaiTenDay" name="txtRaiTenDay" maxlength="10" type="text" maxlength="10" class="proto_date txtmode2" /></td>
+                        </tr>
+                        <tr>
+                            <td class="tdcssAdd"><span class="fontw_two">情報誌名</span></td>
+                            <td class="tdcssAdd-right"><input type="text" id="jyouhouInput" maxlength="60" placeholder="情報誌毎に名前を付けることができます。" /></td>
+                        <tr>
+                            <td class="tdcssAdd">
+                                <div class="fontw_three">
+                                    <div>賃貸物件情報</div>
+                                    <div class=" theight">(3つ選択)</div>
+                                </div>
+                                <div class="hissu_three">必&nbsp;須</div>
+                            </td>
+                            <td>
+                                <div class="tableadd-btn-div">
+                                    <!-- 2019/10/24 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!-- <div class="tableadd-btn tableadd-btn-checked ">賃貸アパート</div> -->
+                                        <div class="tableadd-btn tableadd-btn-checked ">マンション</div>
+                                        <!-- <div class="tableadd-btn ">賃貸マンション</div> -->
+                                        <div class="tableadd-btn ">アパート</div>
+                                        <div class="tableadd-btn tableadd-btn-checked">コーポ</div>
+                                        <!-- <div class="tableadd-btn ">戸&nbsp;&nbsp;&nbsp;建</div> -->
+                                        <div class="tableadd-btn ">借家</div>
+                                        <div class="tableadd-btn ">分譲賃貸</div>
+                                        <div class="tableadd-btn ">ハイツ</div>
+                                        <div class="tableadd-btn ">テラスハウス</div>
+                                        <div class="tableadd-btn ">タウンハウス</div>
+                                        <div class="tableadd-btn ">メゾネット</div>
+                                        <!-- <div class="tableadd-btn ">貸&nbsp;ビ&nbsp;ル</div> -->                                    
+                                        <div class="tableadd-btn ">貸店舗マンション</div>
+                                        <div class="tableadd-btn ">貸店舗アパート</div>                                        
+                                        <div class="tableadd-btn ">貸店舗付住宅</div>
+                                        <!-- <div class="tableadd-btn ">賃&nbsp;店&nbsp;舗</div> -->
+                                        <div class="tableadd-btn ">賃店舗</div>
+                                        <div class="tableadd-btn ">貸事務所</div>
+                                        <div class="tableadd-btn ">貸店舗付事務所</div>
+                                        <!-- <div class="tableadd-btn ">貸&nbsp;倉&nbsp;庫</div>
+                                        <div class="tableadd-btn ">賃&nbsp;工&nbsp;場</div>
+                                        <div class="tableadd-btn ">貸&nbsp;ビ&nbsp;ル</div> -->
+                                        <div class="tableadd-btn ">貸倉庫</div>
+                                        <div class="tableadd-btn ">賃工場</div>
+                                        <div class="tableadd-btn ">貸ビル</div>
+                                        <!-- 2019/10/24 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdcssAdd">
+                                <div class="fontw_four">キャッチコピー</div>
+                                <div class="hissu_four">必&nbsp;須</div>
+                            </td>
+                            <td class="tdcssAdd-c">
+                                <div class="tdcssAdd-select">
+                                    <!--  2018/10/11 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                    <!-- <img class="kyacchikopii" src="../../image/ukg05010/kyacchikopii-one.svg" /> -->
+                                    <img class="kyacchikopii" src="../../image/ukg05010/kyacchikopii-one.png" />
+                                    <!--  2018/10/11 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                    <div>
+                                        <label class="lblSelect"> <select class="imgchangeSel" id="imgchangeSelA">
+                                                <option value="999"></option>
+                                                <option value=1>情報誌</option>
+                                                <option>&nbsp;&nbsp;&nbsp;イメージ広がる 外観写真</option>
+                                                <option>&nbsp;&nbsp;&nbsp;見やすい 大きな間取図</option>
+                                                <option>&nbsp;&nbsp;&nbsp;きめ細かな 物件情報</option>
+                                                <option value=2>店長いち押し 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;スタッフいち押し 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;人気物件 多数掲載中!</option>
+                                                <option>&nbsp;&nbsp;&nbsp;おしゃれな デザイナーズ 物件特集</option>
+                                                <option value=3>交通・アクセス</option>
+                                                <option>&nbsp;&nbsp;&nbsp;アクセス良好物件 多数掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;駅まで 徒歩５分以内の 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;通学に便利な 物件特集</option>
+                                                <option value=4>契約条件</option>
+                                                <option>&nbsp;&nbsp;&nbsp;敷金・礼金 ０円の お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;敷金（保証金）無しの お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp; 礼金０円の お部屋掲載</option>
+                                                <option value=5>こだわり条件</option>
+                                                <option>&nbsp;&nbsp;&nbsp;楽器演奏ＯＫの お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;最上階の お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;人気の 角部屋特集</option>
+                                        </select>
+                                        </label>
+                                    </div>
+                                    <input type="text" id="labelInputA" class="label-input">
+                                    <div class="tdcssAdd-hint">※キャッチコピーを任意箇所で改行する場合は、スペース文字を入力してください。</div>
+                                </div>
+                                <div class="tdcssAdd-select">
+                                    <!--  2018/10/11 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                    <!-- <img class="kyacchikopii" src="../../image/ukg05010/kyacchikopii-two.svg" /> -->
+                                    <img class="kyacchikopii" src="../../image/ukg05010/kyacchikopii-two.png" />
+                                    <!--  2018/10/11 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                    <div>
+                                        <label class="lblSelect"> <select class="imgchangeSel" id="imgchangeSelB">
+                                                <option value="999"></option>
+                                                <option value=1>情報誌</option>
+                                                <option>&nbsp;&nbsp;&nbsp;イメージ広がる 外観写真</option>
+                                                <option>&nbsp;&nbsp;&nbsp;見やすい 大きな間取図</option>
+                                                <option>&nbsp;&nbsp;&nbsp;きめ細かな 物件情報</option>
+                                                <option value=2>店長いち押し 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;スタッフいち押し 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;人気物件 多数掲載中!</option>
+                                                <option>&nbsp;&nbsp;&nbsp;おしゃれな デザイナーズ 物件特集</option>
+                                                <option value=3>交通・アクセス</option>
+                                                <option>&nbsp;&nbsp;&nbsp;アクセス良好物件 多数掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;駅まで 徒歩５分以内の 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;通学に便利な 物件特集</option>
+                                                <option value=4>契約条件</option>
+                                                <option>&nbsp;&nbsp;&nbsp;敷金・礼金 ０円の お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;敷金（保証金）無しの お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp; 礼金０円の お部屋掲載</option>
+                                                <option value=5>こだわり条件</option>
+                                                <option>&nbsp;&nbsp;&nbsp;楽器演奏ＯＫの お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;最上階の お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;人気の 角部屋特集</option>
+                                        </select>
+                                        </label>
+                                    </div>
+                                    <input type="text" id="labelInputB" class="label-input">
+                                </div>
+                                <div class="tdcssAdd-select">
+                                    <!--  2018/10/11 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                    <!-- <img class="kyacchikopii" src="../../image/ukg05010/kyacchikopii-three.svg" /> -->
+                                    <img class="kyacchikopii" src="../../image/ukg05010/kyacchikopii-three.png" />
+                                    <!--  2018/10/11 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                    <div>
+                                        <label class="lblSelect"> <select class="imgchangeSel" id="imgchangeSelC">
+                                                <option value="999">&nbsp;</option>
+                                                <option value=1>情報誌</option>
+                                                <option>&nbsp;&nbsp;&nbsp;イメージ広がる 外観写真</option>
+                                                <option>&nbsp;&nbsp;&nbsp;見やすい 大きな間取図</option>
+                                                <option>&nbsp;&nbsp;&nbsp;きめ細かな 物件情報</option>
+                                                <option value=2>店長いち押し 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;スタッフいち押し 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;人気物件 多数掲載中!</option>
+                                                <option>&nbsp;&nbsp;&nbsp;おしゃれな デザイナーズ 物件特集</option>
+                                                <option value=3>交通・アクセス</option>
+                                                <option>&nbsp;&nbsp;&nbsp;アクセス良好物件 多数掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;駅まで 徒歩５分以内の 物件特集</option>
+                                                <option>&nbsp;&nbsp;&nbsp;通学に便利な 物件特集</option>
+                                                <option value=4>契約条件</option>
+                                                <option>&nbsp;&nbsp;&nbsp;敷金・礼金 ０円の お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;敷金（保証金）無しの お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp; 礼金０円の お部屋掲載</option>
+                                                <option value=5>こだわり条件</option>
+                                                <option>&nbsp;&nbsp;&nbsp;楽器演奏ＯＫの お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;最上階の お部屋掲載</option>
+                                                <option>&nbsp;&nbsp;&nbsp;人気の 角部屋特集</option>
+                                        </select>
+                                        </label>
+                                    </div>
+                                    <input type="text" id="labelInputC" class="label-input">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="step-bg">
+                <img class="step" src="../../image/ukg05010/step2.svg" />
+                <div class="innsatsu-peeji-senntaku-div">
+                    <div class="innsatsu-peeji-senntaku">
+                        <div class="innsatsu-peeji-title">【補足資料】</div>
+                        <div class="innsatsu-peeji-title">設備マーク一覧</div>
+                        <img class="innsatsu-peeji-img" src="../../image/ukg05010/help_setubi.PNG" />
+                        <div class="ari-nasi">
+                            <img class="ari" src="../../image/ukg05010/shin-ari.png" />
+                        </div>
+                    </div>
+                    <div class="innsatsu-peeji-senntaku">
+                        <div class="innsatsu-peeji-title">【補足資料】</div>
+                        <div class="innsatsu-peeji-title">間取図で分かるお部屋の条件</div>
+                        <img class="innsatsu-peeji-img" src="../../image/ukg05010/help_madori.PNG" />
+                        <div class="ari-nasi">
+                            <img class="ari" src="../../image/ukg05010/shin-ari.png" />
+                        </div>
+                    </div>
+                    <div class="innsatsu-peeji-senntaku">
+                        <div class="innsatsu-peeji-title">【裏表紙】</div>
+                        <div class="innsatsu-peeji-title">店&nbsp;舗&nbsp;情&nbsp;報</div>
+                        <img class="innsatsu-peeji-img" src="../../image/ukg05010/uraomote-kami.png" />
+                        <div class="ari-nasi">
+                            <img class="ari" src="../../image/ukg05010/shin-ari.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="UKG05013-btn-div">
+            <img class="settei" src="../../image/common/button/settei.png"> <img class="tojiru" src="../../image/common/button/tojiru.png">
+        </div>
+    </form>
+</body>
+</html>

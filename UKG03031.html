@@ -1,0 +1,408 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/UKG03030.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/UKG03031.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css"></link>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/UKG03031.js"></script>
+    </head>
+
+<body>
+
+<div id="list">
+    <div class="right-title" id="list-title">
+        <span>お気に入り物件一覧</span>
+       <div class="right-title1">
+       </div>
+   </div>
+    <div class="list-title">
+        <span class="label-bukensu">物件数&nbsp;:&nbsp;</span>
+        <span class="bukensu">7</span>
+        <span class="label-bukensu">&nbsp;件&nbsp;&nbsp;&nbsp;</span>
+    </div>
+    <div class="list-background">
+        <div class="align-center list-content">
+            <div class="list-header align-left">
+                <div class="switch-block">
+                    <div id="switch_gaikan" class="switch-on-off">&nbsp;</div>
+                    <div id="switch_madori" class="switch-on-off">&nbsp;</div>
+                </div>
+                <span class="order-label">並び替え</span>
+                <label class="lblSelect1">
+                    <select id="nendai" class="date-select">
+                    	/* 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START */
+                        <!--<option value="0">適合度</option>
+                        <option value="1">家賃</option>
+                        <option value="2">間取り</option>
+                        <option value="6">面積</option>
+                        <option value="6">完成年月</option>
+                        <option value="6">所在地</option>-->
+                        <option value="0">適合度(降順)</option>
+                        <option value="1">家賃(降順)</option>
+                        <option value="2">間取り(降順)</option>
+                        <option value="6">面積(降順)</option>
+                        <option value="6">完成年月(降順)</option>
+                        <option value="6">所在地(降順)</option>
+                        /* 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END */
+                    </select>
+                </label>
+            </div>
+            <div class="list-detail">
+                <table class="buken-list-table">
+                    <colgroup>
+                        <col width="25%" />
+                        <col width="55%" />
+                        <col width="20%" />
+                    </colgroup>
+                    <tr class="tr-a buken-detail">
+                        <td>
+                            <div class="heya-img">
+                                <!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                <img class="netto-hi-keisai_another" src="../../image/common/特典・割引サービス_写真の上用.svg"> 
+                                <!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                <img class="show-img heya-image" src="../../image/ukg03031/heyaA.jpg">
+                                <!-- <img class="show-img madori-image" src="../../image/ukg03031/madori_img.jpg"> -->
+                            </div>
+                            <div class="align-left yachin-info">
+                                <div class="align-center yachin">
+                                    <span>家&nbsp;賃</span>
+                                </div>
+                                <span class="yachin-content yachin-content1">14.8万円</span>
+                            </div>
+                        </td>
+                        <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!--<td class="td-a">-->
+                        <td class="td-a" style="height:1.71rem;">
+                        <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div class="buken-name">
+                                <span class="align-left buken-name-text">名古屋市千種区稲舟通１丁目の賃貸物件</span>
+                            </div>
+                            <div class="buken-addr">
+                                <span class="align-left">名古屋市千種区稲舟通１丁目</span>
+                            </div>
+                            <div class="buken-addr  buken-addr-div">
+                                <span class="align-left">(名古屋市営地下鉄東山線&nbsp;本山駅&nbsp;徒歩3分)</span>
+                            </div>
+
+                        <div class="align-left">
+                            <div class="align-left yachin-info yachin-info-div-left">
+                                <div class="align-center yachin">
+                                    <span>完成年月</span>
+                                </div>
+                                <span class="yachin-content">2017/03</span>
+                            </div>
+                            <div class="align-left yachin-info yachin-info-div-right">
+                                <div class="align-center yachin">
+                                    <span>間取り</span>
+                                </div>
+                                <span class="yachin-content">2LDK(79.5㎡)</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                            <div class="yachin-info-top">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;お気に入り</span>
+                                <div class="hoshi">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                </div>
+                            </div>
+                            <div class="yachin-info-center">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;適合度&nbsp;</span>
+                                <div id="kodowariTekigo" class="tekigou">
+                                    <strong id="Part1_bar1" class="bar"></strong>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="tr-b buken-detail">
+                        <td>
+                            <div class="heya-img">
+                                <img class="show-img heya-image" src="../../image/ukg03031/heyaB.jpg">
+                                <!-- <img class="show-img madori-image" src="../../image/ukg03031/madori_img.jpg"> -->
+                            </div>
+                            <div class="align-left yachin-info">
+                                <div class="align-center yachin">
+                                    <span>家&nbsp;賃</span>
+                                </div>
+                                <span class="yachin-content yachin-content1">14.8万円</span>
+                            </div>
+                        </td>
+                        <td class="td-a">
+                            <div class="buken-name">
+                                <span class="align-left buken-name-text">ジョイナス車道（102号室）</span>
+                            </div>
+                            <div class="buken-addr">
+                                <span class="align-left">名古屋市千種区稲舟通１丁目</span>
+                            </div>
+                            <div class="buken-addr buken-addr-div">
+                                <span class="align-left">(名古屋市営地下鉄東山線&nbsp;本山駅&nbsp;徒歩13分)</span>
+                            </div>
+                        <div class="align-left">
+                            <div class="align-left yachin-info yachin-info-div-left">
+                                <div class="align-center yachin">
+                                    <span>完成年月</span>
+                                </div>
+                                <span class="yachin-content">2017/04</span>
+                            </div>
+                            <div class="align-left yachin-info yachin-info-div-right">
+                                <div class="align-center yachin">
+                                    <span>間取り</span>
+                                </div>
+                                <span class="yachin-content">2LDK(79.5㎡)</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                            <div class="yachin-info-top">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;お気に入り</span>
+                                <div class="hoshi">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                </div>
+                            </div>
+                            <div class="yachin-info-center">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;適合度&nbsp;</span>
+                                <div id="kodowariTekigo" class="tekigou">
+                                    <strong id="Part1_bar1" class="bar"></strong>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="tr-a buken-detail">
+                        <td>
+                            <div class="heya-img">
+                                <img class="show-img heya-image" src="../../image/ukg03031/heyaA.jpg">
+                                <!-- <img class="show-img madori-image" src="../../image/ukg03031/madori_img.jpg"> -->
+                            </div>
+                            <div class="align-left yachin-info">
+                                <div class="align-center yachin">
+                                    <span>家&nbsp;賃</span>
+                                </div>
+                                <span class="yachin-content yachin-content1">14.8万円</span>
+                            </div>
+                        </td>
+                        <td class="td-a">
+                            <div class="buken-name">
+                                <span class="align-left buken-name-text">ラ･シュシュ覚王山（102号室）</span>
+                            </div>
+                            <div class="buken-addr">
+                                <span class="align-left">名古屋市千種区稲舟通１丁目</span>
+                            </div>
+                            <div class="buken-addr  buken-addr-div">
+                                <span class="align-left">(名古屋市営地下鉄東山線&nbsp;本山駅&nbsp;徒歩3分)</span>
+                            </div>
+                        <div class="align-left">
+                            <div class="align-left yachin-info yachin-info-div-left">
+                                <div class="align-center yachin">
+                                    <span>完成年月</span>
+                                </div>
+                                <span class="yachin-content">2017/05</span>
+                            </div>
+                            <div class="align-left yachin-info yachin-info-div-right">
+                                <div class="align-center yachin">
+                                    <span>間取り</span>
+                                </div>
+                                <span class="yachin-content">2LDK(79.5㎡)</span>
+                            </div>
+                           </div>
+                        </td>
+                        <td>
+                            <div class="yachin-info-top">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;お気に入り</span>
+                                <div class="hoshi">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                </div>
+                            </div>
+                            <div class="yachin-info-center">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;適合度&nbsp;</span>
+                                <div id="kodowariTekigo" class="tekigou">
+                                    <strong id="Part1_bar1" class="bar"></strong>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="tr-b buken-detail">
+                        <td>
+                            <div class="heya-img">
+                                <img class="show-img heya-image" src="../../image/ukg03031/heyaB.jpg">
+                                <!-- <img class="show-img madori-image" src="../../image/ukg03031/madori_img.jpg"> -->
+                            </div>
+                            <div class="align-left yachin-info">
+                                <div class="align-center yachin">
+                                    <span>家&nbsp;賃</span>
+                                </div>
+                                <span class="yachin-content yachin-content1">14.8万円</span>
+                            </div>
+                        </td>
+                        <td class="td-a">
+                            <div class="buken-name">
+                                <span class="align-left buken-name-text">ハイム竹橋（102-2号室）</span>
+                            </div>
+                            <div class="buken-addr">
+                                <span class="align-left">名古屋市千種区稲舟通１丁目</span>
+                            </div>
+                            <div class="buken-addr  buken-addr-div">
+                                <span class="align-left">(名古屋市営地下鉄東山線&nbsp;本山駅&nbsp;徒歩3分)</span>
+                            </div>
+                        <div class="align-left">
+                            <div class="align-left yachin-info yachin-info-div-left">
+                                <div class="align-center yachin">
+                                    <span>完成年月</span>
+                                </div>
+                                <span class="yachin-content">2017/06</span>
+                            </div>
+                            <div class="align-left yachin-info yachin-info-div-right">
+                                <div class="align-center yachin">
+                                    <span>間取り</span>
+                                </div>
+                                <span class="yachin-content">2LDK(79.5㎡)</span>
+                            </div>
+                         </div>
+                        </td>
+                        <td>
+                            <div class="yachin-info-top">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;お気に入り</span>
+                                <div class="hoshi">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                </div>
+                            </div>
+                            <div class="yachin-info-center">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;適合度&nbsp;</span>
+                                <div id="kodowariTekigo" class="tekigou">
+                                    <strong id="Part1_bar1" class="bar"></strong>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="tr-a buken-detail">
+                        <td>
+                            <div class="heya-img">
+                                <img class="show-img heya-image" src="../../image/ukg03031/heyaA.jpg">
+                                <!-- <img class="show-img madori-image" src="../../image/ukg03031/madori_img.jpg"> -->
+                            </div>
+                            <div class="align-left yachin-info">
+                                <div class="align-center yachin">
+                                    <span>家&nbsp;賃</span>
+                                </div>
+                                <span class="yachin-content yachin-content1">14.8万円</span>
+                            </div>
+                        </td>
+                        <td class="td-a">
+                            <div class="buken-name">
+                                <span class="align-left buken-name-text">ハイム竹橋（102-2号室）</span>
+                            </div>
+                            <div class="buken-addr">
+                                <span class="align-left">名古屋市千種区稲舟通１丁目</span>
+                            </div>
+                            <div class="buken-addr  buken-addr-div">
+                                <span class="align-left">(名古屋市営地下鉄東山線&nbsp;本山駅&nbsp;徒歩3分)</span>
+                            </div>
+                        <div class="align-left">
+                            <div class="align-left yachin-info yachin-info-div-left">
+                                <div class="align-center yachin">
+                                    <span>完成年月</span>
+                                </div>
+                                <span class="yachin-content">2017/07</span>
+                            </div>
+                            <div class="align-left yachin-info yachin-info-div-right">
+                                <div class="align-center yachin">
+                                    <span>間取り</span>
+                                </div>
+                                <span class="yachin-content">2LDK(79.5㎡)</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                            <div class="yachin-info-top">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;お気に入り</span>
+                                <div class="hoshi">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                </div>
+                            </div>
+                            <div class="yachin-info-center">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;適合度&nbsp;</span>
+                                <div id="kodowariTekigo" class="tekigou">
+                                    <strong id="Part1_bar1" class="bar"></strong>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="tr-a buken-detail">
+                        <td>
+                            <div class="heya-img">
+                                <img class="show-img heya-image" src="../../image/ukg03031/heyaA.jpg">
+                                <!-- <img class="show-img madori-image" src="../../image/ukg03031/madori_img.jpg"> -->
+                            </div>
+                            <div class="align-left yachin-info">
+                                <div class="align-center yachin">
+                                    <span>家&nbsp;賃</span>
+                                </div>
+                                <span class="yachin-content yachin-content1">14.8万円</span>
+                            </div>
+                        </td>
+                        <td class="td-a">
+                            <div class="buken-name">
+                                <span class="align-left buken-name-text">ハイム竹橋（103-2号室）</span>
+                            </div>
+                            <div class="buken-addr">
+                                <span class="align-left">名古屋市千種区稲舟通１丁目</span>
+                            </div>
+                            <div class="buken-addr  buken-addr-div">
+                                <span class="align-left">(名古屋市営地下鉄東山線&nbsp;本山駅&nbsp;徒歩3分)</span>
+                            </div>
+                        <div class="align-left">
+                            <div class="align-left yachin-info yachin-info-div-left">
+                                <div class="align-center yachin">
+                                    <span>完成年月</span>
+                                </div>
+                                <span class="yachin-content">2017/08</span>
+                            </div>
+                            <div class="align-left yachin-info yachin-info-div-right">
+                                <div class="align-center yachin">
+                                    <span>間取り</span>
+                                </div>
+                                <span class="yachin-content">2LDK(79.5㎡)</span>
+                            </div>
+                         </div>
+                        </td>
+                        <td>
+                            <div class="yachin-info-top">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;お気に入り</span>
+                                <div class="hoshi">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                    <img class="show-img-itiran" src="../../image/common/icon/hosi_on.png">
+                                </div>
+                            </div>
+                            <div class="yachin-info-center">
+                                <span class="yachin-content okinihairi">&nbsp;&nbsp;適合度&nbsp;</span>
+                                <div id="kodowariTekigo" class="tekigou">
+                                    <strong id="Part1_bar1" class="bar"></strong>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG05010.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css"></link>
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/UKG05010.js"></script>
+<!--  2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+<script  type="text/javascript" src="../../js/help.js"></script>
+<!--  2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+<title>Success21お部屋探しNAVI</title>
+
+</head>
+
+<body>
+    <form>
+        <div class="iframe-div">
+            <iframe id="content_frame" class="top-title" name="content_frame" src="pageHead.html" ></iframe>
+        </div>
+        <div class="toppage">
+            <div class="toppage-space">&nbsp;</div>
+            <div class="menu-div">
+                <div class="menu_uketuke" id="okyakusamaMenu">お客様受付・物件紹介</div>
+            </div>
+            <div class="menu-div">
+                <div class="menu_uketuke" id="chirashiSakuseiMenu">物件案内チラシ作成</div>
+            </div>
+            <div class="menu-div">
+                <div class="menu_uketuke menu-color" id="jouhoushiSakuseiMenu">オリジナル情報誌作成</div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="ukg5010Main">
+                <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+                <!--<img class="jouhoushi-sakusei" src="../../image/ukg05010/jouhoushi-sakusei_top.png">-->
+                <div class="jouhoushi-sakusei">
+                    <img src="../../image/ukg05010/jouhoushi-sakusei_top.svg">
+                </div>
+                <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+                <div id="sinnkiSakusei">
+                    <img class="sinnki-sakusei" src="../../image/ukg05010/sinnki-sakusei.svg">
+                </div>
+                <!--  2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                <!--<div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg05010.html">
+                    <img class="syoukai-mark-img" src="../../image/common/icon/help.png"/>
+                </div>-->
+                <!--  2018/08/13 ADD END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                <div id="ukg05011show">
+                    <iframe src="UKG05011.html" class="ukg05011-iframe"></iframe>
+                </div>
+                <div id="ukg05012show">
+                    <iframe class="ukg05012-iframe"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="footdiv" class="footer">&nbsp;</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<title>物件案内チラシ印刷</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG99004.css"></link>
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/UKG99004.js"></script>
+<script type="text/javascript" src="../../js/jquery.dragsort-0.4.min.js" ></script>
+</head>
+
+<body data-font="33.5">
+    <form>
+        <div id="ukg099004Main">
+            <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <!--<img class="chirashi-senntaku" src="../../image/ukg99004/chirashi-senntaku.png">-->
+            <div class="chirashi-senntaku">
+                <img src="../../image/ukg99004/chirashi-senntaku.svg">
+            </div>
+            <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <div class="step-bg">
+                <img class="step" src="../../image/ukg99004/step1.svg" />
+                <table class="chirashitaipu-table">
+                    <tr>
+                        <td><div class="chirashi-img-div">
+                                <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Naikan/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked">
+                                    </div>
+                                    <span class="yachinn-hoshou-text">１物件掲載用</span>
+                                </div>
+                                <div class="line"></div>
+                                <div class="chirashi-font color-blue">内観付</div>
+                            </div>
+                        </td>
+                        <td><div class="chirashi-img-div">
+                                <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Tizu/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked">
+                                        </div>
+                                    <span class="yachinn-hoshou-text">１物件掲載用</span>
+                                </div>
+                                <div class="line"></div>
+                                <span class="chirashi-font color-green">地図付</span>
+                            </div>
+                        </td>
+                        <td><div class="imgSelected-pinnku chirashi-img-div">
+                                <img class="chirashi-img" src="../../image/ukg04010/situnaiSyasinCard9/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked checked">
+                                        <div class="checkbox-checked"></div>
+                                    </div>
+                                    <span class="yachinn-hoshou-text">室内写真カード（９枚）</span>
+                                </div>
+                                <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <div class="line lineNew"></div>
+                                <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <span class="chirashi-font"></span>
+                            </div>
+                        </td>
+                        <td><div class="chirashi-img-div">
+                                <img class="chirashi-img" src="../../image/ukg04010/situnaiSyasinCard20/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked">
+                                    </div>
+                                    <span class="yachinn-hoshou-text">室内写真カード（20枚）</span>
+                                </div>
+                                <div class="line"></div>
+                                <span class="chirashi-font"></span>
+                            </div>
+                        </td>
+                        <td><div class="chirashi-img-div">
+                                <img class="tizuAnnaiCard" src="../../image/ukg04010/tizuAnnaiCard/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked">
+                                    </div>
+                                    <span class="yachinn-hoshou-text">地図案内カード</span>
+                                </div>
+                                <div class="line"></div>
+                                <span class="chirashi-font"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="chirashi-img-div">
+                                <img class="chirashi-img" src="../../image/ukg04010/tyukaiGyousya/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked">
+                                    </div>
+                                    <span class="yachinn-hoshou-text">割引サービス表記なし</span>
+                                </div>
+                                <div class="line"></div>
+                                <span class="chirashi-font"></span>
+                            </div>
+                        </td>
+                        <td><div class="imgSelected-pinnku chirashi-img-div">
+                                <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Talent/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked checked">
+                                        <div class="checkbox-checked"></div>
+                                    </div>
+                                    <span class="yachinn-hoshou-text">１物件掲載用</span>
+                                </div>
+                                <div class="line"></div>
+                                <span class="chirashi-font color-red">桐谷美玲</span>
+                            </div>
+                        </td>
+                        <td><div class="chirashi-img-div">
+                                <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_TasyaChukai/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked">
+                                    </div>
+                                    <span class="yachinn-hoshou-text">１物件掲載用</span>
+                                </div>
+                                <div class="line"></div>
+                                <span class="chirashi-font color-yellow">他社仲介</span>
+                            </div>
+                        </td>
+                        <td><div class="chirashi-img-div">
+                                <img class="last-img" src="../../image/ukg04010/oneBukkenKeisai_TateKaki/pink.gif"/>
+                                <div class="checkbox-div">
+                                    <div class="checkbox-search chirashi-img-checked">
+                                    </div>
+                                    <span class="yachinn-hoshou-text">１物件掲載用</span>
+                                </div>
+                                <div class="line"></div>
+                                <span class="chirashi-font color-last">縦書き</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="step-bg">
+                <img class="step" src="../../image/ukg99004/step2.svg" />
+                <div class="kaoiro-img-div">
+                    <img id="kaoiro-senntaku" class="kaoiro-img" src="../../image/ukg99004/kaoiro-senntaku.svg" />
+                    <img id="pinnku" class="kaoiro-img kaoiro-img-selected" src="../../image/ukg99004/pinnku.gif" />
+                    <div class="kaoiro-img-checked"></div>
+                    <img id="buruu" class="kaoiro-img" src="../../image/ukg99004/buruu.gif" />
+                    <img id="guriinn" class="kaoiro-img" src="../../image/ukg99004/guriinn.gif" />
+                    <img id="orennji" class="kaoiro-img" src="../../image/ukg99004/orennji.gif" />
+                    <img id="pa-puru" class="kaoiro-img" src="../../image/ukg99004/pa-puru.gif" />
+                    <img id="guree" class="kaoiro-img" src="../../image/ukg99004/guree.gif" />
+                </div>
+            </div>
+            <div class="step-bg step-bg-big">
+                <img class="step" src="../../image/ukg99004/step3.svg" />
+                <!-- 2020/02/14 ADD START 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+                <div class="step3_bottom">
+                    <div class="step3_selImg">
+                        <div class="mainiti_toroku" id="btnBukkenGotoTourokuGray"></div>
+                        <div class="subetebukkenkcom" id="btnBukkenkyoutuTouroku"></div>
+                    </div>
+                    <div class="step3_show_text none_display">
+                        <div class="text_top">※下記のボタンをクリックすると、物件情報に登録済のセールスポイントを表示できます。(編集可)</div>
+                        <div class="text_bottom">また、「自由入力」を選択すると、自由に文章を入力できます。</div>
+                    </div>
+                    <div class="step3_show_text_common">
+                        <div class="text_top">※下記のボタンをクリックすると、物件情報に登録済のセールスポイントを表示できます。(編集可)</div>
+                        <div class="text_bottom">また、「自由入力」を選択すると、自由に文章を入力できます。</div>
+                    </div>
+                    <div class="tableadd-div1 none_display">
+                    	<div class="touroku_info_block">
+                    		<div class="salepointbukken" id="divBikou">・「リバーヒルズヘキナン(6号室)」</div>
+                    		<table class="tableadd-b tableadd-b1">
+	                            <tr>
+	                                <td class="tdcssAdd">
+	                                    <div class="fontw">セールスポイント</div>
+	                                    <div class="hissu">必&nbsp;須</div>
+	                                </td>
+	                                <td class="tdcssAdd-right">
+	                                    <div class="tableadd-btn-div">
+	                                        <div class="tableadd-btn-new tableadd-btn1">物件セールスポイント</div>
+	                                        <div class="tableadd-btn-new tableadd-btn1 tableadd-btn-checked-new">部屋セールスポイント</div>
+	                                        <div class="tableadd-btn-new tableadd-btn1 tableadd-btn-checked-jixyouhou" id="btnbtext1">物&nbsp;件&nbsp;名</div>
+	                                        <div id="btnbtext" class="tableadd-btn-new tableadd-btn1" choseclass="btnbtext">自&nbsp;由&nbsp;入&nbsp;力</div>
+	                                    </div>
+	                                    <div class="tableadd-textarea-div">
+	                                        <textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea tableadd-btn2" placeholder="セールスポイントを登録できます。"></textarea>
+	                                    </div>
+	                                    <div id="err_salepointAll" class="err_salepointAll" style="width: 6.7rem;color:#FF0000;font-size: 0.14rem;margin:0px 0px 0.1rem 0.4rem; display:none" ></div>
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                                <td class="tdcssAdd"><div class="fontw">備　考</div></td>
+	                                <td class="tdcssAdd-right">
+	                                    <div class="bikou-textarea-div">
+	                                        <textarea rows="2" cols="65" class="bikou-textarea" placeholder="備考を登録できます。"></textarea>
+	                                    </div>
+	                                </td>
+	                            </tr>
+	                            <!--  2020/03/24 ADD START 陳龍龍(SYS) C44072_希望部屋数等を追加  -->
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">外観画像選択</div></td>
+                                    <td>
+                                        <ul class="gaikan_sentaku_imgnaiyou">
+                                            <li>
+                                                <div class="gaikan_imgdiv checkbox_div" ><img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/></div>
+                                            </li>
+                                            <li>
+                                                <div class="gaikan_imgdiv" ><img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/></div>
+                                            </li>
+                                            <li>
+                                                <div class="gaikan_imgdiv" ><img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/></div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">内観画像選択</div></td>
+                                    <td class="naikann_bottomProcess">
+                                        <div class="font_naikann_style">
+                                           内観画像は、選択されたチラシタイプにより、左上から順に最大9枚出力されます。</br>ドラッグ＆ドロップにより出力順の並び替えが可能です。
+                                        </div>
+                                        <ul class="naikann_sentaku_imgnaiyou">
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">玄関</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">セキュリティ</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <!--  2020/03/24 ADD END 陳龍龍(SYS) C44072_希望部屋数等を追加  -->
+	                        </table>
+                    	</div>
+                    	<div class="touroku_info_block">
+                    		<div class="salepointbukken" id="divBikou">・「ジョイナス車道（102号室）」</div>
+                    		<table class="tableadd-b tableadd-b1">
+	                            <tr>
+	                                <td class="tdcssAdd">
+	                                    <div class="fontw">セールスポイント</div>
+	                                    <div class="hissu">必&nbsp;須</div>
+	                                </td>
+	                                <td class="tdcssAdd-right">
+	                                    <div class="tableadd-btn-div">
+	                                        <div class="tableadd-btn-new tableadd-btn1">物件セールスポイント</div>
+	                                        <div class="tableadd-btn-new tableadd-btn1 tableadd-btn-checked-new">部屋セールスポイント</div>
+	                                        <div class="tableadd-btn-new tableadd-btn1 tableadd-btn-checked-jixyouhou" id="btnbtext1">物&nbsp;件&nbsp;名</div>
+	                                        <div id="btnbtext" class="tableadd-btn-new tableadd-btn1" choseclass="btnbtext">自&nbsp;由&nbsp;入&nbsp;力</div>
+	                                    </div>
+	                                    <div class="tableadd-textarea-div">
+	                                        <textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea tableadd-btn2" placeholder="セールスポイントを登録できます。"></textarea>
+	                                    </div>
+	                                    <div id="err_salepointAll" class="err_salepointAll" style="width: 6.7rem;color:#FF0000;font-size: 0.14rem;margin:0px 0px 0.1rem 0.4rem; display:none" ></div>
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                                <td class="tdcssAdd"><div class="fontw">備　考</div></td>
+	                                <td class="tdcssAdd-right">
+	                                    <div class="bikou-textarea-div">
+	                                        <textarea rows="2" cols="65" class="bikou-textarea" placeholder="備考を登録できます。"></textarea>
+	                                    </div>
+	                                </td>
+	                            </tr>
+                                <!--  2020/03/24 ADD START 陳龍龍(SYS) C44072_希望部屋数等を追加  -->
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">外観画像選択</div></td>
+                                    <td>
+                                        <ul class="gaikan_sentaku_imgnaiyou">
+                                            <li>
+                                                <div class="gaikan_imgdiv checkbox_div" ><img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/></div>
+                                            </li>
+                                            <li>
+                                                <div class="gaikan_imgdiv" ><img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/></div>
+                                            </li>
+                                            <li>
+                                                <div class="gaikan_imgdiv" ><img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/></div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">内観画像選択</div></td>
+                                    <td class="naikann_bottomProcess">
+                                        <div class="font_naikann_style">
+                                           内観画像は、選択されたチラシタイプにより、左上から順に最大9枚出力されます。</br>ドラッグ＆ドロップにより出力順の並び替えが可能です。
+                                        </div>
+                                        <ul class="naikann_sentaku_imgnaiyou">
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">玄関</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">セキュリティ</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <!--  2020/03/24 ADD END 陳龍龍(SYS) C44072_希望部屋数等を追加  -->
+	                        </table>
+                    	</div>
+                        <div class="tantou_chk_block">
+	                        <table class="tableadd-b tableadd_jixyouhou">
+	                            <tbody>
+	                                <tr class="tantou_checkbox_div2">
+	                                    <td class="tdcssAdd tdcssAdd2">
+	                                        <div class="fontw">担当者名</div>
+	                                    </td>
+	                                    <td>
+	                                        <div class="tanntoushana">
+	                                            <div class="checkbox-search tanntoushana-checkbox">
+	                                            </div>
+	                                            <span class="yachinn-hoshou-text">担当者名を表示する</span>
+	                                        </div>
+	                                    </td>
+	                                </tr>
+	                            </tbody>
+	                        </table>
+	                    </div>
+                    </div>
+                <!-- 2020/02/14 ADD END 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+                    <div class="tableadd-div">
+                        <table class="tableadd-b">
+                            <tr>
+                                <td class="tdcssAdd">
+                                    <div class="fontw">セールスポイント</div>
+                                    <div class="hissu">必&nbsp;須</div>
+                                </td>
+                                <td class="tdcssAdd-right">
+                                    <div class="tableadd-btn-div">
+                                        <div class="tableadd-btn">物件セールスポイント</div>
+                                        <div class="tableadd-btn tableadd-btn-checked">部屋セールスポイント</div>
+                                        <div class="tableadd-btn">物&nbsp;件&nbsp;名</div>
+                                        <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!--<div class="tableadd-btn">自&nbsp;由&nbsp;入&nbsp;力</div>-->
+                                        <div class="tableadd-btn" id="btnbtext">自&nbsp;由&nbsp;入&nbsp;力</div>
+                                        <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    </div>
+                                    <!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <div class="tableadd-textarea-div" style="margin: 0.25rem 2.5%; display: block; display: none;">
+                                        <textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea tableadd-btn2" placeholder="セールスポイントを登録できます。"></textarea>
+                                    </div>
+                                    <!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdcssAdd"><div class="fontw">備　考</div></td> <!-- 20180408 -->
+                                <td class="tdcssAdd-right">
+                                    <div class="bikou-textarea-div">
+                                        <textarea rows="2" cols="108" class="bikou-textarea" placeholder="備考を入力してください。"></textarea>
+                                    </div>
+                                </td>
+                            <tr>
+                                <td class="tdcssAdd">
+                                    <div class="fontw">担当者名</div>
+                                </td>
+                                <td>
+                                    <div class="tanntoushana">
+                                        <div class="checkbox-search tanntoushana-checkbox checked">
+                                            <!-- 2019/10/29 李龍涛 DEL C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<div class="checkbox-checked"></div>-->
+                                            <!-- 2019/10/29 李龍涛 DEL C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        </div>
+                                        <span class="yachinn-hoshou-text">担当者名を表示する</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div> 
+                    <!-- 2020/02/14 ADD START 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+                </div>
+                    <!-- 2020/02/14 ADD START 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+            </div>
+            <img class="innsatsu" src="../../image/common/button/innsatsu.svg">
+        </div>
+    </form>
+</body>
+</html>

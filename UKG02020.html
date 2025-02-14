@@ -1,0 +1,587 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG02020.css"></link>
+<script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/help.js"></script>
+<script src="../../js/artDialog.js"></script>
+<link href="../../css/ff/twitter.css" rel="stylesheet"/>
+<script type="text/javascript">
+
+function  chckClick (){ 
+
+	  var checkobj =chckClick.arguments;
+	  
+	  var kewdflg = false;
+	  if (document.getElementById("checkintesite").checked  
+	  		|| document.getElementById("chckphone").checked
+	        || document.getElementById("checksumato").checked) {	
+	  	kewdflg = true;
+	  }
+	  if (kewdflg) {
+		document.getElementById("chckhomnoteSpan").style.color="";
+		document.getElementById("chckhomnoteSpan").style.cursor="pointer";
+		document.getElementById("chckfudosanSpan").style.color="";
+		document.getElementById("chckfudosanSpan").style.cursor="pointer";
+		document.getElementById("checksumaiSpan").style.color="";
+		document.getElementById("checksumaiSpan").style.cursor="pointer";
+		document.getElementById("txtheyakeywd").disabled = false;
+		document.getElementById("txtheyakeywd").style.backgroundColor= "#FFFFFF";
+	  } else {
+		document.getElementById("chckhomnoteSpan").style.color="#000";
+		document.getElementById("chckhomnoteSpan").style.cursor="default"; 	
+		document.getElementById("chckfudosanSpan").style.color="#000";
+		document.getElementById("chckfudosanSpan").style.cursor="default"; 
+		document.getElementById("checksumaiSpan").style.color="#000";
+		document.getElementById("checksumaiSpan").style.cursor="default"; 
+	  	document.getElementById("txtheyakeywd").disabled = true;
+		document.getElementById("txtheyakeywd").style.backgroundColor= "#E6E6E6";
+		document.getElementById("txtheyakeywd").value = "";
+	  }
+		
+	  for(i=1;i<checkobj.length;i++) {
+		if (document.getElementById(checkobj[0]).checked) {
+			document.getElementById("chckimodSpan").style.color="";
+			document.getElementById("chckimodSpan").style.cursor="pointer";
+			document.getElementById("chckyahooSpan").style.color="";
+			document.getElementById("chckyahooSpan").style.cursor="pointer";
+			document.getElementById("chckezSpan").style.color="";
+			document.getElementById("chckezSpan").style.cursor="pointer";
+			document.getElementById(checkobj[i]).disabled = false;
+			document.getElementById(checkobj[i]).style.backgroundColor= "#FFFFFF";
+			if (document.getElementById(checkobj[i]).type =="text") {
+				document.getElementById(checkobj[i]).focus();
+			
+			}
+		} else {
+			document.getElementById("chckimodSpan").style.color="#000";
+			document.getElementById("chckimodSpan").style.cursor="default";
+			document.getElementById("chckyahooSpan").style.color="#000";
+			document.getElementById("chckyahooSpan").style.cursor="default";
+			document.getElementById("chckezSpan").style.color="#000";
+			document.getElementById("chckezSpan").style.cursor="default";
+			document.getElementById(checkobj[i]).disabled = true;
+			document.getElementById(checkobj[i]).style.backgroundColor= "#E6E6E6";
+			document.getElementById(checkobj[i]).checked="";
+
+			if (document.getElementById(checkobj[i]).type =="text") {
+				document.getElementById(checkobj[i]).value= "";
+			}
+			
+			if (document.getElementById(checkobj[1]).type=="checkbox") {
+				document.getElementById(checkobj[1]).checked="";
+	
+			}else {
+				document.getElementById(checkobj[1]).checked="checked";
+			}
+			
+			
+		}	
+	 }
+}
+
+//メモのtextareaを入力 
+	function clearText(obj){
+		var testObj=document.getElementById('guest_memo');
+		var  testheight =document.getElementById('guest_memo').scrollHeight;
+		var inputText="";
+		if (obj.value == "メモを登録できます。"){
+        	obj.value = "";
+    	}
+		obj.style.color = "black";
+	};
+	var inputText="";
+
+jQuery().ready(function() {
+
+	jQuery('#checksonotatd').click(function( ){
+		 if (jQuery("#chccksonota").is(':checked')) {
+
+		 	jQuery("#inputsonota").attr("style","width:230px;margin-left:-350px;");
+		 	jQuery("#inputsonota").attr("disabled",false);  
+		 	}else{
+
+		 		jQuery("#inputsonota").attr("style","width:230px;margin-left:-350px;background-color:#E6E6E6;");
+		 		jQuery("#inputsonota").attr("disabled",true);
+		 		}
+	});	
+
+	jQuery('#checksonotatd2').click(function( ){
+		 if (jQuery("#chcksonota2").is(':checked')) {
+
+		 	jQuery("#txtsonota2").attr("style","width:230px;margin-left:2px;");
+		 	jQuery("#txtsonota2").attr("disabled",false);  
+		 	}else{
+
+		 		jQuery("#txtsonota2").attr("style","width:230px;margin-left:2px; background-color:#E6E6E6");
+		 		jQuery("#txtsonota2").attr("disabled",true);
+		 		}
+	});	
+
+	jQuery('#chckphonetd').click(function( ){
+		 if (jQuery("#chckphone").is(':checked')) {
+		 	jQuery("#chckimod").attr("disabled",false);  
+		  jQuery("#chckyahoo").attr("disabled",false);
+		 	jQuery("#chckez").attr("disabled",false);
+		 	}else{
+			jQuery("#chckimod").attr("disabled",true);
+		  jQuery("#chckyahoo").attr("disabled",true);
+		 	jQuery("#chckez").attr("disabled",true);
+		 	jQuery("#chckimod").attr('checked', false);
+		 	jQuery("#chckyahoo").attr('checked', false);
+		 	jQuery("#chckez").attr('checked', false);
+		 		}
+	});	
+
+	jQuery('#zasiSpan').click(function( ){
+		chckClick('chckzasi','txtzasi');
+	});	
+	
+	jQuery('#sonota1Span').click(function( ){
+		chckClick('chcksonota1','txtsonota1');
+	});	
+	
+	jQuery('#sonota2Span').click(function( ){
+		chckClick('chcksonota2','txtsonota2');
+	});	
+	
+	jQuery('#checkintesiteSpan').click(function( ){
+		chckClick('checkintesite','chckhomnote','chckfudosan','checksumai');
+	});	
+	
+	jQuery('#chckphoneSpan').click(function( ){
+		chckClick('chckphone','chckimod','chckyahoo','chckez');
+	});	
+	
+	jQuery('#checksumatoSpan').click(function( ){
+		chckClick();
+	});	
+
+	if ((screen.width<=1024) && (screen.height<=768)){
+		jQuery('#foot_right').css('paddingTop','0px');
+		jQuery('.divbackImage').css('height','462px');
+
+	}
+	else if ((screen.width==1280) && (screen.height==1024)){
+
+		jQuery('#foot_right').css('paddingTop','252px');
+
+	}
+	else {
+		jQuery('#foot_right').css('paddingTop','7px');
+	}
+	
+});
+
+function goback() {
+window.history.go(-1);
+}
+
+function getElementViewLeft(element){
+			
+　　　　var actualLeft = element.offsetLeft;
+　　　　var current = element.offsetParent;
+
+　　　　while (current !== null){
+　　　　　　actualLeft += current.offsetLeft;
+　　　　　　current = current.offsetParent;
+　　　　}
+
+　　　　if (document.compatMode == "BackCompat"){
+　　　　　　var elementScrollLeft=document.body.scrollLeft;
+　　　　} else {
+　　　　　　var elementScrollLeft=document.documentElement.scrollLeft; 
+　　　　}
+
+　　　　return actualLeft-elementScrollLeft;
+　　}
+
+　　function getElementViewTop(element){
+　　　　var actualTop = element.offsetTop;
+　　　　var current = element.offsetParent;
+
+　　　　while (current !== null){
+　　　　　　actualTop += current.offsetTop;
+　　　　　　current = current.offsetParent;
+　　　　}
+
+　　　　 if (document.compatMode == "BackCompat"){
+　　　　　　var elementScrollTop=document.body.scrollTop;
+　　　　} else {
+　　　　　　var elementScrollTop=document.documentElement.scrollTop; 
+　　　　}
+
+　　　　return actualTop-elementScrollTop;
+　　}
+
+function show_guest_info(){
+	jQuery(".guest_info").toggle("fast");
+	var kibou_btn = document.getElementById('show_kibou_btn_sp');
+	var index = kibou_btn.innerHTML;
+
+	switch(index){
+		case '≫詳細を表示する':{
+			kibou_btn.innerHTML = '≪詳細を閉じる';
+			break;
+		}
+		case '≪詳細を閉じる':{
+			kibou_btn.innerHTML = '≫詳細を表示する';
+			break;
+		}
+	}	
+}
+
+</script>
+
+</head>
+	</head>
+	<body onload="overflow()">
+		<div id="container">
+		<iframe id="content_frame" name="content_frame" class="ukg02_common" marginwidth="0" marginheight="0" width="100%" height="64px" src="pageHead.html" frameborder=0 pageId="help_ukg02020.html" style="overflow-y:hidden"></iframe>						
+		<div id="main" >	
+		<ul class="kokyaku-menu">
+			<li onclick="javascript:tabpage('UKG02010.html');" id="lnkKoukayku">
+				<div style="display:none" class="mitouroku_icon" id="image1">未登録</div>
+			</li>
+			<li class="active" id="lnkAnketo">
+				<div style="display:none" class="mitouroku_icon" id="image2">未登録</div>
+			</li>
+			<li onclick="javascript:tabpage('UKG02030.html');" id="lnkKibouJyouken">
+				<div style="display:block" class="mitouroku_icon" id="image3">未登録</div>
+			</li>
+			<li onclick="javascript:tabpage('UKG02040.html');" id="lnkShoudanRireki">
+			</li>
+		</ul>
+	<div id="middle" class="divbackColor">
+		<div id="middle" class="divbackImage">	
+			<form>
+			<div class="photobox" style="float:right;z-index:1;position:relative; width: 225px;">
+			<div class="heya_div angled-pink stripes inhert_window_pink photoshadow" style="width: 203px; margin-top: 4px">
+				<table class="inhert_window_background" cellspacing="0" width="203px" style="background:#FAF5F5;">
+								<tr class="inhert_window_bar">
+									<td valign="middle" class="font_large_b" colspan="2" style="background-image:linear-gradient(#ffcdd2, #ef9a9a);">
+										<div style="padding:9px 42px 3px 2px;float:right;height:20px;">
+											<span class="font_large_b_enji">お&nbsp;客&nbsp;様&nbsp;情&nbsp;報</span>
+										</div>
+									</td>
+								</tr>
+								<tr  height="10px"><td colspan=3></td></tr>
+								<tr  height="23px">
+									<td width="21px"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b">受付№ - </span>12-345-678</td></tr>		
+								<tr  height="23px">
+									<td width="21px"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b" title="2011/07/23">受付日 - </span>2011/07/23</td></tr>
+								<tr  height="35px">
+									<td width="21px" valign="top" style="padding-top:6px;"><div class="font_normal_b" style="margin-left:10px" >・</div></td>
+									<td class="font_normal"><span class="font_normal_b" >お客様名 - </span>
+									  <div style="width:100px;float:right;margin-right:5px" title="NTTドコモモバイル株式会社様"><a href="UKG02010.html"><span class="font_blue">NTTドコモモバイル株式会社</span></a> 様</div></td></tr>
+								<tr id="uketuke_date"  height="23px">
+									<td width="21px"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b">進捗状況 - </span>商談中</td></tr>
+								<tr class="guest_info" style="display:none;" height="35px">
+									<td width="21px" valign="top" style="padding-top:6px;"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b">電話番号 - </span>
+								<div style="width:105px;float:right;margin-right:3px" title="19時～22時土日は終了する予定">052-123-4567<br/>(19時～22時土日...</div></td></tr>
+								<tr class="guest_info" style="display:none;" height="35px">
+									<td width="21px" valign="top" style="padding-top:6px;"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b">携帯番号 - </span>
+									  <div style="width:105px;float:right;margin-right:3px" title="19時～22時土日は終了する予定">052-123-4567<br/>(19時～22時土日...</div></td></tr>
+								<tr class="guest_info" style="display:none;" height="35px">
+									<td width="21px" valign="top" style="padding-top:6px;"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b">FAX番号 - </span>
+									  <div style="width:105px;float:right;margin-right:3px" title="19時～22時土日は終了する予定">052-123-4567<br/>(19時～22時土日...</div></td></tr>
+								<tr class="guest_info" style="display:none;" height="25px">
+									<td width="21px"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b" title="123456@token.jp">Eメール - </span>123456@token.jp</td></tr>
+								<tr class="guest_info" style="display:none;" height="25px">
+									<td width="21px"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b">携帯メール - </span>abc@token.jp</td></tr>
+								<tr  height="25px">
+									<td width="21px"><div class="font_normal_b" style="margin-left:10px">・</div></td>
+									<td class="font_normal"><span class="font_normal_b">当店のご利用 - </span>初めて</td></tr>								
+								<tr  height="25px"><td colspan=2 align="right" style="padding-right:15px"><a href="javascript:show_guest_info()"><span id="show_kibou_btn_sp" class="font_blue">≫詳細を表示する</span></a></td></tr>
+								</tr>	
+								<tr><td colspan=2 valign="top" align="center">
+									<div style="border-bottom:1px dotted #BEBEC0;width:198px;margin-top:6px;"></div>
+								</td></tr>
+								<!--<tr id="uketuke_date" style="background-color:#FFF" height="28px">
+									<td width="20px"><div class="cirTrgreen" style="margin-top:-2px"><div>?</div></div></td>
+									<td class="font_normal_b">メ&nbsp;モ</td></tr>
+								<tr id="uketuke_date" style="background-color:#FFF" height="28px">
+									<td colspan=2 class="font_normal"> 							
+											<textarea id="guest_memo" name="guest_memo" class="txtmode1 memo2" style="width:178px;margin-bottom:6px;resize: none;line-height: 24px;" onfocus="clearText(this)" onchange="check()" onkeyup="check()" cols="20" rows="5">メモを登録できます。</textarea>									
+									</td></tr> -->
+				</table>
+			</div>
+			</div>
+			<div align = "center"  class="divMainTable" style="overflow:hidden;border:1px solid #cccccc;">
+				<div class="title-area font_big_bg_white">アンケートの登録</div>
+				<table class="MainTable">
+					<tr>
+						<td>
+							<div align="center" style="padding:10px 0 0 0">
+								<a class="btn primary btn_height" style="width:105px;font-weight:bold;" href="javascript:print_msg()">受付カード印刷</a>&nbsp;
+								<a class="btn primary btn_height" href="javascript:save_msg()" style="width:85px;font-weight:bold;">保&nbsp;&nbsp;存</a>&nbsp;
+								<a class="btn primary btn_height" href="javascript:confirmMessage();" style="width:85px;font-weight:bold;">キャンセル</a>							
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table cellspacing=0 width="710px" style=" margin-left:10px;margin-top:10px;">										
+								<tr>
+									<td align="left" valign="top" >
+										<div style="float:left">
+											<div class="UGKvbarSh">
+												<table cellspacing=0 style="padding-left:6px;float:left;" width="20px">
+													<tr><td colspan=3><div class="houseTop"></div></td></tr>
+													<tr><td width=2></td><td class="houseLeft"></td><td width=2></td></tr>
+												</table>
+												<div class="font_normal_b_white" style="padding:6px 0 2px 4px;float:left">来店アンケート</div>
+											</div>
+											<div class="UGKvbarTr"></div>
+										</div>
+										<div align="right"><span class="font_normal_b_red">※</span><span class="font_normal">＝必須情報</span></div>
+									</td>
+									</tr>
+									<tr>
+										<td class="UGKbarLine shadow"></td>
+									</tr>
+							</table>
+						</td>		
+					</tr>
+					<tr>
+						<td>
+							<table border = "0" class = "UGK1021Table">
+								<tr>
+									<td rowspan=2>
+										<div class = "UGKcolorBar22">
+										</div>
+									</td>
+									<td class="font_normal_b" style="padding:9px 0 0 0;border:0" colspan="3"> Q1.&nbsp;ご来店のきっかけをお聞かせください。(複数回答可) </td>
+								</tr>
+								<tr>
+									<td style="width: 147px;">
+										<div class="bg_org3" style="padding-right:0px;height:70px;">
+											<span class = "font_normal_b">広&nbsp;&nbsp;&nbsp;告</span><span class="font_normal_b_red">※</span>
+										</div>
+									</td>
+									<td>				
+										<!--広 告-->
+										<table class = "normalTable" style="margin-top: 3px;margin-left:2px">
+											<tr>
+												<td colspan="4"><input name="checkintesite"   id="checkintesite" type = "checkbox" 
+													class="checkbox" onclick="chckClick('checkintesite','chckhomnote','chckfudosan','checksumai')"/>
+												  <span class = "font_normal" id="checkintesiteSpan">インターネットサイト</span>
+												</td>												
+											</tr>
+											<tr>
+												<td colspan="4" style="height:20px">
+													<table  style="margin-left:-2px;" class = "normalTable">
+														<tr>
+															<td id="chckphonetd" style="height:26px">
+																<input name="chckphone"  id="chckphone" type = "checkbox" 
+																	class="checkbox"  onclick="chckClick('chckphone','chckimod','chckyahoo','chckez')"/>
+																<span class = "font_normal" id="chckphoneSpan">携帯サイト</span>
+															</td>
+															<td  style=" padding-left:10px;">
+																<span class = "font_normal" id="chckimodSpan1">（</span>
+																<input name="chckimod"  id="chckimod" type = "checkbox" class="checkbox"  disabled="disabled"/>
+																	<span class = "font_normal" id="chckimodSpan"  style="color:#000;cursor:default">iモード</span>
+															</td>
+															<td style = "padding: 0px 0px 0px 24px;" >
+																<input type = "checkbox"  id="chckyahoo" class="checkbox" disabled="disabled">
+																<span class = "font_normal" id="chckyahooSpan"  style="color:#000;cursor:default">Yahoo!ケータイ</span>
+															</td>
+															<td style = "padding: 0px 0px 0px 24px;">
+																<input type = "checkbox"  id="chckez" class="checkbox" disabled="disabled">
+																<span class = "font_normal" id="chckezSpan" style="color:#000;cursor:default" >EZweb）</span>
+																
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4" style="height:26px">
+													<input name="checksumato" id="checksumato" type = "checkbox"  class="checkbox"  onclick="chckClick()"/>
+													<span class = "font_normal" id="checksumatoSpan">スマートフォンサイト</span>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="checkbox" checked="checked" id="12" class="checkbox" name="12" value="on">		
+													<span class="normalSpan">
+													テレビ・ラジオ
+													</span>
+													<input type="checkbox" checked="checked" id="13" class="checkbox" name="13" value="on">
+													<span class="normalSpan">
+													新聞・チラシ
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td style="height:26px" colspan="4">
+													<input name="checkbox" type = "checkbox" class="checkbox" />
+													<span class = "font_normal">物件の垂幕・横幕・アクリル看板</span>
+												</td>
+											</tr>
+											<tr>
+												<td style="height:26px" colspan="4">
+													<input name="checkbox" type = "checkbox" class="checkbox" />
+													<span class = "font_normal">店頭看板・のぼり</span>
+												</td>
+											</tr>
+											<tr>
+												<td style="height:26px" colspan="4">
+													<input name="checkbox" type = "checkbox" class="checkbox" />
+													<span class = "font_normal">知人の紹介</span>
+												</td>
+											</tr>
+											<tr>
+												<td id="checksonotatd"  style="height:26px" >
+													<input name="checkbox"  id="chccksonota" type = "checkbox"  class="checkbox" 
+											onclick="chckClick('chcksonota2','txtsonota2')')"/>
+													<span class = "font_normal" id="sonota2Span" >その他&nbsp;</span>
+												</td>
+												<td >
+ 													<input id="inputsonota" type = "text" style = "width:230px;margin-left:-350px;background-color:#E6E6E6;" disabled="disabled" class="txtmode1" >	
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4" style=" padding-left:3px; padding-top:9px;">
+													【お部屋探しの検索時に使用したキーワードをお知らせ下さい】													
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4" style="height:36px" >
+													<input id="txtheyakeywd" class="txtmode1" type="text" style="width: 400px; margin-left:4px; margin-top: 6px; margin-bottom: 6px;" >
+												</td>
+											</tr>
+										</table>
+									</td>	
+								</tr>																
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table cellspacing=0 width="710px" style=" margin-left:10px;margin-top:10px;">										
+								<tr>
+									<td align="left" valign="top" >
+										<div class="UGKvbarSh">
+											<table cellspacing=0 style="padding-left:6px;float:left;" width="20px">
+												<tr><td colspan=3><div class="houseTop"></div></td></tr>
+												<tr><td width=2></td><td class="houseLeft"></td><td width=2></td></tr>
+											</table>
+											<div class="font_normal_b_white" style="padding:6px 0 2px 4px;float:left">転居理由</div>
+										</div>
+										<div class="UGKvbarTr"></div></td>
+									</tr>
+									<tr>
+										<td class="UGKbarLine shadow"></td>
+									</tr>
+							</table>
+						</td>		
+					</tr>
+					<tr>
+						<td>
+							<table border = "0" class = "UGK1021Table">																	
+								<tr>
+									<td rowspan=2 >
+										<div class = "UGKcolorBar41">
+										</div>
+									</td>
+									<td class="font_normal_b" style="padding:9px 0 0 0;border:0" colspan="3"> Q2.&nbsp;転居の理由をお聞かせください。(複数回答可) </td>
+								</tr>
+								<tr>
+									<td style="width: 96px;"><div class="bg_blue2">
+										<span class = "font_normal_b">転居理由</span><span class="font_normal_b_red">※</span></div>
+									</td>
+									<td>
+										<!--転居理由-->
+										<table class = "normalTable" style="margin-top: 3px;margin-left:2px">
+											<col width="65px">
+											<col width="65px">
+											<col width="65px">
+											<col width="65px">
+											<col width="65px">
+											<col width="65px">
+											<col width="70px">
+											<tr>
+												<td style="height:26px;">
+													<input name="checkbox" type = "checkbox" class="checkbox" style="margin-top:-2px"/>
+													<span class = "font_normal">就学</span>
+												</td>
+												<td >
+													<input name="checkbox" type = "checkbox" class="checkbox" style="margin-top:-2px"/>
+													<span class = "font_normal">就職</span>
+												</td>
+												<td style = "padding: 0px 0px 0px 10px;">
+													<input type = "checkbox" class="checkbox" style="margin-top:-2px">
+													<span class = "font_normal">転勤</span>
+												</td>
+												<td style = "padding: 0px 0px 0px 10px;">
+													<input type = "checkbox" class="checkbox" style="margin-top:-2px">
+													<span class = "font_normal">転職</span>
+												</td>
+												<td style = "padding: 0px 0px 0px 10px;">
+													<input type = "checkbox" class="checkbox" style="margin-top:-2px">
+													<span class = "font_normal">独立</span>
+												</td>
+												<td style = "padding: 0px 0px 0px 10px;">
+													<input type = "checkbox" class="checkbox" style="margin-top:-2px">
+													<span class = "font_normal">結婚</span>
+												</td>
+												<td style = "padding: 0px 0px 0px 10px;">
+													<input type = "checkbox" class="checkbox" style="margin-top:-2px">
+													<span class = "font_normal">住替え</span>
+												</td>
+											</tr>
+											<tr>
+												<td  id="checksonotatd2" style="padding-bottom:6px;height:26px" >
+													<input name="checkbox"  id="chcksonota2" type = "checkbox"  class="checkbox" 
+													onclick="chckClick('chcksonota2','txtsonota2')"/>
+													<span class = "font_normal" id="sonota2Span" >その他&nbsp;</span>
+												</td>
+												<td colspan="6" style=" padding-left:11px; padding-bottom:6px;">
+													<input type = "text"  id="txtsonota2" 
+													style = "width:230px;margin-left:2px; background-color:#E6E6E6"
+													 class="txtmode1" disabled="disabled">	
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div align = "center" style = "margin-top:10px; margin-bottom:10px;">
+								<a class="btn primary btn_height" style="width:105px;font-weight:bold;" href="javascript:print_msg()">受付カード印刷</a>&nbsp;
+								<a class="btn primary btn_height" href="javascript:save_msg()" style="width:85px;font-weight:bold;">保&nbsp;&nbsp;存</a>&nbsp;
+								<a class="btn primary btn_height" href="javascript:confirmMessage();" style="width:85px;font-weight:bold;">キャンセル</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			</form>	
+		</div>
+	</div>						
+		</div>
+		</div>
+		<div class="footer"></div>
+	</body>
+
+</html>

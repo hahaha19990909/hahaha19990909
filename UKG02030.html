@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG02030.css"></link>
+
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/thickbox.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/message.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/UKG02030.js"></script>
+<script type="text/javascript" src="../../js/help.js"></script>
+<script type="text/javascript" src="../../js/artDialog.js"></script>
+<title>Success21お部屋探しNAVI</title>
+</head>
+<body onload="resizeWindowSize()">
+    <div class="iframe-div"><iframe id="content_frame" class="top-title" name="content_frame" src="pageHead.html" ></iframe></div>
+        <div class="toppage">
+            <div class="toppage-space">&nbsp;</div>
+            <div class="menu-div">
+                <div class="menu_uketuke menu-color" id="kibouJoukenn" >ご希望条件</div>
+            </div>
+            <div class="menu-div">
+                <div class="menu_uketuke" id="okyakusamaMenu">お客様情報の登録</div>
+            </div>
+            <div class="menu-div">
+            	<!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                <!--<div class="menu_uketuke" id="shoudannNaiyouMenu">ご商談内容の確認</div>-->
+                <div class="menu_uketuke" id="shoudannNaiyouMenu">ご相談内容の確認</div>
+                <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+            </div>
+        </div>
+    <div id="container">
+        <div id="main">
+            <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <!--<img id="kibou-joukenn" src="../../image/ukg02030/kibou-joukenn.png">-->
+            <div id="kibou-joukenn">
+                <img src="../../image/ukg02030/kibou-joukenn.svg"/>
+            </div>
+            <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <div class="main-class-width">
+                <div class="mainCenterUKE2030-left">
+                    <div class="mainCenterUKE2030-left-content">
+                            <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                         <div class="senntaku"> -->
+<!--                              2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+<!--                             <div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02030.html"> -->
+<!--                                 <img class="syoukai-mark-img" src="../../image/common/icon/help.png"/> -->
+<!--                                 2019/01/02 ADD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+<!--                                 <span>このページの使い方</span> -->
+<!--                                 2019/01/02 ADD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+<!--                             </div> -->
+<!--                              2018/08/13 ADD END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+<!--                         </div> -->
+                            <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                        <div class="joukenn-senntaku-div">
+                            <!-- 2019/01/03 DEL START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                            <!-- <div class="shadow"></div> -->
+                            <!-- 2019/01/03 DEL END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                            <!-- 2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            <div class="heya_title" >
+                                <div class = "heya_info">
+                                    <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                    <!-- <span>お部屋探しの方法を選択してください。</span> -->
+                                    <span class="title-color1" >&nbsp;お部屋探しの方法&nbsp;</span><span style="font-size: 14pt">を選択してください</span>
+                                    <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                </div>
+                            </div>
+                            <!-- 2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            <ul class="joukenn-senntaku">
+                                <li>
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div>地域から</div> -->
+                                    <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <div class="font-color1">地域から</div> -->
+                                    <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <img id="chiiki" class="joukenn-senntaku-img" src="../../image/ukg02030/chiiki_disable.svg"> -->
+                                    <img id="chiiki" class="joukenn-senntaku-img" src="../../image/ukg02030/chiiki_disable.png">
+                                    <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </li>
+                                <li>
+                                    <!-- 2019/02/18 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div>地図から</div> -->
+                                    <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <div class="font-color1">地図から</div> -->
+                                    <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <img id="chizu" class="joukenn-senntaku-img" src="../../image/ukg02030/chizu_disable.svg"> -->
+                                    <img id="chizu" class="joukenn-senntaku-img" src="../../image/ukg02030/chizu_disable.png">
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </li>
+                                <li>
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div>路線&bull;駅から</div> -->
+                                    <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <div class="font-color2">路線&bull;駅から</div> -->
+                                    <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <img id="rosenn" class="joukenn-senntaku-img" src="../../image/ukg02030/rosenn_disable.svg"> -->
+                                    <img id="rosenn" class="joukenn-senntaku-img" src="../../image/ukg02030/rosenn_disable.png">
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </li>
+                                <li>
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div>通勤&bull;通学時間から</div> -->
+                                    <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <div class="font-color2">通勤&bull;通学時間から</div> -->
+                                    <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <img id="tsuukinn" class="joukenn-senntaku-img" src="../../image/ukg02030/tsuukinn_disable.svg"> -->
+                                    <img id="tsuukinn" class="joukenn-senntaku-img" src="../../image/ukg02030/tsuukinn_disable.png">
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </li>
+                                <li>
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div>バス停から</div> -->
+                                    <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <div class="font-color2">バス停から</div> -->
+                                    <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <img id="basutei" class="joukenn-senntaku-img" src="../../image/ukg02030/basutei_disable.svg"> -->
+                                    <img id="basutei" class="joukenn-senntaku-img" src="../../image/ukg02030/basutei_disable.png">
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </li>
+                                 <!--2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <li>-->
+                                    <!-- 2019/01/02 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div>写真から</div> -->
+                                    <!-- <div class="font-color3">写真から</div>-->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <img id="shashinn" class="joukenn-senntaku-img" src="../../image/ukg02030/shashinn_off.svg"> -->
+                                    <!-- </li> -->
+                                    <!-- <li> -->
+                                    <!-- 2019/01/02 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div>動画から</div> -->
+                                    <!-- <div class="font-color3">動画から</div> -->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <img id="douga" class="joukenn-senntaku-img" src="../../image/ukg02030/douga_off.svg"> -->
+                                    <!-- </li> -->
+                                    <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <li>
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!--2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <div class="font-color4">生活施設から</div> -->
+                                    <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <img id="seikatsu-shisetsu" class="seikatsu-shisetsu-photo joukenn-senntaku-img" src="../../image/ukg02030/seikatsu-shisetsu_disable.svg"> -->
+                                    <!-- 2020/3/16 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                    <!--<img id="seikatsu-shisetsu" class="seikatsu-shisetsu-photo joukenn-senntaku-img" src="../../image/ukg02030/seikatsu-shisetsu_disable.png">-->
+                                    <img id="seikatsu-shisetsu" class="seikatsu-shisetsu-photo joukenn-senntaku-img" src="../../image/ukg02030/seikatsu-shisetsu.png">
+                                    <!-- 2020/3/16 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </li>
+                                  <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <li> -->
+                                    <!-- 2019/01/02 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div>こだわり条件から</div> -->
+                                    <!-- <div class="font-color4">こだわり条件から</div> -->
+                                    <!-- 2019/01/02 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <img id="kodawarijoukenn" class="joukenn-senntaku-img" src="../../image/ukg02030/kodawari-joukenn_off.svg"> -->
+                                    <!-- </li> -->
+                                    <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            </ul>
+                            <div id="changeContent"></div>
+                        </div>
+                        <div class="chinntai-joukenn-color chinntai-joukenn-a">
+                           <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                             <div class="senntaku-a"></div> -->
+                           <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            <div class="chinntai-joukenn">
+                           <!-- 2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <div class="senntaku-a" >
+                                    <div class = "senntaku_info">
+                                        <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!-- <span>賃貸条件</span> -->
+                                        <span class="title-color2" >&nbsp;ご希望の条件&nbsp;</span><span style="font-size: 14pt">をお聞かせください</span>
+                                        <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    </div>
+                                </div>
+                           <!-- 2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                <!-- <div class="shadow"></div> -->
+                                <div class="joukenn-div">
+                                <!-- 2019/01/03 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                           <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div sannkakukei-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">1.&nbsp;&nbsp;物件種別を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div sannkakukei-teii chinntai-joukenn-height1"> -->
+                                <div class="sannkakukei-teii chinntai-joukenn-height1">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title">物件種別</div>
+                           <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div id="kyojyuu" class="kyojyuu UKE2030-btn-a UKE2030-btn-a-checked">居&nbsp;住&nbsp;用</div>
+                                        <div id="jgyou" class="jgyou UKE2030-btn-a">事&nbsp;業&nbsp;用</div>
+                                        <div id="tyuusya" class="tyuusya UKE2030-btn-a">駐&nbsp;車&nbsp;場</div>
+                                    </div>
+                                    <div class="sannkakukei-c"></div>
+                                    <div class="UKE2030-kyojuu-div">
+                                        <div class="UKE2030-btn-a UKE2030-btn-a-checked btn-position UKE2030-btn-one">アパート</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">マンション</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">戸建て</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">分譲賃貸</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">メゾネット</div>
+                                    </div>
+                                    <div class="sannkakukei-d"></div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                           <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">2.&nbsp;&nbsp;間取りを選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height2">
+                                    <div class="chinntai-joukenn-title">間&nbsp;取&nbsp;り</div>
+                           <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div class="UKE2030-btn-div"> -->
+                                    <div class="UKE2030-btn-div" style="margin-bottom: 0.16rem">
+                                    <!-- 2019/01/03 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <div class="UKE2030-btn-a UKE2030-btn-a-checked UKE2030-btn-position UKE2030-btn-two">1R</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">1K</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">1DK</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">1LDK</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">2K</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">2DK</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">2LDK</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">3K</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">3DK</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">3LDK</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">4K</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">4DK</div>
+                                        <div class="UKE2030-btn-a UKE2030-btn-position UKE2030-btn-two">4LDK以上</div>
+                                    </div>
+                                </div>
+                           <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">3.&nbsp;&nbsp;家賃を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3"> -->
+                                <div class="chinntai-joukenn-teii chinntai-joukenn-height3">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title">家&nbsp;&nbsp;&nbsp;&nbsp;賃</div>
+                           <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div class="UKE2030-btn-div"> -->
+                                    <div class="UKE2030-btn-div" style="margin-bottom: 0.16rem">
+                                    <!-- 2019/01/03 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <label class="chinntai-joukenn-label">
+                                            <select class="chinntai-joukenn-select">
+                                                <option value="1">5.0万円</option>
+                                                <option value="2">6.0万円</option>
+                                                <option value="3">7.0万円</option>
+                                                <option value="4">8.0万円</option>
+                                                <option value="5">9.0万円</option>
+                                            </select>
+                                        </label>
+                                        <span class="chuukann">~</span>
+                                        <label class="chinntai-joukenn-label chinntai-joukenn-label-a">
+                                            <select class="chinntai-joukenn-select">
+                                                <option value="1">10.0万円</option>
+                                                <option value="2">11.0万円</option>
+                                                <option value="3">12.0万円</option>
+                                                <option value="4">13.0万円</option>
+                                                <option value="5">14.0万円</option>
+                                            </select>
+                                        </label>
+                                        <!-- 2020/02/14 ADD START 陳龍龍(SYS) C44057_ご希望条件の追加 -->
+                                        <div class="kyoek_checkbox_div">
+                                            <div id="feiBiaoShi" class="feiBiaoShi divmain_checkbox">
+                                            </div>
+                                            <span class="divmain_checkboxnayoi checkbox-isiro6">共益費/管理費を含む</span>
+                                        </div>
+                                        <div class="kyoek_checkbox_div">
+                                            <div id="feiBiaoShi" class="feiBiaoShi divmain_checkbox">
+                                            </div>
+                                            <span class="divmain_checkboxnayoi checkbox-isiro6">駐車料金を含む</span>
+                                        </div>
+                                        <!-- 2020/02/14 ADD END 陳龍龍(SYS) C44057_ご希望条件の追加 -->
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!--  2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 </div> -->
+<!--                                 <div class="joukenn-div"> -->
+                                        <!--  2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">4.&nbsp;&nbsp;築年数を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height4">
+                                    <div class="chinntai-joukenn-title">築&nbsp;年&nbsp;数</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div class="UKE2030-btn-b UKE2030-btn-b-checked UKE2030-btn-position UKE2030-btn-four">指定なし</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">新 築(1年以内)</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">2年以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">5年以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">10年以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">15年以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">20年以内</div>
+                                        <!-- 2020/02/14 ADD START 陳龍龍(SYS) C44057_ご希望条件の追加 -->
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">30年以内</div>
+                                        <!-- 2020/02/14 ADD END 陳龍龍(SYS) C44057_ご希望条件の追加 -->
+                                    </div>
+                                </div>
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">5.&nbsp;&nbsp;駅からの徒歩分を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3">
+                                    <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                    <!-- <div class="chinntai-joukenn-title">駅からの徒歩分</div> -->
+                                    <div class="chinntai-joukenn-title2">駅からの<br>徒歩分</div>
+                                    <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div class="UKE2030-btn-b UKE2030-btn-b-checked UKE2030-btn-position UKE2030-btn-five">指定なし</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-five">3分以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-five">5分以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-five">10分以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-five">15分以内</div>
+                                    </div>
+                                </div>
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">6.&nbsp;&nbsp;専有面積を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3"> -->
+                                <div class="chinntai-joukenn-teii chinntai-joukenn-height3">
+                                <!-- 2020/10/12 UPD EMD   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title">専有面積</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label-b">
+                                            <select class="chinntai-joukenn-select-b">
+                                                <option value="1">下限なし</option>
+                                                <option value="2">10㎡</option>
+                                                <option value="3">20㎡</option>
+                                                <option value="4">30㎡</option>
+                                                <option value="5">50㎡</option>
+                                                <option value="6">100㎡</option>
+                                                <option value="7">300㎡</option>
+                                                <option value="8">500㎡</option>
+                                                <option value="9">1000㎡</option>
+                                                <option value="10">上限なし</option>
+                                            </select>
+                                        </label>
+                                        <span class="chuukann">~</span>
+                                        <label class="chinntai-joukenn-label-b chinntai-joukenn-label-c">
+                                            <select class="chinntai-joukenn-select-b">
+                                                <option value="1">下限なし</option>
+                                                <option value="2">10㎡</option>
+                                                <option value="3">20㎡</option>
+                                                <option value="4">30㎡</option>
+                                                <option value="5">50㎡</option>
+                                                <option value="6">100㎡</option>
+                                                <option value="7">300㎡</option>
+                                                <option value="8">500㎡</option>
+                                                <option value="9">1000㎡</option>
+                                                <option value="10" selected="selected">上限なし</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="livingroom"> -->
+<!--                                     <img class="livingroom-img" src="../../image/ukg02030/living-room.svg"> -->
+<!--                                 </div> -->
+                                        <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 </div> -->
+<!--                                 <div class="joukenn-div"> -->
+                                        <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 --> <!--  2019/02/01 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">7.&nbsp;&nbsp;駐車場の有無を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3">
+                                    <div class="chinntai-joukenn-title">駐車場の有無</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-c-checked UKE2030-btn-seven">要</div>
+                                        <div class="kakko">&nbsp;&nbsp;&nbsp;&nbsp;(&nbsp;&nbsp;</div>
+                                        <label class="chinntai-joukenn-label-d chuushajou-label" >
+                                            <select class="chinntai-joukenn-select-d">
+                                                <option value="1">1台</option>
+                                                <option value="2">2台</option>
+                                                <option value="3">3台</option>
+                                                <option value="4">4台</option>
+                                            </select>
+                                        </label>
+                                        <div class="kakko">&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-seven">不&nbsp;&nbsp;要</div>
+                                    </div>
+                                </div>
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">8.&nbsp;&nbsp;入居人数を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3">
+                                    <div class="chinntai-joukenn-title">入居人数</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div class="nyuukyo-ninnzuu-a UKE2030-btn-position">大人&nbsp;&nbsp;</div>
+                                        <label class="chinntai-joukenn-label-d">
+                                            <select class="chinntai-joukenn-select-d">
+                                                <option value="1">2人</option>
+                                                <option value="2">3人</option>
+                                                <option value="3">4人</option>
+                                                <option value="4">5人</option>
+                                            </select>
+                                        </label>
+                                        <div class="nyuukyo-ninnzuu-b UKE2030-btn-position">&nbsp;&nbsp;子供</div>
+                                        <label class="chinntai-joukenn-label-d">
+                                            <select class="chinntai-joukenn-select-d">
+                                                <option value="1">1人</option>
+                                                <option value="2">2人</option>
+                                                <option value="3">3人</option>
+                                                <option value="4">4人</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!--  2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <div class="livingroom">
+                                    <img class="livingroom-img" src="../../image/ukg02030/living-room.png">
+                                </div>
+                                <!--  2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- 2020/03/20 ADD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3 kibouheya_kassei">
+                                    <div class="chinntai-joukenn-title"><span id="lblNyukyoDate">希望部屋数</span></div>
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label-b">
+                                            <select class="chinntai-joukenn-select-b">
+                                                <option value="1">1室</option>
+                                                <option value="2">2室</option>
+                                                <option value="3">3室</option>
+                                                <option value="4">4室</option>
+                                                <option value="5">5室</option>
+                                                <option value="6">6室</option>
+                                                <option value="7">7室</option>
+                                                <option value="8">8室</option>
+                                                <option value="9">9室</option>
+                                                <option value="10">10室</option>
+                                                <option value="11">11室</option>
+                                                <option value="12">12室</option>
+                                                <option value="13">13室</option>
+                                                <option value="14">14室</option>
+                                                <option value="15">15室</option>
+                                                <option value="16">16室</option>
+                                                <option value="17">17室</option>
+                                                <option value="18">18室</option>
+                                                <option value="19">19室</option>
+                                                <option value="20">20室</option>
+                                                <option value="21">21室</option>
+                                                <option value="22">22室</option>
+                                                <option value="23">23室</option>
+                                                <option value="24">24室</option>
+                                                <option value="25">25室</option>
+                                                <option value="26">26室</option>
+                                                <option value="27">27室</option>
+                                                <option value="28">28室</option>
+                                                <option value="29">29室</option>
+                                                <option value="30">30室以上</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 2020/03/20 ADD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                 <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">9.&nbsp;&nbsp;<span id="lblNyukyoDate">入居時期</span>を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3 chinntai-joukenn-foot-line">
+                                    <div class="chinntai-joukenn-title"><span id="lblNyukyoDate">入居時期</span></div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-e">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-e">
+                                                <option value="1">2017年</option>
+                                                <option value="2">2018年</option>
+                                                <option value="3">2019年</option>
+                                                <option value="4">2020年</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="1">1月</option>
+                                                <option value="2">2月</option>
+                                                <option value="3">3月</option>
+                                                <option value="4">4月</option>
+                                                <option value="5">5月</option>
+                                                <option value="6">6月</option>
+                                                <option value="7">7月</option>
+                                                <option value="8">8月</option>
+                                                <option value="9">9月</option>
+                                                <option value="10" selected="selected">10月</option>
+                                                <option value="11">11月</option>
+                                                <option value="12">12月</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="1">上旬</option>
+                                                <option value="2">中旬</option>
+                                                <option value="3">下旬</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="1">頃</option>
+                                                <option value="2">まで</option>
+                                            </select>
+                                        </label>
+                                        <div class="nyuukyo-ninnzuu-b nyuukyojiki-line">&nbsp;&nbsp;/</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-nine">即&nbsp;&nbsp;時</div>
+                                    </div>
+                                </div>
+                                <!-- 2019/01/03 ADD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                 <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="parking"> -->
+<!--                                     <img class="parking-img" src="../../image/ukg02030/parking.svg"> -->
+<!--                                 </div> -->
+                                        <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </div>
+                                <!-- 2019/01/03 ADD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                            </div>
+                        </div>
+                        <div class="chinntai-joukenn-color chinntai-joukenn-b">
+                                        <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                             <div class="senntaku-a"></div> -->
+                                        <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            <div class="chinntai-joukenn">
+                                        <!--  2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <div class="senntaku-a" >
+                                    <div class = "senntaku_info">
+                                        <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!-- <span>賃貸条件</span> -->
+                                        <span class="title-color2" >&nbsp;ご希望の条件&nbsp;</span><span style="font-size: 14pt">をお聞かせください</span>
+                                        <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    </div>
+                                </div>
+                                        <!--  2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                <!-- <div class="shadow"></div> -->
+                                <div class="joukenn-div">
+                                <!-- 2019/01/03 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div sannkakukei-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">1.&nbsp;&nbsp;物件種別を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div sannkakukei-teii chinntai-joukenn-height1"> -->
+                                <div class="sannkakukei-teii chinntai-joukenn-height1">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title">物件種別</div>
+                                    <div class = "chinntai-joukenn-info">
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div id="kyojyuu" class="kyojyuu UKE2030-btn-a ">居&nbsp;住&nbsp;用</div>
+                                        <div id="jgyou" class="jgyou UKE2030-btn-a UKE2030-btn-a-checked">事&nbsp;業&nbsp;用</div>
+                                        <div id="tyuusya" class="tyuusya UKE2030-btn-a">駐&nbsp;車&nbsp;場</div>
+                                    </div>
+                                    <div class="sannkakukei-c"></div>
+                                    <div class="UKE2030-kyojuu-div">
+                                        <div class="UKE2030-btn-a UKE2030-btn-a-checked btn-position UKE2030-btn-one">店&nbsp;&nbsp;舗</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">事務所</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">倉&nbsp;&nbsp;庫</div>
+                                    </div>
+                                    <div class="sannkakukei-d"></div>
+                                </div>
+                                        <!--  2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!--  2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">2.&nbsp;&nbsp;賃料を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3">
+                                    <div class="chinntai-joukenn-title">賃料</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div class="UKE2030-btn-div"> -->
+                                    <div class="UKE2030-btn-div" style="margin-bottom: 0.16rem">
+                                    <!-- 2019/01/03 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <label class="chinntai-joukenn-label">
+                                            <select class="chinntai-joukenn-select">
+                                                <option value="1">5.0万円</option>
+                                                <option value="2">6.0万円</option>
+                                                <option value="3">7.0万円</option>
+                                                <option value="4">8.0万円</option>
+                                                <option value="5">9.0万円</option>
+                                            </select>
+                                        </label>
+                                        <span class="chuukann">~</span>
+                                        <label class="chinntai-joukenn-label chinntai-joukenn-label-a">
+                                            <select class="chinntai-joukenn-select">
+                                                <option value="1">10.0万円</option>
+                                                <option value="2">11.0万円</option>
+                                                <option value="3">12.0万円</option>
+                                                <option value="4">13.0万円</option>
+                                                <option value="5">14.0万円</option>
+                                            </select>
+                                        </label>
+                                        <!-- 2020/02/14 ADD START 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+                                        <div class="kyoek_checkbox_div">
+                                            <div id="feiBiaoShi" class="feiBiaoShi divmain_checkbox">
+                                            </div>
+                                            <span class="divmain_checkboxnayoi checkbox-isiro6">共益費/管理費を含む</span>
+                                        </div>
+                                        <div class="kyoek_checkbox_div">
+                                            <div id="feiBiaoShi" class="feiBiaoShi divmain_checkbox">
+                                            </div>
+                                            <span class="divmain_checkboxnayoi checkbox-isiro6">駐車料金を含む</span>
+                                        </div>
+                                        <!-- 2020/02/14 ADD END 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+                                    </div>
+                                </div>
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">3.&nbsp;&nbsp;初期費用の合計。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3"> -->
+                                <div class="chinntai-joukenn-teii chinntai-joukenn-height3">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title">初期費用</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label chinntai-joukenn-label-a">
+                                            <select class="chinntai-joukenn-select">
+                                                <option value="1">指定なし</option>
+                                                <option value="2">5.0万円</option>
+                                                <option value="3">10.0万円</option>
+                                                <option value="4" selected="selected">15.0万円</option>
+                                                <option value="5">20.0万円</option>
+                                            </select>
+                                        </label>
+                                        <!--  2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                                        <div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02030ShokiHiyou.html">
+                                            <img class="syoukai-mark-img" src="../../image/common/icon/help.png"/>
+                                        </div>
+                                        <!--  2018/08/13 ADD END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 </div> -->
+<!--                                 </div> -->
+<!--                                 <div class="joukenn-div"> -->
+                                        <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">4.&nbsp;&nbsp;築年数を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height4">
+                                    <div class="chinntai-joukenn-title">築年数</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div class="UKE2030-btn-b UKE2030-btn-b-checked UKE2030-btn-position UKE2030-btn-four">指定なし</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">新 築(1年以内)</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">3年以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">5年以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">10年以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">15年以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">20年以内</div>
+                                        <!-- 2020/02/14 ADD START 陳龍龍(SYS) C44057_ご希望条件の追加 -->
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-four">30年以内</div>
+                                        <!-- 2020/02/14 ADD END 陳龍龍(SYS) C44057_ご希望条件の追加 -->
+                                    </div>
+                                </div>
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">5.&nbsp;&nbsp;駅からの徒歩分を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3">
+                                    <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                    <!-- <div class="chinntai-joukenn-title">駅からの徒歩分</div> -->
+                                    <div class="chinntai-joukenn-title2">駅からの<br>徒歩分</div>
+                                    <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div class="UKE2030-btn-b UKE2030-btn-b-checked UKE2030-btn-position UKE2030-btn-five">指定なし</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-five">3分以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-five">5分以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-five">10分以内</div>
+                                        <div class="UKE2030-btn-b UKE2030-btn-position UKE2030-btn-five">15分以内</div>
+                                    </div>
+                                </div>
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">6.&nbsp;&nbsp;専有面積を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3"> -->
+                                <div class="chinntai-joukenn-teii chinntai-joukenn-height3">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title">専有面積</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label-b">
+                                            <select class="chinntai-joukenn-select-b">
+                                                <option value="1">下限なし</option>
+                                                <option value="2">10㎡</option>
+                                                <option value="3">20㎡</option>
+                                                <option value="4">30㎡</option>
+                                                <option value="5">50㎡</option>
+                                                <option value="6">100㎡</option>
+                                                <option value="7">300㎡</option>
+                                                <option value="8">500㎡</option>
+                                                <option value="9">1000㎡</option>
+                                                <option value="10">上限なし</option>
+                                            </select>
+                                        </label>
+                                        <span class="chuukann">~</span>
+                                        <label class="chinntai-joukenn-label-b chinntai-joukenn-label-c">
+                                            <select class="chinntai-joukenn-select-b">
+                                                <option value="1">下限なし</option>
+                                                <option value="2">10㎡</option>
+                                                <option value="3">20㎡</option>
+                                                <option value="4">30㎡</option>
+                                                <option value="5">50㎡</option>
+                                                <option value="6">100㎡</option>
+                                                <option value="7">300㎡</option>
+                                                <option value="8">500㎡</option>
+                                                <option value="9">1000㎡</option>
+                                                <option value="10" selected="selected">上限なし</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="livingroom"> -->
+<!--                                     <img class="livingroom-img" src="../../image/ukg02030/living-room.svg"> -->
+<!--                                 </div> -->
+<!--                                 </div> -->
+<!--                                 <div class="joukenn-div"> -->
+                                        <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">7.&nbsp;&nbsp;駐車場の有無を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3">
+                                    <div class="chinntai-joukenn-title">駐車場の有無</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-c-checked UKE2030-btn-seven">要</div>
+                                        <div class="kakko">&nbsp;&nbsp;&nbsp;&nbsp;(&nbsp;&nbsp;</div>
+                                        <label class="chinntai-joukenn-label-d chuushajou-label">
+                                            <select class="chinntai-joukenn-select-d">
+                                                <option value="0"></option>
+                                                <option value="1">1台</option>
+                                                <option value="2">2台</option>
+                                                <option value="3">3台</option>
+                                                <option value="4">4台</option>
+                                            </select>
+                                        </label>
+                                        <div class="kakko">&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-seven">不&nbsp;&nbsp;要</div>
+                                    </div>
+                                </div>
+                                <!-- 2020/04/10 ADD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3 kibouheya_kassei">
+                                    <div class="chinntai-joukenn-title"><span id="lblNyukyoDate">希望部屋数</span></div>
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label-b">
+                                            <select class="chinntai-joukenn-select-b">
+                                                <option value="1">1室</option>
+                                                <option value="2">2室</option>
+                                                <option value="3">3室</option>
+                                                <option value="4">4室</option>
+                                                <option value="5">5室</option>
+                                                <option value="6">6室</option>
+                                                <option value="7">7室</option>
+                                                <option value="8">8室</option>
+                                                <option value="9">9室</option>
+                                                <option value="10">10室</option>
+                                                <option value="11">11室</option>
+                                                <option value="12">12室</option>
+                                                <option value="13">13室</option>
+                                                <option value="14">14室</option>
+                                                <option value="15">15室</option>
+                                                <option value="16">16室</option>
+                                                <option value="17">17室</option>
+                                                <option value="18">18室</option>
+                                                <option value="19">19室</option>
+                                                <option value="20">20室</option>
+                                                <option value="21">21室</option>
+                                                <option value="22">22室</option>
+                                                <option value="23">23室</option>
+                                                <option value="24">24室</option>
+                                                <option value="25">25室</option>
+                                                <option value="26">26室</option>
+                                                <option value="27">27室</option>
+                                                <option value="28">28室</option>
+                                                <option value="29">29室</option>
+                                                <option value="30">30室以上</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 2020/04/10 ADD END 楊朋朋(SYS) C44072_不具合対応 -->
+
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-border"> -->
+<!--                                     <div class="chinntai-joukenn-title">8.&nbsp;&nbsp;<span id="lblNyukyoDate">入居時期</span>を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-border chinntai-joukenn-height3">
+                                    <div class="chinntai-joukenn-title"><span id="lblNyukyoDate">入居時期</span></div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-e">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-e">
+                                                <option value="0"></option>
+                                                <option value="1">2017年</option>
+                                                <option value="2">2018年</option>
+                                                <option value="3">2019年</option>
+                                                <option value="4">2020年</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="0"></option>
+                                                <option value="1">1月</option>
+                                                <option value="2">2月</option>
+                                                <option value="3">3月</option>
+                                                <option value="4">4月</option>
+                                                <option value="5">5月</option>
+                                                <option value="6">6月</option>
+                                                <option value="7">7月</option>
+                                                <option value="8">8月</option>
+                                                <option value="9">9月</option>
+                                                <option value="10" selected="selected">10月</option>
+                                                <option value="11">11月</option>
+                                                <option value="12">12月</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="0"></option>
+                                                <option value="1">上旬</option>
+                                                <option value="2">中旬</option>
+                                                <option value="3">下旬</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="0"></option>
+                                                <option value="1">頃</option>
+                                                <option value="2">まで</option>
+                                            </select>
+                                        </label>
+                                        <div class="nyuukyo-ninnzuu-b nyuukyojiki-line">&nbsp;&nbsp;/</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-nine">即&nbsp;&nbsp;時</div>
+                                    </div>
+                                </div>
+                                <!-- 2019/01/03 ADD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                 <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="parking"> -->
+<!--                                     <img class="parking-img" src="../../image/ukg02030/parking.svg"> -->
+<!--                                 </div> -->
+                                        <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </div>
+                                <!-- 2019/01/03 ADD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                            </div>
+                        </div>
+                        <div class="chinntai-joukenn-color chinntai-joukenn-c">
+<!--                             <div class="senntaku-a"></div> -->
+                            <div class="chinntai-joukenn">
+                                <div class="senntaku-a" >
+                                    <div class = "senntaku_info">
+                                        <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!-- <span>賃貸条件</span> -->
+                                        <span class="title-color2" >&nbsp;ご希望の条件&nbsp;</span><span style="font-size: 14pt">をお聞かせください</span>
+                                        <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    </div>
+                                </div>
+                                <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                <!-- <div class="shadow"></div> -->
+                                <div class="joukenn-div">
+                                <!-- 2019/01/03 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div sannkakukei-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">1.&nbsp;&nbsp;物件種別を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div sannkakukei-teii chinntai-joukenn-height1"> -->
+                                <div class="sannkakukei-teii chinntai-joukenn-height1">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title">物件種別</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div id="kyojyuu" class="kyojyuu UKE2030-btn-a">居&nbsp;住&nbsp;用</div>
+                                        <div id="jgyou" class="jgyou UKE2030-btn-a">事&nbsp;業&nbsp;用</div>
+                                        <div id="tyuusya" class="tyuusya UKE2030-btn-a UKE2030-btn-a-checked">駐&nbsp;車&nbsp;場</div>
+                                    </div>
+                                    <div class="sannkakukei-c"></div>
+                                    <div class="UKE2030-kyojuu-div">
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">舗&nbsp;&nbsp;装</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">未舗装</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">屋根付</div>
+                                        <div class="UKE2030-btn-a btn-position UKE2030-btn-one">立&nbsp;&nbsp;体</div>
+                                    </div>
+                                    <div class="sannkakukei-d"></div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- 2019/01/03 ADD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 </div> -->
+<!--                                 <div class="joukenn-div"> -->
+                                        <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- 2019/01/03 ADD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">2.&nbsp;&nbsp;駐車料金を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3"> -->
+                                <div class="chinntai-joukenn-teii chinntai-joukenn-height3">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title">駐車料金</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label-g">
+                                            <select class="chinntai-joukenn-select chinntai-joukenn-select-g">
+                                                <option value="1">5.0万円</option>
+                                                <option value="2">6.0万円</option>
+                                                <option value="3">7.0万円</option>
+                                                <option value="4">8.0万円</option>
+                                                <option value="5">9.0万円</option>
+                                            </select>
+                                        </label>
+                                        <span class="chuukann">~</span>
+                                        <label class="chinntai-joukenn-label-g chinntai-joukenn-label-h">
+                                            <select class="chinntai-joukenn-select chinntai-joukenn-select-g">
+                                                <option value="1">10.0万円</option>
+                                                <option value="2">11.0万円</option>
+                                                <option value="3">12.0万円</option>
+                                                <option value="4">13.0万円</option>
+                                                <option value="5">14.0万円</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- 2019/01/03 ADD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <!--  2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 </div> -->
+<!--                                 <div class="joukenn-div"> -->
+                                        <!--  2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- 2019/01/03 ADD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">3.&nbsp;&nbsp;駅からの徒歩分を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3"> -->
+                                <div class="chinntai-joukenn-teii chinntai-joukenn-height3">
+                                    <!-- <div class="chinntai-joukenn-title">駅からの徒歩分</div> -->
+                                    <div class="chinntai-joukenn-title2">駅からの<br>徒歩分</div>
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <div class="UKE2030-btn-c UKE2030-btn-c-checked UKE2030-btn-position UKE2030-btn-five">指定なし</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-five">3分以内</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-five">5分以内</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-five">10分以内</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-five">15分以内</div>
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv2"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- 2019/01/03 ADD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 </div> -->
+<!--                                 <div class="joukenn-div"> -->
+                                        <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- 2019/01/03 ADD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">4.&nbsp;&nbsp;駐車場の台数を選択してください。</div> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3">
+                                    <div class="chinntai-joukenn-title">駐車場の台数</div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- 2019/01/03 UPD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                    <!-- <div class="UKE2030-btn-div"> -->
+                                    <div class="UKE2030-btn-div" style="margin-bottom: 0.16rem">
+                                    <!-- 2019/01/03 UPD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                        <label class="chinntai-joukenn-label-d">
+                                            <select class="chinntai-joukenn-select-d">
+                                                <option value="1">1台</option>
+                                                <option value="2">2台</option>
+                                                <option value="3">3台</option>
+                                                <option value="4">4台</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                        <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                 <div class="chinntai-joukenn-div chinntai-joukenn-teii"> -->
+<!--                                     <div class="chinntai-joukenn-title">5.&nbsp;&nbsp;<span id="lblNyukyoDate">入庫時期</span>を選択してください。</div> -->
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-height3"> -->
+                                <div class="chinntai-joukenn-div chinntai-joukenn-teii chinntai-joukenn-border chinntai-joukenn-height3">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="chinntai-joukenn-title"><span id="lblNyukyoDate">入庫時期</span></div>
+                                        <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="UKE2030-btn-div">
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-e">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-e">
+                                                <option value="1">2017年</option>
+                                                <option value="2">2017年</option>
+                                                <option value="3">2017年</option>
+                                                <option value="4">2017年</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="1">1月</option>
+                                                <option value="2">2月</option>
+                                                <option value="3">3月</option>
+                                                <option value="4">4月</option>
+                                                <option value="5">5月</option>
+                                                <option value="6">6月</option>
+                                                <option value="7">7月</option>
+                                                <option value="8">8月</option>
+                                                <option value="9">9月</option>
+                                                <option value="10" selected="selected">10月</option>
+                                                <option value="11">11月</option>
+                                                <option value="12">12月</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="1">上旬</option>
+                                                <option value="2">中旬</option>
+                                                <option value="3">下旬</option>
+                                            </select>
+                                        </label>
+                                        <label class="chinntai-joukenn-label-d chinntai-joukenn-label-f">
+                                            <select class="chinntai-joukenn-select-d chinntai-joukenn-select-f">
+                                                <option value="1">頃</option>
+                                                <option value="2">まで</option>
+                                            </select>
+                                        </label>
+                                        <div class="nyuukyo-ninnzuu-b nyuukyojiki-line">&nbsp;&nbsp;/</div>
+                                        <div class="UKE2030-btn-c UKE2030-btn-position UKE2030-btn-nine">即&nbsp;&nbsp;&nbsp;&nbsp;時</div>
+                                    </div>
+                                </div>
+                                <!-- 2019/01/03 ADD START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+<!--                                 <div class="parking"> -->
+<!--                                     <img class="parking-img" src="../../image/ukg02030/parking.svg"> -->
+<!--                                 </div> -->
+                                </div>
+                                <!-- 2019/01/03 ADD END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                            </div>
+                        </div>
+
+                          <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                       <!-- <div class="chinntai-joukenn-color" id="nikiKodawari"> -->
+                       <!--     <div class="senntaku-b"></div> -->
+                       <!--     <div class="chinntai-joukenn"> -->
+                       <!--         <div class="shadow"></div> -->
+                       <!--         <div class="chinntai-joukenn-div"> -->
+                       <!--             <div class="UKE2030-btn-div"> -->
+                       <!--                 <div class="UKE2030-btn-d UKE2030-btn-d-checked UKE2030-btn-position UKE2030-btn-d-click">システムキッチン</div> -->
+                       <!--                 <div class="UKE2030-btn-d UKE2030-btn-position UKE2030-btn-d-click">追&nbsp;焚&nbsp;き</div> -->
+                       <!--                 <div class="UKE2030-btn-d UKE2030-btn-d-checked UKE2030-btn-position UKE2030-btn-d-click">駐&nbsp;車&nbsp;場</div> -->
+                       <!--                 <div class="UKE2030-btn-d UKE2030-btn-position UKE2030-btn-d-click">居室2階以上</div> -->
+                       <!--                 <div class="UKE2030-btn-d UKE2030-btn-d-checked UKE2030-btn-position UKE2030-btn-d-click">室内洗濯機置き場</div> -->
+                       <!--                 <div class="UKE2030-btn-d UKE2030-btn-position UKE2030-btn-d-click">エアコン</div> -->
+                       <!--                 <div class="UKE2030-btn-d UKE2030-btn-position UKE2030-btn-d-click">バス&bull;トイレ別</div> -->
+                       <!--             </div> -->
+                       <!--         </div> -->
+                       <!--     </div> -->
+                       <!-- </div> -->
+                         <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                        <div class="chinntai-joukenn-color" id="sonotaKodawari">
+                          <!--  2019/02/01 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                             <div class="senntaku-c"></div> -->
+                         <!--  2019/02/01 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                          <!--  2019/02/01 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                          <!--   <div class="chinntai-joukenn"> -->
+                            <div class="chinntai-joukenn1">
+                                <div class="senntaku-c" >
+                                    <div class = "senntaku_info">
+                                        <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                        <!-- <span>こだわり条件</span> -->
+                                        <span class="title-color3" >&nbsp;こだわり条件&nbsp;</span><span style="font-size: 14pt">をお聞かせください</span>
+                                        <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    </div>
+                                </div>
+                         <!--  2019/02/01 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- 2019/01/02 DEL START 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                <!-- <div class="shadow"></div> -->
+                                <!-- 2019/01/02 DEL END 胡嘉琳(SYS) C42036-不具合対応-BUG84 -->
+                                <div class="sonota-joukenn-teiji">
+                                    <div class="sonota-joukenn-teiji-a">
+                                    <!--  2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                         ※必須条件にした条件は、ボタンを２回クリックしてください。&nbsp;&nbsp;&nbsp;（ <div class="icon-hissu">必須条件</div> が表示されます。） -->
+                                        &nbsp;&nbsp;&nbsp;※必須条件にした条件は、ボタンを２回クリックしてください。&nbsp;&nbsp;&nbsp;(&nbsp;<div class="icon-hissu">必須条件</div>&nbsp;)が表示されます。
+                                    <!--  2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                    <div class="sonota-joukenn-teiji-b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;次に希望する条件は、ボタンを１回クリックしてください。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ポタンに色が付きます。</div>
+									<!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                                    
+                                    <!--  2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                     <div class="chinntai-joukenn-color" id="nikiKodawari">
+                                                <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                                <!-- <div class="senntaku-b"></div> -->
+                                        <!-- <div class="chinntai-joukenn"> -->
+                                          <!--   <div class="shadow"></div> -->
+                                           <!--  <div class="chinntai-joukenn-div"> -->
+                                                <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                                <!--  2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                            <div class="chinntai-joukenn2 chinntai-joukenn2-height">
+                                                <div class="chinntai-joukenn-title1">
+                                                      <span>人気の<br>こだわり条件</span>
+                                                </div>
+
+                                                <div class="UKE2030-btn-div">
+                                                    <div class="UKE2030-btn-d UKE2030-btn-d-checked UKE2030-btn-position UKE2030-btn-d-click">システムキッチン</div>
+                                                    <div class="UKE2030-btn-d UKE2030-btn-position UKE2030-btn-d-click">追&nbsp;焚&nbsp;き</div>
+                                                    <div class="UKE2030-btn-d UKE2030-btn-d-checked UKE2030-btn-position UKE2030-btn-d-click">駐&nbsp;車&nbsp;場</div>
+                                                    <div class="UKE2030-btn-d UKE2030-btn-position UKE2030-btn-d-click">居室2階以上</div>
+                                                    <div class="UKE2030-btn-d UKE2030-btn-d-checked UKE2030-btn-position UKE2030-btn-d-click">室内洗濯機置き場</div>
+                                                    <div class="UKE2030-btn-d UKE2030-btn-position UKE2030-btn-d-click">エアコン</div>
+                                                    <div class="UKE2030-btn-d UKE2030-btn-position UKE2030-btn-d-click">バス&bull;トイレ別</div>
+                                                </div>
+                                            </div>
+                                                <!--  2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                                <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+			                                       <!--  </div> -->
+			                                       <!--  </div> -->
+                                                <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <div class="backdiv"></div>
+                                    </div>
+                            <!--  2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </div>
+                                <div class="sonota-joukenn-div">
+                                    <div class="sonota-joukenn-test">
+                                        <div class="sonota-joukenn-test-a">室 内 設 備</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--    <div class="sonota-joukenn-test-b">- Room facilities -</div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="senn"> -->
+                                    <!--     <div class="senn-a"></div> -->
+                                    <!--     <div class="senn-b"></div> -->
+                                    <!-- </div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="sonota-joukenn-btn-div">
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-checked UKE2030-btn-e-position shitsunai-setsubi-select">フローリング</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-position shitsunai-setsubi-select">家具&bull;家電付</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-position shitsunai-setsubi-select">家&nbsp;具&nbsp;付</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-checked UKE2030-btn-e-position shitsunai-setsubi-select must">ロ&nbsp;フ&nbsp;ト</div>
+                                        <div class="icon-hissu hissu-joukenn">必須条件</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-position shitsunai-setsubi-select">クローゼット</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-position shitsunai-setsubi-select">ｳｫｰｸｲﾝｸﾛｰｾﾞｯﾄ</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-position shitsunai-setsubi-select">室内洗濯機置場</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-position shitsunai-setsubi-select">独立洗面所</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-position shitsunai-setsubi-select">パントリー</div>
+                                        <div class="UKE2030-btn-e UKE2030-btn-e-position shitsunai-setsubi-select">ｶﾞｽﾌｧﾝﾋｰﾀ対応</div>
+                                    </div>
+                                </div>
+                                <div class="sonota-joukenn-div">
+                                    <div class="sonota-joukenn-test">
+                                        <div class="sonota-joukenn-test-a">キ ッ チ ン</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--    <div class="sonota-joukenn-test-b">- Kitchen -</div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="senn"> -->
+                                    <!--     <div class="senn-a"></div> -->
+                                    <!--     <div class="senn-b"></div> -->
+                                    <!-- </div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="sonota-joukenn-btn-div">
+                                        <div class="UKE2030-btn-e kitchinn-color kitchinn-color-checked UKE2030-btn-e-position">システムキッチン</div>
+                                        <div class="UKE2030-btn-e kitchinn-color kitchinn-color-checked UKE2030-btn-e-position">カウンターキッチン</div>
+                                        <div class="UKE2030-btn-e kitchinn-color UKE2030-btn-e-position">アイランドキッチン</div>
+                                        <div class="UKE2030-btn-e kitchinn-color UKE2030-btn-e-position">オール電化</div>
+                                        <div class="UKE2030-btn-e kitchinn-color UKE2030-btn-e-position">ガスコンロ</div>
+                                        <div class="UKE2030-btn-e kitchinn-color UKE2030-btn-e-position">IHｸｯｷﾝｸﾞﾋｰﾀｰ</div>
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="sonota-joukenn-div"> -->
+                                <div class="sonota-joukenn-div2">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="sonota-joukenn-test">
+                                        <div class="sonota-joukenn-test-a">バス &bull; トイレ</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--    <div class="sonota-joukenn-test-b">- Bath&bull;Toilet -</div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="senn"> -->
+                                    <!--     <div class="senn-a"></div> -->
+                                    <!--     <div class="senn-b"></div> -->
+                                    <!-- </div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="sonota-joukenn-btn-div">
+                                        <div class="UKE2030-btn-e basu-toire-color basu-toire-color-checked UKE2030-btn-e-position">給&nbsp;&nbsp;&nbsp;&nbsp;湯</div>
+                                        <div class="UKE2030-btn-e basu-toire-color UKE2030-btn-e-position basu-toire-select">追&nbsp;焚&nbsp;き</div>
+                                        <div class="UKE2030-btn-e basu-toire-color basu-toire-color-checked UKE2030-btn-e-position must">浴室換気乾燥機</div>
+                                        <div class="icon-hissu hissu-joukenn">必須条件</div>
+                                        <div class="UKE2030-btn-e basu-toire-color UKE2030-btn-e-position">洗面化粧台</div>
+                                        <div class="UKE2030-btn-e basu-toire-color UKE2030-btn-e-position">洗髪洗面化粧台</div>
+                                        <div class="UKE2030-btn-e basu-toire-color UKE2030-btn-e-position">浴室テレビ</div>
+                                        <div class="UKE2030-btn-e basu-toire-color UKE2030-btn-e-position">ミストサウナ</div>
+                                        <div class="UKE2030-btn-e basu-toire-color basu-toire-color-checked UKE2030-btn-e-position">シャワー付トイレ</div>
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv3"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="sonota-joukenn-div">
+                                    <div class="sonota-joukenn-test">
+                                        <div class="sonota-joukenn-test-a">建 物 設 備</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--    <div class="sonota-joukenn-test-b">- Apartment facilities -</div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="senn"> -->
+                                    <!--     <div class="senn-a"></div> -->
+                                    <!--     <div class="senn-b"></div> -->
+                                    <!-- </div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="sonota-joukenn-btn-div">
+                                        <div class="UKE2030-btn-e tatemono-setsubi-color tatemono-setsubi-color-checked UKE2030-btn-e-position">エレベーター</div>
+                                        <div class="UKE2030-btn-e tatemono-setsubi-color tatemono-setsubi-color-checked UKE2030-btn-e-position">駐&nbsp;車&nbsp;場</div>
+                                        <div class="UKE2030-btn-e tatemono-setsubi-color UKE2030-btn-e-position">2台目駐車場</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--     <div class="UKE2030-btn-e tatemono-setsubi-color UKE2030-btn-e-checked UKE2030-btn-e-position">駐輪場(バイク可)</div> -->
+                                        <div class="UKE2030-btn-e tatemono-setsubi-color UKE2030-btn-e-position">駐輪場(バイク可)</div>
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <div class="UKE2030-btn-e tatemono-setsubi-color UKE2030-btn-e-position none-padding align-center" style="line-height: 0.95;">
+                                            <span>コンビニ3分<br>(240m以内)
+                                            </span>
+                                        </div>
+                                        <div class="UKE2030-btn-e tatemono-setsubi-color UKE2030-btn-e-position">高耐震&bull;制震設計</div>
+                                        <div class="UKE2030-btn-e tatemono-setsubi-color UKE2030-btn-e-position">角&nbsp;部&nbsp;屋</div>
+                                        <!-- 2020/03/19 ADD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                        <div class="UKE2030-btn-e tatemono-setsubi-color UKE2030-btn-e-position">都市ガス</div>
+                                        <!-- 2020/03/19 ADD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="sonota-joukenn-div"> -->
+                                <div class="sonota-joukenn-div2">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="sonota-joukenn-test sonota-joukenn-padding">
+                                        <div class="sonota-joukenn-test-a">専 用 機 能</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--    <div class="sonota-joukenn-test-b">- Building facilities -</div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="senn"> -->
+                                    <!--     <div class="senn-a"></div> -->
+                                    <!--     <div class="senn-b"></div> -->
+                                    <!-- </div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="sonota-joukenn-btn-div">
+                                        <div class="UKE2030-btn-e kinou-color kinou-color-checked UKE2030-btn-e-position">女性専用</div>
+                                        <div class="UKE2030-btn-e kinou-color kinou-color-checked UKE2030-btn-e-position">高齢者専用機能</div>
+                                        <div class="UKE2030-btn-e kinou-color UKE2030-btn-e-position">ペット同居専用機能</div>
+                                    <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--     <div class="UKE2030-btn-e kinou-color UKE2030-btn-e-checked UKE2030-btn-e-position">ガーデニング専用機能</div> -->
+                                        <div class="UKE2030-btn-e kinou-color UKE2030-btn-e-position">ガーデニング専用機能</div>
+                                    <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <div class="UKE2030-btn-e kinou-color UKE2030-btn-e-position">ペット相談可</div>
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 ADD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="backdiv3"></div>
+                                <!-- 2020/10/12 ADD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                <div class="sonota-joukenn-div">
+                                    <div class="sonota-joukenn-test sonota-joukenn-padding">
+                                        <div class="sonota-joukenn-test-a">セキュリティ</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--    <div class="sonota-joukenn-test-b">- Security -</div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="senn"> -->
+                                    <!--     <div class="senn-a"></div> -->
+                                    <!--     <div class="senn-b"></div> -->
+                                    <!-- </div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="sonota-joukenn-btn-div">
+                                        <div class="UKE2030-btn-e sekyuritexi-color sekyuritexi-color-checked UKE2030-btn-e-position must">オートロック</div>
+                                        <div class="icon-hissu hissu-joukenn">必須条件</div>
+                                        <div class="UKE2030-btn-e sekyuritexi-color sekyuritexi-color-checked UKE2030-btn-e-position">カメラ付インターホン</div>
+                                        <div class="UKE2030-btn-e sekyuritexi-color UKE2030-btn-e-position">防犯カメラ</div>
+                                    <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--     <div class="UKE2030-btn-e sekyuritexi-color UKE2030-btn-e-checked UKE2030-btn-e-position">24時間セキュリティ</div> -->
+                                        <div class="UKE2030-btn-e sekyuritexi-color UKE2030-btn-e-position">24時間セキュリティ</div>
+                                    <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                </div>
+                                <div class="sonota-joukenn-div">
+                                    <div class="sonota-joukenn-test sonota-joukenn-padding">
+                                        <div class="sonota-joukenn-test-a">通 信 環 境</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--    <div class="sonota-joukenn-test-b">- Internet environment -</div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="senn"> -->
+                                    <!--     <div class="senn-a"></div> -->
+                                    <!--     <div class="senn-b"></div> -->
+                                    <!-- </div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="sonota-joukenn-btn-div">
+                                        <div class="UKE2030-btn-e tsuushinn-color tsuushinn-color-checked UKE2030-btn-e-position">ブロードバンド対応</div>
+                                        <div class="UKE2030-btn-e tsuushinn-color tsuushinn-color-checked UKE2030-btn-e-position">光ファイバー</div>
+                                        <div class="UKE2030-btn-e tsuushinn-color UKE2030-btn-e-position">ｲﾝﾀｰﾈｯﾄ使用料無料</div>
+                                    <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--     <div class="UKE2030-btn-e tsuushinn-color UKE2030-btn-e-checked UKE2030-btn-e-position">ＢＳアンテナ</div> -->
+                                        <div class="UKE2030-btn-e tsuushinn-color UKE2030-btn-e-position">ＢＳアンテナ</div>
+                                    <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <div class="UKE2030-btn-e tsuushinn-color tsuushinn-color-checked UKE2030-btn-e-position">ＣＡＴＶ</div>
+                                    </div>
+                                </div>
+                                <!-- 2020/10/12 UPD START 横山(TK) C45019_社長指示デザイン修正 -->
+                                <!-- <div class="sonota-joukenn-div"> -->
+                                <div class="sonota-joukenn-div2">
+                                <!-- 2020/10/12 UPD END   横山(TK) C45019_社長指示デザイン修正 -->
+                                    <div class="sonota-joukenn-test">
+                                        <div class="sonota-joukenn-test-a">入 居 条 件</div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!--    <div class="sonota-joukenn-test-b">- conditions -</div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    </div>
+                                    <!--  2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="senn"> -->
+                                    <!--     <div class="senn-a"></div> -->
+                                    <!--     <div class="senn-b"></div> -->
+                                    <!-- </div> -->
+                                    <!--  2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="sonota-joukenn-btn-div">
+                                        <div class="UKE2030-btn-e nyuukyo-joukenn-color nyuukyo-joukenn-color-checked UKE2030-btn-e-position">事務所使用可</div>
+                                        <div class="UKE2030-btn-e nyuukyo-joukenn-color nyuukyo-joukenn-color-checked UKE2030-btn-e-position">友人同士(相談)可</div>
+                                        <div class="UKE2030-btn-e nyuukyo-joukenn-color UKE2030-btn-e-position">楽器(相談)可</div>
+                                    <!--  2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="UKE2030-btn-e nyuukyo-joukenn-color UKE2030-btn-e-checked UKE2030-btn-e-position">連帯保証人なし</div> -->
+                                         <div class="UKE2030-btn-e nyuukyo-joukenn-color UKE2030-btn-e-position">連帯保証人なし</div>
+                                    <!--  2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                        <div class="UKE2030-btn-e nyuukyo-joukenn-color UKE2030-btn-e-position">礼金ゼロ</div>
+                                        <div class="UKE2030-btn-e nyuukyo-joukenn-color UKE2030-btn-e-position">敷金(保証金)ゼロ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainCenterUKE2030-right">
+                    <div class="bukkenn-shitei">
+                        <div class="bukkenn-shitei-title">
+                            <div class="chouhoukei-white"></div>
+                            <div class="bukkenn-shitei-test">物件の指定</div>
+                        </div>
+                        <div class="bukkenn-shitei-content">
+                            <div class="bukkenn-shitei-content-title">&nbsp;&nbsp;&nbsp;ホームメイト物件No.&nbsp;&nbsp;又は&nbsp;&nbsp;物件名を<br>&nbsp;&nbsp;&nbsp;指定できます。</div>
+                                <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                             <div class="bukkenn-shitei-teiji"> -->
+<!--                                 ※「ホームメイト」サイトで、お客様がご希望の物件を決められている<br>&nbsp;&nbsp;&nbsp;&nbsp;場合は、「ホームメイト物件No.」もしくは「物件名」から検索できます。 -->
+<!--                             </div> -->
+                                <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            <div class="bukkenn-ichi-jouhou">
+                                <div class="txt-bukkenn-input">
+                                    <!-- 2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="genti-div1">
+                                    <img src="../../image/ukg02030/mejirusi.png"/>
+                                    </div>
+                                    <div class="genti-div2">
+                                    <!-- 2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <span>ホームメイト物件No.</span>
+                                    <!-- 2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <br>
+                                    <!-- 2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                    <input class="txt-bukkenn" type="text" maxlength=3 />-
+                                    <input class="txt-bukkenn txt-width" type="text" maxlength=4 disabled="disabled" />-
+                                    <!-- 2019/10/30 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                    <input class="txt-bukkenn txt-width" type="text" maxlength=5 disabled="disabled" style="width: 0.55rem;"/>
+                                    <!-- 2019/10/30 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                                </div>
+                                <!-- 2019/10/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                <input class="txt-bukkenn-ichi" type="text" placeholder="物件名から検索" maxlength=20 />
+                                <!-- 2019/10/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+
+                                <div class="bukkenn-shitei-sousa bukkenn-shitei-sousa-a">
+                                	<!-- 2019/10/23 李興麗 DEL C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                    <!--<input class="nyuukyo-banngou nyuukyo-banngou-a" type="text" readonly="readonly">-->
+                                    <!-- 2019/10/23 李興麗 DEL C44030_お部屋探しNaviマルチブラウザ対応 END-->		
+                                    <!-- 2019/10/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                    <img class="nyuukyochuu nyuukyochuu-a hide_item" src="../../image/ukg02030/nyuukyo-naka.svg" />
+                                    <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                                     <img class="sonota-heya sonota-heya-a" id="sonotaHeya0" src="../../image/ukg02030/sonota-heya.svg" /> -->
+                                    <div class="sonota-heya sonota-heya-a hide_item" id="sonotaHeya0">
+                                    <span class= "sonota-heya-naiyou">その他の部屋</span>
+                                    </div>
+                                    <!-- 2019/10/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                                    <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                </div>
+                                <!-- その他の部屋クリック START-->
+                                <div class="sonota-heya-div" id="sonota-heya-div">
+                                    <table>
+                                        <tr>
+                                            <td><a class="sonota-heya-link">101号室</a>&nbsp;-&nbsp;<span title="1LDK&nbsp;/&nbsp;78,000円">1LDK&nbsp;/&nbsp;78,000円</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="sonota-heya-link">102号室</a>&nbsp;-&nbsp;<span title="1LDK&nbsp;/&nbsp;78,000円">1LDK&nbsp;/&nbsp;78,000円</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="sonota-heya-link">201号室</a>&nbsp;-&nbsp;<span title="1LDK&nbsp;/&nbsp;78,000円">1LDK&nbsp;/&nbsp;78,000円</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="sonota-heya-link">301号室</a>&nbsp;-&nbsp;<span title="1LDK&nbsp;/&nbsp;78,000円">1LDK&nbsp;/&nbsp;78,000円</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- 2019/10/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                <span class="keikoku" id="keikokuInit">部屋が存在しません</span>
+                                <!-- 2019/10/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                                <!-- その他の部屋クリック END-->
+                                <div class="bukkenn-ichi-dashed"></div>
+                            </div>
+                            <div class="tennka-div"></div>
+                        </div>
+                    </div>
+                        <div class="bukkenn-ichi-tennka">+&nbsp;&nbsp;ホームメイト物件No.の入力欄を追加</div>
+                   </div>
+                   <!-- 2019/06/28 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                    <div class="bukkenn-suuryou" id="kibouBukkenSuuArea">
+                            <!-- 2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                         <div class="bukkenn-suuryou-title">ご希望条件に<br>沿った物件数</div> -->
+                        <div class="bukkenn-suuryou-title">ご希望条件に沿った物件数</div>
+                            <!-- 2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                        <div id="bukkenichran" class="bukkenn-suuryou-content">
+                            <span class="bukkenn-suuryou-number">98</span> <span class="bukkenn-suuryou-test">物件</span>
+                        </div>
+                            <!-- 2019/02/18 DEL START 汪会(SYS) C42036-不具合対応-BUG86 -->
+<!--                         <div class="bukkenn-suuryou-line"></div> -->
+                            <!-- 2019/02/18 DEL END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                        <!-- <img class="bukkenn-suuryou-photo" src="../../image/ukg02030/bukkenn-suuryou-png.png" /> -->
+                    </div>                    
+                    <div class="bukkenn-suuryou_hope" id="kibouBukkenSuuArea_hope">
+                        <div class="bukkenn-suuryou-title_hope"> &nbsp;&nbsp;ご希望条件に沿った<br><span class="letter_spaceing">特典・割引サービスあり物件</span></div>
+                        <div id="bukkenichran_hope" class="bukkenn-suuryou-content_ano">
+                            <span class="bukkenn-suuryou-number">6</span> <span class="bukkenn-suuryou-test">物件</span>
+                        </div>
+                        <div class="mIcon_ano">得</div>
+                    </div>
+                    <div class="setubi-help setubi-help_ano" id="tekigouhelp_2030">
+                         <!-- 2019/07/01 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                         <div><img class="img_print" src="../../image/common/icon/help.png"></div>                        
+                         <!-- 2019/07/01 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                        <span class="setubi-help_span">特典・割引サービスあり物件とは</span>
+                    </div>
+                    <div id="tekigouhelpDiv" class="title_yellow">
+                        <div class="font-weightB">· 特典 · 割引サービスあり物件とは?</div>
+                        <div class="special_cla">
+                            <!-- <span><br></span> -->
+                            「特典 · 割引サービスあり物件」とは、<br/>
+                            仲介手数料の割引や賃料の支援などの特典が付与<br/>
+                            されているお得な物件の事です。<br/>
+                            <br/></div>                
+                    </div>
+                    <!-- 2019/06/28 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                    
+                    <div class="okyakusama-jouhou">
+                        <div class="okyakusama-jouhou-title">
+                            <div class="chouhoukei-white"></div>
+                            <div class="okyakusama-jouhou-test">お客様情報</div>
+                        </div>
+                        <table class="okyakusama">
+                            <tr>
+                            <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            <!-- <td><span>&bull;&nbsp;&nbsp;受付№</span></td> -->
+                                <td><span>&bull;&nbsp;受付№</span></td>
+                            <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <td><span>41-000-007</span></td>
+                            </tr>
+                            <tr>
+                            <!--2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            <!-- <td><span>&bull;&nbsp;&nbsp;受付日</span></td> -->
+                                 <td><span>&bull;&nbsp;受付日時</span></td>
+                            <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <td><span>2016/7/12</span></td>
+                            </tr>
+                            <tr>
+                            <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                            <!-- <td><span>&bull;&nbsp;&nbsp;お客様名</span></td> -->
+                                <td><span>&bull;&nbsp;お客様名</span></td>
+                            <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <td><span>東建&nbsp;&nbsp;&nbsp;&nbsp;太郎&nbsp;&nbsp;様</span></td>
+                            </tr>
+                            <!-- 2019/06/18 熊振 C43100_お客様項目の入力簡素化対応 START-->                              
+                            <tr>
+                                <td><input class="txt-bukkenn-ichi_blue" type="text" maxlength=20 /></td>      
+                                <td><div class="yang_class">様</div></td>                          
+                            </tr>
+                            <tr>
+                                <td><div class="width_140">&bull;&nbsp;お客様名カナ</div></td>
+                            </tr>                
+                            <tr>
+                                <td><input class="txt-bukkenn-ichi_blue" type="text" maxlength=20 /></td>      
+                                <td><div class="yang_class">様</div></td>                          
+                            </tr>
+                            <tr>
+                                <td><div class="width_140">&bull;&nbsp;電話番号</div></td>
+                            </tr>                
+                            <tr>
+                                <td><input class="txt-bukkenn-ichi_blue" type="text" maxlength=20 /></td>      
+                                <td><div class="yang_class"></div></td>                          
+                            </tr>
+                            <tr>
+                                <td><div class="width_160">&bull;&nbsp;メールアドレス</div></td>
+                            </tr>                
+                            <tr>
+                                <td><input class="txt-bukkenn-ichi_blue_ano" type="text" maxlength=20 /></td>      
+                                <td><div class="yang_class"></div></td>                          
+                            </tr>
+                            <tr>
+                                <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- <td><span>&bull;&nbsp;&nbsp;進捗状況</span></td> -->
+                                <td><span>&bull;&nbsp;進捗状況</span></td>
+                                <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                                <!-- 2019/06/18 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                <!-- <td><span>商談中</span></td> -->
+                                <td><span>申込み</span></td>
+                                <!-- 2019/06/18 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                            </tr>   
+                            <!-- 2019/10/23 李興麗 DEL C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                            <!--<tr>
+                                <td><div></div></td>      
+                                <td><div class="yang_class_detailed">> 詳細を表示する</div></td>                          
+                            </tr>-->
+                            <!-- 2019/10/23 李興麗 DEL C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                            <!-- 2019/06/18 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                        </table>
+                        <div class="shataku-assenn-iraisho">
+                            <div class="seihoukei-blue"></div>
+                            <div>社宅斡旋依頼書</div>
+                        </div>
+                        <div class="file-shoose">
+                            <img class="shataku-assenn-iraisho-img" src="../../image/ukg02030/shataku-assenn-iraisho.svg" />
+                            <span>2017年3月31日10:15:27</span>
+                            <span class="bunnsho-youshiki">PDF</span>
+                        </div>
+
+                        <!-- 2019/02/18 ADD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+                        <div class="memo">
+                        <div class="memo_info"></div><div class="memo1">メモ</div></div>
+                         <!-- 2019/02/18 ADD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+                        <div class="okyakusama-jouhou-iioki">
+                            <textarea class="okyakusama-jouhou-textarea" placeholder="メモを登録できます。"></textarea>
+                        </div>
+                    </div>
+                    <div class="tempo-jouhou">
+                        <div class="tempo-jouhou-title">
+                            <div class="chouhoukei-white"></div>
+                            <div class="tempo-jouhou-test">仲介依頼先店舗情報</div>
+                        </div>
+                        <div class="tempo-jouhou-div">
+                            <div class="tempo-jouhou-table-top">
+                                <span class="kibou-heya-suuryou">法人希望部屋数</span>
+                                <span class="heya-suuryou">30室以上</span>
+                            </div>
+                            <table class="tempo-jouhou-table">
+                            <tr>
+                                <td><span>店舗名</span></td>
+                                <td><span>進捗状况</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="tempo-font">宇都宮支店</span></td>
+                                <td><span class="tempo-font">商談中</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="tempo-font">名東支店</span></td>
+                                <td><span class="tempo-font">完了(3室)</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="tempo-font">上小田井駅前店</span></td>
+                                <td><span class="tempo-font">キャンセル</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="tempo-font">西尾駅前店</span></td>
+                                <td><span class="tempo-font">他决</span></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><span class="tempo-font">さいたま南準備室</span></td>
+                                <td><span class="tempo-font">申し込み(1室)</span></td>
+                            </tr>
+                            <tr>
+                                <td class="table-dashed"><span class="tempo-font">仮押え(2室)</span></td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+        </div>
+        </div>
+        <div class="UKE2030-bottom">
+          <!-- 2019/02/18 UPD START 汪会(SYS) C42036-不具合対応-BUG86 -->
+          <!--  <div class="UKE2030-save"> -->
+          <!--     <img id="UKE2030Save" src="../../image/common/button/hozon.png"/> -->
+          <!--  </div> -->
+          <!--  <div class="UKE2030-innsatsu"> -->
+          <!--      <img id="UKE2030innsatsu" src="../../image/common/button/kado_insatu.png"/> -->
+          <!--  </div> -->
+                <div class="UKE2030-innsatsu">
+                    <img id="UKE2030innsatsu" src="../../image/common/button/kado_insatu.png"/>
+                </div>
+                <div class="UKE2030-save">
+                    <img id="UKE2030Save" src="../../image/common/button/hozon.png"/>
+                </div>
+         <!-- 2019/02/18 UPD END 汪会(SYS) C42036-不具合対応-BUG86 -->
+        </div>
+    </div>
+    <div class="footer"></div>
+    <div class="modal fade messageOk" tabindex="-1" role="dialog" id="messageOk" aria-labelledby="myModalLabel" aria-hidden="true" data-target>
+        <div class="modal-dialog">
+            <div class="modal-content percent-w060 ">
+                <div class="modal-body">
+                    <div class="aui_content">
+                        <span id="msgok"></span>
+                    </div>
+                    <div class="tdalignright alginright">
+                        <button type="button" class="btn btn-primary btn-mini tbFontsizeL" id="comfirm" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG01016.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css" />
+        <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../../js/thickbox.js"></script>
+        <script type="text/javascript" src="../../js/jquery.common.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <script type="text/javascript" src="../../js/UKG01016.js"></script>
+        <script type="text/javascript" src="../../js/ajaxCommon.js"></script>
+    </head>
+
+    <body>
+        <div class="title_detail">
+            <!--2020/06/03 セツ  ADD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <img class="title_bgSvg" src="../../image/ukg01016/headBarXLong.svg"/>
+            <img class="show-img" src="../../image/ukg01013/chuui.png"/>
+            <span class="font_normal2">現在の未登録件数：</span>
+            <!--2020/06/03 セツ  ADD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <div class="font_normal3">8</div>
+            <!--2020/06/03 セツ  ADD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <span class="font_normal4">件</span>
+            <!--2020/06/03 セツ  ADD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+        </div>
+        <!-- 2018/09/20 不具合対応-BUG70 START -->
+        <!-- <div class="font_normal5">｢ホームメート｣サイトから問合せされたお客様の一覧を表示しています。<br>仲介担当者を設定して、追客してください。</div> -->
+        <div class="font_normal5">｢ホームメート｣サイトから問合せされたお客様の一覧を表示しています。<br>仲介担当者を設定し、追客してください。</div>
+        <!-- 2018/09/20 不具合対応-BUG70 END -->
+        <div class="uketuke-form">
+            <table class="inhert_window_popup">
+                <col class="tablecol1" />
+                <col class="tablecol2" />
+                <col class="tablecol3" />
+                <col class="tablecol4" />
+                <col class="tablecol5" />
+                <tr class="th">
+                    <td id="time" class="font_normal_b2 table1-td1">
+                        <div id="kokyaku1" class="kokyaku-div nohver_c0">
+                            <a class="kokyaku">受付日時</a>
+                            <div class="sannkakukei-top"></div>
+                            <div class="sannkakukei-bottom"></div>
+                        </div>
+                    </td>
+                    <td class="font_normal_b2  table1-td2 nohver_c0">
+                        <div id="kokyaku2" class="kokyaku-div">
+                            <a class="kokyaku">受付№</a>
+                            <div class="sannkakukei-top"></div>
+                            <div class="sannkakukei-bottom"></div>
+                        </div>
+                    </td>
+                    <td class="font_normal_b2 table1-td3">
+                        <div>お客様名</div>
+                    </td>
+                    <td class="font_normal_b2 table1-td4">
+                        <!--/*20180315*/ Start-->
+                        <!-- <div>お問い合わせ物件</div> -->
+                        <div>お問合せ物件</div>
+                        <!--/*20180315*/ End-->
+                    </td>
+                    <td class="font_normal_b2 table1-td7">
+                        <div>受付キャンセル</div>
+                    </td>
+                </tr>
+                <tr class="table_tr tr1">
+                    <td class="font_normal table1-td1">
+                        <div>
+                            <span name="lblUketukeDate">2017年4月17日 10:00</span>
+                            <span class="phone">電 話</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td2 nohver_c1">
+                        <a class="font_blue uketuke-no">
+                            <span target="_parent" id="spano0">41-000-306</span>
+                        </a>
+                    </td>
+                    <td class="font_normal table1-td3 guest-name">
+                        <div title="山田　壱太郎 様">
+                            <span name="lblKokyakuName" class="onmiss">山田　壱太郎 様</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td4 guest-name">
+                        <span name="lblAnketo">ユニバリィルミナス(301号室)</span>
+                    </td>
+                    <td class="font_normal table1-td5 nohver_c2">
+                        <!-- <a class="cancle btn2 primary_grey thickbox div_style">受付キャンセル</a> -->
+                        <a class="cancle btn2 thickbox div_style">
+                            <img class="cancel-img" src="../../image/common/button/cancle.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="table_tr tr2">
+                    <td class="font_normal  table1-td1">
+                        <div>
+                            <span name="lblUketukeDate">2017年4月17日 10:00</span>
+                            <span class="phone">電 話</span>
+                        </div>
+                    </td>
+                    <td class="font_normal  table1-td2 nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">
+                            <span id="spano1">41-000-306</span>
+                        </a>
+                    </td>
+                    <td class="font_normal  table1-td3 guest-name">
+                        <div title="山田　壱太郎 様">
+                            <span name="lblKokyakuName" class="onmiss">山田　壱太郎 様</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td4 guest-name">
+                        <span name="lblAnketo">ユニバリィルミナス(301号室)</span>
+                    </td>
+                    <td class="font_normal table1-td5 nohver_c2">
+                        <!-- <a class="cancle btn2 primary_grey thickbox div_style">受付キャンセル</a> -->
+                        <a class="cancle btn2 thickbox div_style">
+                            <img class="cancel-img" src="../../image/common/button/cancle.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="table_tr tr1">
+                    <td class="font_normal table1-td1">
+                        <div>
+                            <span name="lblUketukeDate">2012年12月20日 00:02</span>
+                            <span class="phone">電 話</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td2 nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">
+                            <span id="spano2">41-000-306</span>
+                        </a>
+                    </td>
+                    <td class="font_normal table1-td3 guest-name nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">未登録</a>
+                    </td>
+                    <td class="font_normal table1-td4 guest-name">
+                        <span name="lblAnketo">ユニバリィルミナス(301号室)</span>
+                    </td>
+                    <td class="font_normal table1-td5 nohver_c2">
+                        <!-- <a class="cancle btn2 primary_grey thickbox div_style">受付キャンセル</a> -->
+                        <a class="cancle btn2 thickbox div_style">
+                            <img class="cancel-img" src="../../image/common/button/cancle.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="table_tr tr2">
+                    <td class="font_normal table1-td1">
+                        <div>
+                            <span name="lblUketukeDate">2017年4月17日 10:00</span>
+                            <span class="mail">メール</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td2 nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">
+                            <span id="spano3">41-000-306</span>
+                        </a>
+                    </td>
+                    <td class="font_normal table1-td3 guest-name nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">未登録</a>
+                    </td>
+                    <td class="font_normal table1-td4 guest-name">
+                        <span name="lblAnketo">ユニバリィルミナス(301号室)</span>
+                    </td>
+                    <td class="font_normal table1-td5 nohver_c2">
+                        <!-- <a class="cancle btn2 primary_grey thickbox div_style">受付キャンセル</a> -->
+                        <a class="cancle btn2 thickbox div_style">
+                            <img class="cancel-img" src="../../image/common/button/cancle.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="table_tr tr1">
+                    <td class="font_normal table1-td1">
+                        <div>
+                            <span name="lblUketukeDate">2017年4月17日 10:00</span>
+                            <span class="phone">電 話</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td2 nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">
+                            <span id="spano4">41-000-306</span>
+                        </a>
+                    </td>
+                    <td class="font_normal  table1-td3 guest-name">
+                        <div title="山田　壱太郎 様">
+                            <span name="lblKokyakuName" class="onmiss">山田　壱太郎 様</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td4 guest-name">
+                        <span name="lblAnketo">ユニバリィルミナス(301号室)</span>
+                    </td>
+                    <td class="font_normal table1-td5 nohver_c2">
+                        <!-- <a class="cancle btn2 primary_grey thickbox div_style">受付キャンセル</a> -->
+                        <a class="cancle btn2 thickbox div_style">
+                            <img class="cancel-img" src="../../image/common/button/cancle.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="table_tr tr2">
+                    <td class="font_normal table1-td1">
+                        <div>
+                            <span name="lblUketukeDate">2017年4月17日 10:00</span>
+                            <span class="phone">電 話</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td2 nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">
+                            <span id="spano5">41-000-306</span>
+                        </a>
+                    </td>
+                    <td class="font_normal table1-td3 guest-name">
+                        <div title="山田　壱太郎 様">
+                            <span name="lblKokyakuName" class="onmiss">山田　壱太郎 様</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td4 guest-name">
+                        <span name="lblAnketo">ユニバリィルミナス(301号室)</span>
+                    </td>
+                    <td class="font_normal table1-td5 nohver_c2">
+                        <!-- <a class="cancle btn2 primary_grey thickbox div_style">受付キャンセル</a> -->
+                        <a class="cancle btn2 thickbox div_style">
+                            <img class="cancel-img" src="../../image/common/button/cancle.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="table_tr tr1">
+                    <td class="font_normal table1-td1">
+                        <div>
+                            <span name="lblUketukeDate">2017年4月17日 10:00</span>
+                            <span class="mail">メール</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td2 nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">
+                            <span id="spano6">41-000-306</span>
+                        </a>
+                    </td>
+                    <td class="font_normal table1-td3 guest-name">
+                        <div title="株式　あいうえお商店　様">
+                            <span name="lblKokyakuName" class="onmiss">株式会社　あいうえお商店　様</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td4 guest-name">
+                        <span name="lblAnketo">ユニバリィルミナス(301号室)</span>
+                    </td>
+                    <td class="font_normal table1-td5 nohver_c2">
+                        <!-- <a class="cancle btn2 primary_grey thickbox div_style">受付キャンセル</a> -->
+                        <a class="cancle btn2 thickbox div_style">
+                            <img class="cancel-img" src="../../image/common/button/cancle.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="table_tr tr2">
+                    <td class="font_normal table1-td1">
+                        <div>
+                            <span name="lblUketukeDate">2017年4月17日 10:00</span>
+                            <span class="mail">メール</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td2 nohver_c1">
+                        <a target="_parent" class="font_blue uketuke-no">
+                            <span id="spano7">41-000-306</span>
+                        </a>
+                    </td>
+                    <td class="font_normal table1-td3 guest-name">
+                        <div title="山田　壱太郎 様">
+                            <span name="lblKokyakuName" class="onmiss">山田　壱太郎 様</span>
+                        </div>
+                    </td>
+                    <td class="font_normal table1-td4 guest-name">
+                        <span name="lblAnketo">ユニバリィルミナス(301号室)</span>
+                    </td>
+                    <td class="font_normal table1-td5 nohver_c2">
+                        <!-- <a class="cancle btn2 primary_grey thickbox div_style">受付キャンセル</a> -->
+                        <a class="cancle btn2 thickbox div_style">
+                            <img class="cancel-img" src="../../image/common/button/cancle.png">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+</html>

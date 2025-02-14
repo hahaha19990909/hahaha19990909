@@ -1,0 +1,1757 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/thickboxhelp.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/thickboxpop.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/jqModal.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/content_zoom.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG01010.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/ff/jquery.easywidgets.css" />
+<link rel="stylesheet" href="../../css/ff/prettyPopin.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/ff/grumble.min.css">
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/UKG01010.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui-1.8.15.custom.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.easywidgets.min.js"></script>
+<script type="text/javascript" src="../../js/content_zoom.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery.grumble.min.js"></script>
+<script type="text/javascript" src="../../js/jqModal.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script src="../../js/jquery.prettyPopin.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../js/thickbox.js"></script>
+<script type="text/javascript" src="../../js/inthickbox.js"></script>
+<script type="text/javascript" src="../../js/artDialog.js"></script>
+<script type="text/javascript" src="../../js/help.js"></script>
+<script type="text/javascript" src="../../js/message.js"></script>
+</head>
+<body onload="resizeWindowSize();init();" id = "index">
+<div  id="container" class="pagebody">
+<iframe id="content_frame" class="top-title ukg01010"  src="pageHead.html" pageId="help_ukg01010.html"></iframe>
+    <div id = "main">
+        <div class="toppage">
+            <div class="temp_div">&nbsp;</div>
+            <div class="menu_uketuke_div">
+                <div class="menu_uketuke">お客様受付・物件紹介</div>
+            </div>
+            <div class="menu_chirashi_div">
+                <a class="tirasigraytoppage no_line" href="UKG04010.html"><!-- 20180315 -->
+                    <div class="menu_chirashi">物件案内チラシ作成</div>
+                </a>
+            </div>
+            <div class="menu_magazine_div">
+                <a class="tirasigraytoppage no_line" href="UKG05010.html"><!-- 20180315 -->
+                    <div class="memenu_magazine">オリジナル情報誌作成</div>
+                </a>
+            </div>
+    </div>
+    <form>
+        <div id ="mainArea" class="mainArea">
+            <!--新規受付№発行-->
+            <div class="sinki_title">
+                <div class="sinki_uketuke">
+                    <div class="sinki_top">
+                    <span style="position:relative;">新規受付No.発行
+                        <div class="tantou_select">
+                            <span class="tyuukai" style="margin-right: 10px;">仲介担当者</span>
+                            <label class="lblSelect">
+                                <select id="tintai" class="sinntyoku">
+                                    <option selected>仲介　太郎</option>
+                                    <option>仲介　二郎</option>
+                                    <option>仲介　三郎</option>
+                                </select>
+                            </label>
+                        </div>
+                        </span>
+                    </div>
+                    <div class="sinki_bottom">
+                        <div class="step1">
+                            <div class="step_top">1.受付方法</div>
+                            <div class="step1_bottom">
+                                <div class="uketuke_houhou_naiyou ">来　店</div>
+                                <div class="uketuke_houhou_naiyou ">電　話</div>
+                                <div class="uketuke_houhou_naiyou ">メール</div>
+                                <!--2020/04/14 UPD START セツ(SYS) C44072_希望部屋数等を追加-->
+                                <!--<div class="uketuke_houhou_naiyou ">法人仲介課依頼</div>-->
+                                <div class="uketuke_houhou_naiyou houjin_disp">法人仲介課依頼</div>
+                                <!--2020/04/14 UPD END セツ(SYS) C44072_希望部屋数等を追加-->
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div><img src="../../image/ukg01010/yajirosi.png"/></div>
+                        </div>
+                        <div class="step2">
+                            <div class="step_top">2. 顧客種別</div>
+                            <div class="step2_bottom1">
+                                <div class="step2_left">
+                                    <div class="step2_left_top">
+										<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <div class="kokyakuSyubetu_title">
+										<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            <img class="kokyakuSyubetu_title_img" src="../../image/ukg01010/kata.svg" />
+                                            <span class="kokyakuSyubetu_title_font">個　人</span>
+                                        </div>
+                                        <div class="kokyakuSyubetu" onclick="changeKokyakuSyubetu('1')">新規個人</div>
+                                        <!-- 2018/08/13 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG1 -->
+                                        <!-- <div class="kokyakuSyubetu" onclick="changeKokyakuSyubetu('4')">リビート</div> -->
+                                        <div class="kokyakuSyubetu" onclick="changeKokyakuSyubetu('4')">リピート</div>
+                                        <!-- 2018/08/13 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG1 -->
+                                    </div>
+                                    <div class="step2_left_bottom">
+                                        <div class="kokyakuSyubetu_title_font">
+                                            <img class="kokyakuSyubetu_title_img" src="../../image/ukg01010/houjin.svg" />
+                                            <span class="kokyakuSyubetu_title_font">法　人</span>
+                                        </div>
+                                        <div class="kokyakuSyubetu" onclick="changeKokyakuSyubetu('2')">新規法人</div>
+                                        <!-- 2018/08/13 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG1 -->
+                                        <!-- <div class="kokyakuSyubetu" onclick="changeKokyakuSyubetu('3')">リビート</div> -->
+                                        <div class="kokyakuSyubetu" onclick="changeKokyakuSyubetu('3')">リピート</div>
+                                        <!-- 2018/08/13 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG1 -->
+                                    </div>
+                                </div>
+                                <div class="step2_right">
+                                    <div id="ukMsgDiv1" class="ukMsgDiv1">
+                                        <div  id="kokakubackImage" class="kokakubackImage">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                <span class = "font_step2">「受付方法」、「顧客種別」を選択後、受付№</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                <span class = "font_step2">発行処理を行なってください。</span>
+                                                    </td>
+                                                </tr>
+                                                <tr><td> </td></tr>
+                                                <tr>
+                                                    <td>
+                                                <span class = "font_step2"><b>A. </b>ご来店のお客様には、<font class="color_pink">「受付№発行&受付</font></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class = "font_step2 text_left1"><font class="color_pink">カード印刷」</font>ボタンをクリックしてください。</td>
+                                                </tr>
+
+                                                <tr><td> </td></tr>
+                                                <tr>
+                                                    <td class = "font_step2"><b>B. </b>電話・メールによる受付の場合は、<font class="color_pink">「受付№</font></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text_left2"><span class = "font_step2">&nbsp;&nbsp;<font class="color_pink">発行」</font>ボタンをクリックしてください。</span></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="kizonKojinSelect">
+                                        <div class="kizonKojinSelectDiv">
+                                            <table class="font_step2_top_table">
+                                                <tr>
+                                                    <td>
+                                                        <span class = "font_step2" >過去のご契約履歴を検索できます。</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div class="step2_nomal">
+                                                <div class="step2_nomal_left_a">
+                                                    <span class = "font_normal_d">顧 客 名</span><!-- /*20180315*/ -->
+                                                </div>
+                                                <div class="step2_nomal_right">
+                                                    <input type="text" id="txtKokyaku" class="txtmode1 input-blue"/>
+                                                    <div class="check checkbox-div">
+                                                        <input name="chkItiBukkenType" value="1" tabfolder="oneBukkenKeisai_Naikan" type="checkbox" id="checkbox1" class="checkbox"/>
+                                                        <label class="check_lable pinnku" for="checkbox1"></label>
+                                                        <span class="sp_text">&nbsp;カナ</span>
+                                                    </div>
+                                                    <!-- /*20180315 Start*/ -->
+                                                    <!-- <a id="lnkIconHelp" > -->
+                                                    <!-- 2019/10/21 李興麗 DEL C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                    <!--<div class="a_help" pageid="help_ukg01010KanaSearch.html">-->
+                                                        <!-- 2018/08/13 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                                                        <!-- <img src="../../image/ukg01010/herupu.svg"/> -->
+                                                       <!--<img src="../../image/common/icon/help.png"/>-->
+                                                        <!-- 2018/08/13 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                                                    <!--</div>-->
+                                                    <!-- 2019/10/21 李興麗 DEL C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                    <!-- /*20180315 End*/ -->
+                                                </div>
+                                            </div>
+                                            <div class="step2_nomal">
+                                                <div class="step2_nomal_left_b">
+                                                    <span class = "font_normal_d">生年月日</span><!-- /*20180315*/ -->
+                                                </div>
+                                                <div class="step2_nomal_right">
+                                                    <table class="normalTable">
+                                                        <tr>
+                                                            <td>
+                                                               <div class="seinen_select">
+                                                                   <label class="lblSelect">
+                                                                       <select id="tintai" class="sinntyoku">
+                                                                           <option>昭和</option>
+                                                                           <option selected>平成</option>
+                                                                       </select>
+                                                                   </label>
+                                                               </div>
+                                                            </td>
+                                                            <td>
+                                                                <input id="seinen_y" type = "text" class="txtmode2 seinen input-blue">
+                                                            </td>
+                                                            <td>
+                                                                <span class = "seinen_font">年</span>
+                                                            </td>
+                                                            <td>
+                                                                <input id="seinen_m" type = "text"  class="txtmode2 seinen input-blue">
+                                                            </td>
+                                                            <td>
+                                                                <span class = "seinen_font">月</span>
+                                                            </td>
+                                                            <td>
+                                                                <input id="seinen_d" type = "text"  class="txtmode2 seinen input-blue">
+                                                            </td>
+                                                            <td >
+                                                                <span class = "seinen_font">日</span>
+                                                            </td>
+                                                        </tr>
+                                                     </table>
+                                                </div>
+                                            </div>
+                                            <div class="step2_nomal">
+                                                <div class="step2_nomal_left_c">
+                                                    <span class = "font_normal_d">電話番号</span><!-- /*20180315*/ -->
+                                                </div>
+                                                <div class="step2_nomal_right">
+                                                    <input type="text" id="txtCustemNm" class="txtmode1 input-blue"/>
+                                                    <div class="check checkbox-div ketai">
+                                                    	<!--2020/3/30 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START--> 
+                                                        <!--<input name="chkItiBukkenType" value="1" tabfolder="oneBukkenKeisai_Naikan" type="checkbox" id="checkbox1" class="checkbox"/>
+                                                        <label class="check_lable pinnku" for="checkbox1"></label>-->
+                                                        <input name="chkItiBukkenType" value="1" tabfolder="oneBukkenKeisai_Naikan" type="checkbox" id="checkbox2" class="checkbox"/>
+                                                        <label class="check_lable pinnku" for="checkbox2"></label>
+                                                        <!--2020/3/30 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END--> 
+                                                        <span class="sp_text">&nbsp;携帯電話</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <table class="kuroten_jyouhou">
+                                                <colgroup>
+                                                    <col />
+                                                    <col />
+                                                </colgroup>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class = "font_step2">※全国の来店情報より検索します。</span>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <a href="javascript:void(0);" onclick="changeKokyakuSyubetu('5')" class="btn btn_dis primary" id="btnSearch">
+                                                                <span>検&nbsp;&nbsp;索</span>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="ukMsgDiv2">
+                                        <div  id="kokakubackImage" class="kokakubackImage2">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                    <span class = "font_step2">「受付方法」、「顧客種別」を選択後、受付№</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                    <span class = "font_step2">発行処理を行なってください。</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr><td> </td></tr>
+                                                    <tr>
+                                                        <td>
+                                                    <span class = "font_step2"><b>A. </b>ご来店のお客様には、<font class="color_pink">「受付№発行&受付</font></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class = "font_step2 text_left1"><font class="color_pink">カード印刷」</font>ボタンをクリックしてください。</td>
+                                                    </tr>
+
+                                                    <tr><td> </td></tr>
+                                                    <tr>
+                                                        <td class = "font_step2"><b>B. </b>電話・メールによる受付の場合は、<font class="color_pink">「受付№</font></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text_left2"><span class = "font_step2">&nbsp;&nbsp;<font class="color_pink">発行」</font>ボタンをクリックしてください。</span></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                    </div>
+                                    <div id = "kizonSelect">
+                                        <div class="kizonSelect">
+											<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <table class="kizonSelectKana" id="tabKanaIndex2">
+                                                <!--<tr>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo_b kana_bold" href ="" onclick = "changeAiueo1('ア');return false;">全て</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">ア</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">カ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">サ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">タ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">ナ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">ハ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">マ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">ヤ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">ラ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">ワ</a>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">&nbsp;|&nbsp;</span>
+                                                    </td>
+                                                    <td>
+                                                        <span  class= "kizonSelectKanawd">
+                                                            <a class = "aiueo" href ="" onclick = "changeAiueo1('ア');return false;">その他</a>
+                                                        </span>
+                                                    </td>
+                                                </tr>-->
+                                                <tr height="15px">
+													<td id="kanaIndexTd" align="right" style="padding-right:0px;">
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span2 font_small_2_blue kana_normal2 kana_bold2">全て</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" style="cursor:point;" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">ア</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">カ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">サ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">タ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">ナ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">ハ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">マ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">ヤ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">ラ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span1 font_small_2_blue kana_normal2">ワ</span>
+														</a>
+														<span  class= "kizonSelectKanawd">|</span>
+														<a class = "aiueo" href="" onclick="changeAiueo1('ア');return false;">
+															<span class="fixed_kana2_span3 font_small_2_blue kana_normal2">その他</span>
+														</a>
+														<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+													</td>
+												</tr>
+                                            </table>
+                                            
+                                            <div class="kizonSelect_bottom">
+                                                <table class = "subkizonSelect">
+                                                    <tr class="kizonTh">
+                                                        <td class="kyakusama kizon_tdwidth1">
+                                                            <span class = "kyakusama_font">顧客№</span>
+                                                        </td>
+                                                        <td class="kyakusama kizon_tdwidth2">
+                                                            <span class = "kyakusama_font">法人企業名</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div class="kizon_body">
+                                                    <table id = "kisonHoujin_table" class="kizonSelect_table">
+                                                        <tr>
+                                                            <td>
+                                                                <span>5070-890</span>
+                                                            </td>
+                                                            <td><span>株式会社アリオン</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span>5070-891</span></td>
+                                                            <td><span>香川うどん株式会社</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span>5070-892</span></td>
+                                                            <td><span>東建塾</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span>5070-893</span></td>
+                                                            <td><span>ヤマダ電機</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span>5070-894</span></td>
+                                                            <td><span>若宮商事（株）</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span>5070-894</span></td>
+                                                            <td><span>若宮商事（株）</span></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="line_bot1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id = "kizonKojinList">
+                                        <div class="kizonKojinSelectDiv">
+                                            <table class = "subTabletitle">
+                                                <tr  class="okyaTh">
+                                                    <td class="kyakusama kyakusama_tdwidth1">
+                                                        <span class = "kyakusama_font">顧客№</span>
+                                                    </td>
+                                                    <td class="kyakusama kyakusama_tdwidth2">
+                                                        <span class = "kyakusama_font">顧客名</span>
+                                                    </td>
+                                                    <td class="kyakusama kyakusama_tdwidth3">
+                                                        <span class = "kyakusama_font">ご契約物件</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div class="okya_body">
+                                                <table id = "kisonHoujin" class="kisonHoujin">
+                                                    <tr>
+                                                        <td>
+                                                            <div>5070-889</div>
+                                                        </td>
+                                                        <td><div>東建 タロウ</div></td>
+                                                        <td><div>ジュピター高崎</div></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>5070-890</div>
+                                                        </td>
+                                                        <td><div>東建 タロウ</div></td>
+                                                        <td><div>ジュピター高崎</div></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><div>5070-891</div></td>
+                                                        <td><div>東建 花子</div></td>
+                                                        <td><div>エスデコート名古屋</div></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><div>5070-892</div></td>
+                                                        <td><div>東建 太郎</div></td>
+                                                        <td><div>エトワール千代田</div></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><div>5070-893</div></td>
+                                                        <td><div>東建 次郎</div></td>
+                                                        <td><div>プレサンス大須観大須観</div></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><div>5070-894</div></td>
+                                                        <td><div>東建 三郎</div></td>
+                                                        <td><div>ハイム竹橋</div></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="line_okya"></div>
+                                            <div class="kensakujyouken_back">検索条件画面へ戻る</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step2_bottom2">
+                                <div class="step2_bottom2_top">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div>企業</div>
+                                                <div>コード</div>
+                                            </td>
+                                            <td>
+												<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->												
+                                                <!-- <input type="text" id="kigyou_cd" class="kigyou_cd"/> -->
+												<input type="text" id="kigyou_cd" class="kigyou_cd input-blue"/>
+												<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            </td>
+                                            <td>
+                                                <div>企業名</div>
+                                            </td>
+                                            <td>
+												<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->												
+												<!-- <input type="text"  id="kigyou_name" class="kigyou_name"/> -->
+												<input type="text"  id="kigyou_name" class="kigyou_name input-blue"/>
+												<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="kigyou_sel_btn">検 索</div>
+                                </div>
+                                <div class="step2_bottom2_bottom">
+                                    <table class="kigyou_table">
+                                        <tr>
+                                            <td>企業コード</td>
+                                            <td>企業名</td>
+                                        </tr>
+                                    </table>
+                                    <div class="kigyou_tbody">
+                                        <table>
+                                            <tr>
+                                                <td>1002000</td>
+                                                <td>日本図書輸送株式会社</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1002001</td>
+                                                <td>株式会社フレストロニクス</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1002002</td>
+                                                <td>スポーツコーポレートサービス</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1002003</td>
+                                                <td>医療法人貝塚医院</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1002004</td>
+                                                <td>医療法人貝塚医院</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1002005</td>
+                                                <td>医療法人貝塚医院</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="line_bot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div><img src="../../image/ukg01010/yajirosi.png"/></div>
+                        </div>
+                        <div class="step3">
+                            <div class="step_top">3.受付No.発行</div>
+                            <div class="step3_bottom">
+                                <div class="step3_bottom_naiyou">
+                                     <!--受付№発行-->
+                                        <!--/*20180315*/ Start-->
+                                        <!-- <div class="kadao_border hakkou" id="link_src" -->
+                                        <div class="kadao_border hakkou" id="link_src" onclick="ukg02010Process();">
+                                        <!--/*20180315*/ End-->
+                                            <div class="kadao">
+                                                <div class="kadao_font">受付No.発行</div>
+                                                <div class="kadao_font">&</div>
+                                                <div class="kadao_font">受付カード印刷</div>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <!-- <div class="hatyuu_border hakkou_kadao" id="link_src"> -->
+                                        <!--/*20180315*/ Start-->
+                                        <div class="hatyuu_border hakkou_kadao" id="link_src" onclick="ukg02010Process();">
+                                        <!--/*20180315*/ End-->
+                                            <div class="hatyuu">
+                                                <div class="hatyuu_font">受付No.発行</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                <!--<div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg01010.html">
+                   <img class="syoukai-mark-img" src="../../image/common/icon/help.png"/ >
+                </div>-->
+
+                <!--  2018/08/13 ADD END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+				 <!--  2019/02/19 ADD START 張強軍  QA_C42036_037 -->
+				 <div class="sinki_title_close" id="sinki_title_close" >
+                  <div class="sinki_title_button" onclick="shinkiUketsuke()">
+				    <img class="title_close_img" src="../../image/ukg01010/yajirushi-jo.png"/>
+					<span class="title_close_text">新規受付No.発行を閉じる</span>
+				  </div>
+                </div>
+            </div>
+			<div class="sinki_title_hiraku" id="sinki_title_hiraku">
+                <div class="sinki_title_button_hiraku" onclick="shinkihiraku()">
+				<img class="title_close_img" src="../../image/ukg01010/yajirushi-ka.png"/>
+				 <span class="title_close_text">新規受付No.発行を開く</span>
+				 </div>
+            </div>
+            
+            <div class="center1010">
+            <!--  2019/02/19 ADD END 張強軍  QA_C42036_037 -->
+            <div class="jyouhou">
+                <table cellspacing=0  class="taba">
+                    <tr>
+                        <td align="left" valign="top">
+                            <div class="jyouhou_img">
+                                <!-- <img class="jyouhou_img_size" src="../../image/ukg01010/jyouhyou.svg" /> -->
+								 <!--2019/03/18 ADD START 張強軍(SYS)  QA_C42036_037 -->
+								<div class="jyouhou_text"> 商談中のお客様情報</div>
+                               <!--2019/03/18 ADD END 張強軍(SYS)  QA_C42036_037 -->
+                            </div>
+                        </td>
+                    </tr>
+                   <!-- <tr>
+                        <td class="UGKbarLine shadow"></td>
+                    </tr>-->
+                </table>
+                <div class="jyouhou_border">
+                    <table>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="顧客名を入力" class="focus txtmode1 okyakutext" name="KensakuListMoji" id="KensakuListMoji">
+                            </td>
+                            <td colspan="2">
+                                    <div class="kenMenu" id="kenMenu">
+                                    <ul id="dd">
+                                        <li>
+                                            <div class="selected" id="selected">
+                                                <table cellspacing="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="font_normal selected_naiyou">
+                                                                <a onclick="show_method('000019')" class="btnL primary_grey selected_naiyou_text">
+                                                                    <span id="show_select" class="font_normal_a">
+                                                                    <span class="okyaku_selected_text"  title="小Ｘ&#12288;実Ｘ" class="inlineonmiss">小Ｘ&#12288;実Ｘ</span>さんの顧客を検索
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                        <td>
+                                                            <div>
+                                                                <a  href="javascript:mopen(1);" onmouseout="mclosetime();" class="btnR primary_grey down_btn" id="mmenu1">
+                                                                    <div class="down_btn_img"> ▼ </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div onmouseout="mclosetime();" onmouseover="mcancelclosetime()" class="submenu select_hidden" id="menu1">
+                                                    <div class="submenu_top">
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach010" onclick="show_method('010')">
+                                                                <span class="font_normal select_font" id="showsp010">事業所内の全顧客を表示</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach000019" onclick="show_method('000019')">
+                                                                <span class="font_normal select_font" id="showsp000019">
+                                                                    <span title="小Ｘ&#12288;実Ｘ" class="inlineonmiss okyaku_naiyou_text">小Ｘ&#12288;実Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach003199" onclick="show_method('003199')">
+                                                                <span class="font_normal select_font" id="showsp003199">
+                                                                    <span title="川Ｘ&#12288;美Ｘ子" class="inlineonmiss okyaku_naiyou_text">川Ｘ&#12288;美Ｘ子</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach004525" onclick="show_method('004525')">
+                                                                <span class="font_normal select_font" id="showsp004525">
+                                                                    <span title="虫Ｘ&#12288;元Ｘ" class="inlineonmiss okyaku_naiyou_text">虫Ｘ&#12288;元Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach011306" onclick="show_method('011306')">
+                                                                <span class="font_normal select_font" id="showsp011306">
+                                                                    <span title="纐Ｘ&#12288;英Ｘ" class="inlineonmiss okyaku_naiyou_text">纐Ｘ&#12288;英Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach044065" onclick="show_method('044065')">
+                                                                <span class="font_normal select_font" id="showsp044065">
+                                                                    <span title="馬Ｘ&#12288;愛Ｘ" class="inlineonmiss okyaku_naiyou_text">馬Ｘ&#12288;愛Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach045267" onclick="show_method('045267')">
+                                                                <span class="font_normal select_font" id="showsp045267">
+                                                                    <span title="原Ｘ由香Ｘ" class="inlineonmiss okyaku_naiyou_text">原Ｘ由香Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach048862" onclick="show_method('048862')">
+                                                                <span class="font_normal select_font" id="showsp048862">
+                                                                    <span title="石Ｘ&#12288;佑Ｘ" class="inlineonmiss okyaku_naiyou_text">石Ｘ&#12288;佑Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach048916" onclick="show_method('048916')">
+                                                                <span class="font_normal select_font" id="showsp048916">
+                                                                    <span title="北Ｘ&#12288;雅Ｘ" class="inlineonmiss okyaku_naiyou_text">北Ｘ&#12288;雅Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach050098" onclick="show_method('050098')">
+                                                                <span class="font_normal select_font" id="showsp050098">
+                                                                    <span title="宮Ｘ&#12288;理Ｘ" class="inlineonmiss okyaku_naiyou_text">宮Ｘ&#12288;理Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach050424" onclick="show_method('050424')">
+                                                                <span  class="font_normal select_font" id="showsp050424">
+                                                                    <span title="早Ｘ&#12288;佳Ｘ" class="inlineonmiss okyaku_naiyou_text">早Ｘ&#12288;佳Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach050504" onclick="show_method('050504')">
+                                                                <span  class="font_normal select_font" id="showsp050504">
+                                                                    <span title="石Ｘ&#12288;好Ｘ" class="inlineonmiss okyaku_naiyou_text">石Ｘ&#12288;好Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach050930" onclick="show_method('050930')">
+                                                                <span  class="font_normal select_font" id="showsp050930">
+                                                                    <span title="岡Ｘ&#12288;修Ｘ" class="inlineonmiss okyaku_naiyou_text">岡Ｘ&#12288;修Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach051256" onclick="show_method('051256')">
+                                                                <span class="font_normal select_font" id="showsp051256">
+                                                                    <span title="櫻Ｘ&#12288;真Ｘ" class="inlineonmiss  okyaku_naiyou_text">櫻Ｘ&#12288;真Ｘ</span>さんの顧客を検索
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="subitem"><span class="line_color"> ----------------------------</span></div></div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach0" onclick="show_method('0')"><span class="font_normal select_font" id="showsp0">受付№を検索</span></a>
+                                                        </div>
+                                                        <div class="subitem subitem_div">
+                                                            <a id="divseach1" onclick="show_method('1')"><span class="font_normal select_font" id="showsp1">顧客名を検索</span></a>
+                                                        </div>
+                                                        <div  class="subitem subitem_div">
+                                                            <a id="divseach2" onclick="show_method('2')"><span class="font_normal select_font" id="showsp2">顧客名カナを検索</span></a>
+                                                        </div>
+                                                        <div  class="subitem subitem_div">
+                                                            <a id="divseach3" onclick="show_method('3')"><span class="font_normal select_font" id="showsp3">法人を検索</span></a>
+                                                        </div>
+                                                        <div  class="subitem subitem_div">
+                                                            <a id="divseach4" onclick="show_method('4')"><span class="font_normal select_font" id="showsp4">個人を検索</span></a>
+                                                        </div>
+                                                        <div  class="subitem subitem_div">
+                                                            <a id="divseach5" onclick="show_method('5')"> <span class="font_normal select_font" id="showsp5">電話番号を検索</span> </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cleartop">
+                                    <a id="clearsearch">
+                                        <img src="../../image/ukg01010/clear.svg"/>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <div class="checkbox-div kare_naka_check">
+                        <input name="chkItiBukkenType" value="1" tabfolder="oneBukkenKeisai_Naikan" type="checkbox" id="checkbox_kare" class="checkbox"/>
+                        <label class="check_lable pinnku" for="checkbox_kare"></label>
+                        <span class="sp_text1">他決・中止のお客様を含む</span>
+                    </div>
+                    <div class="kanaIndex">
+                        <div class="show_kanaIndex">
+                            <table class="show_kanaIndex_table" id="tabKanaIndex">
+                                <tbody>
+                                    <tr>
+                                        <td class="kanaIndexTd"  id="kanaIndexTd">
+                                            <a href="#" class="kanaOya" id="kanaOya1_1">
+                                                <span class="fixed_kana1_span2 kana_bold">全て</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya2_1">
+                                                <span class="fixed_kana1_span1">ア</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya"  id="kanaOya3_1">
+                                                <span class="fixed_kana1_span1">カ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya4_1">
+                                                <span class="fixed_kana1_span1">サ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya5_1">
+                                                <span class="fixed_kana1_span1">タ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya6_1">
+                                                <span class="fixed_kana1_span1">ナ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya7_1">
+                                                <span class="fixed_kana1_span1">ハ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya8_1">
+                                                <span class="fixed_kana1_span1">マ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya9_1">
+                                                <span class="fixed_kana1_span1">ヤ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya10_1">
+                                                <span class="fixed_kana1_span1">ラ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya11_1">
+                                                <span class="fixed_kana1_span1">ワ</span>
+                                            </a>|
+                                            <a href="#" class="kanaOya" id="kanaOya12_1">
+                                                <span class="fixed_kana1_span3">その他</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input type="hidden" value="20" id="kokyakuInfoSize">
+                        </div>
+                    </div>
+
+                    <table  id="tbshoudanKokyau" class="tbshoudanKokyau" cellspacing="0">
+                        <tr>
+                            <td>
+                                <table id = "kokyakuIchiran" class = "kokyakuTable">
+                                    <tr class="kokyakuIchiranTr">
+                                        <td class="thColor1 td_right_border_dashed kokyakuIchiranTd_width1">
+                                            <span class= "font_normal_f" >
+                                            <a class="kokyaku" href="#" onfocus="javascript:this.blur();"  onclick = "updownClick('1')">受付日</a></span>
+                                            <img id = "updown1" src = "../../image/common/sesshouchuu/narabikaeSanakku.gif"/>
+                                        </td>
+                                        <td rowspan="2" class="thColor td_right_border_solid kokyakuIchiranTd_width2">
+                                            <span class= "font_normal_f">
+                                                <a class="kokyaku" href="###"  onfocus="javascript:this.blur();" onclick = "updownClick('3')">顧&nbsp;客&nbsp;名
+                                                </a>
+                                            </span>
+                                           <!-- <div style="border-top: 0.08rem solid #3E8DCA;" id="updown1" class="sort-up"></div>--> <!-- 20180316 -->
+<!--                                            <img id = "updown3" src ="../../image/common/sesshouchuu/sortup.gif"/ style="width:14px;"> -->
+                                        </td>
+                                        <td rowspan="2" class="thColor td_right_border_dashed kokyakuIchiranTd_width3">
+                                            <span class= "font_normal_f">
+                                                <div class="kokyaku">希望条件</div>
+                                            </span>
+                                        </td>
+                                        <td rowspan="2" class="thColor td_right_border_solid kokyakuIchiranTd_width4">
+                                            <span class= "font_normal_f">
+                                                <div class="kokyaku">商談メモ</div>
+                                            </span>
+                                        </td>
+
+                                        <td class="thColor td_right_border_dashed  kokyakuIchiranTd_width5">
+                                            <span class= "font_normal_f">
+                                                <a class="kokyaku" href="#"  onfocus="javascript:this.blur();" onclick = "updownClick('6')">入居時期
+                                                </a>
+                                            </span>
+                                            <img id = "updown6" src ="../../image/common/sesshouchuu/sortup.gif"/>
+                                        </td>
+
+                                        <td class="thColor1">
+                                            <span class= "font_normal_f"><a class="kokyaku" href="#"  onfocus="javascript:this.blur();"  onclick = "updownClick('4')" >仲介担当者</a></span>
+                                            <img id = "updown4" src = "../../image/common/sesshouchuu/narabikaeSanakku.gif"/>
+                                        </td>
+                                   </tr>
+                                    <tr class="kokyakuIchiranTr kokyakuIchiranTd_width1">
+                                        <td class="thColor2 td_right_border_dashed">
+                                            <span class= "font_normal_f">
+                                            <a class="kokyaku"  onfocus="javascript:this.blur();" href="#"  onclick = "updownClick('2')">受付№</a></span>
+                                            <img id = "updown2" src = "../../image/common/sesshouchuu/narabikaeSanakku.gif"/>
+                                        </td>
+                                        <td class="thColor td_right_border_dashed kokyakuIchiranTd_width5">
+                                            <span class= "font_normal_f">
+                                                <a class="kokyaku" href="#"  onfocus="javascript:this.blur();" onclick = "updownClick('7')">最終商談日
+                                                </a>
+                                            </span>
+                                            <img id = "updown7" src ="../../image/common/sesshouchuu/sortup.gif" />
+                                        </td>
+                                        <td class="thColor2 ">
+                                            <span class= "font_normal_f"><a class="kokyaku" onfocus="javascript:this.blur();"  href="#" onclick = "updownClick('5')">進捗状況</a></span>
+                                            <img id = "updown5" src = "../../image/common/sesshouchuu/narabikaeSanakku.gif" class="updown5"/>
+                                        </td>
+                                   </tr>
+                                </table>
+								<!-- 2019/10/21 李興麗 DEL C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+								<!-- <div class="tail-line1"></div> -->
+								<!-- 2019/10/21 李興麗 DEL C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                                <div class="kokyakuTable_naiyou">
+                                    <table id="kokyakuTable_table" class="kokyakuTable_table">
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 2020/04/02 程旋 UPD START C44030_お部屋探しNaviマルチブラウザ対応-->
+                    <div class="position-block" style="min-width: 3.5rem; width: 3.5rem;">
+					<!-- 2020/04/02 程旋 UPD END C44030_お部屋探しNaviマルチブラウザ対応-->
+                    	<div id="subArea" class="subArea">
+                <div class="youtei">
+                    <div class="youtei_title">
+                        <span class="font_big_size">〈</span>
+                        <span id="dateSpan" class="select_data">2017/03/31 (金)</span>
+                        <input type="hidden"  id="hiddate"  value="31" />
+                        <div class="data_btn">
+                            <!--<span class="pre_data" onclick="dateChange('prev')"> 前日</span>-->
+                            <span class="next_data">〉</span>
+                        </div>
+                    </div>
+                    <div class="youtei_bottom">
+                        <div id="heyaDiv" class="youteinaiyou">
+                            <ul id="heyaList" class="heyaList">
+                                <li>
+                                    <table  class="subareatable">
+                                        <tr class="emptyTr">
+                                            <td colspan = "3">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan = "3">
+                                                <div class="cirTrblue1 cirPink youteinaiyou_cir">
+                                                </div>
+                                                <span class = "font_normal_h color_blue">来店予約</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="emptyTr">
+                                            <td colspan = "3">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">10：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "yoyakucustName_gray onmiss2 kyakutan" title="賃貸&nbsp;&nbsp;&nbsp;芳子&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">賃貸&nbsp;&nbsp;&nbsp;芳子&nbsp;様（東建&nbsp;&nbsp;太郎）</a>
+                                              </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">13：00</span>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray onmiss2 kyakutan" title="アイカ工業株式会社&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">アイカ工業株式会社&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">13：00</span>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray onmiss2 kyakutan"
+                                                title="NTTドコモ東海株式会社&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">NTTドコモ東海株式会社&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="lineTr">
+                                            <td colspan = "3">
+                                                <div class="line_div"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan = "3">
+                                                <div class="cirTrppink1 cirPink youteinaiyou_cir color_pink">
+                                                </div>
+                                                <span class = "font_normal_h color_pink">物件案内</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="emptyTr">
+                                            <td colspan = "3">
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">10：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "yoyakucustName_gray onmiss2 kyakutannai" title="東　タロウ&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">東　タロウ&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">11：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "yoyakucustName_gray onmiss2 kyakutannai" title="賃貸&nbsp;&nbsp;&nbsp;忠&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">賃貸&nbsp;&nbsp;&nbsp;忠&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">12：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "yoyakucustName_gray onmiss2 kyakutannai" title="東　タロウ&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">東　タロウ&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <!-- 2021/03/15 楊振華 START ADD C45032_オンライン仲介システムの導入 -->
+                                        <tr class="lineTr">
+                                            <td colspan = "3">
+                                                <div class="line_div"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan = "3">
+                                                <div class="cirTrporacle cirPink youteinaiyou_cir color_oracle">
+                                                </div>
+                                                <span class = "font_normal_h color_oracle">オンライン仲介</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="emptyTr">
+                                            <td colspan = "3">
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">10：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "yoyakucustName_gray onmiss2 kyakutannai" title="東　タロウ&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">東　タロウ&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">11：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "yoyakucustName_gray onmiss2 kyakutannai" title="賃貸&nbsp;&nbsp;&nbsp;忠&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">賃貸&nbsp;&nbsp;&nbsp;忠&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "yoyakucustName_gray font_normal_c">12：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "yoyakucustName_gray onmiss2 kyakutannai" title="東　タロウ&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html" class = "yoyakucustName_gray font_normal_c">東　タロウ&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <!-- 2021/03/15 楊振華 START ADD C45032_オンライン仲介システムの導入 -->
+                                    </table>
+                                </li>
+                                <li>
+                                    <table  class="subareatable">
+                                        <tr>
+                                            <td colspan = "3">
+                                                <div class="cirTrblue1 youteinaiyou_cir">
+                                                </div>
+                                                <span class = "font_normal_b">本日の来店予約</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">10：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "font_normal_c onmiss2 kyakutannai"  title="賃貸&nbsp;&nbsp;&nbsp;芳子&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                <a href = "UKG02040.html">賃貸&nbsp;&nbsp;&nbsp;芳子&nbsp;様（東建&nbsp;&nbsp;太郎）</a>
+                                              </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">13：00</span>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c onmiss2 kyakutan" title="アイカ工業株式会社&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                <a href = "UKG02040.html">アイカ工業株式会社&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">13：00</span>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c onmiss2 kyakutannai"
+                                                 title="NTTドコモ東海株式会社&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                 <a href = "UKG02040.html">NTTドコモ東海株式会社&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="lineTr">
+                                            <td colspan = "3">
+                                                <div class="line_div"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan = "3">
+                                                <div class="cirTrblue1 youteinaiyou_cir" >
+                                                </div>
+                                                <span class = "font_normal_b">【本日の物件案内】</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">10：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "font_normal_c onmiss2 kyakutannai" title="東　タロウ&nbsp;様（担当:東建&nbsp;&nbsp;太郎）"><a href = "UKG02040.html">東　タロウ&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">11：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "font_normal_c onmiss2 kyakutannai" title="賃貸&nbsp;&nbsp;&nbsp;忠&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html">賃貸&nbsp;&nbsp;&nbsp;忠&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">12：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "font_normal_c onmiss2 kyakutannai"
+                                            title="東　タロウ&nbsp;様（担当:東建&nbsp;&nbsp;太郎）"><a href = "UKG02040.html">東　タロウ&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>
+								<div class="subareatable_tab">
+								<table  class="subareatable">
+                                        <tr>
+                                            <td colspan = "3">
+                                                <div class="cirTrblue1 youteinaiyou_cir" >
+                                                </div>
+                                                <span class = "font_normal_b">【本日の来店予約】</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">10：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "font_normal_c onmiss2 kyakutan" title="賃貸&nbsp;&nbsp;&nbsp;芳子&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                <a href = "UKG02040.html">賃貸&nbsp;&nbsp;&nbsp;芳子&nbsp;様（東建&nbsp;&nbsp;太郎）</a>
+                                              </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">13：00</span>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c onmiss2 kyakutan" title="アイカ工業株式会社&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                <a href = "UKG02040.html">アイカ工業株式会社&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">13：00</span>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c onmiss2 kyakutan" title="NTTドコモ東海株式会社&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                                <a href = "UKG02040.html">NTTドコモ東海株式会社&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="lineTr" >
+                                            <td colspan = "3">
+                                                <div class="line_div"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan = "3">
+                                                <div class="cirTrblue1 youteinaiyou_cir">
+                                                </div>
+                                                <span class = "font_normal_b">【本日の物件案内】</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">10：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "font_normal_c onmiss2 kyakutannai"
+                                            title="東　タロウ&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html">東　タロウ&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">11：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "font_normal_c onmiss2 kyakutannai"
+                                            title="賃貸&nbsp;&nbsp;&nbsp;忠&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html">賃貸&nbsp;&nbsp;&nbsp;忠&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cirTrblack youteinaiyou_tenken">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class = "font_normal_c">12：00</span>
+                                            </td>
+                                            <td>
+                                            <span class = "font_normal_c onmiss2 kyakutannai"
+                                            title="東　タロウ&nbsp;様（担当:東建&nbsp;&nbsp;太郎）">
+                                            <a href = "UKG02040.html">東　タロウ&nbsp;様（東建&nbsp;&nbsp;太郎）</a></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+								</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="uketuke_jyoukyou">
+                    <div class="uketuke_jyoukyou_title">
+                        <span class="font_bigcolor"></span>
+                        <span style="letter-spacing: 0.02rem;">受付状況</span>
+                    </div>
+                    <div class="uketuke_jyoukyou_bottom">
+                        <div class="small_title">
+                            <div class="cirTrblue2 uketuke_jyoukyou_cir">
+                            </div>
+                            <span class = "font_normal_h color_oranged">仲介 太郎さんの受付状況</span>
+                        </div>
+                        <div class="tuki_uektuke">
+                            <div class="uketuke_tenken">・</div>
+                            <span class = "font_normal_l">今月の新規受付組数　<span class="kumi">5</span>　組</span>
+                        </div>
+                        <div class="tuki_uektuke">
+                            <div class="uketuke_tenken">・</div>
+                            <span class = "font_normal_l">商談中のお客様組数　<span class="kumi">8</span>　組</span>
+                        </div>
+                        <div class="uketuke_jyoukyou_detial">
+                            <div class="kumi_detial">
+                                <img src="../../image/ukg01010/kibou.svg"/>
+                                <span class="font_normal_b color_oranged">希望条件該当物件数　</span>
+								<div class="font_normal_suu">
+								   <a class="suu_text bukken_suu">
+                                    <span class="font_suu">8</span>戸（<span>10戸</span>）
+                                   </a>
+								</div>
+
+                            </div>
+                            <div class="kumi_detial">
+                                <img src="../../image/ukg01010/okyaku.svg"/>
+                                <span class="font_normal_b color_oranged kaikei">追客アラーム組数　</span>
+								<div class="font_normal_suu2">
+                                <a class="suu_text alarm_suu">
+                                    <span class="font_suu">10</span>組（<span>51組</span>）
+                                </a>
+								</div>
+                            </div>
+                            <div class="kumi_detial">
+                                <img src="../../image/ukg01010/kairi.svg"/>
+                                <span class="font_normal_b color_oranged">仮押え組数　</span>
+								<div class="font_normal_suu3">
+                                <a class="suu_text pop-two">
+                                    <span class="font_suu">10</span>組（<span>51組</span>）
+                                </a>
+								</div>
+                            </div>
+                        </div>
+                        <div class="binto">
+                            ( )内の数値は、事業所全体の件数です。
+                        </div>
+                        <div class="kari_detial font_normal_c">
+                            <div class="kari_detial_naiyou">
+                                <img src="../../image/common/icon/migi_yajirui4.png"/><!--/*20180315*/-->
+                                <span><span class=" pop-two">山田 太郎様</span> </span> 仮押え有効期限<span class="color_red">終了</span>
+                            </div>
+
+
+                            <div class="kari_detial_naiyou">
+                                <img src="../../image/common/icon/migi_yajirui4.png"/><!--/*20180315*/-->
+                                <span><span class=" pop-two">野田建材株式会社様</span> </span>仮押え 他決により<span class="color_red">解除</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="jyoukyou_data">
+                    <div class="jyoukyou_data_title">
+                        <span class="font_bigcolor_two"></span>
+                        <span class="ten_name">名古屋駅前店の受付状況</span>
+                    </div>
+                    <div class="jyoukyou_data_bottom">
+                        <div class="jyoukyou_data_kumi">
+                            <div class="cirTrblue3 jyoukyou_data_kumi_cir">
+                            </div>
+                            <span class = "font_normal_b color_green">今月の受付組数</span>
+                            <div class="data_kumi_right"><span class="kumi">９８</span> <span class="font_normal_b">組</span></div>
+                        </div>
+                        <div class="jyoukyou_data_kumi">
+                            <div class="cirTrblue3 jyoukyou_data_kumi_cir">
+                            </div>
+                            <span class = "font_normal_b color_green">商談中のお客様組数</span>
+                            <div class="data_kumi_right"><span class="kumi">９８</span> <span class="font_normal_b">組</span></div>
+                        </div>
+                        <div class="jyoukyou_data_kumi">
+                            <div class="cirTrblue5 jyoukyou_data_kumi_cir">
+                            </div>
+                            <span class = "font_normal_b color_blue1">仲介部員別の受付組数</span>
+                        </div>
+                        <div class="buinbetu">
+                            <div class="buinbetu_naiyou">
+                                <div class="buin_name">
+								  <div class="buin_uketuke_kumi_img">
+                                   </div>&nbsp;&nbsp;<span>東建  太郎さん</span></div>
+                                <div class="buin_uketuke_kumi">
+
+                                    <span class="buin_uketuke_kumi_text">今月の新規受付組数</span>
+                                    <div class="buin_uketuke_kumi_suu">
+                                        <span class="kumi_suu">:&nbsp;&nbsp;1</span> 組
+                                    </div>
+                                </div>
+                                <!-- <div class="buin_okyaku_kumi">
+                                   <div class="buin_uketuke_kumi_img">
+                                    </div>-->
+                                    <span class="buin_uketuke_kumi_text" id="buin_uketuke_kumi_text">商談中のお客様</span>
+                                    <div class="buin_uketuke_kumi_suu">
+                                        <span class="kumi_suu">:&nbsp;&nbsp;1</span> 組
+                                    </div>
+                                </div>
+                            </div>
+							<div class="loto">
+                            <div class="loto_left font_normal_c jufu"><span class="load_text">受付状況データダウンロード</span></div>
+                           <!-- <div class="loto_center"></div>-->
+                            <div class="loto_right">
+                                <div class="loto_getu"><span class="font_loto_getu">２</span>月</div>
+                                <div class="loto_getu"><span class="font_loto_getu">３</span>月</div>
+                                <div class="loto_getu"><span class="font_loto_getu">４</span>月</div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                       <div class="uketuke_itiran">
+                    <div class="uketuke_itiran_title">
+                        <span class="font_tantou">
+                            <span class="normal_rec"></span>
+                        </span>
+                        <span class="ten_name">受付入力未登録登一覧</span>
+                        <div class="fukidasi">
+                            <div class="kensuu">50</div>
+                        </div>
+                    </div>
+                    <div class="uketuke_itiran_bottom">
+                        <div class="uketuke_itiran_naiyou">
+                            <table border = "0" id="test"  class="subareatable3">
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/9/21</span> 17:25 (No.12345678)</a></td></tr>
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/11/21</span> 17:25 (No.12345678)</a></td></tr>
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/11/21</span> 17:25 (No.12345678)</a></td></tr>
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/11/21</span> 17:25 (No.12345678)</a></td></tr>
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/11/21</span> 17:25 (No.12345678)</a></td></tr>
+                                <tr class="emtr">
+                                </tr>
+                            </table>
+                            <div><!-- 20180315 -->
+                                <a class="pop-three uketuke_sara uketuke_sara_naiyou"><!-- 20180315 -->
+                                    <span>さらに表示&nbsp;&gt;</span>
+                                </a>
+                            </div><!-- 20180315 -->
+                        </div>
+                    </div>
+                </div>
+				<div class="jidou_uketuke">
+                    <div class="jidou_uketuke_title">
+                        <span class="font_tantou">
+                            <span class="normal_rec"></span>
+                        </span>
+                        <div class="jidou_uketuke_title_top">受付入力未登録登一覧</div>
+                        <!--<div class="jidou_uketuke_title_bottom">(仲介担当者未設定)</div>-->
+                        <div class="fukidasi">
+                            <div class="kensuu">50</div>
+                        </div>
+                    </div>
+                    <div class="jidou_uketuke_bottom">
+                        <div class="jidou_uketuke_naiyou">
+                            <div class="jidou_uketuke_naiyou_setumei">
+                                <p>「ホームメイト」サイトから問合せされたお客様が自動で受付けられ、一覧に表示されます。仲介担当者を設定して下さい。</p>
+                            </div>
+                            <table border = "0" id="test"  class="subareatable3">
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/9/21</span> 17:25 <span class="denwa_btn">電 話</span></a></td></tr>
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/11/21</span> 17:25 <span class="denwa_btn">電 話</span></a></td></tr>
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/11/21</span> 17:25 <span class="meiru_btn">メール</span></a></td></tr>
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/11/21</span> 17:25 <span class="meiru_btn">メール</span></a></td></tr>
+                                <tr><td colspan = "2"><a href="UKG02010.html"><span>･2011/11/21</span> 17:25 <span class="meiru_btn">メール</span></a></td></tr>
+                                <tr class="emtr">
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div>
+								<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                <a href="UKG01011.html?keepThis=true&TB_iframe=true&height=700&width=1007" class="houji jidou_uketuke_sara">
+                                    <span>さらに表示&nbsp;&gt;</span>
+                                </a>
+								<!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="syuukai_itiran">
+                    <div class="syuukai_itiran_title">
+                        <span class="font_tantou">
+                            <span class="normal_rec"></span>
+                        </span>
+                        <div class="syuukai_itiran_title_top">受付入力未登録登一覧</div>
+                        <!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                        <div class="syuukai_itiran_title_bottom">(仲介担当者未設定)</div>
+                        <!-- 2019/10/21 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                        <div class="fukidasi">
+                            <div class="kensuu">50</div>
+                        </div>
+                    </div>
+                    <div class="syuukai_itiran_bottom">
+                        <div class="syuukai_itiran_naiyou">
+                            <div class="syuukai_itiran_naiyou_setumei">
+                            	<!--2019/10/24 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START -->
+                                <p>法人企業クラブ会員様からの斡旋依頼です。仲介担当者と希望条件を設定して下さい。</p>
+                                <!--2019/10/24 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END -->
+                            </div>
+                            <div class="syuukai_itiran_naiyou_show">
+                                <table id="syuukai_itiran_naiyou_table" border = "0" id="test"  class="subareatable3">
+                                    <tr class="trhoujinuketuke"><td colspan = "2"><a href="UKG02010.html"><span class="subareatable_tab">･2011/9/21</span> 17:25 (№42000007)</a></td></tr>
+                                    <tr class="trhoujinuketuke"><td colspan = "2"><a href="UKG02010.html"><span class="subareatable_tab">･2011/11/21</span> 17:25 (№42000007)</a></td></tr>
+                                    <tr class="trhoujinuketuke"><td colspan = "2"><a href="UKG02010.html"><span class="subareatable_tab">･2011/11/21</span> 17:25 (№42000007)</a></td></tr>
+                                    <tr class="trhoujinuketuke"><td colspan = "2"><a href="UKG02010.html"><span class="subareatable_tab">･2011/11/21</span> 17:25 (№42000007)</a></td></tr>
+                                    <tr class="trhoujinuketuke"><td colspan = "2"><a href="UKG02010.html"><span class="subareatable_tab">･2011/11/21</span> 17:25 (№42000007)</a></td></tr>
+                                    <tr class="emtr"><!-- 20180315 -->
+                                    </tr><!-- 20180315 -->
+                                </table>
+                                <div><!-- 20180315 -->
+                                    <a id="linkHoujinUketuke" class="linkHoujinUketuke houji uketuke_sara uketuke_sara_syuukai"><!-- 20180315 -->
+                                        <span>さらに表示&nbsp;&gt;</span>
+                                    </a>
+                                </div><!-- 20180315 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="houjin_irai">
+                    <div class="houjin_irai_title">
+                        <span class="font_big">|</span>
+                        <span>法人仲介依頼状況</span>
+                    </div>
+                    <div class="houjin_irai_bottom">
+                        <div class="jyoukyou_data_kumi">
+                            <div class="cirTrblue4 jyoukyou_data_kumi_cir"></div>
+                            <span class = "font_normal_b color_purple">法人仲介依頼数</span>
+                        </div>
+                        <div class="iraisuu">
+                            <ul>
+                                <li>
+                                    <div class="iraisuu_text">
+                                        <div class="houjin_name"><img class="houjin_name_img" src="../../image/common/icon/migi_yajirui3.png"/>法人<span class="name_text">太郎さん</span></div>
+                                        <div class="iraisuu_mejiusi">
+                                            <!-- /*20180315*/ -->
+                                            <span class="kontuki_iraisuu">今月の法人仲介依頼数</span>
+                                        </div>
+                                    </div>
+                                    <div class="iraisuu_kensuu">
+                                        <span class="iraisuu_kensuuji">99</span><span>件</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="iraisuu_text">
+                                        <div class="houjin_name"><img  class="houjin_name_img" src="../../image/common/icon/migi_yajirui3.png"/>派遣<span class="name_text">次郎さん</span></div>
+                                        <div class="iraisuu_mejiusi">
+                                            <!-- /*20180315*/ -->
+                                            <span class="kontuki_iraisuu">今月の法人仲介依頼数</span>
+                                        </div>
+                                    </div>
+                                    <div class="iraisuu_kensuu">
+                                        <span class="iraisuu_kensuuji">900</span><span>件</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="iraisuu_text">
+                                        <div class="houjin_name"><img class="houjin_name_img" src="../../image/common/icon/migi_yajirui3.png"/>派遣<span class="name_text">三郎さん</span></div>
+                                        <div class="iraisuu_mejiusi">
+                                            <!-- /*20180315*/ -->
+                                            <span class="kontuki_iraisuu">今月の法人仲介依頼数</span>
+                                        </div>
+                                    </div>
+                                    <div class="iraisuu_kensuu">
+                                        <span class="iraisuu_kensuuji">99000</span><span>件</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="soukensuuji">
+                                <span class="soukontuki_iraisuu">今月の法人仲介依頼数</span>
+
+                                <div class="iraisuu_kensuu kensuu_last">
+                                    <span class="iraisuu_soukensuuji">99999</span><span>件</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="houjin_irai_load">
+                            <div class="houjin_irai_load_left font_normal_b"><span class="load_text" style="font-size:0.15rem;">法人仲介依頼データダウンロード</span></div>
+                           <!--<div class="houjin_irai_load_center"></div>-->
+                            <div class="houjin_irai_load_right">
+                                <div class="houjin_irai_load_getu"><span class="font_loto_getu">３</span>月</div>
+                                <div class="houjin_irai_load_getu"><span class="font_loto_getu">４</span>月</div>
+                                <div class="houjin_irai_load_getu"><span class="font_loto_getu">５</span>月</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+					<!-- 2020/04/02 程旋 UPD START C44030_お部屋探しNaviマルチブラウザ対応-->
+                    </div>
+					<!-- 2020/04/02 程旋 UPD END C44030_お部屋探しNaviマルチブラウザ対応-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+    </div>
+    <div id="hidpop" class="hidpopid hidpop">
+        <div id="hidpop1" class="hidpop1">進捗状況を変更する</div>
+        <!--2020/06/12 ADD START セツ(SYS) C43040-2_法人の入力項目追加対応-->
+        <div>
+            <input type="text" class="henkou_riyu" id="henkou_riyu" onblur="setBtnEnable();" placeholder="理由を入力してください。"/>
+        </div>
+        <!--2020/06/12 ADD END セツ(SYS) C43040-2_法人の入力項目追加対応-->
+        <div id="hidpop2" class="hidpop2">
+            <table>
+                <tr>
+                    <td class="font_normal"rowspan="2">
+                        <!--2020/06/12 UPD START セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                        <!--<a class="btn primary chu_ta" onclick="tajue()">-->
+                        <a class="btn primary chu_ta btn_disable" onclick="tajue()">
+                        <!--2020/06/12 UPD END セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                            <div>他 決</div>
+                        </a>
+                    </td>
+                    <td class="font_normal"rowspan="2">
+                        <!--2020/06/12 UPD START セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                        <!--<a class="btn primary chu_ta" onclick="chuushi()">-->
+                        <a class="btn primary chu_ta btn_disable" onclick="chuushi()">
+                        <!--2020/06/12 UPD END セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                            <div>中 止</div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="hidpop3" class="hidpopid hidpop3"><img src ="../../image/ukg01010/fukidashi.gif"/></div>
+    <div id="footdiv" class="footer"></div>
+    <div id="pop_one" style="display:none;">
+         <iframe width="480px" height="800px" frameborder="0" style="overflow-y:hidden" src="UKG99006.html?keepThis=true&TB_iframe=true" marginheight="0" marginwidth="0" name="content_frame"></iframe>
+    </div>
+</body>
+</html>

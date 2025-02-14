@@ -1,0 +1,1248 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/simple.css" id="calendar_style" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/timelist.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG02010.css"></link>
+        <script type="text/javascript" src="../../js/prototype.js" id="prototype"></script>
+        <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../../js/protocalendar_min.js"></script>
+        <script type="text/javascript" src="../../js/timelist.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../js/message.js"></script>
+        <script type="text/javascript" src="../../js/artDialog.js"></script>
+        <script type="text/javascript" src="../../js/thickbox.js"></script>
+        <script type="text/javascript" src="../../js/lang_ja.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <script type="text/javascript" src="../../js/help.js"></script>
+        <script type="text/javascript" src="../../js/UKG02010.js"></script>
+        <title>Success21お部屋探しNAVI</title>
+    </head>
+
+    <body onload="resizeWindowSize()">
+        <div class="iframe-div">
+            <iframe id="content_frame" name="iframe1" class="top-title" src="pageHead.html" pageId="help_ukg02010.html"></iframe>
+        </div>
+        <div class="toppage">
+            <div class="toppage-space">&nbsp;</div>
+            <div class="menu_kibou_div">
+                <a class="ukg02030">
+                    <div class="menu_kiboujyouken">ご希望条件</div>
+                </a>
+            </div>
+            <div class="menu_chirashi_div">
+                <a class="ukg02010">
+                    <div class="menu_chirashi">お客様情報の登録</div>
+                </a>
+            </div>
+            <div class="menu_syoudan_div">
+                <a class="ukg02040">
+                    <div class="menu_syoudan">ご商談内容の確認</div>
+                </a>
+            </div>
+        </div>
+        <div id="container">
+            <div class="header-block">
+                <!--<img src="../../image/ukg02010/customer_info.png">-->
+                <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+                <!--<img class="img-position" src="../../image/ukg02010/customer_info.png">-->
+                <img class="img-position" src="../../image/ukg02010/customer_info.svg">
+                <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+            </div>
+            <div id="main">
+                <div id="middle" class="divbackColor">
+                    <div id="middle" class="divbackImage">
+                        <div class="divMainTable">
+                            <form id="form1">
+                                <div class="MainTable-left">
+                                    <!--<div class="table-header-guest">-->
+                                        <div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02010.html">
+                                            <!--<img class="syoukai-mark-img" src="../../image/common/icon/help.png"/>
+                                            <span class="help-style">このページの使い方</span>-->
+                                        </div>
+                                    <!--</div>-->
+                                    <div class="div-content div-content-line">
+                                        <div class="guest-top">
+                                               <img class="subtitle_position_subtitle_yellow" src="../../image/ukg02010/subtitle_green.png">
+                                        </div>
+                                        <div class="customer-position"><span class="customer-font">お客様情報の登録</span></div>
+                                        <div class="guest-info">
+                                            <table class="UGK1020Table ukg1020-position">
+                                                <tr class="UGK1020Table-tr-line oHeyasagashi-display">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">当社でのお部屋探し</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail-a">
+                                                            <button class="radio-button-checked  radio-button-pos" id="radioFirst">初めて(初回)</button>
+                                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                            <!--<button class="radio-button  radio-button-pos" id="radioNoFirst">複 数 回</button>&nbsp;-->
+                                                            <button class="radio-button  radio-button-pos" id="radioNoFirst">複数回</button>&nbsp;
+                                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <div id="kensaku-info" class="hide-item cursor-hand">
+                                                                <a id="btnkokyaku" class="thickbox">
+                                                                    <!--<img class="kensaku-info" src="../../image/ukg02010/kensaku_info.svg">-->
+                                                                    <img class="kensaku-info kensaku-info-pos" src="../../image/ukg02010/ukechike_info.svg">
+                                                                </a>
+                                                            </div>
+                                                            <div id="kensaku-info_off">
+                                                              <!--<img class="kensaku-info" src="../../image/ukg02010/kensaku_info_off.svg">-->
+                                                              <img class="kensaku-info kensaku-info-pos" src="../../image/ukg02010/ukechike_info_g.svg">
+                                                            </div>
+                                                        </div>
+                                                        <div class="info-detail-b">
+                                                            <div class="setradiobox-disabled">
+                                                            </div>
+                                                            <div id="radiolease" class="setradiobox setHeyaStatus">
+                                                                <div class="checkbox-checked"></div>
+                                                            </div>
+                                                            <span class="font_normal setHeyaStatus" id="radioleaseSpan">&nbsp;&nbsp;現在借りている&nbsp;</span>
+                                                            <div class="setradiobox-disabled ankeito-margin6">
+                                                            </div>
+                                                            <div id="radioOldlease" class="setradiobox ankeito-margin6 setHeyaStatus">
+                                                                <div class="checkbox-checked"></div>
+                                                            </div>
+                                                            <span class="font_normal setHeyaStatus" id="radioOldleaseSpan">&nbsp;&nbsp;以前借りたことがある&nbsp;&nbsp;</span>
+                                                            <div class="setradiobox-disabled ankeito-margin6">
+                                                            </div>
+                                                            <div id="radioNolease" class="setradiobox ankeito-margin6 setHeyaStatus">
+                                                                <div class="checkbox-checked"></div>
+                                                            </div>
+                                                            <span class="font_normal setHeyaStatus" id="radioNoleaseSpan">&nbsp;&nbsp;来店したが他社で借りた</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- 2020/04/10 UPD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                                <!-- <tr  class="UGK1020Table-tr-line2 oKyakusamashubetu-display"> -->
+                                                <tr  class="UGK1020Table-tr-line2 oKyakusamashubetu-display border-btm">
+                                                <!-- 2020/04/10 UPD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">お客様種別</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align">
+                                                            <button class="radio-button-checked" id="firstSpan">個 人</button>
+                                                            <button class="radio-button" id="noFirstSpan">法 人</button>
+                                                            
+                                                            
+                                                            <!-- 2020/03/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START -->
+                                                            <!--<div id="checkbossflg-none" class="setcheckbox-disabled ankeito-margin1 div-chkbox">
+                                                            </div>-->
+                                                            <div id="checkbossflg-none" class="setcheckbox-disabled ankeito-margin1 div-chkbox setcheckbox1" style="display:none;">
+                                                            	<div class="checkbox-checked hide-item"></div>
+                                                            </div>
+                                                            <!-- 2020/03/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END -->
+                                                            
+                                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                            <!--<div id="checkbossflg" class="setcheckbox ankeito-margin1 div-chkbox">-->
+                                                            <!--2020/03/20 UPD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                            <!--<div id="checkbossflg" class="setcheckbox-disabled ankeito-margin1 div-chkbox setcheckbox">-->
+                                                            <!-- 2020/03/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START -->
+                                                            <!--<div id="checkbossflg" class="setcheckbox-disabled ankeito-margin1 div-chkbox setcheckbox checkbox-ankeito setHeyaStatus checkbox_ankeito_flag">-->
+                                                            <div id="checkbossflg" class="setcheckbox-disabled ankeito-margin1 div-chkbox setcheckbox1 checkbox-ankeito setHeyaStatus checkbox_ankeito_flag">
+                                                            <!-- 2020/03/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END -->
+                                                            <!--2020/03/20 UPD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                                <div class="checkbox-checked hide-item"></div>
+                                                            </div>
+                                                            
+                                                           <!--2020/03/20 UPD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                            <!--<span class="font_normal setcheckboxlabel" id="checkbossflgSpan">&nbsp;&nbsp;法人企業クラブ</span>-->
+                                                            <!-- 2020/03/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START -->
+                                                            <!--<span class="font_normal setcheckboxlabel setHeyaStatus" id="checkbossflgSpan">&nbsp;&nbsp;法人企業クラブ</span>-->
+                                                            <span class="font_normal  setHeyaStatus" id="checkbossflgSpan">&nbsp;&nbsp;法人企業クラブ</span>
+                                                            <!-- 2020/03/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END -->
+                                                            <!--2020/03/20 UPD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                            
+                                                            <div id="kensaku-kigyou" class="ankeito-margin2 kensaku-kigyou hide-item cursor-hand">
+                                                                <a id="btnbosssearch" class="thickbox">
+                                                                    <!--<img class="show-img" src="../../image/ukg02010/kensaku_kigyou.svg">-->
+                                                                    <!--2020/03/20 UPD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                                    <!--<img class="show-img" src="../../image/ukg02010/houjin_kigyou.svg">-->
+                                                                    <img class="show-img" src="../../image/ukg02010/houjinkigyoukensaku.svg">
+                                                                    <!--2020/03/20 UPD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                                </a>
+                                                            </div>
+                                                            <div id="kensaku-kigyou_off" class="ankeito-margin2 kensaku-kigyou">
+                                                                <!--<img class="show-img" src="../../image/ukg02010/kensaku_kigyou_off.svg">-->
+                                                                <!--2020/03/20 UPD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                                <!--<img class="show-img" src="../../image/ukg02010/houjin_kigyou_g.svg">-->
+                                                                <img class="show-img" src="../../image/ukg02010/houjinkigyoukensaku_g.svg">
+                                                                <!--2020/03/20 UPD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                             <!--  ########## 2018/10/18 蒋阳  ADD Start 法人の入力項目追加対応(C43040) -->
+                                                <!-- 開発メモ：法人仲介依頼のため「当社でのお部屋探し」、「お客様種別」は不要，代わりに、トップページで選択した法人企業情報を表示する。 -->
+                                                <!-- 2020/04/10 UPD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                                <!-- <tr class="houjin-display UGK1020Table-tr-line3"> -->
+                                                <tr class="houjin-display UGK1020Table-tr-line3 trshoworhid">
+                                                <!-- 2020/04/10 UPD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">法人企業情報</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="info-detail detail-align UGK1020Table-td">
+                                                            <div class="font_normal">＜社宅代行企業＞ 株式会社コラボレート（企業コード：321）</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--  ########## 2018/10/18 蒋阳  ADD End 法人の入力項目追加対応(C43040) -->
+
+
+                                                <!-- 2020/04/10 UPD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                                <!-- <tr class="houjin-display UGK1020Table-tr-line3"> -->
+                                                <tr class="houjin-display UGK1020Table-tr-line3 trshoworhid">
+                                                <!-- 2020/04/10 UPD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">減&nbsp;額&nbsp;率</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="info-detail detail-align UGK1020Table-td">
+                                                            <span class="font_normal gengakuritu">50%</span>
+                                                            <span class="font_normal">(サブリース物件の場合&nbsp;50%)</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- 2020/04/10 UPD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                                <!-- <tr class="houjin-display UGK1020Table-tr-line2"> -->
+                                                <tr class="houjin-display UGK1020Table-tr-line2 trshoworhid">
+                                                <!-- 2020/04/10 UPD START 楊朋朋(SYS) C44072_不具合対応 -->
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">紹介料率</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="info-detail detail-align UGK1020Table-td">
+                                                            <span class="font_normal gengakuritu">0%</span>
+                                                            <span class="font_normal">(サブリース物件の場合&nbsp;50%)</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div class="navigate-block">
+                                                <div class="navigate-item">
+                                                    <img class="navigate-item-img" src="../../image/ukg02010/kuroba_midori.svg">
+                                                </div>
+                                                <div class="title-font-style">
+                                                    <span>お 客 様 情 報</span>
+                                                </div>
+												<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                                <div class="hituyou-addr-label align-center">
+                                                    <span>申込み時必須</span>
+                                                </div>
+												<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                            </div>
+                                            <table class="UGK1020Table">
+                                                <tr class="UGK1020Table-tr-line">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">顧&nbsp;客&nbsp;№</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                        	<!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                            <!--<span class="font_normal">12345</span>-->
+                                                            <span class="font_normal custom-no">12345</span>
+                                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <img class="clear" src="../../image/ukg02010/clear.svg" onclick="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- 2019/09/25 郝年昇 ADD START C43089_20190913_不具合対応 -->
+                                                <tr  class="UGK1020Table-tr-line2 houJinType">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">お客様種別</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align">
+                                                            <button type='button' class="radio-button" id="firstSpan2">個 人</button>
+                                                            <button type='button' class="radio-button-checked" id="noFirstSpan2">法 人</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- 2019/09/25 郝年昇 ADD END C43089_20190913_不具合対応 -->
+                                                <tr class="UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title1" id="tdCustemNm" align="center">
+                                                        <!--<div class="hituyou-item">-->
+                                                            <!--<span class="font_normal_title">お客様名</span>-->
+                                                            <div class="customer-font-normal">
+                                                            <div class="font_normal_title1">&nbsp;お客様名&nbsp;&nbsp;</div>
+                                                            <div class="hitu-label align-center hitu-label-postion">
+                                                                <span>必須</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <!--  ########## 2018/10/18 蒋阳  UPD Start 法人の入力項目追加対応(C43040) -->
+                                                    <!-- <div class="info-detail">
+                                                            <input type="text" id="txtCustemNm" maxlength="60" class="input-pink txtmode1 text-name" />
+                                                            <span class="font_normal">&nbsp;&nbsp;様</span>
+                                                            <span class="font_normal_gray rei-label">例）&nbsp;東建&nbsp;&nbsp;&nbsp;太郎</span>
+                                                            <span id="errCustemNm" class="font_normal_small_red"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="UGK1020Table-title" id="tdCustomNmKana">
+                                                        <span class="font_normal_title">お客様名カナ</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="info-detail">
+                                                            <input type="text" id="txtCustomNmKana" maxlength="60" class="input-pink txtmode1 text-name" />
+                                                            <span class="font_normal">&nbsp;&nbsp;様</span>
+                                                            <span class="font_normal_gray rei-label">例）&nbsp;トウケン&nbsp;&nbsp;&nbsp;タロウ</span>
+                                                            <span id="errCustomNmKana" class="font_normal_small_red"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr> -->
+                                                    <div class="info-detail">
+                                                            <input type="text" id="txtCustemNm" maxlength="60" class="input-pink txtmode1 text-name" />
+                                                            <span class="font_normal">&nbsp;&nbsp;様</span>
+                                                            <span class="font_normal_gray rei-label">例）&nbsp;株式会社&nbsp;&nbsp;&nbsp;東建設</span>
+                                                            <span id="errCustemNm" class="font_normal_small_red"></span>
+                                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                            <img class="houJinKiGyouJouhou" src="../../image/ukg02010/hanei_kigyou.svg" onclick="haneiClick()">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title" id="tdCustemNm" align="center"> 
+                                                      <div class="hituyou-item">
+                                                        <span class="font_normal_title text_algin">お客様名カナ</span>
+                                                        <div class="hitu-labelNyuukyo align-center">
+                                                         <span>必須</span>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail">
+                                                            <input type="text" id="txtCustomNmKana" maxlength="60" class="input-pink txtmode1 text-name" />
+                                                            <span class="font_normal">&nbsp;&nbsp;様</span>
+                                                            <span class="font_normal_gray rei-label">例）&nbsp;ヒガシケンセツ</span>
+                                                            <span id="errCustomNmKana" class="font_normal_small_red"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="houJinKiGyouJouhou UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title" id="tdCustemNm" align="center">
+                                                      <div class="hituyou-item">
+                                                        <span class="font_normal_title text_algin">入居予定者名</span>
+                                                         <div class="hitu-labelNyuukyo align-center">
+                                                          <span>必須</span>
+                                                         </div>
+                                                      </div>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail">
+                                                            <input type="text" id="txtCustemNm" maxlength="60" class="input-pink txtmode1 text-name" />
+                                                            <span class="font_normal">&nbsp;&nbsp;様</span>
+                                                            <span class="font_normal_gray rei-label">例）&nbsp;東建&nbsp;&nbsp;&nbsp;太郎</span>
+                                                            <span id="errCustemNm" class="font_normal_small_red"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- <tr> -->
+                                                <tr class="houJinKiGyouJouhou UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title" id="tdCustomNmKana" align="center">
+                                                     <div class="hituyou-item">
+                                                        <span class="font_normal_title text_algin1" >入居予定者名カナ</span>
+                                                        <div class="hitu-labelNyuukyoKana align-center">
+                                                            <span>必須</span>
+                                                        </div>
+                                                     </div>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail">
+                                                            <input type="text" id="txtCustomNmKana" maxlength="60" class="input-pink txtmode1 text-name" />
+                                                            <span class="font_normal">&nbsp;&nbsp;様</span>
+                                                            <span class="font_normal_gray rei-label">例）&nbsp;トウケン&nbsp;&nbsp;&nbsp;タロウ</span>
+                                                            <span id="errCustomNmKana" class="font_normal_small_red"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--  ########## 2018/10/18 蒋阳  UPD End 法人の入力項目追加対応(C43040) -->
+                                                <tr class="UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title" align="center">
+														<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                                        <div class="customer-font-normal">
+                                                            <span class="font_normal_title">生年月日&nbsp;</span>
+                                                            <!--  ########## 2018/10/18 蒋阳  UPD Start 法人の入力項目追加対応(C43040) -->
+                                                            <!-- <div class="hitu-label align-center"> -->
+                                                            <!-- <div class="hitu-label align-center hitu-label-postion"> -->
+                                                            <!--  ########## 2018/10/18 蒋阳  UPD End 法人の入力項目追加対応(C43040) -->
+                                                            <!--    <span>必須</span> -->
+                                                            <!-- </div> -->
+                                                        </div>
+														<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail">
+                                                            <label class="lblSelect1">
+                                                                <select id="seinen" class="date-select">
+                                                                    <option value="0"></option>
+                                                                    <option value="Taurus">平成</option>
+                                                                    <option value="Aries">昭和</option>
+                                                                </select>
+                                                            </label>
+                                                            <input id="seinen_y" type="text" class="input-pink txtmode2 seinen-date">
+                                                            <span class="font_normal">年</span>
+                                                            <input id="seinen_m" type="text" class="input-pink txtmode2 seinen-date">
+                                                            <span class="font_normal">月</span>
+                                                            <input id="seinen_d" type="text" class="input-pink txtmode2 seinen-date">
+                                                            <span class="font_normal">日</span>
+															<span class="font_normal renraku-label">(年齢&nbsp;25歳)</span>
+                                                             <!--  ########## 2018/10/18 蒋阳  DEL Start 法人の入力項目追加対応(C43040) -->
+                                                            <!-- <span class="font_normal renraku-label">(年齢&nbsp;25歳)</span> -->
+                                                            <!--  ########## 2018/10/18 蒋阳  DEL End 法人の入力項目追加対応(C43040) -->
+                                                            <!--<span class="font_normal font_bold seibetsu">(性別&nbsp;：&nbsp;&nbsp;</span>
+                                                            <div class="info-detail1">
+                                                            <button class="radio-button-checked seibetsu_button" id="sp_sex_m">男&nbsp;&nbsp;&nbsp;&nbsp;性</button>
+                                                            <button class="radio-button seibetsu_button" id="sp_sex_f">女&nbsp;&nbsp;&nbsp;&nbsp;性</button>
+                                                            </div>
+                                                            <span class="font_normal font_bold1">)</span>-->
+                                                        </div>
+                                                        <div class="info-detail">
+                                                            <div class="seinen-warning">
+                                                            <span>※生年月日を聞き取ることができなかった場合は、年齢層を選択してください。</span>
+                                                            <!--<span class="font_normal">(&nbsp;年齢層&nbsp;：&nbsp;&nbsp;&nbsp;</span>-->
+                                                            <label class="lblSelect1 lblSelect1-position">
+                                                                <select id="nendai" class="date-select">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">10代</option>
+                                                                    <option value="2">20代</option>
+                                                                    <option value="3">30代</option>
+                                                                    <option value="4">40代</option>
+                                                                    <option value="5">50代</option>
+                                                                    <option value="6">60代以上</option>
+                                                                </select>
+                                                            </label>
+                                                            </div>
+                                                        </div>
+                                                        <!--<span class="font_normal">&nbsp;&nbsp;&nbsp;)</span>-->
+                                                    </td>
+                                                </tr>
+												
+                                                   <tr  class="UGK1020Table-tr-line2">
+                                                    <td class="UGK1020Table-title"  align="center">
+													    <!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                                        <div class="customer-font-normal">
+                                                            <span class="font_normal_title">性&nbsp;&nbsp;別&nbsp;</span>
+                                                            <!--<div class="hitu-label align-center hitu-label-postion">
+                                                                <span id="hissuSei">必須</span>
+                                                            </div>-->
+                                                        </div>
+														<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <div class="info-detail1">
+                                                            	<!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                                <!--<button class="seibetsu_button radio-button-checked" id="sp_sex_m">男 性</button>
+                                                                <button class="seibetsu_button radio-button" id="sp_sex_f">女 性</button>-->
+                                                                <button class="seibetsu_button radio-button-checked" id="sex_m">男 性</button>
+                                                                <button class="seibetsu_button radio-button" id="sex_f">女 性</button>
+                                                                <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div class="navigate-block">
+                                                <div class="navigate-item">
+                                                    <img class="navigate-item-img" src="../../image/ukg02010/kuroba_midori.svg">
+                                                </div>
+                                                <div class="title-font-style">
+                                                    <span>連 絡 先</span>
+                                                </div>
+                                                 <!--  ########## 2018/10/18 蒋阳  UPD Start 法人の入力項目追加対応(C43040) -->
+                                                <!-- 連絡先は法人企業の連絡先を反映しない。（必須でない） -->
+                                                <!-- <div class="hituyou-label align-center"> -->
+                                                <div class="hituyou-addr-label align-center">
+                                                <!--  ########## 2018/10/18 蒋阳  UPD End 法人の入力項目追加対応(C43040) -->
+                                                    <span>申込み時必須</span>
+                                                </div>
+                                            </div>
+                                            <div class="UGK1020Div">
+                                                <div class="memo-item">
+                                                    <img class="memo-item-img" src="../../image/ukg02010/renrakusaki1.png">
+                                                </div>
+                                                <table class="UGK1020Table">
+                                                <tr class="UGK1020Table-tr-line">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">電話番号</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <input id="txt_Tel" type="text" class="input-pink txtmode2 text-tel" placeholder="例） 090-123-4567">
+                                                            <span class="font_normal renraku-label font_bold">（連絡可能時間&nbsp;</span>
+                                                            <input type="text" class="input-pink txtmode1 renraku-jikan">
+                                                            <span class="font_normal renraku-label font_bold2">）</span>
+                                                        </div>
+                                                        <div>
+                                                            <span id="errTel" class="font_normal_small_red"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr  class="UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">携帯番号</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <input type="text" id="text_phone" class="input-pink txtmode2 text-tel" placeholder="例） 090-1234-5678">
+                                                            <span class="font_normal renraku-label font_bold">（連絡可能時間&nbsp;</span>
+                                                            <input type="text" class="input-pink txtmode1 renraku-jikan">
+                                                            <span class="font_normal renraku-label font_bold2">）</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">ＦＡＸ番号</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <input type="text" id="text_fax" class="input-pink txtmode2 text-tel" placeholder="例） 090-1234-5678">
+                                                            <span class="font_normal renraku-label font_bold">（連絡可能時間&nbsp;</span>
+                                                            <input type="text" class="input-pink txtmode1 renraku-jikan">
+                                                            <span class="font_normal renraku-label font_bold2">）</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">Ｅメールアドレス</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <input type="text" class="input-pink txtmode2 email-addr">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="UGK1020Table-tr-line2">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">携帯メールアドレス</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <input type="text" class="input-pink txtmode2 email-addr">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </table>
+                                            </div>
+                                            <div class="navigate-block">
+                                                <div class="navigate-item">
+                                                    <img class="navigate-item-img" src="../../image/ukg02010/kuroba_midori.svg">
+                                                </div>
+                                                 <div class="title-font-style">
+                                                    <span>住 所</span>
+                                                </div>
+                                                <!--  2020/10/27 DEL START 横山(TK) C45018_お客様住所の申し込み時必須からの除外 -->
+                                                <!--  <div class="hituyou-addr-label align-center"> -->
+                                                <!--      <span>申込み時必須</span> -->
+                                                <!--  </div> -->
+                                                <!--  2020/10/27 DEL END   横山(TK) C45018_お客様住所の申し込み時必須からの除外 -->
+                                            </div>
+                                            <table class="UGK1020Table">
+                                                <tr class="UGK1020Table-tr-line">
+                                                    <td class="UGK1020Table-title" id="tdCustomNmKana" align="center">
+                                                       <span class="font_normal_title juusho_title">郵便番号&nbsp;/&nbsp;都道府県&nbsp;/&nbsp;市区郡</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <input type="text" id="jusyoNbId" class="input-pink txtmode2 zip-code">
+                                                            <label class="lblSelect2">
+                                                                <select id="fukenList" class="select-fuken" onchange="funkenChange()">
+                                                                    <option value=" "></option>
+                                                                    <option value="Aries">愛知県</option>
+                                                                    <option value="Taurus">三重県</option>
+                                                                    <option value="Gemini">岐阜県</option>
+                                                                    <option value="Cancer">静岡県</option>
+                                                                </select>
+                                                            </label>
+                                                            <label class="lblSelect3">
+                                                                <select id="sikuList" class="select-siku" disabled="disabled" onchange="sikuListChange()">
+                                                                    <option value=""></option>
+                                                                    <option value="Aries">名古屋市中区</option>
+                                                                    <option value="Taurus">名古屋市東区</option>
+                                                                    <option value="Gemini">名古屋市中区</option>
+                                                                    <option value="Cancer">名古屋市港区</option>
+                                                                </select>
+                                                            </label>
+                                                            <a id="todofukenlinck" class="renraku-label" onclick="funkenClick()">
+                                                                <!--<span>[ 現在地の都道府県を選択 ]</span>-->
+                                                                <span id="todofukenlinck"><img class="show-svg-wth" src="../../image/ukg02010/kenzaichi.svg"></span>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="UGK1020Table-tr-line3">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">町・大字</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <input type="text" id="txtmati" class="input-pink txtmode1 text-addr" disabled="disabled">
+                                                            <span class="font_normal_gray renraku-label">例）丸の内</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="UGK1020Table-tr-line2">
+                                                    <td class="UGK1020Table-title" align="center">
+                                                        <span class="font_normal_title">丁・番地・マンション名</span>
+                                                    </td>
+                                                    <td class="UGK1020Table-td">
+                                                        <div class="info-detail detail-align1">
+                                                            <input type="text" id="jusyoAddressId" class="input-pink txtmode1 text-addr1">
+                                                            <span class="font_normal_gray renraku-label">例）１－２－３ マンション丸の内１０３号室</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--<div class="table-header-anket top-style">-->
+                                        <!--  2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                                        <div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02020.html">
+                                            <!--<img class="syoukai-mark-img" src="../../image/common/icon/help.png"/>
+                                            <span class="help-style">このページの使い方</span>-->
+                                        </div>
+                                        <!--  2018/08/13 ADD END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                                    <!--</div>-->
+                                    <div class="div-content">
+                                        <div class="guest-top">
+                                            <img class="subtitle_position" src="../../image/ukg02010/subtitle_yellow.png"/>
+                                        </div>
+                                        <div class="raiten-title"><span class="customer-font">来店アンケート</span></div>
+                                        <div class="navigate-block">
+                                            <!--<div class="navigate-item left-style">
+                                                 <img class="navigate-item-img" src="../../image/ukg02010/kuroba.svg">
+                                            </div>-->
+                                            <div class="ankeito-top1">
+                                                <span class="span-position ankeito-top-span">Q1.ご来店のきっかけをお聞かせください。(複数回答可)</span>
+												<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                                <div class="hituyou-addr-label align-center ankeito-hisuu align-top">
+                                                <span>申込み時必須</span>
+												<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="ankeito-block">
+                                            <div class="ankeito-bgroud">
+                                                <div class="ankeito-info">
+                                                    <div id="internet_set" class="setcheckbox">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="internet_set_span" class="font_normal setcheckboxlabel">&nbsp;&nbsp;インターネットサイト</span>
+                                                    <span class="font_normal ankeito-margin1">（&nbsp;</span>
+                                                    <div class="setcheckbox-disabled internet-none">
+                                                    </div>
+                                                    <div id="homemate" class="setcheckbox internet">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="homemate_span" class="font_normal setcheckboxlabel internetspan">&nbsp;&nbsp;ホームメイト</span>
+                                                    <div class="setcheckbox-disabled ankeito-margin2 internet-none">
+                                                    </div>
+                                                    <div id="yahoo" class="setcheckbox ankeito-margin2 internet">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="yahoo_span" class="font_normal setcheckboxlabel internetspan">&nbsp;&nbsp;Ｙａｈｏｏ!不動産</span>
+                                                    <div class="setcheckbox-disabled ankeito-margin2 internet-none">
+                                                    </div>
+                                                    <div id="suumo" class="setcheckbox ankeito-margin2 internet">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="suumo_span" class="font_normal setcheckboxlabel internetspan">&nbsp;&nbsp;ＳＵＵＭＯ</span>
+                                                    <div class="setcheckbox-disabled ankeito-margin2 internet-none">
+                                                    </div>
+                                                    <div id="home" class="setcheckbox ankeito-margin2 internet">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="home_span" class="font_normal setcheckboxlabel internetspan">&nbsp;&nbsp;ＨＯＭＥ'Ｓ&nbsp;）</span>
+                                                </div>
+                                                <!--<div class="ankeito-info">
+                                                    <div id="smart_phone" class="setcheckbox">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;スマートフォンサイト</span>
+                                                </div>-->
+<!--
+                                                <div class="ankeito-info">
+                                                    <div id="keitai_set" class="setcheckbox">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="keitai_set_span" class="font_normal setcheckboxlabel">&nbsp;&nbsp;携帯サイト</span>
+                                                    <span class="font_normal ankeito-margin1">（&nbsp;</span>
+                                                    <div class="setcheckbox-disabled keitai-none">
+                                                    </div>
+                                                    <div id="imode" class="setcheckbox keitai">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="imode_span" class="font_normal setcheckboxlabel keitaispan">&nbsp;&nbsp;ｉモード</span>
+                                                    <div class="setcheckbox-disabled ankeito-margin2 keitai-none">
+                                                    </div>
+                                                    <div id="yahoo_keitai" class="setcheckbox ankeito-margin2 keitai">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="yahoo_keitai_span" class="font_normal setcheckboxlabel keitaispan">&nbsp;&nbsp;Ｙａｈｏｏ!ケータイ</span>
+                                                    <div class="setcheckbox-disabled ankeito-margin2 keitai-none">
+                                                    </div>
+                                                    <div id="ezweb" class="setcheckbox ankeito-margin2 keitai">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="ezweb_span" class="font_normal setcheckboxlabel keitaispan">&nbsp;&nbsp;ＥＺｗｅｂ&nbsp;）</span>
+                                                    <div id="smart_phone" class="setcheckbox ankeito-margin2">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;スマートフォンサイト</span>
+                                                </div>
+-->
+                                                <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                <!--<div class="ankeito-info">-->
+                                                <div class="ankeito-info" style="margin-top: 0.1rem;">
+                                                <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                    <div id="smart_phone" class="setcheckbox">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;スマートフォンサイト</span>
+                                                    <div id="tv_radio" class="setcheckbox ankeito-margin8">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;テレビ・ラジオ</span>
+                                                    <div id="news" class="setcheckbox ankeito-margin9">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;新聞・チラシ</span>
+                                                    <div id="kanban" class="setcheckbox ankeito-margin10">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;物件の垂幕・横幕・アクリル看板</span>
+                                                </div>
+                                                <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                <!--<div class="ankeito-info">-->
+                                                <div class="ankeito-info" style="margin-top: 0.1rem;">
+                                                <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                    <div id="nobori" class="setcheckbox">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;店頭看板・のぼり</span>
+                                                    <div id="syoukai" class="setcheckbox ankeito-margin11">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;知人の紹介</span>
+                                                    <div id="kikkake_sonota" class="setcheckbox ankeito-margin12">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="kikkake_sonota_span" class="font_normal setcheckboxlabel">&nbsp;&nbsp;その他</span>
+                                                    <div><input type="text" id="txt_kikkake_sonota" class="txtmode1 ankeito-sonota" disabled="disabled" /></div>
+                                                </div>
+                                                <div class="ankeito-info sonota-top">
+                                                	<!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                    <!--<span class="font_normal">【お部屋探しの検索時に使用したキーワードをお知らせ下さい】</span>-->
+                                                    <span class="font_normal font_style">【お部屋探しの検索時に使用したキーワードをお知らせ下さい】</span>
+                                                    <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                </div>
+                                                <div class="ankeito-info">
+                                                    <input type="text" class="input-pink text-keyword" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!--<div class="navigate-block" style="margin-top:0.1rem">-->
+                                        <div class="navigate-block" style="margin-top:0.25rem">
+                                        <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            <!--<div class="navigate-item left-style">
+                                                 <img class="navigate-item-img" src="../../image/ukg02010/kuroba.svg">
+                                            </div>-->
+                                            <div class="ankeito-top2">
+                                                <span class="span-position span-color ankeito-top-span">Q2.転居の理由をお聞かせください。(複数回答可)</span>
+												<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                                <div class="hituyou-addr-label align-center ankeito-hisuu align-top">
+                                                <span>申込み時必須</span>
+												<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                            </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!--<div class="ankeito-block">-->
+                                        <div class="ankeito-block" style="margin-bottom: 0.1rem;">
+                                        <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            <div class="ankeito-bgroud">
+                                                <div class="ankeito-info">
+                                                    <div id="shugaku" class="setcheckbox">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;就学</span>
+                                                    <div id="shushoku" class="setcheckbox ankeito-margin5">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;就職</span>
+                                                    <div id="tenkin" class="setcheckbox ankeito-margin5">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;転勤</span>
+                                                    <div id="tenshoku" class="setcheckbox ankeito-margin5">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;転職</span>
+                                                    <div id="dokuritu" class="setcheckbox ankeito-margin5">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;独立</span>
+                                                    <div id="kekkon" class="setcheckbox ankeito-margin5">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;結婚</span>
+                                                    <div id="kae" class="setcheckbox ankeito-margin5">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span class="font_normal setcheckboxlabel">&nbsp;&nbsp;住替え</span>
+                                                </div>
+                                                <div class="ankeito-info">
+                                                    <div id="riyu_sonota" class="setcheckbox">
+                                                        <div class="checkbox-checked"></div>
+                                                    </div>
+                                                    <span id="riyu_sonota_span" class="font_normal setcheckboxlabel">&nbsp;&nbsp;その他</span>
+                                                    <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                    <!--<div><input type="text" id="txt_riyu_sonota" class="ankeito-sonota" disabled="disabled" /></div>-->
+                                                    <div><input type="text" id="txt_riyu_sonota" class="ankeito-sonota txt_kikkake_style" disabled="disabled" /></div>
+                                                    <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MainTable-right">
+                                    <div class="table-headerSh">
+                                        <div class="label-headerSh"></div>
+                                        <div class="headerSh">受付情報</div>
+                                    </div>
+                                    <div class="jyucyu-info">
+                                        <div class="jyucyu-info-detail">
+                                            <div class="jyucyu-info-titel jyucyu-info-detail-position">
+                                                <span class="font_normal_title">・ 受付№</span>
+                                            </div>
+                                            <div class="jyucyu-info-content">
+                                                <span class="font_normal">41-000-007</span>
+                                            </div>
+                                        </div>
+                                        <div class="jyucyu-info-detail">
+                                            <span class="font_normal_title">・ 受付日時&nbsp;</span>
+											<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                            <div class="hituyou-addr-label align-center hituyou-margin">
+                                                <span>申込み時必須</span>
+                                            </div>
+											<!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                        </div>
+                                        <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!--<div class="jyucyu-date-detail">-->
+                                        <div class="jyucyu-date-detail" style="margin-left: 0.08rem;">
+										<!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                          <div class="jyucyu-date-title-svg"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div>
+                                            <div id="tdraiten" class="jyucyu-date-title">
+                                                <span>来 店</span>
+                                            </div>
+                                            <div class="jyucyu-info-content jyucyu-algin">
+                                                <input id="txtRaiTenDay" maxlength="10" type="text" class="input-blue proto_date txtmode2 txtjyucyu-date" placeholder="例）2017/03/22" />
+                                                <input id="txtRaiTenTime" class="input-blue timelist txtmode2 ukg02010 txtjyucyu-time" maxlength="5" type="text" placeholder="例）09:00" />
+                                                <div id="trerInforaiten" class="warning">
+                                                    <span id="errRaiTenDay" class="font_normal_small_red">来店受付日時を入力してください。</span>
+                                                </div>
+                                            </div>
+                                        <div class="jyucyu-date-title-svg"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div>
+                                            <div id="tdphone" class="jyucyu-date-title">
+                                                <span>電 話</span>
+                                            </div>
+                                            <div class="jyucyu-info-content jyucyu-algin">
+                                                <input id="txtTelDay" maxlength="10" type="text" class="input-blue proto_date txtmode2 txtjyucyu-date" placeholder="例）2017/03/22" />
+                                                <input id="txtTelTime" class="input-blue timelist txtmode2 ukg02010 txtjyucyu-time" maxlength="5" type="text" placeholder="例）09:00" />
+                                                <div id="trerInfophone" class="warning">
+                                                    <span class="font_normal_small_red">&nbsp;電話受付日時を入力してください。</span>
+                                                </div>
+                                            </div>
+                                            <div class="jyucyu-date-title-svg"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div>
+                                            <div class="jyucyu-date-title">
+                                                <span>メール</span>
+                                            </div>
+                                            <div class="jyucyu-info-content jyucyu-algin">
+                                                <input id="txtMailDay" maxlength="10" type="text" class="input-blue proto_date txtmode2 txtjyucyu-date" placeholder="例）2017/03/22" />
+                                                <input id="txtMailTime" class="input-blue timelist txtmode2 ukg02010 txtjyucyu-time" maxlength="5" type="text" placeholder="例）09:00" />
+                                                <div id="trerInfophone" class="warning">
+                                                    <span class="font_normal_small_red">&nbsp;電話受付日時を入力してください。</span>
+                                                </div>
+                                            </div>
+                                            <div class="jyucyu-date-title-svg"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div>
+                                            <div class="jyucyu-date-title">
+                                                <!--<div class="irai-label">--><span>法人仲介課</span><!--</div>-->
+                                                <!--<div class="irai-label"><span>依頼</span></div>-->
+                                            </div>
+                                            <div class="jyucyu-info-content jyucyu-algin">
+                                                <input id="houjin_calendar" maxlength="10" type="text" class="input-blue proto_date txtmode2 txtjyucyu-date" placeholder="例）2017/03/22" />
+                                                <input id="txthonjintime" class="input-blue timelist txtmode2 ukg02010 txtjyucyu-time" maxlength="5" type="text" placeholder="例）09:00" />
+                                            </div>
+                                        </div>
+                                        <div class="jyucyu-info-detail-1">
+                                            <div class="jyucyu-info-titel">
+                                                <div class="tenbo-label"><span>・ 受付店舗（担当者）</span></div>
+                                                <!--<div class="tenbo-label"><span>&nbsp;&nbsp;&nbsp;（担当者）</span></div>-->
+                                            </div>
+                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<div class="jyucyu-info-content jyucyu-info-margin">-->
+                                            <div class="jyucyu-info-content jyucyu-info-margin jyucyu-info-style">
+                                                <!--<span class="font_normal">丸の内支店&nbsp;（受注　花子）</span>-->
+                                                <span class="font_normal">丸の内支店&nbsp;（受注　花子&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;）</span>
+                                                <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            </div>
+                                        </div>
+                                        <div class="jyucyu-info-detail-2">
+                                            <div class="jyucyu-info-titel jyucyu-info-titel-position">
+                                                <span class="font_normal_title">・ 仲介担当者</span>
+                                                <span class="hitu-label-a align-center">必須</span>
+                                                <!--<div class="hitu-label-a align-center">
+                                                    <span>必須</span>
+                                                </div>-->
+                                            </div>
+                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<div class="jyucyu-info-content jyucyu-info-margin1">-->
+                                            <div class="jyucyu-info-content jyucyu-info-margin1 jyucyu-info-style">
+                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                <label class="lblSelect4">
+                                                    <select id="tantouList" class="select-list">
+                                                        <option value="Aries">仲介　太郎</option>
+                                                        <option value="Taurus">東建　太郎</option>
+                                                        <option value="Gemini">仲介　一郎</option>
+                                                        <option value="Cancer">神宮司　一太郎</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="jyucyu-info-detail-4">
+                                            <div class="jyucyu-info-titel jyucyu-info-position">
+                                                <span class="font_normal_title">・ 進捗状況</span>
+                                            </div>
+                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<div class="jyucyu-info-content jyucyu-info-margin2">-->
+                                            <div class="jyucyu-info-content jyucyu-info-margin2 jyucyu-info-style">
+                                            <!-- 2019/10/22 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                <label class="lblSelect4">
+                                                    <!--2020/06/17 UPD START セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                                                    <!--<select id="tantouList" class="select-list">-->
+                                                    <select id="joukyouList" class="select-list">
+                                                    <!--2020/06/17 UPD END セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                                                        <option value="Aries">商談中</option>
+                                                        <option value="Taurus">他決</option>
+                                                        <option value="Gemini">中止</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="soudan-onasama-tuikyakuaramu">
+                                       <span class="soudan-onasama-aranu-square"></span>メモ
+                                    </div>
+                                    <div class="memo-block">
+                                        <textarea rows="13" cols="47" id="txtMemo" maxlength="800" class="txtMemo rei-text" placeholder="メモを登録できます。"></textarea>
+                                    </div>
+                                </div>
+                                <div class="MainTable-right-houjin">
+                                    <div class="houjin-block">
+                                        <div class="table-headerSh-houjin">
+                                            <div class="label-headerSh"></div>
+                                            <div class="headerSh">仲介依頼先店舗情報</div>
+                                        </div>
+                                        <div class="houjin-info">
+                                            <div class="align-center th">
+                                                <span class="font_normal_title">法人希望部屋数</span>
+                                                <label class="lblSelect5">
+                                                    <select id="hayasuList" class="hayasu-list">
+                                                        <option value="Aries">30室以上</option>
+                                                        <option value="Taurus">1室</option>
+                                                        <option value="Taurus">2室</option>
+                                                        <option value="Taurus">3室</option>
+                                                        <option value="Taurus">4室</option>
+                                                        <option value="Taurus">5室</option>
+                                                        <option value="Taurus">6室</option>
+                                                        <option value="Taurus">7室</option>
+                                                        <option value="Taurus">8室</option>
+                                                        <option value="Taurus">9室</option>
+                                                        <option value="Gemini">10室</option>
+                                                        <option value="Gemini">11室</option>
+                                                        <option value="Gemini">12室</option>
+                                                        <option value="Gemini">13室</option>
+                                                        <option value="Gemini">14室</option>
+                                                        <option value="Gemini">15室</option>
+                                                        <option value="Gemini">16室</option>
+                                                        <option value="Gemini">17室</option>
+                                                        <option value="Gemini">18室</option>
+                                                        <option value="Gemini">19室</option>
+                                                        <option value="Cancer">20室</option>
+                                                        <option value="Cancer">21室</option>
+                                                        <option value="Cancer">22室</option>
+                                                        <option value="Cancer">23室</option>
+                                                        <option value="Cancer">24室</option>
+                                                        <option value="Cancer">25室</option>
+                                                        <option value="Cancer">26室</option>
+                                                        <option value="Cancer">27室</option>
+                                                        <option value="Cancer">28室</option>
+                                                        <option value="Cancer">29室</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="ten-select">
+                                                <label class="lblSelect6">
+                                                    <select id="tenList" class="ten-list">
+                                                        <option value="Aries">宇都宮支店</option>
+                                                        <option value="Taurus">名東支店</option>
+                                                        <option value="Gemini">上小田井駅前店</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="ten-select">
+                                                <label class="lblSelect6">
+                                                    <select id="tenList" class="ten-list">
+                                                        <option value="Taurus">名東支店</option>
+                                                        <option value="Gemini">上小田井駅前店</option>
+                                                        <option value="Aries">宇都宮支店</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="ten-select">
+                                                <label class="lblSelect6">
+                                                    <select id="tenList" class="ten-list">
+                                                        <option value="Gemini">上小田井駅前店</option>
+                                                        <option value="Aries">宇都宮支店</option>
+                                                        <option value="Taurus">名東支店</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="align-center ten-setmei">
+                                                <div class="align-center ten-setmei-label">
+                                                    <span>店舗コードまたは店舗名を入力して検索することもできます。</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="iraisyo-title">
+                                            <div class="label-headerHJ"></div>
+                                            <div>社宅斡旋依頼書</div>
+                                        </div>
+                                        <!--2020/06/12 UPD START セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                                        <!--<div class="iraisyo-title-a">※法人企業クラブ様からの社宅斡旋依頼書(PDF)を保存できます。</div>-->
+                                        <div class="iraisyo-title-a">※法人企業クラブ様からの社宅斡旋依頼書(PDF・Excel・Word)を保存できます。</div>
+                                        <!--2020/06/12 UPD END セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                                        <div class="align-center iraisyo-time">
+                                        	<!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<div>・2017年3月31日&nbsp;10:15:27</div>-->
+                                            <div>・2017年3月31日<br />10:15:27</div>
+                                            <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            <div class="align-center clear-time">
+                                                <img src="../../image/ukg02010/clear.svg">
+                                            </div>
+                                        </div>
+                                        <div class="align-center button-hozon pdf-save">
+                                            <div>
+                                                <!--  ########## 2018/10/31 蒋阳  UPD Start 法人の入力項目追加対応(C43040) -->
+                                                <!-- <img src="../../image/common/button/pdf_hozon.png"> -->                                                
+                                                <img src="../../image/common/button/tenpushiryou_hozon.png">
+                                            <!--  ########## 2018/10/31 蒋阳  UPD End 法人の入力項目追加対応(C43040) --> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="jyucyu-block">
+                                        <div class="table-headerSh">
+                                            <div class="label-headerSh"></div>
+                                            <div class="headerSh">受付情報</div>
+                                        </div>
+                                        <div class="jyucyu-info">
+                                            <div class="jyucyu-info-detail">
+                                                <div class="jyucyu-info-titel jyucyu-info-detail-position">
+                                                    <span class="font_normal_title">・ 受付№</span>
+                                                </div>
+                                                <div class="jyucyu-info-content">
+                                                    <span class="font_normal">41-000-007</span>
+                                                </div>
+                                            </div>
+                                            <div class="jyucyu-info-detail">
+                                                <span class="font_normal_title ">・ 受付日時&nbsp;</span>
+                                                <div class="hitu-label-b align-center">
+                                                    <span>必須</span>
+                                                </div>
+                                            </div>
+                                            <!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <div class="jyucyu-date-detail" style="height:0.8rem">
+                                            	<!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+											<!--<div class="jyucyu-date-title-svg"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div>-->
+                                            <div class="jyucyu-date-title-svg" style="margin-left: 0.05rem;display: none;"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div                                            
+                                            <div id="tdphone" class="jyucyu-date-title" style="display: none;">
+                                            	<!--<span>法人仲介課</span>-->
+                                                <span style="display: none;">来 店</span>
+                                                <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            </div>
+                                                 <!--<div class="jyucyu-date-title-a">
+                                                   <div class="irai-label"><span>法人仲介課</span>
+                                                   <div class="irai-label"><span>依頼</span></div>
+                                                </div>-->
+                                                <!-- 2020/04/02 熊振 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                <div class="jyucyu-info-content" style="display: none;">
+                                                    <input id="houjin_calendar_b" maxlength="10" type="text" class="input-blue proto_date txtmode2 txtjyucyu-date-a" placeholder="例）2017/03/22" />
+                                                    <input id="txthonjintime_b" class="input-blue timelist txtmode2 ukg02010 txtjyucyu-time-a" maxlength="5" type="text" placeholder="例）09:00" />
+                                                
+                                                <!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                <div class="jyucyu-date-title-svg" style="margin-left: -0.04rem;display: none;"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div>
+                                            <div id="tdphone" class="jyucyu-date-title" style="display: none;">
+                                                <span>電 話</span>
+                                            </div>
+                                                </div>
+                                                <div class="jyucyu-info-content" style="display: none;">
+                                                    <input id="houjin_calendar_c" maxlength="10" type="text" class="input-blue proto_date txtmode2 txtjyucyu-date-a" placeholder="例）2017/03/22" />                                                    
+                                                    <input id="txthonjintime_c" class="input-blue timelist txtmode2 ukg02010 txtjyucyu-time-a" maxlength="5" type="text" placeholder="例）09:00" />
+                                                
+                                                <div class="jyucyu-date-title-svg" style="margin-left: -0.04rem;display: none;"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div>
+                                            <div id="tdphone" class="jyucyu-date-title">
+                                                <span>メール</span>
+                                            </div>
+                                                </div>
+                                                <div class="jyucyu-info-content" style="margin-top: -0.85rem">
+                                                    <input id="houjin_calendar_d" maxlength="10" type="text" style="display: none;" class="input-blue proto_date txtmode2 txtjyucyu-date-a" placeholder="例）2017/03/22" />
+                                                     <!-- 2020/04/02 熊振 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                    <input id="txthonjintime_d" style="display: none;" class="input-blue timelist txtmode2 ukg02010 txtjyucyu-time-a" maxlength="5" type="text" placeholder="例）09:00" />
+                                                    <div class="jyucyu-date-title-svg"style="margin-left: -0.04rem;width:6%"><img class="navigate-item-svg" src="../../image/ukg02010/mejirusi.png"></div>
+                                                    <!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->    
+                                            <div id="tdphone" class="jyucyu-date-title">
+                                                <span>法人仲介課</span>
+                                            </div>
+                                                </div>
+                                                <div class="jyucyu-info-content">
+                                                    <input id="houjin_calendar_a" maxlength="10" type="text" class="input-blue proto_date txtmode2 txtjyucyu-date-a" placeholder="例）2017/03/22" />
+                                                    <input id="txthonjintime_a" class="input-blue timelist txtmode2 ukg02010 txtjyucyu-time-a" maxlength="5" type="text" placeholder="例）09:00" />
+                                                </div>
+                                            <!-- 2020/04/29 DEL START 楊朋朋(SYS) C43040-2_法人の入力項目追加対応 -->
+                                            <!--</div>-->
+                                            <!-- 2020/04/29 DEL END 楊朋朋(SYS) C43040-2_法人の入力項目追加対  -->
+                                            <!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            <!--<div class="jyucyu-info-detail-3">
+                                                <div class="jyucyu-info-titel">
+                                                    <div class="tenbo-label"><span>・ 受付店舗（担当者）</span></div>
+                                                    <div class="tenbo-label"><span>&nbsp;&nbsp;&nbsp;（担当者）</span>
+                                                </div>
+                                                <div class="jyucyu-info-content">
+                                                    <span class="font_normal">仲介管理局&nbsp;&nbsp;（受付&nbsp;&nbsp;花子）</span>
+                                                </div>
+                                            </div>-->
+                                            <!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->    
+                                            <div class="jyucyu-info-detail-1" style="margin-top : 8%">
+                                            <!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->    
+                                            <div class="jyucyu-info-titel">
+                                                <div class="tenbo-label"><span>・ 受付店舗（担当者）</span></div>
+                                                <!--<div class="tenbo-label"><span>&nbsp;&nbsp;&nbsp;（担当者）</span></div>-->
+                                            </div>
+                                            <div class="jyucyu-info-content jyucyu-info-margin">
+                                                <span class="font_normal">仲介管理局&nbsp;&nbsp;（受付&nbsp;&nbsp;花子）</span>
+                                            </div>
+                                        </div>
+                                            <!--<div class="jyucyu-info-detail-3">
+                                                <div class="jyucyu-info-titel">
+                                                    <span class="font_normal_title">・ 仲介担当者</span>
+                                                    <div class="hitu-label-a align-center">
+                                                        <span>必須</span>
+                                                    </div>
+                                                </div>
+                                                <div class="jyucyu-info-content">
+                                                    <label class="lblSelect4">
+                                                    <select id="tantouList" class="select-list">
+                                                        <option value="Aries">仲介　太郎</option>
+                                                        <option value="Taurus">東建　太郎</option>
+                                                        <option value="Gemini">仲介　一郎</option>
+                                                        <option value="Cancer">神宮司　一太郎</option>
+                                                    </select>
+                                                    </label>
+                                                </div>
+                                            </div>-->
+											<div class="jyucyu-info-detail-2">
+                                            <div class="jyucyu-info-titel jyucyu-info-titel-position">
+                                                <span class="font_normal_title">・ 仲介担当者</span>
+                                                <span class="hitu-label-a align-center align_left">必須</span>
+                                                <!--<div class="hitu-label-a align-center">
+                                                    <span>必須</span>
+                                                </div>-->
+                                            </div>
+                                            <div class="jyucyu-info-content jyucyu-info-margin1">
+                                                <label class="lblSelect4">
+                                                    <select id="tantouList" class="select-list">
+                                                        <option value="Aries">仲介　太郎</option>
+                                                        <option value="Taurus">東建　太郎</option>
+                                                        <option value="Gemini">仲介　一郎</option>
+                                                        <option value="Cancer">神宮司　一太郎</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- 2020/04/29 ADD START 楊朋朋(SYS) C43040-2_法人の入力項目追加対応 -->
+                                        <div class="jyucyu-info-detail-2 jyucyu-info-margin-top">
+                                            <div class="jyucyu-info-titel jyucyu-info-titel-position">
+                                                <span class="font_normal_title">・ 法人仲介依頼担当</span>
+                                            </div>
+                                            <div class="jyucyu-info-content jyucyu-info-margin">
+                                                <span>  受付&nbsp;&nbsp;花子     </span>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="soudan-onasama-tuikyakuaramu">
+                                           <span class="soudan-onasama-aranu-square"></span>法人仲介依頼連絡事項
+                                        </div>
+                                        <div class="memo-block">
+                                             <textarea rows="13" cols="47" id="txtHoujinRenrakuJiko" maxlength="800" class="txtMemo rei-text" placeholder="連絡事項を登録できます。"></textarea>
+                                        </div>
+                                        <!-- 2020/04/29 ADD END 楊朋朋(SYS) C43040-2_法人の入力項目追加対  -->
+                                        <!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <div class="soudan-onasama-tuikyakuaramu">
+                                            <span class="soudan-onasama-aranu-square"></span>メモ
+                                         </div>
+                                         <div class="memo-block">
+                                             <textarea rows="13" cols="47" id="txtMemo" maxlength="800" class="txtMemo rei-text" placeholder="メモを登録できます。"></textarea>
+                                             <!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="guest-button" class="align-center btns">
+                                <div class="btn-jyucyu-print">
+                                    <img src="../../image/common/button/kado_insatu.png"/>
+                                </div>
+                                <div class="btn-save">
+                                    <img src="../../image/common/button/hozon.png"/>
+                                </div>
+                                <div class="btn-cancle">
+                                    <img src="../../image/common/button/kyanseru_blue.png" class="bth-cancle-h"/>
+                                </div>
+                            </div>
+                            <div id="houjin-button" class="btns align-center">
+                                <div class="btn-send-mail">
+                                    <img src="../../image/common/button/tyuukai_irai_sousin.png"/>
+                                </div>
+                                <div class="btn-save2">
+                                    <img src="../../image/common/button/hozon.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footdiv" class="footer">&nbsp;</div>
+    </body>
+
+</html>

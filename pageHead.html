@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<Meta http-equiv="MSThemeCompatible" Content="No">
+
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css"  href="../../css/ff/pageHead.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/message.js"></script>
+</head>
+<body>
+<div class="title">
+    <div class="pre_title ">
+    </div>
+    <div id="top_log" class="left_title top_logo"></div>
+    <div class="tantou_title">
+        <div class="tantou_name">
+            <img src="../../image/ukg01010/login_user.svg"/>
+            <span>名古屋駅店前：</span>
+            <span>仲介　太郎</span>
+        </div>
+        <div class="logo_out">ログアウト</div>
+    </div>
+</div>
+<!-- MSGを表示用DIV class="hidemode"-->
+<div class="modal fade" id="message" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" data-target
+    style="position: fixed; margin-top: 1.8rem;">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin: auto;">
+            <div class="modal-body">
+                <div class="aui_content" style="padding: 0.2rem 0.25rem;">
+                    <span id="msg"></span>
+                </div>
+                <div class="alginright" align="right">
+                    <button type="button" class="btn btn-primary btn-mini" id="btnok"
+                        data-dismiss="modal">はい</button>
+                    <button type="button" class="btn btn-primary btn-mini"
+                        id="btncancel" data-dismiss="modal">いいえ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

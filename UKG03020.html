@@ -1,0 +1,1573 @@
+﻿<!DOCTYPE>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/content_zoom.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG03010.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG03010-3.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG03010-2.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG03010-1.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG03020.css"></link>
+        <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../../js/content_zoom.js"></script>
+        <script type="text/javascript" src="../../js/message.js"></script>
+        <script type="text/javascript" src="../../js/artDialog.js"></script>
+        <script type="text/javascript" src="../../js/thickbox.js"></script>
+        <script type="text/javascript" src="../../js/jquery.common.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../js/jquery.raty.js"></script>
+        <script type="text/javascript" src="../../js/UKG03020.js"></script>
+        <script type="text/javascript" src="../../js/UKG030_common.js"></script>
+        <script type="text/javascript" src="../../js/help.js"></script>
+        <title>Success21お部屋探しNAVI</title>
+    </head>
+
+    <body>
+        <div class="iframe-div">
+            <iframe id="content_frame" class="top-title" name="content_frame" src="pageHead.html"></iframe>
+        </div>
+        <div class="toppage">
+            <div class="toppage-space">&nbsp;</div>
+            <div class="menu_chirashi_div">
+                <div class="menu_uketuke" id="itirandehyouji">一覧で表示する</div>
+            </div>
+            <div class="menu_syoudan_div">
+                <div class="menu_uketuke menu-color" id="tizudehyouji">地図で表示する</div>
+            </div>
+            <div class="menu_kibou_div">
+                <div class="menu_uketuke" id="okinihairi">お気に入り物件</div>
+            </div>
+        </div>
+        <div id="container">
+            <div class="container-title-img">
+               <div class="container-title-img-div1">
+                   <div class="title-img-div1-one"></div>
+                   <div class="title-img-div1-two">
+                      <div class="shoudann-naiyou-kakuninn-div">
+                       <div class="kyakusama-div">
+                           <span>お客様名 : </span>
+                           <span class="kyakusama-mei">東建&nbsp;&nbsp;太郎</span>
+                           <span>様</span>
+                       </div>
+                       <div class="shoudann-naiyou-kakuninn"><span>ご相談内容の確認</span></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="container-title-img-div2"></div>
+            </div>
+
+            <div id="main">
+                <div id="middle" class="divbackColor">
+                    <div id="middle" class="divbackImage">
+                        <table class="table1">
+                            <col class="tabke1-col1" />
+                            <col class="tabke1-col2" />
+                            <col class="tabke1-col3" />
+                            <tr>
+                                <td class="gamen_hajika">
+                                    <div class="Part1_yincang Part1_yincang1">
+                                        <table id="mix-five" cellpadding="0" cellspacing="0">
+                                            <colgroup>
+                                                <col class="mix-five-col1" />
+                                                <col class="mix-five-col2" />
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                <!-- <tr class="title-label">
+                                                    <td colspan="2">
+                                                        <div class="a_help mix-five-basu4" pageid="help_bukkenIcon_common.html">
+                                                            <img class="mix-five-basu1" src="../../image/common/icon/help.png" />
+                                                        </div>
+                                                        <div class="a_help mix-five-basu3" pageid="help_bukkenIcon_common.html" style="padding-top: 4px;">物件アイコンの色分けについて</div>
+                                                    </td>
+                                                </tr> -->
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="mix-five-map1">
+                                                            <img src="../../image/ukg03020/map1.jpg" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                <!-- <tr>
+                                                    <td>
+                                                        <div class="mix-five-siseru1"></div>
+                                                        <div class="mix-five-siseru2" style="padding-top: 3px; padding-left: 3px;">周辺施設の表示</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="a_help2 mix-five-basu12" pageid="help_bus_stop.html" style="padding-top: 4px;"  onclick="busPopup()">バス停の情報について</div>
+                                                        <div class="a_help2" pageid="help_bus_stop.html"  onclick="busPopup()"><img class="mix-five-basu11" src="../../image/common/icon/help.png" /></div>
+                                                    </td>
+                                                </tr> -->
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                <!--2019/12/25 DEL START 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携-->
+                                                <!--<tr>
+                                                    <td colspan="2">-->
+                                                            <!-- 2019/02/20 ADD END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!--<div class="mix-five-sisetu mix-five-midori" style="margin: 0.15rem 0rem;">周辺施設<br>の表示</div>-->
+                                                        <!-- 2019/02/20 ADD END 汪会(SYS) C42036-201902-BUG86 -->
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- <div class="mix-five-hyouji1 mix-five-hyouji"> -->
+                                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                            <!--<div class="mix-five-sisetu mix-five-midori2 mix-five-midori">駅</div>
+                                                            <div class="mix-five-sisetu mix-five-midori1 mix-five-midori">バス停</div>-->
+                                                            <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- </div> -->
+                                                        <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- <div class="mix-five-hyouji2 mix-five-hyouji"> -->
+                                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                            <!--<div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">コンビニ</div>
+                                                            <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">ビデオ<br>CD</div>
+                                                            <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">本 屋</div>-->
+                                                            <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- </div> -->
+                                                        <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- <div class="mix-five-hyouji3 mix-five-hyouji"> -->
+                                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                            <!--<div class="mix-five-sisetu mix-five-ao1 mix-five-ao">病 院</div>
+                                                            <div class="mix-five-sisetu mix-five-ao1 mix-five-ao">学 校</div>
+                                                            <div class="mix-five-sisetu mix-five-ao1 mix-five-ao">公 園</div>-->
+                                                            <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- </div> -->
+                                                        <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- <div class="mix-five-hyouji4 mix-five-hyouji"> -->
+                                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                            <!--<div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">スーパー</div>
+                                                            <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">銀 行</div>
+                                                            <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">食 事</div>-->
+                                                            <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- </div> -->
+                                                        <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                        <!-- <div class="mix-five-hyouji5 mix-five-hyouji">
+                                                            <img id="koukuushashin" class="koukuushashin-img" src="../../image/ukg03010/koukuushashin.png"></img>
+                                                            <img id="sutoritobyu" class="sutoritobyu-img" src="../../image/ukg03010/sutoritobyu.png"></img>
+                                                        </div> -->
+                                                        <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                    <!--</td>
+                                                </tr>-->
+                                                <!-- 2019/02/20 ADD END 汪会(SYS) C42036-201902-BUG86 -->
+                                               <!-- <tr>
+                                                        <td>-->
+                                                            <!-- 2019/10/24 李龍涛 DEL C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                            <!--<div class="mix-five-hyouji-hikouki mix-five-hyouji">
+                                                               <img id="koukuushashin" class="koukuushashin-img" src="../../image/ukg03010/koukuushashin.png" style="cursor: pointer;"></img>
+                                                               <img id="sutoritobyu" class="sutoritobyu-img" src="../../image/ukg03010/sutoritobyu.png" style="cursor: pointer;"></img>
+                                                            </div>-->
+                                                            <!-- 2019/10/24 李龍涛 DEL C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <!--<div class="a_help2 mix-five-basu12" pageid="help_bus_stop.html" style="padding-top: 4px;"  onclick="busPopup()">バス停の情報について</div>
+                                                            <div class="a_help2" pageid="help_bus_stop.html"  onclick="busPopup()"><img class="mix-five-basu11" src="../../image/common/icon/help.png" /></div>
+                                                        </td>
+                                                    </tr>-->
+                                                    <!-- 2019/02/20 ADD END 汪会(SYS) C42036-201902-BUG86 -->
+                                                    <!--2019/12/25 DEL END 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携-->
+                                        </table>
+                                        <!--2019/12/25 ADD START 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携-->
+                                        <div class="float_map_bottom">
+                                            <div class="button_block">
+                                                <div class="shisetsu_font mix-five-midori" style="margin: 0.15rem 0rem;">周辺施設<br>の表示</div>
+                                                <div class="mix-five-sisetu mix-five-midori1 mix-five-midori">駅</div>
+                                                <div class="mix-five-sisetu mix-five-midori1 mix-five-midori">バス停</div>
+                                                <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">コンビニ</div>
+                                                <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">スーパー</div>
+                                                <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">ドラッグ</br>ストア</div>
+                                                <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">ホーム</br>センター</div>
+                                                <div class="mix-five-sisetu mix-five-ao1 mix-five-ao">病 院</div>
+                                                <div class="mix-five-sisetu mix-five-ao1 mix-five-ao">学 校</div>
+                                                <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">公共施設</div>
+                                                <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">銀行</div>
+                                                <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">飲食店</div>
+                                            </div>
+                                            <div>
+                                                <img class="btn_sonata_kategori" src="../../image/ukg03010/sonotanokategorika.png" />
+                                            </div>
+                                            <div class="help_bus">
+                                                <div class="a_help2" pageid="help_bus_stop.html"  onclick="busPopup()"><img class="mix-five-basu11" src="../../image/common/icon/help.png" /></div>
+                                                <div class="a_help2 mix-five-basu12" pageid="help_bus_stop.html" style="padding-top: 4px;"  onclick="busPopup()">バス停の情報について</div>
+                                            </div>
+                                        </div>
+                                        <!--2019/12/25 ADD END 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携-->
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td class="bukkenListTop" id="Part2TD">
+                                    <!----------------------------------------Part2----------------------------------------------------------------->
+                                    <div class="buken-list-block">
+                                        <div class="bukkenTitle">
+                                            <!-- 2019/12/04 DEL START 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                            <!--<div class="bukkenTitle-div1">-->
+                                            <!-- 2019/12/04 DEL END 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                <!-- 2019/02/20 UPD END 汪会(SYS) C42036-201902-BUG86 -->
+                                            <!-- <div class="font_bold_subtitle_white"></div> -->
+                                            <!-- 2019/12/04 DEL START 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                            <!--<div class="table-center-div">
+                                                    <div class="table4-tr-3-div"></div>
+                                                    <div class="table4-tr-4-div">物件一覧</div>
+                                            </div>-->
+                                            <!-- 2019/12/04 DEL END 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                <!-- 2019/02/20 UPD END 汪会(SYS) C42036-201902-BUG86 -->
+                                            <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                                <!-- <div class="setubi-help" id="tekigouhelp">
+                                                    <div>
+                                                        <img src="../../image/common/icon/help.png">
+                                                    </div>
+                                                    <span>適合度について</span>
+                                                </div> -->
+                                                <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                            <!-- 2019/12/04 ADD START 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                            <!--</div>-->
+                                            <div class="bukken_list_title">
+                                                <div class="table-center-div">
+                                                    <div class="bukken_list_title_buken list_title_buken_check">物件一覧</div>
+                                                    <div class="bukken_list_title_shisetu">施設一覧</div>
+                                                </div>
+                                            </div>
+                                            <!-- 2019/12/04 ADD END 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                            <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                            <!-- <div class="bukkenTitle-div2"></div> -->
+                                            <!-- 2019/02/20 DEL END 汪会(SYS) C42036-201902-BUG86 -->
+                                            <div id="bukenListHeader" class="bukkenListHeader">
+                                                <div class="bukkenListHeader-div1">
+                                                    <span class="font-normal-b">物件数： <font size="+1" color="#FF0000"> <span id="lblCount">5</span></font>件</span>
+                                                </div>
+                                                <div class="bukkenListHeader-div2">
+                                                    <div id="gaikan-img" class="switch-on-off">&nbsp;</div>
+                                                    <div id="madori-img" class="switch-on-off">&nbsp;</div>
+                                                </div>
+                                                <div class="bukkenListHeader-div3">
+                                                    <span class="syoukai-box-mae">並び<br />替え
+                                            </span>
+                                                </div>
+                                                <div class="bukkenListHeader-div4">
+                                                    <label class="lblSelect1">
+                                                    <select id="sintyoku">
+                                                        <option selected>適合度</option>
+                                                        <option>家賃</option>
+                                                        <option>間取り</option>
+                                                        <option>面積</option>
+                                                        <option>完成年月</option>
+                                                        <option>所在地</option>
+                                                    </select>
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="heyaSuu">
+                                            <span class="font_normal">部屋数&nbsp;:&nbsp;400&nbsp;部屋</span>
+                                        </div>
+                                        <div id="PART2">
+                                            <div id="heyaDiv">
+                                                <table class="bukenList-table">
+                                                    <tr class="heya-data">
+                                                        <td class="bukenList-table-td1">
+                                                            <div class="font_normal Part2_divbox kou1 kou-two">
+                                                                <table class="bukenList-div1 bukenList-tab">
+                                                                    <col class="table7-col1" />
+                                                                    <col class="table7-col2" />
+                                                                    <col class="table7-col3" />
+                                                                    <!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                                                    <tr class="bukenList-tr1">
+                                                                        <td><img class="dbpic" src="../../image/ukg99002/imageView1.jpg">
+                                                                            <div class="loading">
+                                                                                <img class="netto-hi-keisai_ano_oth" src="../../image/common/特典・割引サービス_写真の上用.svg">
+                                                                                <img src="../../image/ukg03010/bukken.jpg">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            <div id="showicon" class="font-normal-b font_blue showicon" title="名古屋市千種区稻舟通1丁目の賃貸物件">名古屋市千種区稻舟通1丁目の賃貸物件
+                                                                            </div>
+                                                                            <div class="font_black font_black2" title="名古屋市千種区稻舟通1丁目">名古屋市千種区稻舟通1丁目</div>
+                                                                            <div id="ok" class="font_black" title="(名古屋市営地下鉄討東山線 本山駅 徒歩3分)">(名古屋市営地下鉄東山線 本山駅 徒歩3分)</div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                                                    <tr class="bukenList-tr2">
+                                                                        <td><span class="font_small_bold Part2_table_td table1-midori1">家&nbsp;&nbsp;賃</span> <span class="table1-suji1">14.8万円</span></td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori2">完成年月</div> <span class="table1-suji2">2017/03</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori3">間取り</div> <span class="table1-suji3">2LDK(79.5㎡)</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr3">
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <span class="okihihairi">お気に入り</span>
+                                                                                <div class="star_div">
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;適合度</span>
+                                                                                <div class="graph">
+                                                                                    <strong id="Part2_bar1" class="bar"></strong>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <div class="bukkenn-checkbox"></div>
+                                                                                <span class="isiro">今後は表示しない</span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="heya-data">
+                                                        <td class="bukenList-table-td">
+                                                            <div class="font_normal Part2_divbox kou2 kou-one">
+                                                                <table class="bukenList-div2 bukenList-tab">
+                                                                    <col class="table7-col1" />
+                                                                    <col class="table7-col2" />
+                                                                    <col class="table7-col3" />
+                                                                    <tr class="bukenList-tr1">
+                                                                        <td><img class="dbpic" src="../../image/ukg99002/imageView1.jpg">
+                                                                            <div class="loading">
+                                                                                <img src="../../image/ukg03010/bukken.jpg">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            <div class="font-normal-b font_blue showicon" title="ジョイナス車道（102室）">
+                                                                                ジョイナス車道（102室）<br>
+                                                                            </div>
+                                                                            <div class="font_black" title="名古屋市千種区鹿子町1丁目">名古屋市千種区稻舟通1丁目</div>
+                                                                            <div class="font_black" title="(名古屋市営地下鉄討東山線 本山駅 徒歩3分)">(名古屋市営地下鉄東山線 本山駅 徒歩3分)</div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr2">
+                                                                        <td><span class="font_small_bold Part2_table_td table1-midori1">家&nbsp;&nbsp;賃</span> <span class="table1-suji1">14.8万円</span></td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori2">完成年月</div> <span class="table1-suji2">2017/03</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori3">間取り</div> <span class="table1-suji3">2LDK(79.5㎡)</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr3">
+                                                                        <td class="font_small ">
+                                                                            <div class="center-div">
+                                                                                <span class="okihihairi">お気に入り</span>
+                                                                                <div class="star_div">
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;適合度</span>
+                                                                                <div class="graph">
+                                                                                    <strong id="Part2_bar2" class="bar"></strong>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <div class="bukkenn-checkbox"></div>
+                                                                                <span class="isiro">今後は表示しない</span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="heya-data">
+                                                        <td class="bukenList-table-td1">
+                                                            <div class="font_normal Part2_divbox kou3 kou-two">
+                                                                <table class="bukenList-div3 bukenList-tab">
+                                                                    <col class="table7-col1" />
+                                                                    <col class="table7-col2" />
+                                                                    <col class="table7-col3" />
+                                                                    <tr class="bukenList-tr1">
+                                                                        <td><img class="dbpic" src="../../image/ukg99002/imageView1.jpg">
+                                                                            <div class="loading">
+                                                                                <img src="../../image/ukg03010/bukken.jpg">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            <div class="font-normal-b font_blue showicon" title="ラ・シュシュ覚恩山（102号室）">
+                                                                                ラ・シュシュ覚恩山（102号室）<br>
+                                                                            </div>
+                                                                            <div class="font_black" title="名古屋市千種区稻舟通1丁目">名古屋市千種区稻舟通1丁目</div>
+                                                                            <div class="font_black" title="(名古屋市営地下鉄討東山線 本山駅 徒歩3分)">(名古屋市営地下鉄東山線 本山駅 徒歩3分)</div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr2">
+                                                                        <td><span class="font_small_bold Part2_table_td table1-midori1">家&nbsp;&nbsp;賃</span> <span class="table1-suji1">14.8万円</span></td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori2">完成年月</div> <span class="table1-suji2">2017/03</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori3">間取り</div> <span class="table1-suji3">2LDK(79.5㎡)</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr3">
+                                                                        <td class="font_small ">
+                                                                            <div class="center-div">
+                                                                                <span class="okihihairi">お気に入り</span>
+                                                                                <div class="star_div">
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;適合度</span>
+                                                                                <div class="graph">
+                                                                                    <strong id="Part2_bar2" class="bar"></strong>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <div class="bukkenn-checkbox"></div>
+                                                                                <span class="isiro">今後は表示しない</span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="heya-data">
+                                                        <td class="bukenList-table-td">
+                                                            <div class="font_normal Part2_divbox kou4 kou-one">
+                                                                <table class="bukenList-div4 bukenList-tab">
+                                                                    <col class="table7-col1" />
+                                                                    <col class="table7-col2" />
+                                                                    <col class="table7-col3" />
+                                                                    <tr class="bukenList-tr1">
+                                                                        <td><img class="dbpic" src="../../image/ukg99002/imageView1.jpg">
+                                                                            <div class="loading">
+                                                                                <img src="../../image/ukg03010/bukken.jpg">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            <div class="font-normal-b font_blue showicon" title="ハイム竹橋（102-2号室）">
+                                                                                <!-- 2019/06/18 ADD START 程旋(SYS) C43100_お客様項目の入力簡素化対応 -->
+                                                                                <div class="bukkenName">ハイム竹橋（102-2号室）</div>
+                                                                                <!-- 2019/06/18 ADD END 程旋(SYS) C43100_お客様項目の入力簡素化対応 -->
+                                                                            </div>
+                                                                            <div class="font_black" title="名古屋市千種区稻舟通1丁目">名古屋市千種区稻舟通1丁目</div>
+                                                                            <div class="font_black" title="(名古屋市営地下鉄討東山線 本山駅 徒歩3分)">(名古屋市営地下鉄東山線 本山駅 徒歩3分)</div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr2">
+                                                                        <td><span class="font_small_bold Part2_table_td table1-midori1">家&nbsp;&nbsp;賃</span> <span class="table1-suji1">14.8万円</span></td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori2">完成年月</div> <span class="table1-suji2">2017/03</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori3">間取り</div> <span class="table1-suji3">2LDK(79.5㎡)</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr3">
+                                                                        <td class="font_small ">
+                                                                            <div class="center-div">
+                                                                                <span class="okihihairi">お気に入り</span>
+                                                                                <div class="star_div">
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;適合度</span>
+                                                                                <div class="graph">
+                                                                                    <strong id="Part2_bar2" class="bar"></strong>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <div class="bukkenn-checkbox"></div>
+                                                                                <span class="isiro">今後は表示しない</span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="heya-data">
+                                                        <td class="bukenList-table-td1">
+                                                            <div class="font_normal Part2_divbox kou5 kou-two">
+                                                                <table class="bukenList-div5 bukenList-tab">
+                                                                    <col class="table7-col1" />
+                                                                    <col class="table7-col2" />
+                                                                    <col class="table7-col3" />
+                                                                    <tr class="bukenList-tr1">
+                                                                        <td><img class="dbpic" src="../../image/ukg99002/imageView1.jpg">
+                                                                            <div class="loading">
+                                                                                <img src="../../image/ukg03010/bukken.jpg">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            <div class="font-normal-b font_blue showicon" title="ハイム竹橋（102-2号室）">
+                                                                                ハイム竹橋（102-2号室）<br>
+                                                                            </div>
+                                                                            <div class="font_black" title="名古屋市千種区稻舟通1丁目">名古屋市千種区稻舟通1丁目</div>
+                                                                            <div class="font_black" title="(名古屋市営地下鉄討東山線 本山駅 徒歩3分)">(名古屋市営地下鉄東山線 本山駅 徒歩3分)</div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr2">
+                                                                        <td><span class="font_small_bold Part2_table_td table1-midori1">家&nbsp;&nbsp;賃</span> <span class="table1-suji1">14.8万円</span></td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori2">完成年月</div> <span class="table1-suji2">2017/03</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="font_small_bold Part2_table_td table1-midori3">間取り</div> <span class="table1-suji3">2LDK(79.5㎡)</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="bukenList-tr3">
+                                                                        <td class="font_small ">
+                                                                            <div class="center-div">
+                                                                                <span class="okihihairi">お気に入り</span>
+                                                                                <div class="star_div">
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                    <div class="bukken Part2_small"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;適合度</span>
+                                                                                <div class="graph">
+                                                                                    <strong id="Part2_bar2" class="bar"></strong>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="font_small">
+                                                                            <div class="center-div">
+                                                                                <div class="bukkenn-checkbox"></div>
+                                                                                <span class="isiro">今後は表示しない</span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- 2019/12/05 ADD START 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                        <div class="list_shisetu_block none_display">
+                                            <div class="list_shisetu_shisetusu">
+                                                <span class="shisetusu_lbl">施設数:</span>
+                                                <span class="shisetusu">46</span>
+                                                <span class="shisetusu_lbl">件</span>
+                                            </div>
+                                            <div class="list_shisetu_info">
+                                                <div class="shisetu_info_div">
+                                                    <div class="shisetu_info_left">
+                                                        <div class="loading">
+                                                            <img src="../../image/ukg03010/bukken.jpg" title="外観写真" />
+                                                        </div>
+                                                        <div class="hyouka_lbl">【口コミ評価】</div>
+                                                        <div class="star_div shisetu_star">
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="shisetu_info_right">
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                        <label class="shisetu_name">ミニストップ　元住吉店</label><br>-->
+                                                        <div class="janpurokomi">
+                                                            <img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                        <label class="shisetu_name">ミニストップ　元住吉店</label>
+                                                        </div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <div class="shisetu_ubin">&nbsp;〒１２３－４５６７</div>
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<div class="shisetu_ubin">&nbsp;愛知県名古屋市中区丸の内１２３４</div>-->
+                                                        <div class="shisetu_ubin shisetu_basho">&nbsp;愛知県名古屋市中区丸の内１２３４</div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <div class="shisetu_kuchikomi" title="思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それ">思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それは…
+                                                            <a class="kuchikomi_link janpurokomi">もっと見る</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="shisetu_info_div">
+                                                    <div class="shisetu_info_left">
+                                                        <div class="loading">
+                                                            <img src="../../image/ukg03010/bukken.jpg" title="外観写真" />
+                                                        </div>
+                                                        <div class="hyouka_lbl">【口コミ評価】</div>
+                                                        <div class="star_div shisetu_star">
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="shisetu_info_right">
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                        <label class="shisetu_name">ミニストップ　元住吉店</label><br>-->
+                                                        <div class="janpurokomi">
+                                                            <img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                            <label class="shisetu_name">ミニストップ　元住吉店</label>
+                                                        </div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+
+                                                        <div class="shisetu_ubin">&nbsp;〒１２３－４５６７</div>
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<div class="shisetu_ubin">&nbsp;愛知県名古屋市中区丸の内１２３４</div>-->
+                                                        <div class="shisetu_ubin shisetu_basho">&nbsp;愛知県名古屋市中区丸の内１２３４</div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <div class="shisetu_kuchikomi" title="思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それ">思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それは…
+                                                            <a class="kuchikomi_link janpurokomi">もっと見る</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="shisetu_info_div">
+                                                    <div class="shisetu_info_left">
+                                                        <div class="loading">
+                                                            <img src="../../image/ukg03010/bukken.jpg" title="外観写真" />
+                                                        </div>
+                                                        <div class="hyouka_lbl">【口コミ評価】</div>
+                                                        <div class="star_div shisetu_star">
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="shisetu_info_right">
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                        <label class="shisetu_name">ミニストップ　元住吉店</label><br>-->
+                                                        <div class="janpurokomi">
+                                                            <img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                        <label class="shisetu_name">ミニストップ　元住吉店</label>
+                                                        </div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+
+                                                        <div class="shisetu_ubin">&nbsp;〒１２３－４５６７</div>
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<div class="shisetu_ubin">&nbsp;愛知県名古屋市中区丸の内１２３４</div>-->
+                                                        <div class="shisetu_ubin shisetu_basho">&nbsp;愛知県名古屋市中区丸の内１２３４</div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <div class="shisetu_kuchikomi" title="思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それ">思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それは…
+                                                            <a class="kuchikomi_link janpurokomi">もっと見る</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="shisetu_info_div">
+                                                    <div class="shisetu_info_left">
+                                                        <div class="loading">
+                                                            <img src="../../image/ukg03010/bukken.jpg" title="外観写真" />
+                                                        </div>
+                                                        <div class="hyouka_lbl">【口コミ評価】</div>
+                                                        <div class="star_div shisetu_star">
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="shisetu_info_right">
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                        <label class="shisetu_name">ミニストップ　元住吉店</label><br>-->
+                                                        <div class="janpurokomi">
+                                                            <img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                            <label class="shisetu_name">ミニストップ　元住吉店</label>
+                                                        </div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <div class="shisetu_ubin">&nbsp;〒１２３－４５６７</div>
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<div class="shisetu_ubin">&nbsp;愛知県名古屋市中区丸の内１２３４</div>-->
+                                                        <div class="shisetu_ubin shisetu_basho">&nbsp;愛知県名古屋市中区丸の内１２３４</div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <div class="shisetu_kuchikomi" title="思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それ">思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それは…
+                                                            <a class="kuchikomi_link janpurokomi">もっと見る</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="shisetu_info_div">
+                                                    <div class="shisetu_info_left">
+                                                        <div class="loading">
+                                                            <img src="../../image/ukg03010/bukken.jpg" title="外観写真" />
+                                                        </div>
+                                                        <div class="hyouka_lbl">【口コミ評価】</div>
+                                                        <div class="star_div shisetu_star">
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                            <div class="bukken Part2_small"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="shisetu_info_right">
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                        <label class="shisetu_name">ミニストップ　元住吉店</label><br>-->
+                                                        <div class="janpurokomi">
+                                                            <img class="kategori_img" src="../../image/common/icon/shisetuKb_img_11.png"/>
+                                                            <label class="shisetu_name" title="ミニストップ　 元住吉店ミニト店">ミニストップ　 元住吉店ミニト...</label>
+                                                        </div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+
+                                                        <div class="shisetu_ubin">&nbsp;〒１２３－４５６７</div>
+                                                        <!-- 2020/01/09 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <!--<div class="shisetu_ubin">&nbsp;愛知県名古屋市中区丸の内１２３４</div>-->
+                                                        <div class="shisetu_ubin shisetu_basho">&nbsp;愛知県名古屋市中区丸の内１２３４</div>
+                                                        <!-- 2020/01/09 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                                        <div class="shisetu_kuchikomi" title="思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それ">思わず食べたくなると、家族分のソフトクリームを買いに、自転車に乗って買い馳せ参じるコンビニエンス！！それは…
+                                                            <a class="kuchikomi_link janpurokomi">もっと見る</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 2019/12/05 ADD END 薛(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                                    </div>
+                                    <div class="buken-detail-block">
+                                        <div class="left-title">
+                                            <div>
+                                                <img class="left-title-img" src="../../image/ukg03020/buken_detail.svg">
+                                            </div>
+                                            <div class="okiniiri-div">
+	                                            <span>お気に入り物件登録&nbsp;:&nbsp;</span>
+	                                            <div id="Part_star_div1-1" class="star-img">
+	                                                <img src="../../image/common/icon/hosi_off.png">
+	                                            </div>
+	                                            <div id="Part_star_div1-2" class="star-img">
+	                                                <img src="../../image/common/icon/hosi_off.png">
+	                                            </div>
+	                                            <div id="Part_star_div1-3" class="star-img">
+	                                                <img src="../../image/common/icon/hosi_off.png">
+	                                            </div>
+	                                            <input id="Part_star_div1-score" name="score" value="0" type="hidden" />
+                                            </div>
+                                            <div id="henkou_pink" class="henkou-pink-blue">
+                                                <img src="../../image/ukg03020/buken_list.svg">
+                                            </div>
+                                        </div>
+                                        <div class="detail-background">
+                                            <div class="header-color"></div>
+                                            <div class="bukken-title">
+                                                <div class="bukken-name">
+                                                    <span title="ジョイナス車道（102号室）">ジョイナス車道（102号室）</span>
+                                                </div>
+                                                <div class="bukken-number">
+                                                    <span class="bukken-no-label">ホームメイト物件№</span>
+                                                    <span id="Part1_tan_talk" class="bukken-no" title="51-2001-A101">51-2001-A101</span>
+                                                </div>
+                                            </div>
+                                            <div class="jyouken">
+                                                <div class="bukken-img">
+                                                    <div class="bukken-img-block">
+                                                    	<!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!--<a class="thickbox show-bukken-image">-->
+                                                        <a class="thickbox show-bukken-image move-photo-flg">
+                                                        <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <img class="bukken-image" src="../../image/ukg03030/heyaA.jpg">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="bukken-jyouken">
+                                                    <div class="jyouken-title">
+                                                    <img style="width: 1.5rem; height: 0.20rem;" src="../../image/ukg03020/chintaijoken.png"></img>
+                                                        </div>
+                                                    <table class="jyouken-table" cellspacing="0">
+                                                        <colgroup>
+                                                            <col width="29%" />
+                                                            <col width="71%" />
+                                                        </colgroup>
+                                                        <tr>
+                                                        	<!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+<!--                                                            <td class="jyouken-title-td">-->
+	                                                        <td class="jyouken-title-td" style="border-top: 0.03rem solid #EDA9C0;">
+	                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                                <span>家&nbsp;貸</span>
+                                                            </td>
+                                                            <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                            <!--<td class="jyouken-text-td">-->
+                                                            <td class="jyouken-text-td" style="border-top: 0.03rem solid #EDA9C0;">
+                                                            <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                                <div class="red-en">50,000 <span>円</span></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="jyouken-title-td">
+                                                                <span>共益費</span>
+                                                            </td>
+                                                            <td class="jyouken-text-td">
+                                                                <span>4,200 円</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="jyouken-title-td">
+                                                                <span>駐車場</span>
+                                                            </td>
+                                                            <td class="jyouken-text-td">
+                                                                <span>4,200 円</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="jyouken-title-td">
+                                                                <span>保証金</span>
+                                                            </td>
+                                                            <td class="jyouken-text-td">
+                                                                <span>無</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="jyouken-title-td">
+                                                                <span>礼&nbsp;金</span>
+                                                            </td>
+                                                            <td class="jyouken-text-td">
+                                                                <span>無</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="jyouken-title-td-bottom">
+                                                                <span>間取り</span>
+                                                            </td>
+                                                            <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                           <!-- <td class="jyouken-text-td jyouken-text-td1">-->
+                                                           	 <td class="jyouken-text-td jyouken-text-td1" style="    border-bottom: 0.03rem solid #EDA9C0;">
+                                                           	<!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                                <span>1K(30.96㎡)</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="subimg-view-div">
+
+                                                <div class="preicon" id="Part1_btnPre" onclick="picList('pre');"></div>
+
+                                                <div class="Part1_mainDiv" id="bigDiv">
+                                                    <ul id="Part1_myList">
+                                                        <li>
+                                                            <img class="img2" src="../../image/ukg03010/jianqu_max.jpg" title="間取図" />
+                                                            <div title="間取図">間取図</div>
+                                                        </li>
+                                                        <li>
+                                                            <!-- 2018/11/06 UPD Start 薛(SYS) C41024-4_パノラマ画像対応 -->
+                                                            <!-- <a class="thickbox show-bukken-image"> -->
+                                                            <a class="thickbox show-bukken-image move-photo-flg">
+                                                            <!-- 2018/11/06 UPD End 薛(SYS) -->
+                                                                <img class="img2" src="../../image/ukg03030/heya.jpg" title="洋室" />
+                                                            </a>
+                                                            <div title="洋室">外観写真</div>
+                                                        </li>
+                                                        <li>
+                                                            <!-- 2018/11/06 UPD Start 薛(SYS) C41024-4_パノラマ画像対応 -->
+                                                            <!-- <a class="thickbox show-bukken-image"> -->
+                                                            <a class="thickbox show-bukken-image move-photo-flg">
+                                                            <!-- 2018/11/06 UPD End 薛(SYS) -->
+                                                                <img class="img2" src="../../image/ukg03010/WC_max.jpg" title="WC" />
+                                                            </a>
+                                                            <div title="WC">外観写真</div>
+                                                        </li>
+                                                        <li>
+                                                            <!-- 2018/11/06 UPD Start 薛(SYS) C41024-4_パノラマ画像対応 -->
+                                                            <!-- <a class="thickbox show-bukken-image"> -->
+                                                            <a class="thickbox show-bukken-image move-photo-flg">
+                                                            <!-- 2018/11/06 UPD End 薛(SYS) -->
+                                                                <img class="img2" src="../../image/ukg03010/kaida_max.jpg" title="専用階段" />
+                                                            </a>
+                                                            <div title="専用階段">外観写真</div>
+                                                        </li>
+                                                        <li>
+                                                            <!-- 2018/11/06 ADD Start 薛(SYS) C41024-4_パノラマ画像対応 -->
+                                                            <div class="iconDiv">
+                                                                <img class="icon" src="../../image/ukg03010/panoview.png">
+                                                            </div>
+                                                            <!-- 2018/11/06 ADD End 薛(SYS) -->
+                                                            <a class="thickbox show-bukken-image">
+                                                                <img class="img2" src="../../image/ukg03010/bukken.jpg" title="外観写真" />
+                                                            </a>
+                                                            <div title="外観写真">外観写真</div>
+                                                        </li>
+                                                        <li>
+                                                            <!-- 2018/11/06 ADD Start 薛(SYS) C41024-4_パノラマ画像対応 -->
+                                                            <div class="iconDiv">
+                                                                <img class="icon" src="../../image/ukg03010/panoview.png">
+                                                            </div>
+                                                            <!-- 2018/11/06 ADD End 薛(SYS) -->
+                                                            <a class="thickbox show-bukken-image">
+                                                                <img class="img2" src="../../image/ukg03010/imageView1.jpg" title="外観写真" />
+                                                            </a>
+                                                            <div title="外観写真">外観写真</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="img-nexticon" id="Part1_btnNext" onclick="picList('next');"></div>
+
+                                            </div>
+
+                                            <div class="bukken-info">
+                                                <div class="jyouken-title1">
+                                                     <img style="width: 1.2rem; height: 0.20rem;" src="../../image/ukg03020/bukenjyohou.png"></img>
+                                                      </div>
+                                                <table class="bukken-info-table" cellspacing="0">
+                                                    <colgroup>
+                                                        <col width="18%" />
+                                                        <col width="32%" />
+                                                        <col width="18%" />
+                                                        <col width="" />
+                                                    </colgroup>
+                                                    <tr>
+                                                        <td class="bukken-info-title-td-top">
+                                                            <span>所在地</span>
+                                                        </td>
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!--<td colspan="3" class="bukken-info-text-td">-->
+                                                        <td colspan="3" class="bukken-info-text-td" style="border-top: 0.03rem solid #84B9D9;">
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <div class="bukken-addr"><span style="padding-top: 4px;">名古屋市東区筒井２丁目８-６&nbsp;&nbsp;</span></div>
+                                                            <div class="show-map-pink">
+                                                                <a class="map-button thickbox">
+                                                                    <span>MAP</span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="bukken-info-title-td">
+                                                            <span>交&nbsp;通</span>
+                                                        </td>
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!--<td colspan="3" class="bukken-info-text-td">-->
+                                                        <td colspan="3" class="bukken-info-text-td" style="height: 0.8rem;">
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <div class="koutu-text">
+                                                                <span>名古屋市営地下鉄桜通線&nbsp;「車道駅」下車&nbsp;徒歩２分、</span>
+                                                                <span>名古屋市営地下鉄東山線&nbsp;「千類駅」下車&nbsp;徒歩９分、</span>
+                                                                <span>名古屋市営地下鉄東山線&nbsp;「新栄町駅」下車&nbsp;徒歩１３分</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="bukken-info-title-td">
+                                                            <span>特典･割引<br>サービス</span>
+                                                        </td>
+                                                         <!-- 2019/07/09 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                                         <td colspan="3" class="bukken-info-text-td_ano">
+                                                             <div class="special_classical_fi_anose" title="仲介手数料減額５０％">仲介手数料減額５０％</div>
+                                                             <div class="special_classical_fi">                                                            
+                                                                    <img src="../../image/ukg03020/特典・割引サービス.svg" class="width_con_seven">
+                                                                    </img>
+                                                             </div>
+                                                        </td>
+                                                        <!-- 2019/07/09 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                                        </tr>
+                                                    <tr>
+                                                        <td class="bukken-info-title-td">
+                                                            <span>この物件の<br>他の空室</span>
+                                                        </td>
+                                                        <td colspan="3" class="bukken-info-text-td">
+                                                            <div class="kushitu-div">
+                                                                <span class="heya-font-blue">
+                                                                    <a class="heya_part">1LDK&nbsp;+&nbsp;S/102,000円</a>
+                                                                </span>
+                                                                <span class="heya-font-blue">
+                                                                    <a class="heya_part">1K/50,000円</a>
+                                                                </span>
+                                                                <span class="heya-font-blue">
+                                                                    <a class="heya_part">1K/50,000円</a>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!--<td class="bukken-info-title-td">-->
+                                                        <td class="bukken-info-title-td" style="border-bottom: 0.03rem solid #84B9D9;">
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <span>完成年月</span>
+                                                        </td>
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!--<td class="bukken-info-text-td">-->
+                                                        <td class="bukken-info-text-td" style="border-bottom: 0.03rem solid #84B9D9;">
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <span>2003年03月</span>
+                                                        </td>
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!--<td class="bukken-info-title-td-top">-->
+                                                        <td class="bukken-info-title-td-top" style="border-bottom: 0.03rem solid #84B9D9;">
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <span>入居可能日</span>
+                                                        </td>
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!--<td class="bukken-info-text-td">-->
+                                                        <td class="bukken-info-text-td" style="border-bottom: 0.03rem solid #84B9D9;">
+                                                        <!-- 2019/10/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                            <span>2003年03月15日</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div class="jyouki-igai">
+                                                    <div class="Part1_bukken"><img class="jyokiigai-img" src="../../image/common/button/jyouki_igai.svg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="setubi-block">
+                                                <div class="jyouken-title2">
+                                                    <div class="jyouken-setubi">
+                                                         <img style="width: 1.2rem; height: 0.20rem;" src="../../image/ukg03020/setubi.png"></img>
+                                                         </div>
+                                                    <div class="tekigo-info">
+                                                        <div class="font-label1">設備の適合度</div>
+                                                        <div>&nbsp;:&nbsp;</div>
+                                                        <div id="kodowariTekigo" class="kodawarigraph">
+                                                            <strong class="bar"></strong>
+                                                        </div>
+                                                        <div id="tekigouhelp_detail" class="setubihelp">
+                                                            <img src="../../image/common/icon/help.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="setubi-info">
+                                                    <div class="align-center hissu-jyouken"><span>礼金ゼロ</span></div>
+                                                    <div class="align-center kibou-jyouken"><span>オートロック</span></div>
+                                                    <div class="align-center none-jyouken"><span>エアコン</span></div>
+                                                    <div class="align-center none-jyouken"><span>シャワー付<br>トイレ</span></div>
+                                                </div>
+                                                <div class="setubi-info">
+                                                    <div class="align-center none-jyouken"><span>浴室シャワー</span></div>
+                                                    <div class="align-center none-jyouken"><span>システム<br>キッチン</span></div>
+                                                    <div class="align-center none-jyouken"><span>インターネット<br>使用料無料</span></div>
+                                                    <div class="align-center none-jyouken"><span>ＣＡＴＶ</span></div>
+                                                </div>
+                                                <div class="setubi-info">
+                                                    <div class="align-center none-jyouken"><span>防犯カメラ</span></div>
+                                                    <div class="align-center none-jyouken"><span>24時間<br>セキュリティ</span></div>
+                                                    <div class="align-center none-jyouken"><span>高齢者<br>専用機能</span></div>
+                                                    <!-- 2020/03/19 UPD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                    <!--<div class="align-center none-jyouken"><span>ロフト</span></div>-->
+                                                    <div class="align-center none-jyouken"><span>都市ガス</span></div>
+                                                    <!-- 2020/03/19 UPD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                                                </div>
+                                                <div class="setubi-setumei">
+                                                    <span class="font-label2">(</span>
+                                                    <span class="font_normal_b">ご指定条件</span>
+                                                    <span class="font-label2">&nbsp;:&nbsp;&nbsp;</span>
+                                                    <div class="kibou-setumei"></div>
+                                                    <span class="font-label2">&nbsp;･･･&nbsp;希望条件</span>
+                                                    <div class="hissu-setumei"></div>
+                                                    <span class="font-label2">&nbsp;･･･&nbsp;必須条件&nbsp;)</span>
+                                                </div>
+                                            </div>
+                                            <div class="annai-block">
+                                                <div class="annai-botton">
+                                                    <img class="annaiprint-img" src="../../image/common/button/annai_tirasi_insatu.png">
+                                                </div>
+                                                <div class="align-center checkbox-div">
+                                                    <div class="bukkenn-checkbox1"></div>
+                                                    <span class="isiro1">&nbsp;この物件を今後は表示しない</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="setubi-help" id="tekigouhelp">
+                                            <div>
+                                                <img src="../../image/common/icon/help.png">
+                                            </div>
+                                            <span>適合度について</span>
+                                        </div>
+                                    <div class="last-tr mycheck1 checkbox6">
+                                        <div id="feiBiaoShi" class="feiBiaoShi"></div>
+                                        <span class="font_normal checkbox-isiro6">非表示にした物件を表示する</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!---- Part2_hidden ！----->
+                    <!-- 適合度 -->
+                    <div id="Part2_dialogue1" class="title_yellow">
+                        <div class="dialogue2">
+                            <span class="dialogue3">・&nbsp;【適合度】について</span><br/>&nbsp;お客様が「こだわり条件」としてご指定した
+                            <br/>&nbsp;条件と物件情報の設備情報を比較し、<br/>&nbsp;その適合度を表示しています。
+                        </div>
+                        <div class="dialogue4">
+                            <div class="dialogue5">お客様の指定したこだわり条件</div>
+                            <ul class="dialogue5-ul">
+                                <li>家具家電付　－
+                                    <font class="dialogue5-1">×</font>
+                                </li>
+                                <li>家具付　－
+                                    <font class="dialogue5-1">×</font>
+                                </li>
+                                <li>ロフト　－
+                                    <font class="dialogue5-1">×</font>
+                                </li>
+                                <li>敷金(保証金)ゼロ　－
+                                    <font class="dialogue5-2">○</font>
+                                </li>
+                                <li>室内洗濯機置場　－
+                                    <font class="dialogue5-1">×</font>
+                                </li>
+                                <li>エアコン　－
+                                    <font class="dialogue5-1">×</font>
+                                </li>
+                                <li>バス・トイレ別　－
+                                    <font class="dialogue5-1">×</font>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="tekigouhelpDiv" class="title_yellow">
+                        <div style="font-weight:bold">・こだわり条件(設備)の適合度について</div>
+                        <div style="padding-left:5px;">
+                            お客様が「こだわり条件」としてご指定した<br/>
+                            設備の条件と、物件の設備情報を比較し<br/>
+                            その適合度を表示しています。<br/>
+                            <br/></div>
+                        <div style="padding-left:5px;">
+                            <div style="float: left; width:50px; cursor: pointer; margin-right: 5px;margin-top: 2px;" class="graph" id="icoTekigoudo"><strong style="width: 15px; border: medium none;" class="bar"></strong></div>
+                            をクリックすると、詳細情報を<br/>
+                            確認することができます。<br/>
+                        </div>
+                    </div>
+
+                    <!--今後は表示しない-->
+                    <div id="displayhelpDiv" class="title_yellow">検索結果に表示される物件が、お客様の<br/> ご希望に合わなかった場合、「今後は表
+                        <br/> 示しない」にチェックを入れると、今後は
+                        <br/> 物件一覧に表示されなくなります。
+                        <br/>
+                        <br/> 「今後は表示しない」にチェックを入れた
+                        <br/> 物件を再度確認する場合は、「非表示に
+                        <br/> した物件を表示する」にチェックを入れると
+                        <br/> 再表示する事ができます。
+                        <br/>
+                    </div>
+                    <div id="Part1_talk" class="title_yellow">
+                        <div class="align-center cirTrRed">
+                            <div>!</div>
+                        </div>
+                        <div class="Part1-info1"><b>「丸の内支店」の管理物件です。</b></div>
+                        <div class="Part1-info2"><b>詳細は「丸の内支店」にお問合せください。</b></div>
+                        <div class="Part1-info-tel"><b>電話番号：  052-123-4890</b></div>
+                        <div class="Part1_line_dot"></div>
+                        <!-- 2019/10/30 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+            			<div class="cirTrRed-table4-1" style="width: 4.1rem;"></div>
+            			<!-- 2019/10/30 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        <div class="kaisya-title"><b>管理会社</b></div>
+                        <table class="kaisya-info-table">
+                            <col width="100px" />
+                            <col width="20px" />
+                            <col width="286px" />
+                            <tr>
+                                <td>管理者社名</td>
+                                <td>-</td>
+                                <td>ナゴヤビル管理株式会社</td>
+                            </tr>
+                            <tr>
+                                <td>住&nbsp;&nbsp;&nbsp;所</td>
+                                <td>-</td>
+                                <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!--<td>愛知県名古屋市中区丸の内１丁目5-12&nbsp;&nbsp;丸の内ビル13F</td>-->
+                                <td style="width: 3rem;">愛知県名古屋市中区丸の内１丁目5-12&nbsp;&nbsp;丸の内ビル13F</td>
+                                <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            </tr>
+                            <tr>
+                                <td>担当者名</td>
+                                <td>-</td>
+                                <td>東原&nbsp;&nbsp;昭雄&nbsp;&nbsp;（ヒガシバラ&nbsp;&nbsp;アキオ）</td>
+                            </tr>
+                            <tr>
+                                <td>電話番号</td>
+                                <td>-</td>
+                                <td>052-111-1111</td>
+                            </tr>
+                            <tr>
+                                <td>連絡先電話番号</td>
+                                <td>-</td>
+                                <td>052-111-1111</td>
+                            </tr>
+                            <tr>
+                                <td>ＦＡＸ番号</td>
+                                <td>-</td>
+                                <td>052-111-1111</td>
+                            </tr>
+                            <tr>
+                                <td>Ｅ-Ｍａｉｌ</td>
+                                <td>-</td>
+                                <td>nagoya_billding@yahoo.co.jp</td>
+                            </tr>
+                            <tr>
+                                <td>メ&nbsp;&nbsp;&nbsp;モ</td>
+                                <td>-</td>
+                                <td>休日は毎週水曜日</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                        <div><span class="font_normal_b">賃貸人</span></div>
+                        <table class="kaisya-info-table">
+                            <col width="100px" />
+                            <col width="20px" />
+                            <col width="286px" />
+                            <tr>
+                                <td>賃貸人名</td>
+                                <td>-</td>
+                                <td>大家 はな&nbsp;&nbsp;(オオイエ&nbsp;&nbsp;ハナ)</td>
+                            </tr>
+                            <tr>
+                                <td>住&nbsp;&nbsp;&nbsp;所</td>
+                                <td>-</td>
+                                <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!--<td>愛知県名古屋市中区丸の内１丁目5-12&nbsp;&nbsp;丸の内ビル13F</td>-->
+                                <td style="width: 3rem;">愛知県名古屋市中区丸の内１丁目5-12&nbsp;&nbsp;丸の内ビル13F</td>
+                                <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            </tr>
+                            <tr>
+                                <td>電話番号</td>
+                                <td>-</td>
+                                <td>052-111-1111</td>
+                            </tr>
+                            <tr>
+                                <td>ＦＡＸ番号</td>
+                                <td>-</td>
+                                <td>052-111-1111</td>
+                            </tr>
+                            <tr>
+                                <td>Ｅ-Ｍａｉｌ</td>
+                                <td>-</td>
+                                <td>ooie_hana@yahoo.co.jp</td>
+                            </tr>
+                            <tr>
+                                <td>・連絡先１</td>
+                            </tr>
+                            <tr>
+                                <td colspan=3>
+                                    <table class="kaisya-info-table">
+                                        <col width="87px" />
+                                        <col width="20px" />
+                                        <col width="286px" />
+                                        <tr>
+                                            <td>名&nbsp;&nbsp;称</td>
+                                            <td>-</td>
+                                            <td>大家花店&nbsp;&nbsp;(オオイエハナテン)</td>
+                                        </tr>
+                                        <tr>
+                                        	<!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<td>電話番号</td>-->
+                                            <td style="width: 1.01rem;">電話番号</td>
+                                            <!-- 2019/10/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            <td>-</td>
+                                            <td>052-111-1111</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ＦＡＸ番号</td>
+                                            <td>-</td>
+                                            <td>052-111-1111</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>メ&nbsp;&nbsp;&nbsp;モ</td>
+                                <td>-</td>
+                                <td>連絡する場合は、18時以降に携帯電話にかけること</td>
+                            </tr>
+                        </table>
+                        <table class="shiire-info-table">
+                            <col width="104px" />
+                            <col width="20px" />
+                            <col width="130px" />
+                            <col width="156px" />
+                            <tr>
+                                <td colspan="4" class="td-space">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><b>仕入日</b></td>
+                                <td>-</td>
+                                <td>2013年4月15日</td>
+                                <td rowspan="2">
+                                    <button class="btn primary nyuukyo" onclick="#" title="オーナー様へ問い合わせた結果、すでに入居が決まっていた場合は、このボタンをクリックして、部屋情報を「入居中」に変更してください。">
+                            <div>入居中に変更する</div>
+                        </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>仕入担当者</b></td>
+                                <td>-</td>
+                                <td>東建　太郎</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="heyaNaiyou_part1" class="title_yellow heyaNaiyou-part1">
+                        <div class="heyaNaiyou-div">
+                            <span class="font_normal_b">・&nbsp;号&nbsp;室</span>
+                            <span class="heyaNaiyou-info">-</span>
+                            <span class="heyaNaiyou-info">102号室</span>
+                        </div>
+                        <div class="heyaNaiyou-div"><span class="font_normal_b">・&nbsp;面&nbsp;積</span><span class="heyaNaiyou-info">-</span><span class="heyaNaiyou-info">56.5㎡</span></div>
+                        <div class="heyaNaiyou-div"><span class="font_normal_b">・&nbsp;入居可能日</span><span class="heyaNaiyou-info">-</span><span class="heyaNaiyou-info">2014年11月上旬</span></div>
+                        <div class="heyaNaiyou-div"><span class="font_normal_b">・&nbsp;適合度</span><span class="heyaNaiyou-info">-</span>
+                            <div class="heyaNaiyou-graph">
+                                <strong class="bar"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                    <!--<div id="Part1_jouhou" class="title_yellow Part1-jouhou">-->
+                    <div id="Part1_jouhou1" class="title_yellow Part1-jouhou Part1-jouhou1" style="width: 3.8rem; margin-left: 0.39rem;">
+                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        <table id="Part1_kenheiht">
+                            <col width="100px" />
+                            <col width="22px" />
+                            <col width="202px" />
+                            <tr>
+                                <td class="font_normal_b">償却（敷引）</td>
+                                <td class="font_normal_b">-</td>
+                                <td>無し</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">居室階数</td>
+                                <td class="font_normal_b">-</td>
+                                <td>1階／2階建</td>
+                            </tr>
+                            <tr rowspan="2">
+                                <td class="font_normal_b">その他費用</td>
+                                <td class="font_normal_b">-</td>
+                                <td>住宅総合保険料12,000円／2ヵ年、</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>町内会費200円／1ヵ月</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">家賃保証利用料</td>
+                                <td class="font_normal_b">-</td>
+                                <td title="要加入：月額賃料の1％／毎月(入居時)">
+                                    <span class="onmiss tokki">要加入：月額賃料の1％／毎月(入居時)</span>
+                                </td>
+                            </tr>
+                            <tr rowspan="2">
+                                <td class="font_normal_b">特記事項</td>
+                                <td class="font_normal_b">-</td>
+                                <td title="あああああああああああああああああああああああああ">
+                                    <span class="onmiss tokki">あああああああああああああああああああああああああ</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td title="いいいいいいいいいいいいいいいいいいいいいいいいい">
+                                    <span class="onmiss tokki">いいいいいいいいいいいいいいいいいいいいいいいいい</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">物件種別</td>
+                                <td class="font_normal_b">-</td>
+                                <td>アパート</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">構造・総戸数</td>
+                                <td class="font_normal_b">-</td>
+                                <td>重量鉄骨造2階建&nbsp;8戸</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">小学校(学区)</td>
+                                <td class="font_normal_b">-</td>
+                                <td>丸の内小学校</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">中学校(学区)</td>
+                                <td class="font_normal_b">-</td>
+                                <td>丸の内北中学校</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">契約形熊</td>
+                                <td class="font_normal_b">-</td>
+                                <td>一般賃貸借／2ヵ年</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">取引態様</td>
+                                <td class="font_normal_b">-</td>
+                                <td>仲介（専任）</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">募集広告料</td>
+                                <td class="font_normal_b">-</td>
+                                <td>2,000円</td>
+                            </tr>
+                            <tr>
+                                <td class="font_normal_b">情報掲載日</td>
+                                <td class="font_normal_b">-</td>
+                                <td>2011年10月5日</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="starhelpDiv" class="title_yellow">
+                        <span>お気に入り度を３段階で<br/> 選択することができます。<br/></span>
+                        <div>
+                            <img src="../../image/common/icon/hosi_on.png">&nbsp;…良い
+                        </div>
+                        <div>
+                            <img src="../../image/common/icon/hosi_on.png">
+                            <img src="../../image/common/icon/hosi_on.png">&nbsp;…かなり良い
+                        </div>
+                        <div>
+                            <img src="../../image/common/icon/hosi_on.png">
+                            <img src="../../image/common/icon/hosi_on.png">
+                            <img src="../../image/common/icon/hosi_on.png">&nbsp;…最高
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="henkou-jyouken">
+            <div colspan="2" class="jyouken-kibou">
+                <div class="label-font1">
+                    <span>・ご希望条件</span>
+                </div>
+                <div class="jyouken-kibou-info">
+                    <div>
+                        <div class="jyouken-left">
+                        <div class="jyouken-label">希望地域</div>
+                        <div class="jyouken-content">愛知県名古屋市中区</div>
+                    </div>
+                    <div class="separtor"></div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">&nbsp;初期(入居)費用</div>
+                        <div class="jyouken-content">&nbsp;指定なし</div>
+                    </div>
+                    <div class="separtor"></div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">駅からの徒歩分</div>
+                        <div class="jyouken-content">指定なし&nbsp;&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="separtor"></div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">&nbsp;入居時期</div>
+                        <div class="jyouken-content">&nbsp;&nbsp;2017年10月上旬頃</div>
+                    </div>
+                    <div class="separtor"></div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">&nbsp;築年数</div>
+                        <div class="jyouken-content">&nbsp;&nbsp;指定なし</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">間取り</div>
+                        <div class="jyouken-content">1k､1DK､1LDK､2Ｋ</div>
+                    </div>
+                    <div class="separtor"></div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">駐車場</div>
+                        <div class="jyouken-content">要１台&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </div>
+                    <div class="separtor"></div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">家賃</div>
+                        <div class="jyouken-content">下限なし～上限なし</div>
+                        <div class="jyouken-content">(共益費･管理費を含む)</div>
+                    </div>
+                    <div class="separtor"></div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">希望専用面積</div>
+                        <div class="jyouken-content">下限なし～上限なし</div>
+                    </div>
+                    <div class="separtor"></div>
+                    <div class="jyouken-left">
+                        <div class="jyouken-label">入居人数</div>
+                        <div class="jyouken-content">大人１人</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div colspan="2" class="jyouken-kotawari">
+                <div class="label-font1">
+                    <span>・こだわり条件</span>
+                </div>
+                <div class="jyouken-kibou-info">
+                    <div class="kibou-div">
+                        <div class="jyouken-right">
+                            <div class="jyouken-hissu">
+                            <div class="jyouken-content">礼金ゼロ</div>
+                            <div class="hissu" style="padding-top: 1px;">必&nbsp;須</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <div class="separtor"></div>
+                        <!-- 2020/03/19 ADD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                        <div class="jyouken-right">
+                            <div class="jyouken-hissu">
+                            <div class="jyouken-content">都市ガス</div>
+                            <div class="hissu" style="padding-top: 1px;">必&nbsp;須</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <!-- 2020/03/19 ADD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                        <!-- 2020/03/19 DEL START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                        <!--<div class="jyouken-right">
+                            <div class="jyouken-content">南向き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        </div>
+                        <div class="separtor"></div>
+                        <div class="jyouken-right">
+                            <div class="jyouken-content">オートロック</div>
+                        </div>-->
+                        <!-- 2020/03/19 DEL END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                    </div>
+                    <!-- 2020/03/19 ADD START 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                    <div class="kibou-div">
+                        <div class="jyouken-right">
+                            <div class="jyouken-content">南向き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        </div>
+                        <div class="separtor"></div>
+                        <div class="jyouken-right">
+                            <div class="jyouken-content">オートロック</div>
+                        </div>
+                    </div>
+                    <!-- 2020/03/19 ADD END 陳龍龍(SYS) C44072_希望部屋数等を追加 -->
+                </div>
+            </div>
+        </div>
+        <div class="align-center button-henkou">
+            <img class="show-img jyouken-btn" onclick="henkou()" src="../../image/common/button/button_henkou.png">
+        </div>
+        <div class="footer"></div>
+    </body>
+
+</html>

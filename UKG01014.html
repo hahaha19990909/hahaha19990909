@@ -1,0 +1,831 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/thickbox.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG01013.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG01014.css"></link>
+        <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../js/message.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <script type="text/javascript" src="../../js/artDialog.js"></script>
+        <script type="text/javascript" src="../../js/UKG01014.js"></script>
+    </head>
+
+    <body>
+        <div class="shincyaku-info">
+            <!-- <div class="shincyaku-info-title"> -->
+                <div>
+                    <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+                    <!--<img class="imgwidth" src="../../image/ukg01014/headBarXLong.png">-->
+                    <img class="imgwidth" src="../../image/ukg01014/headBarXLong_pic1.png">
+                    <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+                </div>
+                <div class="worn_point align-center">
+                    <!--2020/06/03 セツ  ADD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+                    <img class="title_bgSvg" src="../../image/ukg01014/headBarXLong.svg"/>
+                    <!--2020/06/03 セツ  ADD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+                    <div class="shincyaku-img"><img class="show-img" src="../../image/ukg01013/chuui.png"></div>
+                    <span class="normal-font">&nbsp;新着物件数：&nbsp;</span>
+                    <span class="red-font">8</span>
+                    <span class="normal-font">&nbsp;戸</span>
+                <!-- </div> -->
+            </div>
+			<!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+            <!-- <div class="shincyaku-info-setumei"> -->
+			<div class="shincyaku-info-setumei" style="margin-left: 0.6rem;">
+			<!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                <!-- 2019/06/24 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                <span>お客様のご希望条件に合致する物件が、新たに空室となりました。&nbsp;お客様へ物件の紹介を行なってください。</span>
+                <div>
+                    <div>
+                            <div class="jyouken-botton_ano">
+                                <span class="align-center shincyaku-info-setumei_span">賃貸条件</span>
+                            </div>
+                            <div class="jyouken-botton_ano_pink">
+                                    <span class="align-center shincyaku-info-setumei_span">賃貸条件</span>
+                            </div>
+                    </div>
+                    <div class="jyouken-botton_ano_fi">:クリックすると賃貸条件が確認できます。</div>
+                    <!-- <div>
+                            は特典·割引サービス有の物件です。
+                        <div>特典·割引サービス有</div>
+                    </div> -->
+                    <div class="font_size_control">
+                            <div class="radius_only">&nbsp;</div>
+                            <div class="float_left_ano">は</div>
+                            <div class="color_pink_ano">特典·割引サービス有</div>
+                            <div class="float_left">の物件です。</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2019/06/24 熊振 C43100_お客様項目の入力簡素化対応 END-->
+            <div class="data-block">
+                <div class="shincyaku-content-block">
+                    <div class="info-list">
+                        <table class="shincyaku-info-table-title" cellspacing=0>
+                            <col width="30%" />
+                            <col width="13%" />
+                            <col width="14%" />
+                            <col width="19%" />
+                            <col width="14%" />
+                            <col width="" />
+                            <tr class="title-tr">
+                                <td class="inner-tr-td">
+                                    <div class="updown-title">
+                                        <a class="font_normal_b" onclick="updownClick( '1')">お客様名</a>
+                                    </div>
+                                    <div id="updown1" class="sort-up"></div>
+                                </td>
+                                <td rowspan="2" class="solid-td">
+                                    <div class="updown-title">
+                                        <a class="font_normal_b" onclick="updownClick( '2')">仲介担当者</a>
+                                    </div>
+                                    <div id="updown2" class="sort-up"></div>
+                                </td>
+                                <td rowspan="2" class="dashed-td">
+                                    <div class="updown-title">
+                                        <a class="font_normal_b" onclick="updownClick('3')">ﾎｰﾑﾒｲﾄ物件№</a>
+                                    </div>
+                                    <div id="updown3" class="sort-up"></div>
+                                </td>
+                                <td rowspan="2" class="solid-td">
+                                    <span class="font_normal_b">物件名(号室)</span>
+                                </td>
+                                <td class="inner-tr-td">
+                                    <span class="font_normal_b">設備の適合度</span>
+                                </td>
+                                <td rowspan="2" colspan="2">
+                                    <span class="font_normal_b">アラーム<br>解除</span>
+                                </td>
+                            </tr>
+                            <tr class="title-tr table-tr">
+                                <td class="solid-td">
+                                    <span class="font_normal_b">連絡先(連絡可能時間)</span>
+                                </td>
+                                <td class="solid-td">
+                                    <span class="font_normal_b">入居希望日</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="fixed-block">
+                            <table id="guest-view1" class="shincyaku-info-table" cellspacing=0>
+                                <col width="30%" />
+                                <col width="13%" />
+                                <col width="14%" />
+                                <col width="19%" />
+                                <col width="14%" />
+                                <col width="" />
+                                <tr class="detail-tr">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="顧客　光男 様">顧客　光男 様</a>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　壱太郎">東建　壱太郎</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <!-- 2019/07/03 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar1" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/tel.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="052-1244-4448（9:00～12:00）">052-1244-4448（9:00～12:00）</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                     -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <!-- 2020/04/01 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!-- 2019/06/24 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                        <!--<div class="jyouken-botton_another"><span class="align-center" >賃貸条件</span></div>-->
+                                        <!--<div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>-->
+                                        <div class="jyouken-botton jyouken-botton_another"><span class="align-center" >賃貸条件</span></div>
+                                        <!-- 2019/06/24 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                        <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <!-- 2020/04/01 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    <!--End-->
+                                    </td>
+                                    <td class="font_normal solid-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar2" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"> 
+                                            <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal solid-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="株式会社 あいうえお商店 様">株式会社 あいうえお商店 様</a>
+                                        </div>
+                                        <div class="ho-hojin"><span class="align-center">法人</span></div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　壱太郎">東建　壱太郎</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar3" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr table-tr">
+                                    <td class="font_normal inner-tr-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="顧客　光男 様">顧客　光男 様</a>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar4" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a table-tr">
+                                    <td class="font_normal inner-tr-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/tel.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="052-1244-4448（9:00～12:00）">052-1244-4448（9:00～12:00）</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　壱太郎">東建　壱太郎</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar5" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr table-tr">
+                                    <td class="font_normal inner-tr-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="株式会社 あいうえお商店 様">株式会社 あいうえお商店 様</a>
+                                        </div>
+                                        <div class="ho-hojin"><span class="align-center">法人</span></div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar6" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a table-tr">
+                                    <td class="font_normal inner-tr-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="顧客　光男 様">顧客　光男 様</a>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　壱太郎">東建　壱太郎</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar7" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr table-tr">
+                                    <td class="font_normal inner-tr-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar8" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a table-tr">
+                                    <td class="font_normal inner-tr-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <!-- 2019/10/18 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!--<tr class="detail-tr-a">-->
+                                <tr class="detail-tr">
+                                <!-- 2019/10/18 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar8" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- 2019/10/18 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!--<tr class="detail-tr-a table-tr">-->
+                                <tr class="detail-tr table-tr">
+                                <!-- 2019/10/18 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    <td class="font_normal inner-tr-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a">
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2" class="font_normal solid-td">-->
+                                    <td rowspan="2" class="font_normal solid-td td-2">
+                                    <!-- 2019/10/21 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="align-center"><span>A0-1163-303</span></div>
+                                    </td>
+                                    <td class="font_normal solid-td" title="東建マンション丸の内">
+                                        <div class="chu_torou width_three"><span class="hidden_this">東建マンション丸の内</span></div>
+                                    </td>
+                                    <!-- 2019/07/03 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                                    <td class="inner-tr-td">
+                                        <div class="graph">
+                                            <strong id="bar8" class="bar" style="width:0px"></strong>
+                                        </div>
+                                    </td>
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<td rowspan="2">-->
+                                    <td rowspan="2" class="td-2">
+                                    <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <div class="kaijyo-button">
+                                            <img class="show-img" src="../../image/ukg01014/kaijyo.png" onclick="confirmMessage();">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-tr-a table-tr">
+                                    <td class="font_normal inner-tr-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                    <!-- Start 2018/03/09 董凱き
+                                        <div class="goushitu">
+                                            <span>(303)</span>
+                                            <div class="jyouken-botton">
+                                                <img class="show-img" src="../../image/ukg01014/chintai_jyouken.svg">
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="goushitu">
+                                            <span class="indentation_two">(303)</span>
+                                        </div>
+                                        <div class="jyouken-botton"><span class="align-center" >賃貸条件</span></div>
+                                     <!-- End -->
+                                    </td>
+                                    <td class="font_normal inner-tr-td">
+                                        <div class="align-center"><span>2016年6月30日</span></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tail-line"></div>
+                    </div>
+                    <!-- 弹出层 -->
+                    <div id="divPop1" class="dialogue1">
+                        <div class="font_normal chindai-info">
+                            <b>物件所在地</b>&nbsp;－&nbsp;<span title="名古屋市中区桜井町三度山20">名古屋市中区桜井町三度山20</span><br>
+                            <b>交&nbsp;&nbsp;&nbsp;通</b>&nbsp;－&nbsp;<span title="名古屋営地下鉄東山線金山駅徒歩5分">名古屋営地下鉄東山線金山駅徒歩5分</span><br>
+                            <b>間取リ</b>&nbsp;－&nbsp;1LDK<br>
+                            <b>物件種別</b>&nbsp;－&nbsp;マンション<br>
+                            <b>家&nbsp;&nbsp;&nbsp;賃</b>&nbsp;－&nbsp;78,000円<br>
+                            <b>共益費</b>&nbsp;&nbsp;－&nbsp;&nbsp;5,000円<br>
+                            <b>駐車場</b>&nbsp;&nbsp;－&nbsp;&nbsp;5,000円<br>
+                            <b>入居可能日</b>&nbsp;－&nbsp;2011年9月15日<br>
+                            <b>入空室更新日</b>&nbsp;－&nbsp;2011年9月15日<br>
+                        </div>
+                    </div>
+                    <div id="divPop2" class="dialogue1">
+                        <div class="font_normal chindai-info">
+                            <b>物件所在地</b>&nbsp;－&nbsp;<span title="名古屋市中区桜井町三度山20">名古屋市中区桜井町三度山20</span><br>
+                            <b>交&nbsp;&nbsp;&nbsp;通</b>&nbsp;－&nbsp;<span title="名古屋営地下鉄東山線金山駅徒歩5分">名古屋営地下鉄東山線金山駅徒歩5分</span><br>
+                            <b>間取リ</b>&nbsp;－&nbsp;1LDK<br>
+                            <b>物件種別</b>&nbsp;－&nbsp;マンション<br>
+                            <b>家&nbsp;&nbsp;&nbsp;賃</b>&nbsp;－&nbsp;78,000円<br>
+                            <b>共益費</b>&nbsp;&nbsp;－&nbsp;&nbsp;5,000円<br>
+                            <b>駐車場</b>&nbsp;&nbsp;－&nbsp;&nbsp;5,000円<br>
+                            <b>入居可能日</b>&nbsp;－&nbsp;2011年9月15日<br>
+                            <b>入空室更新日</b>&nbsp;－&nbsp;2011年9月15日<br>
+                        </div>
+                    </div>
+                    <div id="starshow1" class="dialogue2">
+                        <div class="font_normal bar-info">
+                            <b>お客様の指定したこだわり条件</b><br> バス・トイレ別　－
+                            <font class="circle">○</font><br> 南向き　－
+                            <font class="mistake">×</font><br> 居室2階以上　－
+                            <font class="mistake">×</font><br> ウォークインクローゼット　－
+                            <font class="mistake">×</font><br> IHクッキングヒーター　－
+                            <font class="circle">○</font><br> ブロードバンド　－
+                            <font class="circle">○</font>
+                        </div>
+                    </div>
+                    <div id="starshow2" class="dialogue2">
+                        <div class="font_normal bar-info">
+                            <b>お客様の指定したこだわり条件</b><br> バス・トイレ別　－
+                            <font class="circle">○</font><br> 南向き　－
+                            <font class="mistake">×</font><br> 居室2階以上　－
+                            <font class="mistake">×</font><br> ウォークインクローゼット　－
+                            <font class="mistake">×</font><br> IHクッキングヒーター　－
+                            <font class="circle">○</font><br> ブロードバンド　－
+                            <font class="circle">○</font>
+                        </div>
+                    </div>
+                    <div id="dialog1">
+                        <div class="font_normal tel-detail">
+                            <div class="tel-img"><img class="show-img" class="telephone-img" src="../../image/common/icon/telephone.gif" /></div>
+                            <div><span>052-1234-5467&nbsp;（8～9時& 12～1時、土日は終日OK）</span></div>
+                        </div>
+                        <div class="font_normal tel-detail">
+                            <div class="tel-img"><img class="show-img" class="mail-img" src="../../image/common/icon/mail.gif" /></div>
+                            <div><span>hanako@token.co.jp</span></div>
+                        </div>
+                        <div class="font_normal tel-detail">
+                            <div class="tel-img"><img class="show-img" class="mail-img" src="../../image/common/icon/phone.gif" /></div>
+                            <div><span>hanako@token.co.jp</span></div>
+                        </div>
+                    </div>
+                    <div id="dialog2">
+                        <div class="font_normal tel-detail">
+                            <div class="tel-img"><img class="show-img" class="telephone-img" src="../../image/common/icon/telephone.gif" /></div>
+                            <div><span>052-1234-5467&nbsp;（8～9時& 12～1時、土日は終日OK）</span></div>
+                        </div>
+                        <div class="font_normal tel-detail">
+                            <div class="tel-img"><img class="show-img" class="mail-img" src="../../image/common/icon/mail.gif" /></div>
+                            <div><span>hanako@token.co.jp</span></div>
+                        </div>
+                        <div class="font_normal tel-detail">
+                            <div class="tel-img"><img class="show-img" class="mail-img" src="../../image/common/icon/phone.gif" /></div>
+                            <div><span>hanako@token.co.jp</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

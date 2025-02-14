@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG05032.css"></link>
+<link rel="stylesheet" href="../../css/ff/twitter.css" />
+<script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/thickbox.js"></script>
+<script type="text/javascript" src="../../js/artDialog.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+</head>
+
+<body>
+	<div class="headBarXXXLong font_large_b_w font_bar" style="margin-left:13px;text-shadow:1px 3px 3px rgba(0, 0, 0, 0.2);">地図から探す</div>
+	<form method="post" >
+		<div id="mainDiv">
+			<table  class="" width="734px" cellspacing="0" style="height:592px;">
+				<col width="10%"/>
+				<col width="80%"/>
+				<col width="10%"/>
+				<tr style="height:30px;width:700px">
+					<td colspan="2">
+						<div style="float:left;">
+						  <select style="width:120px; font-size:13px; margin:-5px 0 0 11px;">
+							<option>愛知県</option>
+							<option>三重県</option>
+							<option>岐阜県</option>
+							<option>静岡県</option>
+						  </select>
+					  </div>
+					  <div style=" float:left; margin-left:8px; margin-top:1px;">表示されている地図のエリア内で物件を検索します。</div>
+					</td>
+				</tr>
+				<tr>
+					<td height="512" colspan="2" valign="top">
+						<div id="mapDiv">
+							<img src="../../image/ukg02032/map.jpg"/>
+						</div>
+				  </td>
+					<td>
+						<div id="rightUpDiv" style="margin-top:-165px">
+							<table class="inhert_window" style="border:1px solid #CCCCCC; width:174px;" cellspacing="0" cellpadding="0">
+								<tr bgcolor="#968E79">
+									<td height="32px">
+										<div id="kibouHead"></div>
+										<div style="color:#FFFFFF; margin-top:-10px">希望エリアの設定方法</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="left" style="line-height:16px; margin-left:7px; margin-top:7px; color:#737373; margin-right:7px; height:190px" class="font_normal">
+											希望エリアは、地図上に<br />
+											四角形の範囲で指定すること<br />
+											ができます。<br />
+											<div style="font-size:10px; color:#FF0000; margin:4px 0 -4px 0">
+												（エリアを指定しない場合、選択した<br />地域全域の物件が対象になります。）
+
+											</div><br />
+											【手順】<br />
+											地図上で、希望地域の開始<br />位置と終了位置をクリックし<br />ます。<br/>
+											作成された四角形の範囲内が<br />希望エリアとなります。
+
+										</div>
+										<div id="areaDiv" >
+											<div id="cloudUpDiv">開始位置</div>
+											<div id="area" class="font_normal_b">希望エリア</div>
+											<div id="cloudDownDiv">終了位置</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+				<td>	
+				<div style="margin-left:320px;">	
+					<a id="btnset" class="btn primary" disabled="" target="_parent" style="width: 80px; font-weight: bold; cursor: pointer;" href="javascript:kibo_jyouken(2)">設  定</a>
+				</div>
+				</td>
+				</tr>
+			</table>	
+		</div>
+	</form>
+</body>
+</html>

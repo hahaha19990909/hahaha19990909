@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG05033.css"></link>
+<link rel="stylesheet" href="../../css/ff/twitter.css" />
+<script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="../../js/artDialog.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/UKG05033.js"></script>
+</head>
+<body style=" margin-left:8px; overflow:hidden;">
+<div class="headBarset font_large_b_w font_bar" style="text-shadow:1px 3px 3px rgba(0, 0, 0, 0.2);">路線・駅設定</div>
+<form method="post" >
+  <div style="float:left;width:926px;margin:-20px 0 0 5px">
+    <div id="divtop" style="border-top:0;margin-top:0px; width:924px; height:479px;">
+		<div style="float:left; margin-top:12px;">
+			<table width="670px" >
+			<tr style="height:50px;">
+			<td>
+			<div style="float:left; margin-left:10px; margin-top:2px">
+				  <select style="width:120px; font-size:13px;">
+					<option>愛知県</option>
+					<option>三重県</option>
+					<option>岐阜県</option>
+					<option>静岡県</option>
+					<option>静岡県</option>
+				  </select>
+			</div>
+			<div style="float:right;">
+				<div style=" border:1px solid #D5ECF6;background-color:#F3FBFB;width:230px;">
+					<img style="margin-left:6px; margin-top:2px;" src="../../image/ukg02034/check_ico.jpg" />	
+					<div style="margin-top:-21px; margin-left:39px;">
+					  <span id="btnSubway1" style="margin-right:-4px; margin-top:10px;">
+							<a class="btn primary_grey3 map_cot btndisable" >
+								<table cellspacing="0" style="margin-top:5px;margin-left:0px;">
+									<tbody><tr>
+										<td width="20px">
+											<div class="cirTrIco" style="margin-left:2px; margin-top:-4px;">
+												<div style="font-size:10px;margin-top:0px;">→</div>
+											</div>
+										</td>
+										<td style="font-size:8pt;">地下鉄</td>
+									</tr>
+								</tbody></table>
+							</a>
+					  </span>
+						<span style="margin-right:-4px; margin-top:10px;">
+							<a id="syusayi" class="btn primary_grey2 map_cot">
+								<table cellspacing=0 style="margin-top:5px;">
+									<tr>
+										<td width="20px">
+											<div class="cirTrIco" style="margin-left:2px; margin-top:-4px;">
+												<div style="font-size:10px;">→</div>
+											</div>
+										</td>
+										<td style="font-size:8pt;">
+											詳&nbsp;細
+										</td>
+									</tr>
+								</table>												
+							</a>
+						</span>
+						<span style="margin-right:-4px;">
+							<a id="guangyu" class="btn primary_grey2 map_cot">
+								<table cellspacing=0 style="margin-top:5px;">
+									<tr>
+										<td width="20px">
+											<div class="cirTrIco"  style="margin-left:2px; margin-top:-4px;">
+												<div style="font-size:10px;">→</div>
+											</div>
+										</td>
+
+										<td style="font-size:8pt;">
+											広&nbsp;域
+
+										</td>
+									</tr>
+								</table>												
+							</a>
+						</span>
+						
+					</div>
+				</div>	
+			</div>
+			<div id="divchange" style="clear:both; margin-left:10px; margin-top:33px;"> <img id="imgchange" src="../../image/ukg02034/map1.png"/> 
+			<div id="mapchange" style="position: absolute; cursor: pointer; z-index: 10000; left: 696px; top: 255px;">
+                    <img id="imgsicon" src="../../image/ukg02034/map_open.gif" title="クリックすると地図の表示エリアを広げることができます">
+            </div>
+
+			</div>
+			</td></tr>
+			</table>
+		</div>
+		<div class="inhert_window" style="display: block;margin-top:-30px;margin-top:-29px;margin-left:1px" id="yajirushiNaiyou">
+		       <div style="background-color:#D5ECF6;height: 105px;">
+			   <div class="ekititle">
+				<img src="../../image/ukg02034/train.gif">
+			   </div>
+			   <div class="rossenmemo font_normal_b">路線図からご希望の駅名を<br>選択してください。</div>
+			   <div><span style="line-height:12px;display:block;margin-top:4px;float:left;width:8%;text-align: right;" class="font_small">※</span><span style="line-height:12px;display:block;margin-top:4px;float:left;width:92%;" class="font_small">カッコ内の数字は選択した駅を最寄り駅として登録している空室物件の数です。</span></div>
+      	</div>
+
+		<div class="ekilist">
+		  <div class="ekirow" id="eki_25073" ekiname="中村日赤駅" prefecturename="愛知県" style="">
+		  <div class="rossenrow">
+		  <div class="btnicoclear" onclick="deleteCurrentRow('25073');" id="btnClear"><img src="../../image/ukg02034/btndelete.gif"></div>	
+		   <ul>			
+		   <li id="rosen_P147001"><span class="font_normal inlineonmiss2" style="display: inline-block;color:black; width: 145px;" title="名古屋市営地下鉄東山線">名古屋市営地下鉄東山線</span></li>		
+		   </ul>	
+		  </div>	
+		  <div class="ekibox">
+		  <div style="background-color: rgb(0, 102, 153); height: 21px;padding:2px 2px;">
+		     <span id="lblStation">
+		     <span class="inlineonmiss3  font_normal_b" style="max-width:125px;font-size:12pt;margin-left: 4px;letter-spacing: 2px;" title="中村日赤駅">中村日赤駅</span><span class="ekicount inlineonmiss3">(<span id="lblkuusituBukkenSuu">82</span>)</span>		
+		     </span>	 
+		  </div>	
+		  </div>
+		  </div>
+		  <div class="ekirow" id="eki_24963" ekiname="七宝駅" prefecturename="愛知県" style="background-color: rgb(244, 244, 244);">	
+		    <div class="rossenrow">		
+		    <div class="btnicoclear" onclick="deleteCurrentRow('24963');" id="btnClear"><img src="../../image/ukg02034/btndelete.gif"></div>
+			 <ul>
+			 <li id="rosen_P148011"><span class="font_normal inlineonmiss2" style="display: inline-block;color:black; width: 145px;" title="名鉄津島線">名鉄津島線</span>
+			 </li>
+			 </ul>
+			</div>
+			<div class="ekibox">
+			 <div style="background-color: rgb(0, 102, 153); height: 21px;padding:2px 2px;"><span id="lblStation"><span class="inlineonmiss3  font_normal_b" style="max-width:125px;font-size:12pt;margin-left: 4px;letter-spacing: 2px;" title="七宝駅">七宝駅</span><span class="ekicount inlineonmiss3">(<span id="lblkuusituBukkenSuu">49</span>)</span></span>
+			</div>
+			</div>
+		  </div>
+			<div class="ekirow" id="eki_29495" ekiname="ささしまライブ駅" prefecturename="愛知県">
+			<div class="rossenrow">
+			<div class="btnicoclear" onclick="deleteCurrentRow('29495');" id="btnClear"><img src="../../image/ukg02034/btndelete.gif"></div>
+			  <ul><li id="rosen_P149001"><span class="font_normal inlineonmiss2" style="display: inline-block;color:black; width: 145px;" title="名古屋臨海高速鉄道あおなみ線">名古屋臨海高速鉄道あおなみ線</span>
+			   </li>
+		      </ul>
+			</div>
+			<div class="ekibox">
+			<div style="background-color: rgb(0, 102, 153); height: 21px;padding:2px 2px;">
+			 <span id="lblStation">
+			 <span class="inlineonmiss3  font_normal_b" style="max-width:125px;font-size:12pt;margin-left: 4px;letter-spacing: 2px;" title="ささしまライブ駅">ささしまライブ駅</span>
+			 <span class="ekicount inlineonmiss3">(<span id="lblkuusituBukkenSuu">8</span>)</span></span>
+			</div>
+			</div>
+			</div>
+			
+			<div id="emptyEki">
+			  <div class="ekirow"  style="border-bottom: medium none; background-color: rgb(244, 244, 244);">
+			   <div class="rossenrow">
+			     <div style="height:25px;">&nbsp;</div>
+			   </div>
+			   <div class="ekinullbox">駅&#12288;名</div>
+			  </div>
+		  </div>
+
+		  </div>
+
+	  </div>
+	</div>
+	<div align="center" style="padding-top:20px;">	
+		<a id="btnset" class="btn primary" disabled="" target="_parent" style="width: 80px; font-weight: bold; cursor: pointer;" href="javascript:kibo_jyouken(3)">設  定</a>
+	</div>
+  </div>
+</form>
+</body>
+</html>

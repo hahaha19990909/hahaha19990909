@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG99001.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG99011.css"></link>
+        <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../../js/thickbox.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <script type="text/javascript" src="../../js/help.js"></script>
+        <script type="text/javascript" src="../../js/UKG99011.js"></script>
+    </head>
+
+    <body>
+        <div class="guest-kensaku">
+            <div class="guest-kensaku-title">
+                <!--2020/06/05 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+                <!--<img class="show-img" src="../../image/ukg99001/houjinkigyoukensaku_title.png">-->
+                <img class="show-img" src="../../image/ukg99011/houjinkigyoukensaku_title.svg">
+                <!--2020/06/05 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+            </div>
+            <form method="post">
+                <div>
+                    <div class="kensaku-jyouken-title"></div>
+                    <div class="div-guest-content">
+                        <div class="kensaku-jyouken-top"></div>
+                        <div class="kigyo-info">
+                            <table class="jyouken-table">
+                                <tr>
+                                    <td class="jyouken-table-title">
+                                        <span class="font_normal_title align-center">企業名</span>
+                                    </td>
+                                    <td>
+                                        <div class="jyouken-table-detail">
+                                            <input type="text" id="text_phone" class="txtmode2 name_search">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="kensaku-btn">
+                                <img class="kensaku_style" onclick="" src="../../image/ukg99001/kensaku.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="houjin-list-title"></div>
+                    <div class="div-guest-content">
+                        <div class="kensaku-jyouken-top"></div>
+                        <div class="kigyo-info">
+                            <table class="guest-list-table-title-new">
+                                <col width="20%" />
+                                <col width="80%" />
+                                <tr class="th">
+                                    <td class="font_normal_b sortTitle block_title">
+                                        <div id="title1" class="align-center title-id-style">
+                                            企業コード
+                                        </div>
+                                    </td>
+                                    <td class="font_normal_b sortTitle block2">
+                                        <div id="title2" class="align-center title-name title-id-style">
+                                            企業名
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="fixed-block-new">
+                                <table id="guest-view-new" class="guest-list-table-new">
+                                    <col width="20%" />
+                                    <col width="80%" />
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new">
+                                            <a class="kigyou_koido" onclick="kigyoucode();"><span class="rei-label-new-text">997</span></a>
+                                        </td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new">〷会社テスト企業</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new">
+                                            <a class="kigyou_koido"><span class="rei-label-new-text">998</span></a>
+                                        </td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new">テスト企業</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new">
+                                            <a class="kigyou_koido"><span class="rei-label-new-text">999</span></a>
+                                        </td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new">テスト企業(XX会社)</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new"></td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new"></td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new"></td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new"></td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new"></td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new"></td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="detail-new">
+                                        <td class="font_normal block_title number-text-new"></td>
+                                        <td class="font_normal block2-new">
+                                            <span class="rei-label-new"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="foot-line-new"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+
+</html>

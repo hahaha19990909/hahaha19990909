@@ -1,0 +1,528 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG01013.css"></link>
+        <link rel="stylesheet" href="../../css/ff/twitter.css" />
+        <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../../js/artDialog.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../js/message.js"></script>
+        <script type="text/javascript" src="../../js/UKG01013.js"></script>
+    </head>
+    </head>
+
+    <body>
+        <div class="alarm-info">
+            <div class="alarm-info-title">
+                <div class="win_point align-center">
+                    <!--2020/06/03 セツ  ADD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+                    <img class="title_bgSvg" src="../../image/ukg01013/headBarXLong.svg"/>
+                    <!--2020/06/03 セツ  ADD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+                    <!--/*20180315*/ Start-->
+                    <div class="chuui-img">
+                        <img class="show-img" src="../../image/ukg01013/chuui.png"></img>
+                    </div>
+                    <!--/*20180315*/ End-->
+                    <span class="normal-font">&nbsp;追客アラーム組数：&nbsp;</span>
+                    <span class="red-font">8</span>
+                    <span class="normal-font">&nbsp;組</span>
+                </div>
+            </div>
+            <div class="alarm-info-setumei">
+                <span>お客様とのご商談以降、長期間追客業務が行なわれていないお客様の一覧を表示しています。</span>
+                <span>お客様へ連絡をとり、お部屋探しのご提案を行なってください。</span>
+            </div>
+            <div class="data-list">
+                <div class="content-block">
+                    <div class="detail-list">
+                        <table class="alarm-info-table-title" cellspacing=0>
+                        	<!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        	<!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                            <!--<col width="11%" />
+                            <col width="28%" />
+                            <col width="10%" />
+                            <col width="13%" />
+                            <col width="16%" />
+                            <col width="11%" />-->
+                            <col width="11%" />
+                            <col width="28%" />
+                            <col width="9%" />
+                            <col width="10%" />
+                            <col width="14%" />
+                            <col width="12%" />
+                            <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                            <!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <tr class="title-tr inner-tr">
+                                <td rowspan="2" class="dashed-td">
+                                    <div class="updown-title">
+                                        <a class="font_normal_b kokyaku" onclick="updownClick('1')">受付№</a>
+                                    </div>
+                                    <div id="updown1" class="sort-up"></div>
+                                </td>
+                                <td class="solid-td">
+                                    <div class="updown-title">
+                                        <a class="font_normal_b" onclick="updownClick( '2')">お客様名</a>
+                                    </div>
+                                    <div id="updown2" class="sort-up"></div>
+                                </td>
+                                <td rowspan="2" class="dashed-td">
+                                    <span class="font_normal_b">追客メモ</span>
+                                </td>
+                                <td rowspan="2" class="solid-td">
+                                    <span class="font_normal_b">入居希望日</span>
+                                </td>
+                                <td class="solid-td">
+                                    <span class="font_normal_b">最終追客日</span>
+                                </td>
+                                <td rowspan="2" class="solid-td">
+                                    <div class="updown-title">
+                                        <a class="font_normal_b" onclick="updownClick( '3')">仲介担当者</a>
+                                    </div>
+                                    <div id="updown3" class="sort-up"></div>
+                                </td>
+                                <td rowspan="2" colspan="2">
+                                    <span class="font_normal_b">追客中止/他決</span>
+                                </td>
+                            </tr>
+                            <tr class="title-tr table-tr">
+                                <td class="solid-td">
+                                    <span class="font_normal_b">連絡先(連絡可能時間)</span>
+                                </td>
+                                <td class="solid-td">
+                                    <div class="updown-title">
+                                        <a class="font_normal_b" onclick="updownClick( '4')">経過日数</a>
+                                    </div>
+                                    <div id="updown4" class="sort-up"></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="detail-fixed-block">
+                            <table class="alarm-info-table" cellspacing=0>
+                            	<!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            	<!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->	
+                                <!--<col width="11%" />
+                                <col width="28%" />
+                                <col width="10%" />
+                                <col width="13%" />
+                                <col width="16%" />
+                                <col width="11%" />
+                                <col width="" />-->
+                                <col width="11%" />
+	                            <col width="28%" />
+	                            <col width="9%" />
+	                            <col width="10%" />
+	                            <col width="14%" />
+	                            <col width="12%" />
+	                            <col width="" />
+                                <!--<col width="" />-->
+                                <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->	
+                                <!-- 2020/03/30 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <tr class="body-tr inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="顧客　光男 様">顧客　光男 様</a>
+                                        </div>
+                                        <div class="ho_shin"><span class="align-center" style="margin-top:0.034rem">新着</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/tuikya_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　壱太郎">東建　壱太郎</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/tel.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="052-1244-4448（9:00～12:00）">052-1244-4448(9:00～12:00）</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                                <tr class="body-tr-a inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/tuikya_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr-a table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <span title="008-1244-4448">008-1244-4448</span>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                                <tr class="body-tr inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="株式会社 あいうえお商店 様">株式会社 あいうえお商店 様</a>
+                                        </div>
+                                        <div class="ho_fa"><span class="align-center" style="margin-top:0.02rem">法人</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/soudan_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　壱太郎">東建　壱太郎</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                                <tr class="body-tr-a inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="顧客　光男 様">顧客　光男 様</a>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/tuikya_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr-a table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/tel.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="052-1244-4448(9:00～12:00）">052-1244-4448(9:00～12:00）</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                                <tr class="body-tr inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/tuikya_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　壱太郎">東建　壱太郎</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                                <tr class="body-tr-a inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="株式会社 あいうえお商店 様">株式会社 あいうえお商店 様</a>
+                                        </div>
+                                        <div class="ho_fa"><span class="align-center" style="margin-top:0.02rem">法人</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/soudan_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr-a table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <span title="052-1244-4448">052-1244-4448</span>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                                <tr class="body-tr inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="顧客　光男 様">顧客　光男 様</a>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/tuikya_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　壱太郎">東建　壱太郎</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="080-1244-4448">080-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                                <tr class="body-tr-a inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/tuikya_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr-a table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="052-1244-4448">052-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                                <tr class="body-tr-a inner-tr">
+                                    <td rowspan="2" class="font_normal dashed-td">41-000-306</td>
+                                    <td class="font_normal solid-td">
+                                        <div class="kou_d_ys">
+                                            <a class="undlin" target="_parent" title="山田　花子 様">山田　花子 様</a>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="shoudan_memo">
+                                            <img class="show-img" src="../../image/ukg01013/tuikya_memo.svg">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal solid-td kibou-date"><span>2017年<br>10月初旬</span></td>
+                                    <td class="font_normal solid-td">2017年6月30日</td>
+                                    <td rowspan="2" class="font_normal solid-td">
+                                        <div class="chu_torou"><span title="東建　良子">東建　良子</span></div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal dashed-td">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chushi.png" onclick="chuushi()">
+                                        </div>
+                                    </td>
+                                    <td rowspan="2" class="font_normal">
+                                        <div class="chushi">
+                                            <img class="show-img" src="../../image/ukg01013/chu_ta.png" onclick="chuTa()">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-tr-a table-tr">
+                                    <td class="font_normal solid-td text-align-left">
+                                        <div class="img_kou_ys">
+                                            <img class="show-img tanchuceng" src="../../image/ukg01013/telephone.svg" />
+                                        </div>
+                                        <div class="tel-number">
+                                            <span title="052-1244-4448">052-1244-4448</span>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal solid-td">30日</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tail-line"></div>
+                    </div>
+                    <!-- 弹出层 -->
+                    <div id="dialog0" class="tel-info">
+                        <div class="font_normal telephone-detail">
+                            <div class="tel-img"><img class="show-img" src="../../image/common/icon/telephone.gif" /></div>
+                            <div><span>052-1234-5467（8～9時& 12～1時、土日は以降）</span></div>
+                        </div>
+                        <div class="font_normal telephone-detail">
+                            <div class="tel-img"><img class="show-img" src="../../image/common/icon/mail.gif" /></div>
+                            <div><span>052-1234-5467</span></div>
+                        </div>
+                        <div class="font_normal telephone-detail">
+                            <div class="tel-img"><img class="show-img" src="../../image/common/icon/phone.gif" /></div>
+                            <div><span>hanako@token.co.jp</span></div>
+                        </div>
+                    </div>
+                    <div id="dialog1" class="tel-info">
+                        <div class="font_normal telephone-detail">
+                            <div class="tel-img"><img class="show-img" src="../../image/common/icon/telephone.gif" /></div>
+                            <div><span>052-1234-5467（8～9時& 12～1時、土日は以降）</span></div>
+                        </div>
+                        <div class="font_normal telephone-detail">
+                            <div class="tel-img"><img class="show-img" src="../../image/common/icon/mail.gif" /></div>
+                            <div><span>052-1234-5467</span></div>
+                        </div>
+                        <div class="font_normal telephone-detail">
+                            <div class="tel-img"><img class="show-img" src="../../image/common/icon/phone.gif" /></div>
+                            <div><span>hanako@token.co.jp</span></div>
+                        </div>
+                    </div>
+                    <div id="dialogue0" class="memo-info">
+                        <div class="font_normal memo-detail">
+                            <span>名古屋駅周辺で築五年以内の1LDKを希望</span><br />
+                            <span>車での移動が前提のため、駅から遠くても構わない。</span>
+                        </div>
+                    </div>
+                    <div id="dialogue1" class="memo-info">
+                        <div class="font_normal memo-detail">
+                            <span>名古屋駅周辺で築五年以内の1LDKを希望</span><br />
+                            <span>車での移動が前提のため、駅から遠くても構わない。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

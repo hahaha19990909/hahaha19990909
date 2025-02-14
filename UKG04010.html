@@ -1,0 +1,1163 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css" ></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/content_zoom.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG04010.css"></link>
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/UKG04010.js"></script>
+<script  type="text/javascript" src="../../js/help.js"></script>
+<script type="text/javascript" src="../../js/jqModal.js"></script>
+<script type="text/javascript" src="../../js/thickbox.js"></script>
+<!--2019/12/04 劉恆毅 ADD Start C44033-1_ホームメイトリサーチと施設情報の連携-->
+<script type="text/javascript" src="../../js/inthickbox.js"></script>
+<!--2019/12/04 劉恆毅 ADD End C44033-1_ホームメイトリサーチと施設情報の連携 -->
+<script type="text/javascript" src="../../js/content_zoom.js"></script>
+<script type="text/javascript" src="../../js/jquery.raty.js" ></script>
+<script type="text/javascript" src="../../js/message.js" ></script>
+<script type="text/javascript" src="../../js/jquery-browser.js" ></script>
+<script type="text/javascript" src="../../js/jquery.dragsort-0.4.min.js" ></script>
+
+</head>
+<body>
+<div id="container" class="container_div">
+    <iframe id="content_frame" class="top-title ukg04010" name="content_frame" src="pageHead.html" pageId="help_ukg01010.html"></iframe>
+    <div id = "main">
+        <div class="toppage">
+            <div>&nbsp;</div>
+            <div class="menu_uketuke_div">
+                <a class="tirasigraytoppage" href="UKG01010.html">
+                    <div class="menu_uketuke">お客様受付・物件紹介</div>
+                </a>
+            </div>
+            <div class="menu_chirashi_div">
+                <div class="menu_chirashi">物件案内チラシ作成</div>
+            </div>
+            <div class="menu_magazine_div">
+                <a class="tirasigraytoppage" href="UKG05010.html">
+                    <div class="memenu_magazine">オリジナル情報誌作成</div>
+                </a>
+            </div>
+        </div>
+        <div class="title_img">
+            <!--2020/06/03 セツ  ADD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <img src="../../image/ukg04010/title_img.svg">
+            <!--2020/06/03 セツ  ADD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+        </div>
+        <div class="middle">
+            <div class="mainArea">
+            <div>
+                <div class="step1">
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                    <!--<img id="step1_title" src="../../image/ukg04010/step1_title.svg" />-->
+                    <img id="step1_title" src="../../image/ukg04010/step1_title.svg" style="margin-left: -0.05rem;"/>
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    <!--  2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                    <!-- <div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg04010.html">
+                        <img class="syoukai-mark-img" src="../../image/common/icon/help.png"/>
+                    </div> -->
+                    <!--  2018/08/13 ADD END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                    <div class="step1_selImg">
+                        <div class="bukkenyou"></div>
+                        <div class="bukkenkyoutuTouroku"></div>
+						<!--  ########## 2018/08/08 王一氷 ADD Start (案件C42015-1)周辺物件案内カードの追加 -->
+                        <div class="bukkenShuuhenn"></div>
+                        <!--  ########## 2018/08/08 王一氷 ADD End -->
+                    </div>
+                    <table id="onetirasitab" class="chirashitaipu-table">
+                        <tr>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Naikan/pink.gif"/>-->
+                                    <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Naikan/homemate.gif"/>
+                                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="1" tabfolder="oneBukkenKeisai_Naikan" type="checkbox" id="checkbox1" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox1"></label>
+                                        <span class="sp_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="chirashi-font color-blue">内観付</div>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Tizu/pink.gif"/>-->
+                                    <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Tizu/homemate.gif"/>
+                                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="2" tabfolder="oneBukkenKeisai_Tizu" type="checkbox" id="checkbox2" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox2"></label>
+                                        <span class="sp_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font color-green">地図付</span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<img class="chirashi-img" src="../../image/ukg04010/situnaiSyasinCard9/pink.gif"/>-->
+                                    <img class="chirashi-img" src="../../image/ukg04010/situnaiSyasinCard9/homemate.gif"/>
+                                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="3" tabfolder="situnaiSyasinCard9" type="checkbox" id="checkbox3" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox3"></label>
+                                        <span class="sp_text">室内写真カード(９枚)</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font"></span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<img class="chirashi-img" src="../../image/ukg04010/situnaiSyasinCard20/pink.gif"/>-->
+                                    <img class="chirashi-img" src="../../image/ukg04010/situnaiSyasinCard20/homemate.gif"/>
+                                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="4" tabfolder="situnaiSyasinCard20" type="checkbox" id="checkbox4" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox4"></label>
+                                        <span class="sp_text">室内写真カード(20枚)</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="chirashi-img-div">
+                                    <div class="img_div">
+                                    	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!--<img class="chirashi-img" src="../../image/ukg04010/tizuAnnaiCard/pink.gif"/>-->
+                                        <img class="chirashi-img" src="../../image/ukg04010/tizuAnnaiCard/homemate.gif"/>
+                                        <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="5" tabfolder="tizuAnnaiCard"  type="checkbox" id="checkbox5" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox5"></label>
+                                        <span class="sp_text">地図案内カード</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<img class="chirashi-img" src="../../image/ukg04010/tyukaiGyousya/pink.gif"/>-->
+                                    <img class="chirashi-img" src="../../image/ukg04010/tyukaiGyousya/homemate.gif"/>
+                                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="12" tabfolder="tyukaiGyousya" type="checkbox" id="checkbox6" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox6"></label>
+                                        <span class="sp_text">割引サービス表記なし</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font"></span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Talent/pink.gif"/>-->
+                                    <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Talent/homemate.gif"/>
+                                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="13" tabfolder="oneBukkenKeisai_Talent" type="checkbox" id="checkbox7" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox7"></label>
+                                        <span class="sp_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font color-red">桐谷美玲</span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_TasyaChukai/pink.gif"/>-->
+                                    <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_TasyaChukai/homemate.gif"/>
+                                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="14" tabfolder="oneBukkenKeisai_TasyaChukai" type="checkbox" id="checkbox8" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox8"></label>
+                                        <span class="sp_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font color-yellow">他社仲介</span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <!--<img class="last-img" src="../../image/ukg04010/oneBukkenKeisai_TateKaki/pink.gif"/>-->
+                                    <img class="last-img" src="../../image/ukg04010/oneBukkenKeisai_TateKaki/homemate.gif"/>
+                                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="6" tabfolder="oneBukkenKeisai_TateKaki" type="checkbox" id="checkbox9" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox9"></label>
+                                        <span class="sp_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font color-last">縦書き</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="fukusuutirasitab" class="chirashitaipu-table">
+                        <tr>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/twoBukkenKeisai_YokoKaki/homemate.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="rdoFukusuuBukkenType" value="7" tabfolder="twoBukkenKeisai_YokoKaki" maxBukkenCount="2" type="radio" id="fukusuu_checkbox1" class="checkbox"/>
+                                        <label class="fukusuu_check_lable pinnku" for="fukusuu_checkbox1"></label>
+                                        <span class="fukusuu_sp_text">２物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="chirashi-font color-green">横書き</div>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/fourBukkenKeisai_YokoKaki/homemate.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="rdoFukusuuBukkenType" value="8" tabfolder="fourBukkenKeisai_YokoKaki" maxBukkenCount="4" type="radio" id="fukusuu_checkbox2" class="checkbox"/>
+                                        <label class="fukusuu_check_lable pinnku" for="fukusuu_checkbox2"></label>
+                                        <span class="fukusuu_sp_text">４物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="chirashi-font color-green">横書き</div>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/eightBukkenKeisai_YokoKaki/homemate.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="rdoFukusuuBukkenType"  value="9" tabfolder="eightBukkenKeisai_YokoKaki" maxBukkenCount="8" type="radio" id="fukusuu_checkbox3" class="checkbox"/>
+                                        <label class="fukusuu_check_lable pinnku" for="fukusuu_checkbox3"></label>
+                                        <span class="fukusuu_sp_text">８物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="chirashi-font color-green">横書き</div>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div">
+                                <div class="img_div">
+                                    <img class="fukusuu_tate-img" src="../../image/ukg04010/twoBukkenKeisai_TateKaki/homemate.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="rdoFukusuuBukkenType" value="10" tabfolder="twoBukkenKeisai_TateKaki" maxBukkenCount="2" type="radio" id="fukusuu_checkbox4" class="checkbox"/>
+                                        <label class="fukusuu_check_lable pinnku" for="fukusuu_checkbox4"></label>
+                                        <span class="fukusuu_sp_text">２物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="chirashi-font color-blue">縦書き</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="chirashi-img-div">
+                                    <div class="img_div">
+                                        <img class="fukusuu_tate-img" src="../../image/ukg04010/eightBukkenKeisai_TateKaki/homemate.gif"/>
+                                    </div>
+                                    <div class="check checkbox-div">
+                                        <input name="rdoFukusuuBukkenType" value="11" tabfolder="eightBukkenKeisai_TateKaki" maxBukkenCount="8"  type="radio" id="fukusuu_checkbox5" class="checkbox"/>
+                                        <label class="fukusuu_check_lable pinnku" for="fukusuu_checkbox5"></label>
+                                        <span class="fukusuu_sp_text">８物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="chirashi-font color-blue">縦書き</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="step2">
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                    <!--<img id="step2_title" src="../../image/ukg04010/step2_newtitle.svg" />-->
+                    <img id="step2_title" src="../../image/ukg04010/step2_newtitle.svg" style="margin-left: -0.05rem;"/>
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    <div class="step2_bottom">
+                        <div class="step2_selImg">
+                            <div class="gousi"></div>
+                            <div class="tizu"></div>
+                            <div class="sitei"></div>
+                        </div>
+                        <!-- 2020/3/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!--<div id="ukg02040Help" class="step2_icon a_help" pageid="help_ukg02040Icon.html">-->
+                       <div id="ukg02040Help" class="step2_icon a_help" pageid="help_ukg04012Icon.html">
+                        <!-- 2020/3/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div class="step2_icon_img"></div>
+                            <div class="step2_icon_text">物件アイコンの色分けについて</div>
+                        </div>
+                        <div class="pagebody">
+                        </div>
+                    </div>
+                </div>
+                <div class="step3">
+                	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                    <!--<img id="step3_title" src="../../image/ukg04010/step3_title.svg" />-->
+                    <img id="step3_title" src="../../image/ukg04010/step3_title.svg" style="width: 9.67rem;"/>
+                    <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    <div class="step3_bottom">
+                        <div class="step3_selImg">
+                        	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!--<div class="mainiti_toroku"></div>
+                            <div class="subetebukkenkcom"></div>-->
+                            <div class="mainiti_toroku" id="btnBukkenGotoTourokuGray"></div>
+                            <div class="subetebukkenkcom" id="btnBukkenkyoutuTouroku"></div>
+                            <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </div>
+                        <div class="step3_show_text">
+                            <div class="text_top">※下記のボタンをクリックすると、物件情報に登録済のセールスポイントを表示できます。(編集可)</div>
+                            <div class="text_bottom">また、「自由入力」を選択すると、自由に文章を入力できます。</div>
+                        </div>
+                        <!-- 2018/08/13 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                        <!-- <span class="seiru_text">セールスポイントの編集について</span> -->
+                        <!-- 2019/02/26 DEL START 汪会(SYS) C42036-201902-BUG86 -->
+                        <!-- <span class="seiru_text a_help" pageid="help_ukg04010SalesPoint.html">セールスポイントの編集について</span> -->
+                        <!-- 2019/02/26 DEL START 汪会(SYS) C42036-201902-BUG86 -->
+                        <!-- 2018/08/13 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                        <!-- 2019/02/26 DEL START 汪会(SYS) C42036-201902-BUG86 -->
+                        <!-- <div class="seiru_show">
+                            <span class="seiru_help"> -->
+                                <!-- 2018/08/13 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                                <!-- <img id="helpclick" class="img_help" src="../../image/common/icon/help.png"/> -->
+                                <!-- <img id="helpclick" class="syoukai-mark-img a_help" pageid="help_ukg04010SalesPoint.html" src="../../image/common/icon/help.png"/> -->
+                                <!-- 2018/08/13 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                            <!-- </span>
+                        </div> -->
+                        <!-- 2019/02/26 DEL START 汪会(SYS) C42036-201902-BUG86 -->
+                        <div class="tableadd-div">
+                            <table class="tableadd-b">
+                            	<!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            	<div class="text_bottom salepointbukken" id="divBikou" style="display: none;">・「リバーヒルズヘキナン(6号室)」</div>
+                            	<!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <tr>
+                                    <td class="tdcssAdd">
+                                        <div class="fontw fontw-div">セールス<br>ポイント</div>
+                                        <div class="hissu">必須</div>
+                                    </td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="tableadd-btn-div">
+                                        	<!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<div class="tableadd-btn">物件セールスポイント</div>
+                                            <div class="tableadd-btn tableadd-btn-checked">部屋セールスポイント</div>
+                                            <div class="tableadd-btn">物&nbsp;件&nbsp;名</div>-->
+                                            <div class="tableadd-btn tableadd-btn2">物件セールスポイント</div>
+                                            <div class="tableadd-btn tableadd-btn-checked tableadd-btn2">部屋セールスポイント</div>
+                                            <div class="tableadd-btn tableadd-btn2">物&nbsp;件&nbsp;名</div>
+                                            <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            <!-- 2019/10/24 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<div class="tableadd-btn">自&nbsp;由&nbsp;入&nbsp;力</div>-->
+                                        <div id="btnbtext" class="tableadd-btn tableadd-btn2" choseclass="btnbtext">自&nbsp;由&nbsp;入&nbsp;力</div>
+                                        </div>
+                                        <div class="tableadd-textarea-div" style="display:none">
+                                            <textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea" placeholder="セールスポイントを登録できます。"></textarea>
+                                        </div>
+                                        <div id="err_salepointAll" class="err_salepointAll" style="width: 6.7rem;color:#FF0000;font-size: 0.14rem;margin:0px 0px 0.1rem 0.4rem; display:none" ></div>
+                                        <!-- 2019/10/24 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">備　考</div></td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="bikou-textarea-div">
+                                            <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<textarea rows="2" cols="65" class="bikou-textarea" placeholder="備考を入力してください。"></textarea>-->
+                                            <textarea rows="2" cols="65" class="bikou-textarea" placeholder="備考を登録できます。"></textarea>
+                                            <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        </div>
+                                    </td>
+                                <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!--</tr>
+                                <tr">-->
+                                <tr class="tantou_checkbox_div1">
+                                <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    <td class="tdcssAdd">
+                                        <div class="fontw">担当者名</div>
+                                    </td>
+                                    <td>
+                                        <div class="tantou_check tantou_checkbox_div">
+                                            <input   type="checkbox" id="checkbox_tantou" class="checkbox"/>
+                                            <label for="checkbox_tantou"></label>
+                                            <span class="yachinn-hoshou-text">担当者名を表示する</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <div class="tableadd-div1" style="display: none;">
+                            <table class="tableadd-b">
+                            	<div class="text_bottom salepointbukken" id="divBikou" style="display: none;">・「リバーヒルズヘキナン(6号室)」</div>
+                                <tr>
+                                    <td class="tdcssAdd">
+                                        <div class="fontw fontw-div">セールス<br>ポイント</div>
+                                        <div class="hissu">必須</div>
+                                    </td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="tableadd-btn-div">
+                                            <div class="tableadd-btn tableadd-btn1">物件セールスポイント</div>
+                                            <div class="tableadd-btn tableadd-btn1 tableadd-btn-checked">部屋セールスポイント</div>
+                                            <div class="tableadd-btn tableadd-btn1" id="btnbtext1">物&nbsp;件&nbsp;名</div>
+                                            <div id="btnbtext" class="tableadd-btn tableadd-btn1" choseclass="btnbtext">自&nbsp;由&nbsp;入&nbsp;力</div>
+                                        </div>
+                                        <div class="tableadd-textarea-div" style="display:none">
+                                            <textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea" placeholder="セールスポイントを登録できます。"></textarea>
+                                        </div>
+                                        <div id="err_salepointAll" class="err_salepointAll" style="width: 6.7rem;color:#FF0000;font-size: 0.14rem;margin:0px 0px 0.1rem 0.4rem; display:none" ></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">備　考</div></td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="bikou-textarea-div">
+                                            <textarea rows="2" cols="65" class="bikou-textarea" placeholder="備考を登録できます。"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--  2020/03/24 ADD START 陳龍龍(SYS) C44072_希望部屋数等を追加  -->
+                                <tr class="one_buken_display">
+                                    <td class="tdcssAdd"><div class="fontw">外観画像選択</div></td>
+                                    <td>
+                                        <ul class="gaikan_sentaku_imgnaiyou">
+                                            <li>
+                                                <div class="gaikan_imgdiv checkbox_div" ><img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/></div>
+                                            </li>
+                                            <li>
+                                                <div class="gaikan_imgdiv" ><img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/></div>
+                                            </li>
+                                            <li>
+                                                <div class="gaikan_imgdiv" ><img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/></div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="one_buken_display">
+                                    <td class="tdcssAdd"><div class="fontw">内観画像選択</div></td>
+                                    <td class="naikann_bottomProcess">
+                                        <div class="font_naikann_style">
+                                            内観画像は、選択されたチラシタイプにより、左上から順に最大9枚出力されます。</br>ドラッグ＆ドロップにより出力順の並び替えが可能です。
+                                        </div>
+                                        <ul class="naikann_sentaku_imgnaiyou">
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">玄関</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                               </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">セキュリティ</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv checkbox_div" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya2.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">屋内設備</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya1.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">リビング</div>
+                                            </li>
+                                            <li>
+                                                <div class="naikann_imgdiv" >
+                                                    <img class="gaikan_img" src="../../image/ukg04010/heya3.jpg"/>
+                                                </div>
+                                                <div class="naikann_font_style">キッチン</div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                
+                                <!--  2020/03/24 ADD END 陳龍龍(SYS) C44072_希望部屋数等を追加  -->
+                                <tr class="tantou_checkbox_div1">
+                                    <td class="tdcssAdd">
+                                        <div class="fontw">担当者名</div>
+                                    </td>
+                                    <td>
+                                        <div class="tantou_check tantou_checkbox_div">
+                                            <input   type="checkbox" id="checkbox_tantou" class="checkbox"/>
+                                            <label for="checkbox_tantou"></label>
+                                            <span class="yachinn-hoshou-text">担当者名を表示する</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 2020/03/25 UPD START 陳龍龍(SYS) C44072_希望部屋数等を追加-->
+                        <!--<div class="table_div" style="display: none; margin-top: 2.45rem;">-->
+                        <div class="table_div" style="display: none; margin-top: 10rem;">
+                        <!-- 2020/03/25 UPD END 陳龍龍(SYS) C44072_希望部屋数等を追加-->
+                        <table class="tableadd-b">
+                        	<tbody>
+                                <tr class="tantou_checkbox_div2">
+                                    <td class="tdcssAdd">
+                                        <div class="fontw">担当者名</div>
+                                    </td>
+                                    <td class="tdcssAdd1">
+                                        <div class="tantou_check tantou_checkbox_div">
+                                            <input   type="checkbox" id="checkbox_tantou" class="checkbox"/>
+                                            <!-- 2020/3/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START -->
+                                            <!--<label for="checkbox_tantou"></label>-->
+                                            <label for="checkbox_tantou" class="yachinn-hoshou-text-fi"></label>
+                                            <!-- 2020/3/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END -->
+                                            <span class="yachinn-hoshou-text">担当者名を表示する</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                         <!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->       
+                    </div>
+                </div>
+                <div class="step4">
+                	<!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                    <!--<img id="step4_title" src="../../image/ukg04010/step4_title.svg" />-->
+                    <img id="step4_title" src="../../image/ukg04010/step4_title.svg" style="width: 9.67rem;"/>
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    <div class="step4_selImg">
+                        <img src="../../image/common/button/annai_tirasi_insatu.png"/>
+                    </div>
+                </div>
+                </div>
+            </div>
+			 <!--  ########## 2018/08/08 王一氷 ADD Start (案件C42015-1)周辺物件案内カードの追加 -->
+            <div class="rimArea">
+            	<!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                <!--<div class="rimstep1">-->
+                	<div class="rimstep1" style="width: 100.5%;">
+                    <!--<img id="step1_title" src="../../image/ukg04010/step1_title.svg" />-->
+                    <img id="step1_title" src="../../image/ukg04010/step1_title.svg" style="width: 9.81rem;"/>
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                   <!-- <div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg04010_3.html">
+                        <img class="syoukai-mark-img" src="../../image/common/icon/help.png"/>
+                    </div>-->
+                    <div class="step1_selImg">
+                        <div class="bukkenyou"></div>
+                        <div class="bukkenkyoutuTouroku"></div>
+                        <div class="bukkenShuuhenn"></div>
+                    </div>
+                    <table id="fukusuutirasitab" class="chirashitaipu-table">
+                        <tr>
+                            <td><div class="bukkenshuuhenn-img-div">
+                                    <div class="img_div">
+                                        <img class="bukkenshuuhenn-img" src="../../image/ukg04010/fiveBukkenKeisai/pink.png"/>
+                                    </div>
+                                    <div class="check checkbox-div">
+                                        <input name="rdoFukusuuBukkenType" value="5" tabfolder="fiveBukkenKeisai" maxBukkenCount="5" type="radio" id="bukkenShuuhennTizu1" class="checkbox"/>
+                                        <label class="shuuhenn_check_lable pinnku" for="bukkenShuuhennTizu1"></label>
+                                        <span class="shuuhenn_sp_text">5 物件掲載用</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><div class="bukkenshuuhenn-img-div">
+                                    <div class="img_div">
+                                        <img class="bukkenshuuhenn-img" src="../../image/ukg04010/tenBukkenKeisai/pink.png"/>
+                                    </div>
+                                    <div class="check checkbox-div">
+                                        <input name="rdoFukusuuBukkenType" value="10" tabfolder="tenBukkenKeisai" maxBukkenCount="10" type="radio" id="bukkenShuuhennTizu2" class="checkbox"/>
+                                        <label class="shuuhenn_check_lable pinnku" for="bukkenShuuhennTizu2"></label>
+                                        <span class="shuuhenn_sp_text">10 物件掲載用</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                <!--<div class="rimstep2">-->
+                <div class="rimstep2" style="width: 100.5%;">
+                    <!--<img id="step2_title" src="../../image/ukg04010/step2_newtitle.svg" />-->
+                    <img id="step2_title" src="../../image/ukg04010/step2_newtitle.svg" style="width: 9.78rem;"/>
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    <div id="LoadUKG4014">
+                    </div>
+                </div>
+                <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                <!--<div class="rimstep3">
+                    <img id="step3_title" src="../../image/ukg04010/step3-newtitle.svg" />-->
+                <div class="rimstep3" style="width: 100.5%;">
+                    <img id="step3_title" src="../../image/ukg04010/step3-newtitle.svg" style="width: 9.8rem;"/>
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    <div class="tableadd tableadd-rim">
+                            <table class="tableadd-a tableadd-b tableadd-rim-b">
+                                <tr>
+                                    <td class="tdcssAdd">
+                                        <div class="fontc">お客様名</div>
+                                        <div class="hissu-user">必&nbsp;須</div>
+                                    </td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="okyakusama-input-div">
+                                            <input class="okyakusamaInput">
+                                            <span class="uaser-name-lbl">様</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">物件紹介区分</div></td>
+                                    <td class="tdcssAdd-right">
+                                        <label class="okyakusama-select-div">
+                                        	<!-- 2019/10/29 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <select class="okyakusamaSelect" id="okyakusamaSelect">
+                                                <option></option>
+                                                <option>単身用物件紹介</option>
+                                                <option>ペア・ファミリー用物件紹介</option>
+                                                <option>事業用物件紹介</option>
+                                            </select>
+                                            <!-- 2019/10/29 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                            <!-- 2019/10/29 李興麗 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+											<select class="okyakusamaSelect2">
+                                                <option></option>
+                                                <option>単身用物件紹介</option>
+                                                <option>ペア・ファミリー用物件紹介</option>
+                                                <option>事業用物件紹介</option>
+                                            </select>
+                                        	<!-- 2019/10/29 李興麗  ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        </label>
+                                    </td>
+                                <tr>
+                                    <td class="tdcssAdd">
+                                        <div class="fontw">担当者名</div>
+                                    </td>
+                                    <td>
+                                        <div class="tantou_check tantou_checkbox_div">
+                                            <input type="checkbox" id="checkbox_tantou1" class="checkbox"/>
+                                            <label for="checkbox_tantou1"></label>
+                                            <span class="yachinn-hoshou-text-tab3">担当者名を表示する</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+                <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                <!--<div class="rimstep4">
+                    <img id="step4_title" src="../../image/ukg04010/step4-newtitle.svg" />-->
+                <div class="rimstep4" style="width: 100.5%;">
+                    <img id="step4_title" src="../../image/ukg04010/step4-newtitle.svg" style="width: 9.81rem;"/>
+                <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    <table id="onetirasitabrim" class="chirashitaipu-table">
+                        <tr>
+                            <td><div class="chirashi-img-div-tab3 chirashi-img-padding">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Naikan/pink.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="1" tabfolder="oneBukkenKeisai_Naikan" type="checkbox" id="checkbox11" class="checkbox"/>
+                                        <label class="check_lable pinnku" for="checkbox11"></label>
+                                        <span class="shuuhenn_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="chirashi-font color-blue">内観付</div>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div-tab3 chirashi-img-padding">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Tizu/pink.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="2" tabfolder="oneBukkenKeisai_Tizu" type="checkbox" id="checkbox12" class="checkbox"/>
+                                        <label class="shuuhenn_lable pinnku" for="checkbox12"></label>
+                                        <span class="shuuhenn_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font color-green">地図付</span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div-tab3 chirashi-img-padding">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/situnaiSyasinCard9/pink.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="3" tabfolder="situnaiSyasinCard9" type="checkbox" id="checkbox13" class="checkbox"/>
+                                        <label class="shuuhenn_lable pinnku" for="checkbox13"></label>
+                                        <span class="shuuhenn_text">室内写真カード(９枚)</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font"></span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div-tab3">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/situnaiSyasinCard20/pink.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="4" tabfolder="situnaiSyasinCard20" type="checkbox" id="checkbox14" class="checkbox"/>
+                                        <label class="shuuhenn_lable pinnku" for="checkbox14"></label>
+                                        <span class="shuuhenn_text">室内写真カード(20枚)</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="chirashi-img-div-tab3 chirashi-img-padding">
+                                    <div class="img_div">
+                                        <img class="chirashi-img" src="../../image/ukg04010/tizuAnnaiCard/pink.gif"/>
+                                    </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="5" tabfolder="tizuAnnaiCard"  type="checkbox" id="checkbox15" class="checkbox"/>
+                                        <label class="shuuhenn_lable pinnku" for="checkbox15"></label>
+                                        <span class="shuuhenn_text">地図案内カード</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div class="chirashi-img-div-tab3 chirashi-img-padding">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/tyukaiGyousya/pink.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="12" tabfolder="tyukaiGyousya" type="checkbox" id="checkbox16" class="checkbox"/>
+                                        <label class="shuuhenn_lable pinnku" for="checkbox16"></label>
+                                        <span class="shuuhenn_text">割引サービス表記なし</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font"></span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div-tab3 chirashi-img-padding">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_Talent/pink.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="13" tabfolder="oneBukkenKeisai_Talent" type="checkbox" id="checkbox17" class="checkbox"/>
+                                        <label class="shuuhenn_lable pinnku" for="checkbox17"></label>
+                                        <span class="shuuhenn_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font color-red">桐谷美玲</span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div-tab3 chirashi-img-padding">
+                                <div class="img_div">
+                                    <img class="chirashi-img" src="../../image/ukg04010/oneBukkenKeisai_TasyaChukai/pink.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="14" tabfolder="oneBukkenKeisai_TasyaChukai" type="checkbox" id="checkbox18" class="checkbox"/>
+                                        <label class="shuuhenn_lable pinnku" for="checkbox18"></label>
+                                        <span class="shuuhenn_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font color-yellow">他社仲介</span>
+                                </div>
+                            </td>
+                            <td><div class="chirashi-img-div-tab3 chirashi-img-padding">
+                                <div class="img_div">
+                                    <img class="last-img" src="../../image/ukg04010/oneBukkenKeisai_TateKaki/pink.gif"/>
+                                </div>
+                                    <div class="check checkbox-div">
+                                        <input name="chkItiBukkenType" value="6" tabfolder="oneBukkenKeisai_TateKaki" type="checkbox" id="checkbox19" class="checkbox"/>
+                                        <label class="shuuhenn_lable pinnku" for="checkbox19"></label>
+                                        <span class="shuuhenn_text">１物件掲載用</span>
+                                    </div>
+                                    <div class="line"></div>
+                                    <span class="chirashi-font color-last">縦書き</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="tableadd-rim-c">
+                        <div class="step3_selImg">
+                        	<!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!--<div class="mainiti_toroku"></div>
+                            <div class="subetebukkenkcom"></div>-->
+                            <div class="mainiti_toroku" id="btnBukkenGotoTourokuGray"></div>
+                            <div class="subetebukkenkcom" id="btnBukkenkyoutuTouroku"></div>
+                            <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </div>
+                        <div class="step3_show_text">
+                            <div class="text_top">※下記のボタンをクリックする事で、物件情報に登録済みのセールスポイントを表示する事ができます。(編集可)</div>
+                            <div class="text_bottom">また、「テキスト入力」を選択すると、自由に文章を入力する事もできます。</div>
+                        </div>
+                        <span class="seiru_text a_help" pageid="help_ukg04010SalesPoint.html">セールスポイントの編集について</span>
+                        <div class="seiru_show">
+                            <span class="seiru_help">
+                                <img id="helpclick" class="syoukai-mark-img a_help" pageid="help_ukg04010SalesPoint.html" src="../../image/common/icon/help.png"/>
+                            </span>
+                        </div>
+                        <div class="tableadd-div">
+                            <table class="tableadd-b">
+                                <tr>
+                                    <td class="tdcssAdd">
+                                        <div class="fontw fontw_two">セールスポイント</div>
+                                        <div class="hissu">必&nbsp;須</div>
+                                    </td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="tableadd-btn-div">
+                                        	<!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<div id="btnbuksalepoint" class="tableadd-btn"  choseclass="bukkensalepoint">物件セールスポイント</div>
+                                            <div id="btnheyasalepoint" class="tableadd-btn tableadd-btn-checked" choseclass="heyasalepoint">部屋セールスポイント</div>
+                                            <div id="btnbukname" class="tableadd-btn" choseclass="bukkenname">物&nbsp;件&nbsp;名</div>
+                                            <div id="btnbtext" class="tableadd-btn" choseclass="btnbtext">自&nbsp;由&nbsp;入&nbsp;力</div>
+                                        </div>
+                                        <div class="tableadd-textarea-div" style="display:none">
+                                            <textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea" placeholder="セールスポイントを登録できます。"></textarea>-->
+                                            <div id="btnbuksalepoint" class="tableadd-btn tableadd-btn2"  choseclass="bukkensalepoint">物件セールスポイント</div>
+                                            <div id="btnheyasalepoint" class="tableadd-btn tableadd-btn-checked tableadd-btn2" choseclass="heyasalepoint">部屋セールスポイント</div>
+                                            <div id="btnbukname" class="tableadd-btn tableadd-btn2" choseclass="bukkenname">物&nbsp;件&nbsp;名</div>
+                                            <div id="btnbtext" class="tableadd-btn tableadd-btn2" choseclass="btnbtext">自&nbsp;由&nbsp;入&nbsp;力</div>
+                                        </div>
+                                        <div class="tableadd-textarea-div" style="display:none">
+                                            <!-- 2020/3/16 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea tableadd-btn2" placeholder="セールスポイントを登録できます。"></textarea>-->
+                                            <textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea" placeholder="セールスポイントを登録できます。"></textarea>
+                                        	<!-- 2020/3/16 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">備　考</div></td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="bikou-textarea-div">
+                                        	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<textarea rows="2" cols="65" class="bikou-textarea" placeholder="備考を入力してください。"></textarea>-->
+                                            <textarea rows="2" cols="65" class="bikou-textarea" placeholder="備考を登録できます。"></textarea>
+                                            <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        </div>
+                                    </td>
+                                <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!--</tr>
+                                <tr">-->
+                                <tr class="tantou_checkbox_div1">
+                                <!-- 2019/10/29 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    <td class="tdcssAdd">
+                                        <div class="fontw">担当者名</div>
+                                    </td>
+                                    <td>
+                                        <div class="tantou_check tantou_checkbox_div">
+                                            <input type="checkbox" id="checkbox_tantou2" class="checkbox"/>
+                                            <label for="checkbox_tantou2"></label>
+                                            <span class="yachinn-hoshou-text-tab3">担当者名を表示する</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <div class="tableadd-div1" style="display: none;">
+                            <table class="tableadd-b">
+                            	<div class="text_bottom salepointbukken" id="divBikou" style="display: none;">・「リバーヒルズヘキナン(6号室)」</div>
+                                <tr>
+                                    <td class="tdcssAdd">
+                                        <div class="fontw fontw-div">セールス<br>ポイント</div>
+                                        <div class="hissu">必須</div>
+                                    </td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="tableadd-btn-div">
+                                            <div class="tableadd-btn tableadd-btn1">物件セールスポイント</div>
+                                            <div class="tableadd-btn tableadd-btn1 tableadd-btn-checked">部屋セールスポイント</div>
+                                            <div class="tableadd-btn tableadd-btn1" id="btnbtext1">物&nbsp;件&nbsp;名</div>
+                                            <div id="btnbtext" class="tableadd-btn tableadd-btn1" choseclass="btnbtext">自&nbsp;由&nbsp;入&nbsp;力</div>
+                                        </div>
+                                        <div class="tableadd-textarea-div" style="display:none">
+                                            <textarea id="salepointAll" name="salepointAll" maxlength="100" class="salepointAll tableadd-textarea" placeholder="セールスポイントを登録できます。"></textarea>
+                                        </div>
+                                        <div id="err_salepointAll" class="err_salepointAll" style="width: 6.7rem;color:#FF0000;font-size: 0.14rem;margin:0px 0px 0.1rem 0.4rem; display:none" ></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdcssAdd"><div class="fontw">備　考</div></td>
+                                    <td class="tdcssAdd-right">
+                                        <div class="bikou-textarea-div">
+                                            <textarea rows="2" cols="65" class="bikou-textarea" placeholder="備考を登録できます。"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="tantou_checkbox_div1">
+                                    <td class="tdcssAdd">
+                                        <div class="fontw">担当者名</div>
+                                    </td>
+                                    <td>
+                                        <div class="tantou_check tantou_checkbox_div">
+                                            <input   type="checkbox" id="checkbox_tantou" class="checkbox"/>
+                                            <label for="checkbox_tantou"></label>
+                                            <span class="yachinn-hoshou-text">担当者名を表示する</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table_div" style="display: none; margin-top: 2.45rem;">
+                        <table class="tableadd-b">
+                        	<tbody>
+                                <tr class="tantou_checkbox_div2">
+                                    <td class="tdcssAdd">
+                                        <div class="fontw">担当者名</div>
+                                    </td>
+                                    <td class="tdcssAdd1">
+                                        <div class="tantou_check tantou_checkbox_div">
+                                            <input   type="checkbox" id="checkbox_tantou" class="checkbox"/>
+                                            <!-- 2020/3/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START -->
+                                            <!--<label for="checkbox_tantou"></label>-->
+                                            <label for="checkbox_tantou" class="yachinn-hoshou-text-fi"></label>
+                                            <!-- 2020/3/23 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END -->
+                                            <span class="yachinn-hoshou-text">担当者名を表示する</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                         <!-- 2019/10/29 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->      
+                    </div>
+                </div>
+                <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                <!--<div class="rimstep5">
+                    <img id="step4_title" src="../../image/ukg04010/step5-newtitle.svg" />-->
+                <div class="rimstep5" style="width: 100.5%;">
+                    <img id="step4_title" src="../../image/ukg04010/step5-newtitle.svg" style="width: 9.8rem;"/>
+                    <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    <div class="step4_selImg">
+                        <img src="../../image/common/button/annai_tirasi_insatu.png"/>
+                    </div>
+                </div>
+            </div>
+            <!--2020/01/09 劉恆毅 ADD Start C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <div class="position-block" style="min-width: 2.8rem; margin-left: 0.1rem;width: 2.8rem;">
+                <!--2020/01/09 劉恆毅 ADD End C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <div class="subArea">
+                <div class="tirasi_sel_color">
+                    <div class="tirasi_sel_color_title">
+                        <span class="font_big_size">|</span>
+                        <span class="title_font_normal">チラシカラー選択</span>
+                    </div>
+                    <div class="tirasi_color">
+                        <div class="tirasi_color_top">
+                        	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!--<img id="kaoiro-senntaku" class="kaoiro-img" src="../../image/ukg99004/kaoiro-senntaku.svg" />
+                            <img id="pinnku" class="kaoiro-img kaoiro-img-selected"  src="../../image/ukg99004/pinnku.gif" />
+                            <div class="kaoiro-img-checked"></div>-->
+                            <img id="kaoiro-senntaku" class="kaoiro-img kaoiro-img-selected" src="../../image/ukg99004/kaoiro-senntaku.svg" />
+                            <div class="kaoiro-img-checked"></div>
+                            <img id="pinnku" class="kaoiro-img"  src="../../image/ukg99004/pinnku.gif" />
+                            <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <img id="buruu" class="kaoiro-img" src="../../image/ukg99004/buruu.gif" />
+                            <img id="guriinn" class="kaoiro-img" src="../../image/ukg99004/guriinn.gif" />
+                        </div>
+                        <div class="tirasi_color_bottom">
+                            <img id="orennji" class="kaoiro-img" src="../../image/ukg99004/orennji.gif" />
+                            <img id="pa-puru" class="kaoiro-img" src="../../image/ukg99004/pa-puru.gif" />
+                            <img id="guree" class="kaoiro-img" src="../../image/ukg99004/guree.gif" />
+                        </div>
+                    </div>
+                </div>
+                <div id="divBukkenInfo" class="print">
+                  <table>
+                      <tbody>
+                          <tr>
+                            <td class="print_title">
+                                <span class="font_big_size">|</span>
+                                <span class="title_font_normal">印刷プレビュー</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" class="print_naiyou">
+                                <div id="imgtabBukkenInfo" class="sel_img">
+                                    <!-- <img src="../../image/ukg04010/noSentaku_yoko.gif"/> -->
+                                </div>
+                                <div id="tabBukkenInfo" class="selected_img">
+                                    <div class="selected_img_title">
+                                        <div class="cirTrblue1">
+                                        </div>
+                                        <span class="selected_img_title_text">選択した物件</span>
+                                    </div>
+                                    <div class="selectBukkenArea">
+                                        <ul id="selectBukkenArea" class="selectBukken_ul">
+                                          </ul>
+                                          <div class="subete_clear">
+                                              <img src="../../image/ukg04010/subete_clear.svg"/>
+                                          </div>
+                                    </div>
+                                </div>
+                             </td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <div class="annai_print_btn">
+                    <img src="../../image/common/button/annai_tirasi_insatu.png"/>
+                </div>
+            </div>
+            <!--2020/01/09 劉恆毅 ADD Start C44033-1_ホームメイトリサーチと施設情報の連携-->
+            </div>
+            <!--2020/01/09 劉恆毅 ADD End C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <!--2020/01/09 劉恆毅 DEL Start C44033-1_ホームメイトリサーチと施設情報の連携-->
+            <!--<div class="position-block" style="min-width: 2.8rem; display: none;margin-left: 0.1rem;width: 2.8rem;"></div>-->
+            <!--2020/01/09 劉恆毅 DEL End C44033-1_ホームメイトリサーチと施設情報の連携-->
+        </div>
+    </div>
+</div>
+<div id="footdiv" class="footer">&nbsp;</div>
+<div id="helpbotan" class="title_yellow help_btn">チェックを入れると、自事業所が管理している物件及び、Success21にて優先取扱店舗として登録されている物件のみ表示することができます。</div>
+</div>
+<!-- MSGを表示用DIV class="hidemode"-->
+    <div class="modal fade" id="message" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true" data-target
+        style="position: fixed; margin-top: 1.8rem;">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin: auto;">
+                <div class="modal-body">
+                    <div class="aui_content" style="padding: 0.2rem 0.25rem;">
+                        <span id="msg"></span>
+                    </div>
+                    <div class="alginright" align="right">
+                        <button type="button" class="btn btn-primary btn-mini" id="btnok"
+                            data-dismiss="modal">はい</button>
+                        <button type="button" class="btn btn-primary btn-mini"
+                            id="btncancel" data-dismiss="modal">いいえ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade messageOk" tabindex="-1" role="dialog" id="messageOk"
+        aria-labelledby="myModalLabel" aria-hidden="true"
+        data-target>
+        <div class="modal-dialog">
+            <div class="modal-content percent-w060 "
+                style="margin-top: 2.5rem; margin-left: 1rem;">
+                <div class="modal-body">
+                    <div class="aui_content"
+                        style="padding: 0.2rem 0.25rem;">
+                        <span id="msgok"></span>
+                    </div>
+                    <div class="tdalignright alginright"
+                        style="text-align: right;">
+                        <button type="button"
+                            class="btn btn-primary btn-mini tbFontsizeL"
+                            id="comfirm" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG99001.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG99001_1.css"></link>
+        <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../../js/thickbox.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <script type="text/javascript" src="../../js/UKG99001.js"></script>
+        <script type="text/javascript" src="../../js/help.js"></script>
+    </head>
+
+    <body>
+        <div class="guest-kensaku">
+            <div class="guest-kensaku-title">
+            	<!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                <!--<img class="show-img" src="../../image/ukg99001/objBarXLong_1.png">-->
+                <img class="show-img" src="../../image/ukg99001/objBarXLong.png">
+                <!-- 2019/10/28 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+            </div>
+            <form method="post">
+                <div>
+                    <div class="kensaku-jyouken-title"></div>
+                    <div class="div-guest-content">
+                        <div class="kensaku-jyouken-top"></div>
+                        <div class="jyouken-info">
+                            <table class="jyouken-table">
+                                <tr>
+                                    <td class="jyouken-table-title">
+                                        <span class="font_normal_title align-center">顧客種別</span>
+                                    </td>
+                                    <td>
+                                        <div class="jyouken-table-detail">
+                                        	<!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!--<button class="radio-button" id="firstSpan1">個&nbsp;&nbsp;&nbsp;&nbsp;人</button>
+                                            <button class="radio-button-checked" id="noFirstSpan1">法&nbsp;&nbsp;&nbsp;&nbsp;人</button>-->
+                                            <button class="radio-button" id="firstSpan1" disabled="disabled">個&nbsp;&nbsp;&nbsp;&nbsp;人</button>
+                                            <button class="radio-button-checked" id="noFirstSpan1" disabled="disabled">法&nbsp;&nbsp;&nbsp;&nbsp;人</button>
+                                            <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="jyouken-table-title">
+                                        <div class="title-content align-center">
+                                            <span class="font_normal_title align-center">法人企業名</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="jyouken-table-detail">
+                                            <input type="text" class="txtmode1 text-name-pop" value="顧客　太郎" />
+                                            <span class="font_normal">&nbsp;&nbsp;様&nbsp;&nbsp;</span>
+                                            <div id="guest_name" class="checkbox-block">
+                                                <div class="checkbox-check"></div>
+                                            </div>
+                                            <span class="font_normal check-label" id="checkbossflgSpan">含む&nbsp;</span>
+                                            <a id="ukg99001Help" class="ankeito-margin1">
+                                                <div class="cirhelp a_help" pageid="help_ukg99001.html">
+                                                    <img class="show-img" src="../../image/ukg99001/help.svg">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="jyouken-table-title">
+                                        <div class="title-content"><span class="font_normal_title align-center">法人企業名<br>カナ</span></div>
+                                    </td>
+                                    <td>
+                                        <div class="jyouken-table-detail">
+                                            <input type="text" class="txtmode1 text-name-pop" />
+                                            <span class="font_normal">&nbsp;&nbsp;様&nbsp;&nbsp;</span>
+                                            <div id="guest_naka" class="checkbox-block">
+                                                <div class="checkbox-check"></div>
+                                            </div>
+                                            <span class="font_normal check-label" id="checkbossflgSpan">含む</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="jyouken-table-title">
+                                        <span class="font_normal_title align-center">生年月日</span>
+                                    </td>
+                                    <td>
+                                        <div class="jyouken-table-detail">
+                                            <!--/*20180315*/ -->
+                                            <label class="lblforSelect">
+                                            <!--/*20180315*/ -->
+                                                <select class="date-select-pop">
+                                                    <option value="0"></option>
+                                                    <option value="Taurus">平成</option>
+                                                    <option value="Aries">昭和</option>
+                                                </select>
+                                            </label>
+                                            <input type="text" class="txtmode2 seinen-date seinen-date-year">
+                                            <span class="font_normal">年</span>
+                                            <input type="text" class="txtmode2 seinen-date">
+                                            <span class="font_normal">月</span>
+                                            <input type="text" class="txtmode2 seinen-date">
+                                            <span class="font_normal">日</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="jyouken-table-title">
+                                        <span class="font_normal_title align-center">電話番号</span>
+                                    </td>
+                                    <td>
+                                        <div class="jyouken-table-detail">
+                                            <input type="text" id="txt_Tel" class="txtmode2 text-tel-pop" placeholder="例） 090-123-4567">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="jyouken-table-title">
+                                        <span class="font_normal_title align-center">携帯番号</span>
+                                    </td>
+                                    <td>
+                                        <div class="jyouken-table-detail">
+                                            <input type="text" id="text_phone" class="txtmode2 text-tel-pop" placeholder="例） 090-1234-5678">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="repeat-botton">
+                                <img class="show-img" onclick="" src="../../image/ukg99001/rireki_kensaku_houjin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="houjin-list-title"></div>
+                    <div class="div-guest-content">
+                        <div class="kensaku-jyouken-top"></div>
+                        <div class="jyouken-info">
+                            <div id="search_foot" class="search-index">
+                            	<!-- 2020/03/16 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            	<!-- 2019/10/25 李龍涛 DEL C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <a><span class="font_small_blue_b">全て</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">ア</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">カ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">サ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">タ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">ナ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">ハ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">マ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">ヤ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">ラ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">ワ</span></a><span class="span-margin2">|</span>
+                                <a><span class="font_blue">その他</span></a>
+                                <!-- 2019/10/25 李龍涛 DEL C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <!-- 2020/03/16 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            </div>
+                            <table class="guest-list-table-title">
+                                <col width="13%" />
+                                <col width="19%" />
+                                <col width="24.8%" />
+                                <col width="10.8%" />
+                                <col width="18.2%" />
+                                <col width="" />
+                                <tr class="th">
+                                    <td class="font_normal_b sortTitle block1">
+                                        <div id="title1" class="align-center title-id">
+                                            <a onclick="updownClick('1')">顧客№</a>
+                                        </div>
+                                        <div id="updown1" class="sort-up"></div>
+                                    </td>
+                                    <td class="font_normal_b sortTitle block2">
+                                        <div id="title2" class="align-center title-name">
+                                            <a onclick="updownClick('2')">法人企業名</a>
+                                        </div>
+                                        <div id="updown2" class="sort-up"></div>
+                                    </td>
+                                    <td class="font_normal_b block1">
+                                        <span class="font_normal_title align-center">前回ご契約物件</span>
+                                    </td>
+                                    <td class="font_normal_b block1">
+                                        <span class="font_normal_title align-center">号&nbsp;室</span>
+                                    </td>
+                                    <td class="font_normal_b block2">
+                                        <span class="font_normal_title align-center">入居開始日</span>
+                                    </td>
+                                    <td class="font_normal_b sortTitle">
+                                        <div id="title3" class="align-center title-ten">
+                                            <a onclick="updownClick('3')">仲介店舖</a>
+                                        </div>
+                                        <div id="updown3" class="sort-up"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="fixed-block">
+                                <table id="guest-view" class="guest-list-table">
+                                    <col width="13%" />
+                                    <col width="19%" />
+                                    <col width="24.8%" />
+                                    <col width="10.8%" />
+                                    <col width="18.2%" />
+                                    <col width="" />
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text">1234-567</td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" title="顧客　太郎 様" target="_parent"><span class="onmiss2 rei-label">顧客　太郎 様</span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span title="デラックスマンション城之崎Ⅱガーデン" class="rei-label">マンション城之崎Ⅱ</span></td>
+                                        <td class="font_normal block1 number-text">10002</td>
+                                        <td class="font_normal block2 number-text">2011年7月11日</td>
+                                        <td class="font_normal"><span class="align-center" title="名古屋駅前店">丸の内支店</span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text">1234-567</td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" title="顧客　太郎 様" target="_parent"><span class="onmiss2 rei-label">顧客　太郎 様</span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span title="デラックスマンション城之崎Ⅱガーデン" class="rei-label">マンション城之崎Ⅱ</span></td>
+                                        <td class="font_normal block1 number-text">10002</td>
+                                        <td class="font_normal block2 number-text">2011年7月11日</td>
+                                        <td class="font_normal"><span class="align-center" title="名古屋駅前店">丸の内支店</span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                    <tr class="detail">
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2">
+                                            <a class="underline" target="_parent"><span class="onmiss2 rei-label"></span></a>
+                                        </td>
+                                        <td class="font_normal block1"><span class="rei-label"></span></td>
+                                        <td class="font_normal block1 number-text"></td>
+                                        <td class="font_normal block2 number-text"></td>
+                                        <td class="font_normal"><span class="align-center"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="foot-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,795 @@
+﻿<!DOCTYPE>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/UKG05024.css"></link>
+        <link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css" />
+        <script type="text/javascript" src="../../js/prototype.js" id="prototype"></script>
+        <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../../js/jquery-browser.js"></script>
+        <script type="text/javascript" src="../../js/jquery.common.js"></script>
+        <script type="text/javascript" src="../../js/artDialog.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+        <script type="text/javascript" src="../../js/inthickbox.js"></script>
+        <script type="text/javascript" src="../../js/iframe_artDialog.js"></script>
+        <script type="text/javascript" src="../../js/jquery.raty.js"></script>
+        <script type="text/javascript" src="../../js/UKG05024.js"></script>
+    </head>
+
+    <body data-font="">
+        <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+        <!--<div class="chiiki-sannkakukei"></div>-->
+        <div class="chiiki-sannkakukei">
+            <img src="../../image/ukg05021/tiiki_title.svg">
+        </div>
+        <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+        <div class="chiiki-joukenn-naiyou">
+            <div class="joukenn-naiyou-select-div">
+                <div class="joukenn-naiyou">
+                    <label class="joukenn-naiyou-label">
+                        <select class="joukenn-naiyou-select">
+                            <option value="1">愛知県</option>
+                            <option value="2">三重県</option>
+                            <option value="3">岐阜県</option>
+                            <option value="4">静岡県</option>
+                        </select>
+                    </label>
+                    <span class="chiku-text">の住所一覧</span>
+                </div>
+                <div class="ukg02033-hint">
+                    <div>※市区町村全体を設定する場合は、チェックボックスをクリックしてください。</div>
+                    <div>※町単位で設定したい場合は、市区町村名をクリックしてください。</div>
+                </div>
+            </div>
+            <div class="joukenn-naiyou-select-machi">
+                <div class="joukenn-naiyou">
+                    <span class="chiku-agata-text">愛知県</span>
+                    <div class="fugou"></div>
+                    <span class="chiku-shi-text">春日井市 </span>
+                </div>
+                <div class="ukg02033-hint">
+                    <div>※市区町村全体を設定する場合は、チェックボックスをクリックしてください。</div>
+                    <div>※町単位で設定したい場合は、市区町村名をクリックしてください。</div>
+                </div>
+            </div>
+            <div class="chiiki-title-div">
+                <table class="chiiki-title-table">
+                    <tr>
+                        <td>
+                            <span class="font-distance a">&nbsp;あ行</span>|
+                            <span class="font-distance ka">&nbsp;か行</span>|
+                            <span class="font-distance sa">&nbsp;さ行</span>|
+                            <span class="font-distance ta">&nbsp;た行</span>|
+                            <span class="font-distance na">&nbsp;な行</span>|
+                            <span class="font-distance ha">&nbsp;は行</span>|
+                            <span class="font-distance ma">&nbsp;ま行</span>|
+                            <span class="font-distance ya">&nbsp;や行</span>|
+                            <span class="font-distance ra">&nbsp;ら行</span>|
+                            <span class="font-distance wa">&nbsp;わ行</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="chiku-search-div">
+                <div class="gyou-div" id="a-gyou">
+                    <span class="gyou">[あ行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search must">
+                                    <div class="checkbox-checked"></div>
+                                </div>
+                                <div><span class="font-normal">愛西市（15）</span></div></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">愛知郡東郷町（21）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">愛知郡長久手町（14）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">海部郡大治町（123）</span></div></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">海部郡蟹江町（12）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">海部郡飛島村（54）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">あま市（14）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">安城市（25）</span></div></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">一宮市（87）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">稲沢市（100）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">犬山市（45）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">岩倉市（486）</span></div></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">大府市（14）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">岡崎市（12）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">尾張旭市（110）</span></div></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">大府市（14）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">岡崎市（12）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">尾張旭市（110）</span></div></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ka-gyou">
+                    <span class="gyou">[か行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search">
+                                    <div class="checkbox-checked"></div>
+                                </div>
+                                <div><span class="font-normal">愛西市（15）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">愛知郡東郷町（21）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">愛知郡長久手町（14）</span></div></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div>
+                                <div><span class="font-normal">海部郡大治町（123）</span></div></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡蟹江町（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡飛島村（54）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">あま市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">安城市（25）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">一宮市（87）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">稲沢市（100）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">犬山市（45）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岩倉市（486）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">大府市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岡崎市（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">尾張旭市（110）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="sa-gyou">
+                    <span class="gyou">[さ行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search">
+                                    <div class="checkbox-checked"></div>
+                                </div> <span class="font-normal">愛西市（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡東郷町（21）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡長久手町（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡大治町（123）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡蟹江町（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡飛島村（54）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">あま市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">安城市（25）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">一宮市（87）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">稲沢市（100）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">犬山市（45）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岩倉市（486）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">大府市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岡崎市（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">尾張旭市（110）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ta-gyou">
+                    <span class="gyou">[た行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search">
+                                    <div class="checkbox-checked"></div>
+                                </div> <span class="font-normal">愛西市（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡東郷町（21）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡長久手町（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡大治町（123）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡蟹江町（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡飛島村（54）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">あま市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">安城市（25）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">一宮市（87）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">稲沢市（100）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">犬山市（45）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岩倉市（486）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">大府市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岡崎市（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">尾張旭市（110）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="na-gyou">
+                    <span class="gyou">[な行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search">
+                                    <div class="checkbox-checked"></div>
+                                </div> <span class="font-normal">愛西市（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡東郷町（21）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡長久手町（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡大治町（123）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡蟹江町（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡飛島村（54）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">あま市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">安城市（25）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">一宮市（87）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">稲沢市（100）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">犬山市（45）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岩倉市（486）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">大府市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岡崎市（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">尾張旭市（110）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ha-gyou">
+                    <span class="gyou">[は行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search">
+                                    <div class="checkbox-checked"></div>
+                                </div> <span class="font-normal">愛西市（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡東郷町（21）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡長久手町（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡大治町（123）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡蟹江町（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡飛島村（54）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">あま市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">安城市（25）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">一宮市（87）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">稲沢市（100）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">犬山市（45）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岩倉市（486）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">大府市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岡崎市（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">尾張旭市（110）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ma-gyou">
+                    <span class="gyou">[ま行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search">
+                                    <div class="checkbox-checked"></div>
+                                </div> <span class="font-normal">愛西市（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡東郷町（21）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡長久手町（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡大治町（123）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡蟹江町（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡飛島村（54）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">あま市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">安城市（25）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">一宮市（87）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">稲沢市（100）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">犬山市（45）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岩倉市（486）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">大府市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岡崎市（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">尾張旭市（110）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ya-gyou">
+                    <span class="gyou">[や行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search">
+                                    <div class="checkbox-checked"></div>
+                                </div> <span class="font-normal">愛西市（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡東郷町（21）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">愛知郡長久手町（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡大治町（123）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡蟹江町（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">海部郡飛島村（54）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">あま市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">安城市（25）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">一宮市（87）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">稲沢市（100）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">犬山市（45）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岩倉市（486）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">大府市（14）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">岡崎市（12）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal">尾張旭市（110）</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="chiiki-title-machi">
+                <table class="chiiki-title-table">
+                    <tr>
+                        <td>
+                            <span class="font-distance a-machi">&nbsp;あ行</span>|
+                            <span class="font-distance ka-machi">&nbsp;か行</span>|
+                            <span class="font-distance sa-machi">&nbsp;さ行</span>|
+                            <span class="font-distance ta-machi">&nbsp;た行</span>|
+                            <span class="font-distance na-machi">&nbsp;な行</span>|
+                            <span class="font-distance ha-machi">&nbsp;は行</span>|
+                            <span class="font-distance ma-machi">&nbsp;ま行</span>|
+                            <span class="font-distance ya-machi">&nbsp;や行</span>|
+                            <span class="font-distance ra-machi">&nbsp;ら行</span>|
+                            <span class="font-distance wa-machi">&nbsp;わ行</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="chiku-search-machi">
+                <div class="gyou-div" id="a-gyou-machi">
+                    <span class="gyou">[あ行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ka-gyou-machi">
+                    <span class="gyou">[か行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="sa-gyou-machi">
+                    <span class="gyou">[さ行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ta-gyou-machi">
+                    <span class="gyou">[た行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="na-gyou-machi">
+                    <span class="gyou">[な行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ha-gyou-machi">
+                    <span class="gyou">[は行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ma-gyou-machi">
+                    <span class="gyou">[ま行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="gyou-div" id="ya-gyou-machi">
+                    <span class="gyou">[や行]</span>
+                    <div class="gyou-line"></div>
+                    <table class="duiqi line_dott">
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日町（15）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">浅山町（10）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">明智町（10）</span></td>
+                            <td class="duiqi-td">
+                                <div class="checkbox-search"></div> <span class="font-normal-machi">朝日西町（10）</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="senntaku-juusho">
+                <div class="senntaku-juusho-chouhoukei"></div>
+                <div class="senntaku-juusho-text">選択中の住所</div>
+                <div>
+                    <span>安城市(池浦町)</span>&nbsp;&nbsp;
+                    <span class="separtor"></span>&nbsp;&nbsp;
+                    <span>一宮市</span>&nbsp;&nbsp;
+                    <span class="separtor"></span>&nbsp;&nbsp;
+                    <span>刈谷市</span>&nbsp;&nbsp;
+                    <span class="separtor"></span>&nbsp;&nbsp;
+                    <span class="shikiru-fugou">Ｓあ</span>
+                    <span>春日井市</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="setei-button">
+            <a id="btncss" onclick="showMode1()"><img src="../../image/common/button/settei.png"></a>
+        </div>
+    </body>
+
+</html>

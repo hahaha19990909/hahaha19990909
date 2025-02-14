@@ -1,0 +1,1541 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/inthickbox.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG05021.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css"></link>
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/inthickbox.js"></script>
+<script type="text/javascript" src="../../js/artDialog.js"></script>
+<script type="text/javascript" src="../../js/incontent_zoom.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/UKG05021.js"></script>
+<script type="text/javascript" src="../../js/message.js"></script>
+<script type="text/javascript" src="../../js/help.js"></script>
+</head>
+<body data-font="27.4">
+    <form id="form1">
+        <div id="UKG05021Main">
+            <div id="jyoukensetteyi">
+                <div class="kihou_div">
+                    <div class="kihou_title"></div>
+                    <!--エリア条件テーブル-->
+                    <div class="kihou_naiyou">
+                        <table border="0" cellspacing="0" class="tableWidth">
+                        <col width="23%"/>
+                        <col width="76%"/>
+                        <tr>
+                            <td colspan=2 valign="top" class="font_normal_b">
+                                <div class="font_normal_b">
+                                        <table id="kibo_add_btn">
+                                            <tr>
+                                                <td valign="top">
+                                                    <a id="thickFalse1" class="btn primary_grey selTanBtn">地域から探す</a>
+                                                </td>
+                                                <td valign="top">
+                                                    <a id="thickFalse2" class="btn primary_grey tanBtn">地図から探す</a>
+                                                </td>
+                                                <td>
+                                                    <a id="thickFalse3" class="btn primary_grey tanBtn">路線・駅から探す</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="kibo_div">
+                                            <span class="show_clear">エリア条件を指定しない場合、営業エリア内の物件を対象とします。</span>
+                                        </div>
+                                        <!-- ご希望の条件の泡 END-->
+                                    </div>
+                                    <!-- ご希望の条件の泡 END-->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tintai_area">
+                    <div class="tintai_title"></div>
+                    <div class="tintai_naiyou tintai_naiyou_height">
+                        <table>
+                            <tr class="sumu_show">
+                                <td class="tintai_td_title">物件種別</td>
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_naiyou1 tintai_td_naiyou_border" colspan="3">
+                                    <!-- 2019/09/25 程旋 UPD END C43089_20190913_不具合対応 -->
+                                    <div class="bukken_syuu_img">
+                                        <div class="image_div sumu">
+                                            <!--<a class="btn_login ninki_icon_font btn_pos primary_d_white">
+                                                  <div class="r1">居住用</div>
+                                                </a>-->
+                                            <!--  2018/10/11 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                            <!-- <img src="../../image/ukg05021/sumu.svg"/> -->
+                                            <img src="../../image/ukg05021/sumu_red.png" />
+                                            <!--  2018/10/11 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                        </div>
+                                        <div class="image_div jigyou sumujigyou">
+                                            <!--<a class="btn_login ninki_icon_font btn_pos primary_d_white">
+                                                  <div class="r1">居住用</div>
+                                                </a>-->
+                                            <!--  2018/10/11 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                            <!-- <img src="../../image/ukg05021/jigyou_off.svg"/> -->
+                                            <img src="../../image/ukg05021/jigyou_red_off.png" />
+                                            <!--  2018/10/11 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                        </div>
+                                    </div>
+                                    <div class="bukken_syuu_check colorbox">
+                                        <div class="check arrow-range">
+                                            <div class="sumu-flg arrow-outer">
+                                                <div class="arrow">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos">
+                                            <div class="r1">アパート</div>
+                                        </a>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos1">
+                                            <div class="r1">マンション</div>
+                                        </a>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos1">
+                                            <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                            <!-- <div class="r3">戸建</div> -->
+                                            <div class="r3">戸建て</div>                                            
+                                            <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                        </a>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos1">
+                                            <div class="r3">分讓賃貸</div>
+                                        </a>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos1">
+                                            <div class="r3">メンネット</div>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="jigyou_show notshow">
+                                <td class="tintai_td_title">物件種別</td>
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_naiyou tintai_td_naiyou_border" colspan="3">
+                                    <!-- 2019/09/25 程旋 UPD END C43089_20190913_不具合対応 -->
+                                    <div class="bukken_syuu_img">
+                                        <div class="image_div sumu">
+                                            <!--  2018/10/11 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                            <!-- <img src="../../image/ukg05021/sumu.svg"/> -->
+                                            <img src="../../image/ukg05021/sumu_red.png" />
+                                            <!--  2018/10/11 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                        </div>
+                                        <div class="image_div jigyou">
+                                            <!--  2018/10/11 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                            <!-- <img src="../../image/ukg05021/jigyou_off.svg"/> -->
+                                            <img src="../../image/ukg05021/jigyou_red_off.png" />
+                                            <!--  2018/10/11 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG075 -->
+                                        </div>
+                                    </div>
+                                    <div class="bukken_syuu_check colorbox">
+                                        <!--<div class="check">
+                                                <input type="checkbox" id="checkbox11" class="checkbox"/>
+                                                <label for="checkbox11"></label>
+                                                <span class="sp_text">店舗</span>
+                                           </div>
+                                            <div class="check">
+                                                <input type="checkbox" id="checkbox12" class="checkbox"/>
+                                                <label for="checkbox12"></label>
+                                                <span class="sp_text">事務所</span>
+                                            </div>
+                                            <div class="check">
+                                                <input type="checkbox" id="checkbox13" class="checkbox"/>
+                                                <label for="checkbox13"></label>
+                                                <span class="sp_text">倉庫</span>
+                                            </div>
+                                            <div class="check">
+                                                <input type="checkbox" id="checkbox14" class="checkbox"/>
+                                                <label for="checkbox14"></label>
+                                                <span class="sp_text">工場</span>
+                                            </div>
+                                            <div class="check">
+                                                <input type="checkbox" id="checkbox15" class="checkbox"/>
+                                                <label for="checkbox15"></label>
+                                                <span class="sp_text">トランクルーム</span>
+                                            </div>-->
+                                        <div class="check arrow-range">
+                                            <div class="jigyou-flg arrow-outer">
+                                                <div class="arrow">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos">
+                                            <div class="r1">店舗</div>
+                                        </a>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos1">
+                                            <div class="r1">事務所</div>
+                                        </a>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos1">
+                                            <div class="r3">倉庫</div>
+                                        </a>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos1">
+                                            <div class="r3">工場</div>
+                                        </a>
+                                        <a class="btn_login primary_d_pink ninki_icon_font arrow_pos1">
+                                            <div class="r3">トランクルーム</div>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tintai_td_title">築 年 数</td>
+                                <!--<td class="tintai_td_naiyou">
+                                        <label class="lblSelect">
+                                            <select id="tintai" class="sinntyoku">
+                                                <option>指定なし</option>
+                                                <option selected>新築（１年未満）</option>
+                                                <option>3年以内</option>
+                                                <option>5年以内</option>
+                                                <option>10年以内</option>
+                                                <option>15年以内</option>
+                                            </select>
+                                        </label>
+                                    </td>-->
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_naiyou tintai_td_naiyou_pad" colspan="3"
+                                    style="padding: 0rem 0px 0.2rem 0.2rem !important;">
+                                    <!-- 2019/09/25 程旋 UPD END C43089_20190913_不具合対応 -->
+                                    <table>
+                                        <tbody class="tintai_height">
+                                            <tr class="sumu_show_flg sumu_show6">
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font btn_pos">
+                                                        <div class="r1">指定なし</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!-- <div class="r1">新築(１年未満)</div> -->
+                                                        <div class="r1">新築&nbsp;(１年未満)</div>
+                                                        <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">3年以内</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">5年以内</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">10年以内</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font btn_pos">
+                                                        <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!-- <div class="r3">20年以内</div> -->
+                                                        <div class="r3">15年以内</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <!-- <div class="r3">15年以内</div> -->
+                                                        <div class="r3">20年以内</div>
+                                                        <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- /*20180315*/ -->
+                                <td class="tintai_td_title">家 &nbsp;&nbsp;賃</td>
+                                <!-- /*20180315*/ -->
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <!-- <td class="tintai_td_naiyou tintai_td_naiyou_pad1"> -->
+                                <td class="tintai_td_madori"
+                                    style="border-right: none;padding-left:0.2rem !important;width: 39%;">
+                                    <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                    <div class="katia">
+                                        <label class="lblSelect lblSelect_pos">
+                                            <select id="katia_kigen" class="sinntyoku">
+                                                <option value="0" selected>下限なし</option>
+                                                <option value="1">1.5万円</option>
+                                                <option value="2">2.0万円</option>
+                                                <option value="3">2.5万円</option>
+                                                <option value="4">3.0万円</option>
+                                                <option value="5">3.5万円</option>
+                                                <option value="6">4.0万円</option>
+                                                <option value="7">4.5万円</option>
+                                                <option value="8">5.0万円</option>
+                                                <option value="9">5.5万円</option>
+                                                <option value="10">6.0万円</option>
+                                                <option value="11">6.5万円</option>
+                                                <option value="12">7.0万円</option>
+                                                <option value="13">7.5万円</option>
+                                                <option value="14">8.0万円</option>
+                                                <option value="15">8.5万円</option>
+                                                <option value="16">9.0万円</option>
+                                                <option value="17">9.5万円</option>
+                                                <option value="18">10万円</option>
+                                                <option value="19">11万円</option>
+                                                <option value="20">12万円</option>
+                                                <option value="21">13万円</option>
+                                                <option value="22">14万円</option>
+                                                <option value="23">15万円</option>
+                                                <option value="24">16万円</option>
+                                                <option value="25">17万円</option>
+                                                <option value="26">18万円</option>
+                                                <option value="27">19万円</option>
+                                                <option value="28">20万円</option>
+                                                <option value="29">25万円</option>
+                                                <option value="30">30万円</option>
+                                                <option value="31">35万円</option>
+                                                <option value="32">40万円</option>
+                                                <option value="33">45万円</option>
+                                                <option value="34">50万円</option>
+                                                <option value="35">上限なし</option>
+                                            </select>
+                                        </label>
+                                        <div class="katia_line">～</div>
+
+                                        <label class="lblSelect">
+                                            <select id="katia_jyougen" class="sinntyoku">
+                                                <option value="0">下限なし</option>
+                                                <option value="1">1.5万円</option>
+                                                <option value="2">2.0万円</option>
+                                                <option value="3">2.5万円</option>
+                                                <option value="4">3.0万円</option>
+                                                <option value="5">3.5万円</option>
+                                                <option value="6">4.0万円</option>
+                                                <option value="7">4.5万円</option>
+                                                <option value="8">5.0万円</option>
+                                                <option value="9">5.5万円</option>
+                                                <option value="10">6.0万円</option>
+                                                <option value="11">6.5万円</option>
+                                                <option value="12">7.0万円</option>
+                                                <option value="13">7.5万円</option>
+                                                <option value="14">8.0万円</option>
+                                                <option value="15">8.5万円</option>
+                                                <option value="16">9.0万円</option>
+                                                <option value="17">9.5万円</option>
+                                                <option value="18">10万円</option>
+                                                <option value="19">11万円</option>
+                                                <option value="20">12万円</option>
+                                                <option value="21">13万円</option>
+                                                <option value="22">14万円</option>
+                                                <option value="23">15万円</option>
+                                                <option value="24">16万円</option>
+                                                <option value="25">17万円</option>
+                                                <option value="26">18万円</option>
+                                                <option value="27">19万円</option>
+                                                <option value="28">20万円</option>
+                                                <option value="29">25万円</option>
+                                                <option value="30">30万円</option>
+                                                <option value="31">35万円</option>
+                                                <option value="32">40万円</option>
+                                                <option value="33">45万円</option>
+                                                <option value="34">50万円</option>
+                                                <option value="35" selected="selected">上限なし</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </td>
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_title"
+                                    style="border-top: medium none;border-right: medium none;border-left: medium none;">
+                                    専有面積</td>
+                                <!-- <td class="tintai_td_naiyou  tintai_td_naiyou_pad3"> -->
+                                <td class="tintai_td_madori" style="padding-left: 0.15rem;">
+                                    <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                    <div class="menseki">
+                                        <label class="lblSelect lblSelect_pos">
+                                            <select id="menseki_kigen" class="sinntyoku">
+                                                <option value="0">下限なし</option>
+                                                <option value="1">10㎡</option>
+                                                <option value="2">15㎡</option>
+                                                <option value="3">20㎡</option>
+                                                <option value="4">25㎡</option>
+                                                <option value="5">30㎡</option>
+                                                <option value="7">40㎡</option>
+                                                <option value="8">50㎡</option>
+                                                <option value="9">60㎡</option>
+                                                <option value="10">70㎡</option>
+                                                <option value="11">80㎡</option>
+                                                <option value="12">90㎡</option>
+                                                <option value="13">100㎡</option>
+                                                <option value="15">150㎡</option>
+                                                <option value="16">200㎡</option>
+                                                <option value="17">250㎡</option>
+                                                <option value="18">300㎡</option>
+                                                <option value="19">350㎡</option>
+                                                <option value="20">400㎡</option>
+                                                <option value="21">450㎡</option>
+                                                <option value="22">500㎡</option>
+                                                <option value="24">600㎡</option>
+                                                <option value="25">700㎡</option>
+                                                <option value="26">800㎡</option>
+                                                <option value="27">900㎡</option>
+                                                <option value="28">1000㎡</option>
+                                                <option value="30">上限なし</option>
+                                            </select>
+                                        </label>
+                                        <div class="katia_line">～</div>
+
+                                        <label class="lblSelect">
+                                            <select id="menseki_jyougen" class="sinntyoku">
+                                                <option value="0">下限なし</option>
+                                                <option value="1">10㎡</option>
+                                                <option value="2">15㎡</option>
+                                                <option value="3">20㎡</option>
+                                                <option value="4">25㎡</option>
+                                                <option value="5">30㎡</option>
+                                                <option value="7">40㎡</option>
+                                                <option value="8">50㎡</option>
+                                                <option value="9">60㎡</option>
+                                                <option value="10">70㎡</option>
+                                                <option value="11">80㎡</option>
+                                                <option value="12">90㎡</option>
+                                                <option value="13">100㎡</option>
+                                                <option value="15">150㎡</option>
+                                                <option value="16">200㎡</option>
+                                                <option value="17">250㎡</option>
+                                                <option value="18">300㎡</option>
+                                                <option value="19">350㎡</option>
+                                                <option value="20">400㎡</option>
+                                                <option value="21">450㎡</option>
+                                                <option value="22">500㎡</option>
+                                                <option value="24">600㎡</option>
+                                                <option value="25">700㎡</option>
+                                                <option value="26">800㎡</option>
+                                                <option value="27">900㎡</option>
+                                                <option value="28">1000㎡</option>
+                                                <option value="30" selected="selected">上限なし</option>
+                                            </select>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="sumu_show">
+                                <td class="tintai_td_title">間 取 り</td>
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_naiyou" colspan="3" style="padding-left:0.21rem !important;">
+                                    <!-- 2019/09/25 程旋 UPD END C43089_20190913_不具合対応 -->
+                                    <table>
+                                        <tbody class="tintai_height">
+                                            <tr>
+                                                <td>
+                                                    <a
+                                                        class="btn_login primary_d_pink ninki_icon_font btn_pos madori_width">
+                                                        <div class="r1">1R</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font madori_width">
+                                                        <div class="r1">1K</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font madori_width">
+                                                        <div class="r3">1DK</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font madori_width">
+                                                        <div class="r3">1LDK</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font madori_width">
+                                                        <div class="r1">2K</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font madori_width">
+                                                        <div class="r3">2DK</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font madori_width">
+                                                        <div class="r3">2LDK</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a
+                                                        class="btn_login primary_d_pink ninki_icon_font btn_pos madori_width madori_margin">
+                                                        <div class="r1">3K</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a
+                                                        class="btn_login primary_d_pink ninki_icon_font madori_width madori_margin">
+                                                        <div class="r1">3DK</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a
+                                                        class="btn_login primary_d_pink ninki_icon_font madori_width madori_margin">
+                                                        <div class="r3">3LDK</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a
+                                                        class="btn_login primary_d_pink ninki_icon_font madori_width madori_margin">
+                                                        <div class="r3">4K</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a
+                                                        class="btn_login primary_d_pink ninki_icon_font madori_width madori_margin">
+                                                        <div class="r1">4DK</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a
+                                                        class="btn_login primary_d_pink ninki_icon_font madori_width madori_margin">
+                                                        <div class="r3">4LDK<span style="font-size: 0.17rem;">以上</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- <div class="modori_check">
+                                            <input type="checkbox" id="modori_check1" class="checkbox"/>
+                                            <label for="modori_check1"></label>
+                                            <span class="sp_text">1R</span>
+                                       </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check2" class="checkbox"/>
+                                            <label for="modori_check2"></label>
+                                            <span class="sp_text">1K</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check3" class="checkbox"/>
+                                            <label for="modori_check3"></label>
+                                            <span class="sp_text">1DK</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check4" class="checkbox"/>
+                                            <label for="modori_check4"></label>
+                                            <span class="sp_text">2K</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check5" class="checkbox"/>
+                                            <label for="modori_check5"></label>
+                                            <span class="sp_text">2DK</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check6" class="checkbox"/>
+                                            <label for="modori_check6"></label>
+                                            <span class="sp_text">2LDK</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check7" class="checkbox"/>
+                                            <label for="modori_check7"></label>
+                                            <span class="sp_text">3K</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check8" class="checkbox"/>
+                                            <label for="modori_check8"></label>
+                                            <span class="sp_text">3DK</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check9" class="checkbox"/>
+                                            <label for="modori_check9"></label>
+                                            <span class="sp_text">3LDK</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check10" class="checkbox"/>
+                                            <label for="modori_check10"></label>
+                                            <span class="sp_text">4K</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check11" class="checkbox"/>
+                                            <label for="modori_check11"></label>
+                                            <span class="sp_text">4DK</span>
+                                        </div>
+                                        <div class="modori_check">
+                                            <input type="checkbox" id="modori_check12" class="checkbox"/>
+                                            <label for="modori_check12"></label>
+                                            <span class="sp_text">4LDK以上</span>
+                                        </div> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tintai_td_title">管理区分</td>
+                                <!--<td class="tintai_td_naiyou">
+                                        <div class="kanri_check">
+                                            <input type="checkbox" id="kanricheckbox1" class="checkbox"/>
+                                            <label for="kanricheckbox1"></label>
+                                            <span class="sp_text">自社物件</span>
+                                       </div>
+                                        <div class="kanri_check">
+                                            <input type="checkbox" id="kanricheckbox2" class="checkbox"/>
+                                            <label for="kanricheckbox2"></label>
+                                            <span class="sp_text">一般管理</span>
+                                        </div>
+                                        <div class="kanri_check">
+                                            <input type="checkbox" id="kanricheckbox3" class="checkbox"/>
+                                            <label for="kanricheckbox3"></label>
+                                            <span class="sp_text">直接仕入</span>
+                                        </div>
+                                        <div class="kanri_check">
+                                            <input type="checkbox" id="kanricheckbox4" class="checkbox"/>
+                                            <label for="kanricheckbox4"></label>
+                                            <span class="sp_text">間接仕入</span>
+                                        </div>
+                                    </td>-->
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_naiyou  tintai_td_naiyou_pad" colspan="3">
+                                    <!-- 2019/09/25 程旋 UPD END C43089_20190913_不具合対応 -->
+                                    <table>
+                                        <tbody class="tintai_height">
+                                            <tr>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font btn_pos">
+                                                        <div class="r1">自社物件</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r1">一般管理</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">直接仕入</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">間接仕入</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tintai_td_title">駅からの</br>徒歩分</td>
+                                <!--<td class="tintai_td_naiyou">
+                                        <div>
+                                            <div class="ekitoho">
+                                                <label class="lblSelect">
+                                                    <select id="ekitohobun" class="sinntyoku">
+                                                        <option value="0">指定なし</option>
+                                                        <option value="1">3分以内</option>
+                                                        <option value="2">5分以内</option>
+                                                        <option value="3">10分以内</option>
+                                                        <option value="4">15分以内</option>
+                                                    </select>
+                                                   </label>
+                                            </div>
+                                        </div>
+                                    </td>-->
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_naiyou tintai_td_naiyou_pad4" colspan="3">
+                                    <!-- 2019/09/25 程旋 UPD END C43089_20190913_不具合対応 -->
+                                    <table>
+                                        <tbody class="tintai_height">
+                                            <tr>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font btn_pos">
+                                                        <div class="r1">指定なし</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r1">3分以内</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">5分以内</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">10分以内</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">15分以内</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="sumu_show sumu_show7">
+                                <td class="tintai_td_title_col tintai_td_title tintai_td_bot">こだわり</br>条件</td>
+                                <!--<td class="tintai_td_naiyou_bottom">
+                                        <table>
+                                          <tbody class="tintai_height1">
+                                            <tr  class="sumu_show_flg sumu_show6">
+                                                <td>
+                                                    <a class="btn_login1 primary_d_pink ninki_icon_font btn_pos">
+                                                        <div class="r1">南向き</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login2 primary_d_pink ninki_icon_font">
+                                                        <div class="r1">駐車場</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login3 primary_d_pink ninki_icon_font">
+                                                        <div class="r3">室内洗濯機置場</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login4 primary_d_pink ninki_icon_font">
+                                                        <div class="r3">ペット相談可</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login5 primary_d_pink ninki_icon_font">
+                                                        <div class="r3">バス・トイレ別</div>
+                                                    </a>
+                                                </td>
+                                           </tr>
+                                           <tr>
+                                                <td>
+                                                    <a class="btn_login6 primary_d_pink ninki_icon_font">
+                                                        <div class="r1">エアコン</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login7 primary_d_pink ninki_icon_font">
+                                                        <div class="r3">居室２階以上</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </td>-->
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_naiyou tintai_td_naiyou_pad td_bottom" colspan="3"
+                                    style="padding: 0rem 0px 0.2rem 0.2rem !important;">
+                                    <!-- 2019/09/25 程旋 UPD END C43089_20190913_不具合対応 -->
+                                    <table>
+                                        <tbody class="tintai_height">
+                                            <tr class="sumu_show_flg sumu_show6">
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font btn_pos">
+                                                        <div class="r1">南向き</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r1">駐車場</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!-- <div class="r3">室内洗濯機置場</div> -->
+                                                        <div class="r3">室内&nbsp;洗濯機&nbsp;置場</div>
+                                                        <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                                        <!-- <div class="r3">ペット相談可</div> -->
+                                                        <div class="r3">ペット&nbsp;(相談)可</div>
+                                                        <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">バス・トイレ別</div>
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font btn_pos">
+                                                        <div class="r3">エアコン</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn_login primary_d_pink ninki_icon_font">
+                                                        <div class="r3">居室２階以上</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="jigyou_show notshow">
+                                <td class="tintai_td_title  tintai_td_bot">駐車場の</br>有無</td>
+                                <!-- 2019/09/25 程旋 UPD START C43089_20190913_不具合対応 -->
+                                <td class="tintai_td_naiyou2 tintai_td_naiyou_border1" colspan="3">
+                                    <!-- 2019/09/25 程旋 UPD END C43089_20190913_不具合対応 -->
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <a class="btn_login_you primary_d_pink ninki_icon_font">
+                                                    <div class="r1">要</div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="btn_login_mu primary_d_pink ninki_icon_font">
+                                                    <div class="r1">不要</div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="jiantoujiansuo">
+                            <div class="selResult selResult_pos">
+                                <span class="selResult_text">検索結果（64件）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="jyoukenkekka" class="jyoukenkekka">
+                <div id="jiantousheding" class="jiantousheding">
+                    <div class="jyoukenseittei">
+                        <span class="jyoukenseittei_text">条件設定</span>
+                    </div>
+                    <!--<div class="setumei">
+                        <img src="../../image/common/icon/check.png"/>
+                        <span>:選択済物件</span>
+                    </div>-->
+                </div>
+                <table id="guest-view" class="guest-view guest-view-pos">
+                    <tr class="th mousenashi">
+                        <td class="font_normal_b sortBtn tdDashedLine tdWidth3">
+                            <a class="sort">
+                                <div id="title0" class="table_title sort-div">物件№</div>
+                                <div class="sannkakukei-top"></div>
+                                <div class="sannkakukei-bottom"></div>
+                            </a>
+                        </td>
+                        <td class="font_normal_b sortBtn tdDashedLine">
+                            <div class="table_title tdWidth1">号室</div>
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="tdSolidLine"> -->
+                        <td class="tdSolidLine" id="bukken-nameid">
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <table class="bujyuu">
+                                <tr class="mousenashi">
+                                    <td class="font_normal_b sortBtn tdWidth2">
+                                        <a class="sort">
+                                            <div id="title1" class="table_title sort-div">物 件 名</div>
+                                            <div class="sannkakukei-top"></div>
+                                            <div class="sannkakukei-bottom"></div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="mousenashi">
+                                    <td class="font_normal_b sortBtn tdWidth6">
+                                        <a class="sort">
+                                            <div id="title2" class="table_title sort-div">住 所</div>
+                                            <div class="sannkakukei-top"></div>
+                                            <div class="sannkakukei-bottom"></div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="font_normal_b sortBtn tdDashedLine tdWidth4">
+                            <a class="sort">
+                                <div id="title3" class="table_title sort-div">間取り</div>
+                                <div class="sannkakukei-top"></div>
+                                <div class="sannkakukei-bottom"></div>
+                            </a>
+                        </td>
+                        <td class="font_normal_b sortBtn tdSolidLine tdWidth5">
+                            <a class="sort">
+                                <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!-- <div id="title4" class="table_title sort-div">面 積</div> -->
+                                <div id="title4" class="table_title sort-div rentmon">面 積</div>
+                                <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <div class="sannkakukei-top"></div>
+                                <div class="sannkakukei-bottom"></div>
+                            </a>
+                        </td>
+                        <td class="font_normal_b sortBtn tdDashedLine tdWidth7">
+                            <a class="sort">
+                                <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                <!-- <div id="title5" class="table_title sort-div">家 賃</div> -->
+                                <div id="title5" class="table_title sort-div">家 賃</div>
+                                <!-- 2019/10/30 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <div class="sannkakukei-top"></div>
+                                <div class="sannkakukei-bottom"></div>
+                            </a>
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="font_normal_b sortBtn tdDashedLine"> -->
+                        <td class="font_normal_b sortBtn tdDashedLine" id="welfar-pay">
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div class="table_title tdWidth8">共益費</div>
+                        </td>
+                        <td class="font_normal_b sortBtn tdDashedLine">
+                            <div class="table_title tdWidth9">礼 金</div>
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="font_normal_b sortBtn tdSolidLine1"> -->
+                        <td class="font_normal_b sortBtn tdSolidLine1 just_for_bear">
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div class="table_title tdWidth10">敷 金</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_101" heyano="101" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">101</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_102" heyano="102" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">102</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_103" heyano="103" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">103</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_104" heyano="104" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">104</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_105" heyano="105" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">105</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_106" heyano="106" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">106</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_107" heyano="107" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">107</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_108" heyano="108" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">108</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_109" heyano="109" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">109</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_110" heyano="110" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">110</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_111" heyano="111" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">111</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_112" heyano="112" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">112</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>
+                    <tr id="12123412345_107" heyano="113" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="guest_view_naiyou">S00-1234<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div class="heyano a_col">113</div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="left">
+                                <div class="pop_div pop_adiv">
+                                    <a class="a_line a_col" title="エスポワール香南" target="_parent"
+                                        href="#pop99007">エスポワール香南<br /></a>
+                                </div>
+                            </div>
+                            <div align="left">
+                                <div class="pop_div pop_div_font">名古屋市名東区香南</div>
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="center">
+                                2LDK <br />
+                            </div>
+                        </td>
+                        <td class="guest_view_font tdbodySolidLine">
+                            <div align="center">56.19㎡</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos1">65,000円<br /></div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos2">5,000円</div>
+                        </td>
+                        <td class="guest_view_font tdbodyDashedLine">
+                            <div align="right" class="guest_pos3">100,000円<br /></div>
+
+                        </td>
+                        <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                        <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <div align="right" class="guest_pos4">600,000円</div>
+                        </td>
+                    </tr>                 
+                    <tr class="foot">            
+                    <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->                    
+                    <td colspan=9 class="just_for_bear">
+                    <!-- 2019/10/28 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                            <table class="foot">                                
+                                <tr>
+                                    <td>
+                                        <a href="javascript:view_first()" class="aiueo beginPageno">
+                                            <span id="sp_first" class="font_small_grey font_col">《 最初</span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:view_prev()" class="aiueo">
+                                            <span id="sp_prev" class="font_small_grey font_col">《 前のページ</span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="pageNum">
+                                            <span id="sp_show_no" class="text_normal" onclick="pejiDia()">1-15</span>
+                                            <span class="text_normal">
+                                                /
+                                            </span>
+                                            <span id="sp_show_no_total" class="text_normal">
+                                                30件
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:view_next()" class="show_next">
+                                            <span id="sp_next" class="font_blue" class="next_table font_col">次のページ
+                                                》</span>
+                                        </a>
+
+                                    </td>
+                                    <td>
+                                        <a href="javascript:view_last()">
+                                            <span id="sp_last" class="font_blue" class="end_table font_col">最後 》</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+
+    <div id="kibo_add_btn2" class="kibo_add_btn2">
+        <a id="thickTrue1" class="btn primary_grey inThickbox"
+            href="UKG05024.html?keepThis=true&TB_iframe=true&height=720&width=1000">1</a>
+        <a id="thickTrue2" class="btn primary_grey inThickbox"
+            href="UKG05025.html?keepThis=true&TB_iframe=true&height=720&width=1000">2</a>
+        <a id="thickTrue3" class="btn primary_grey inThickbox"
+            href="UKG05026.html?keepThis=true&TB_iframe=true&height=800&width=1000">3</a>
+    </div>
+    <div class="kibo_select_btn">
+        <select id="sokujiselect1" disabled="disabled" class="sokujiselect1">
+        </select>
+        <select id="sokujiselect2" disabled="disabled" class="sokujiselect">
+
+        </select>
+        <select id="sokujiselect3" disabled="disabled" class="sokujiselect">
+
+        </select>
+        <select id="sokujiselect4" disabled="disabled" class="sokujiselect">
+
+        </select>
+    </div>
+    <div id="pop99007">
+        <iframe id="pop99007_ifream" class="pop99007" src="UKG99007.html?keepThis=true&TB_iframe=true"
+            name="content_frame"></iframe>
+    </div>
+</body>
+
+</html>

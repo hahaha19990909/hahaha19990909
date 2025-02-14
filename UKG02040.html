@@ -1,0 +1,1353 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<title>Success21お部屋探しNAVI</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/content_zoom.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap.min.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/thickbox.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/timelist.css" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG02040.css" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG02040-1.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/ff/jquery.easywidgets.css" />
+<link id="calendar_style" href="../../css/ff/UKG02040_slide_door.css" media="screen" rel="Stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../css/ff/grumble.min.css">
+<link id="calendar_style" href="../../css/ff/simple.css" media="screen" rel="Stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/thickbox.js"></script>
+<!--2019/12/04 劉恆毅 ADD Start C44033-1_ホームメイトリサーチと施設情報の連携-->
+<script type="text/javascript" src="../../js/inthickbox.js"></script>
+<!--2019/12/04 劉恆毅 ADD End C44033-1_ホームメイトリサーチと施設情報の連携 -->
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/message.js"></script>
+<script type="text/javascript" src="../../js/timelist.js"></script>
+<script type="text/javascript" src="../../js/jquery.grumble.min.js"></script>
+
+<script type="text/javascript" src="../../js/kana.js"></script>
+<script type="text/javascript" src="../../js/jquery.raty.js"></script>
+
+<script type="text/javascript" src="../../js/jquery-ui-1.8.15.custom.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.easywidgets.min.js"></script>
+<script type="text/javascript" src="../../js/content_zoom.js"></script>
+<script type="text/javascript" src="../../js/jqModal.js"></script>
+<script type="text/javascript" src="../../js/help.js"></script>
+<script type="text/javascript" src="../../js/artDialog.js"></script>
+
+<script id="prototype" src="../../js/prototype.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/2040_protocalendar_min.js"></script>
+<script type="text/javascript" src="../../js/lang_ja.js"></script>
+<script type="text/javascript" src="../../js/UKG02040.js"></script>
+<script type="text/javascript" src="../../js/UKG02040-1.js"></script>
+<script type="text/javascript" src="../../js/UKG02040-2.js"></script>
+<script type="text/javascript" src="../../js/UKG02040_slide_door.js"></script>
+</head>
+
+<body onload="resizeWindowSize()">
+    <div class="iframe-div">
+        <iframe id="content_frame" class="top-title" name="content_frame" src="pageHead.html"></iframe>
+    </div>
+        <div class="toppage">
+            <div class="toppage-space">&nbsp;</div>
+            <div class="menu_chirashi_div">
+                <div class="menu_uketuke" id="kibouJoukenn">ご希望条件</div>
+            </div>
+            <div class="menu_syoudan_div">
+                <div class="menu_uketuke" id="okyakusamaMenu">お客様情報の登録</div>
+            </div>
+            <div class="menu_kibou_div">
+                <div class="menu_uketuke menu-color" id="shoudannNaiyouMenu">ご商談内容の確認</div>
+            </div>
+        </div>
+    <div class="soudan-kakunin">
+        <!-- 2019/01/30 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+        <!-- <img src="../../image/ukg02040/title.png" /> -->
+        <!--2020/06/03 セツ  UPD START C44033-1_ホームメイトリサーチと施設情報の連携-->
+        <!--<img src="../../image/ukg02040/kakuninn_title.png" />-->
+        <img src="../../image/ukg02040/kakuninn_title.svg" />
+        <!--2020/06/03 セツ  UPD END C44033-1_ホームメイトリサーチと施設情報の連携-->
+        <!-- 2019/01/30 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+    </div>
+    <!-- 2019/03/12 ADD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+    <div class="main-sondan-kakunin" id="UKG02040">
+    <!-- 2019/03/12 ADD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+    <div class="soudan-honben">
+        <div class="soudan-hidari">
+            <div class="soudan-nyuuryouku">
+                <div>
+                    <div class="soudan-topbar1">
+                    <!--  2018/08/13 ADD START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                    <!-- 2019/01/30 DEL START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    <!-- <div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02040.html">
+                        <img class="syoukai-mark-img" src="../../image/common/icon/help.png"/>
+                        <span class="help-style">このページの使い方</span>
+                    </div> -->
+                    <!-- 2019/01/30 DEL END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    <!--  2018/08/13 ADD END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                    </div>
+                    <div class="nyuuryouku1">
+                        <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                        <!-- <div class="nyuryouku-top"></div> -->
+                        <div class="syoudannaiyou-title">
+                            <div>ご相談内容の入力・参照</div>
+                        </div>
+                        <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                        <div class="nyuuryouku2">
+                            <div class="nyuuryouku-hidari">
+                                <div id="bianji_bnt" class="kufen">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <span class="kufen-title font_normal_b" id="spanShaodanKb">相談区分</span> -->
+                                    <span class="kufen-title font_normal_b" id="spanShaodanKb">ご相談区分</span>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="kufen-naiyou">
+                                        <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+                                        <!-- <div class="primary_grey2_active1" id="btnCome">来&nbsp;&nbsp;店</div> -->
+                                        <div class="primary_grey2_active1" id="btnCome">再&nbsp;来&nbsp;店</div>
+                                        <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+                                        <div class="kufen-miouka2" id="btnTel">電&nbsp;&nbsp;話</div>
+                                        <div class="kufen-miouka3" id="btlMail">メール</div>
+                                        <div class="kufen-miouka4" id="btnFax">F A X</div>
+                                    </div>
+                                </div>
+                                <div class="hiji">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <div class="hiji-title">商談日時</div> -->
+                                    <div class="hiji-title">ご相談日時</div>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <div class="hiji-nayou">
+                                        <input id="txtTalkDay" name="txtTalkDay" class="proto_date txtmode2 ukg02040 hiji-jikan1" value="2016/12/10"></input> <input
+                                            class="timelist txtmode2 ukg02040 popup hiji-jikan2" id="txtTalkTime" name="txtTalkTime" value="10:00"></input>
+<!--                                         <div id="timeListDiv"> -->
+<!--                                             <ul class="time-list"> -->
+<!--                                                 <li id="timeListLi0">08:00</li> -->
+<!--                                                 <li id="timeListLi1">09:00</li> -->
+<!--                                                 <li id="timeListLi2">08:00</li> -->
+<!--                                                 <li id="timeListLi3">09:00</li> -->
+<!--                                                 <li id="timeListLi4">08:00</li> -->
+<!--                                                 <li id="timeListLi5" value="09:00">09:00</li> -->
+<!--                                                 <li id="timeListLi6">08:00</li> -->
+<!--                                                 <li id="timeListLi7">09:00</li> -->
+<!--                                                 <li id="timeListLi8">08:00</li> -->
+<!--                                                 <li id="timeListLi9">09:00</li> -->
+<!--                                                 <li id="timeListLi10">08:00</li> -->
+<!--                                                 <li id="timeListLi11">09:00</li> -->
+<!--                                             </ul> -->
+<!--                                         </div> -->
+                                    </div>
+                                </div>
+                                <div class="textarea-syoutan-div">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <textarea id="txtTalkCmnt" cols="30" class="textarea-syoutan" placeholder="「相談区分」「商談日時」を入力後、ここに、お客様との商談内容を入力してください。"></textarea> -->
+                                    <!-- 2019/10/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    <textarea id="txtTalkCmnt" cols="30" class="textarea-syoutan" placeholder="「ご相談区分」「ご相談日時」を入力後、ここに、お客様とのご相談内容を入力してください。"></textarea>
+                                    <!-- 2019/10/23 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                </div>
+
+                                <div class="button-save-cancel" id="updArea" style="display: none;">
+                                    <div class="save-botton" >修&nbsp;&nbsp;正</div>
+                                    <div class="cancel-botton" >キャンセル</div>
+                                </div>
+                                <div class="button-save-cancel" id="addArea">
+                                    <div class="save-botton" >追&nbsp;&nbsp;加</div>
+                                </div>
+                            </div>
+                            <div class="nyuuryouku-migi">
+                                <div class="migi-title mycheck">
+                                    <div class="mycheckbox"></div>
+                                    <span class="migi-miji">自動で登録された商談内容を表示する</span>
+                                </div>
+                                <ul class="aa" id="syodanListHeader">
+                                    <!--2020/06/17 ADD START セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                                    <li id="chuchi_riyu">
+                                        <div class="sanjyou1">
+                                            <div class="sanjyou-title1">
+                                                <div class="sanjyou-jikan">2020/06/17</div>
+                                            </div>
+                                            <div class="sanjyou-title2"></div>
+                                            <div class="sanjyou-honben">
+                                                <textarea id="sanjyou-honben-txt" cols="30" class="sanjyou-honben-txt">【商談が中止されました】&#13;○○○○○により中止</textarea>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!--2020/06/17 ADD END セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                                    <li>
+                                        <div class="sanjyou1">
+                                            <div class="sanjyou-title1">
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+                                                <!-- <div class="sanjyou-kuhen">来&nbsp;&nbsp;店</div> -->
+                                                <div class="sanjyou-kuhen">再&nbsp;来&nbsp;店</div>
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+                                                <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                                <!-- <div class="sanjyou-jikan">2017年4月3日</div> -->
+                                                <div class="sanjyou-jikan">2017/04/03</div>
+                                                <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                            </div>
+                                            <div class="sanjyou-title2"></div>
+                                            <div class="sanjyou-honben">
+                                                <textarea id="sanjyou-honben-txt" cols="30" class="sanjyou-honben-txt">小学校のお子様が2名居るので、学校が近くて通いやすい立地の物件をお探しでした。また、3LDKで広めのお部屋をご希望です。ジュピター高崎（1301語室号室）をご提案中です。</textarea>
+                                            </div>
+                                            <div class="sanjyou-henshu" >編&nbsp;&nbsp;集</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sanjyou1">
+                                            <div class="sanjyou-title1">
+                                                <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                                <!-- <div class="sanjyou-jikan">2017年4月20日</div> -->
+                                                <div class="sanjyou-jikan">2017/04/20</div>
+                                                <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                            </div>
+                                            <div class="sanjyou-title2"></div>
+                                            <div class="sanjyou-honben">
+                                                <textarea id="sanjyou-honben-txt" cols="30" class="sanjyou-honben-txt">【物件ラチシを印刷しました】&#13;・ジュピター高崎（1301号室）&#13;・ジュピター高崎（1302号室）&#13;・ジュピター高崎（1303号室）</textarea>
+                                            </div>
+                                            <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+                                            <!-- <div class="sanjyou-henshu">編&nbsp;&nbsp;集</div> -->
+                                            <div class="sanjyou-henshu" style="display:none">編&nbsp;&nbsp;集</div>
+                                            <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sanjyou1">
+                                            <div class="sanjyou-title1">
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+                                                <!-- <div class="sanjyou-kuhen">来&nbsp;&nbsp;店</div> -->
+                                                <div class="sanjyou-kuhen">再&nbsp;来&nbsp;店</div>
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+                                                <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                                <!-- <div class="sanjyou-jikan">2017年4月20日</div> -->
+                                                <div class="sanjyou-jikan">2017/04/20</div>
+                                                <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                            </div>
+                                            <div class="sanjyou-title2"></div>
+
+                                            <div class="sanjyou-honben">
+                                                <textarea id="sanjyou-honben-txt" cols="30" class="sanjyou-honben-txt">【物件ラチシを印刷しました】&#13;・ジュピター高崎（1301号室）&#13;・ジュピター高崎（1302号室）&#13;・ジュピター高崎（1303号室）</textarea>
+
+                                            </div>
+                                            <div class="sanjyou-henshu">編&nbsp;&nbsp;集</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sanjyou1">
+                                            <div class="sanjyou-title1">
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+                                                <!-- <div class="sanjyou-kuhen">来&nbsp;&nbsp;店</div> -->
+                                                <div class="sanjyou-kuhen">再&nbsp;来&nbsp;店</div>
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+                                                <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                                <!-- <div class="sanjyou-jikan">2017年4月20日</div> -->
+                                                <div class="sanjyou-jikan">2017/04/20</div>
+                                                <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                            </div>
+                                            <div class="sanjyou-title2"></div>
+
+                                            <div class="sanjyou-honben">
+                                                <textarea id="sanjyou-honben-txt" cols="30" class="sanjyou-honben-txt">【物件ラチシを印刷しました】&#13;・ジュピター高崎（1301号室）&#13;・ジュピター高崎（1302号室）&#13;・ジュピター高崎（1303号室）</textarea>
+
+                                            </div>
+                                            <div class="sanjyou-henshu" >編&nbsp;&nbsp;集</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sanjyou1">
+                                            <div class="sanjyou-title1">
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+                                                <!-- <div class="sanjyou-kuhen">来&nbsp;&nbsp;店</div> -->
+                                                <div class="sanjyou-kuhen">再&nbsp;来&nbsp;店</div>
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+                                                <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                                <!-- <div class="sanjyou-jikan">2017年4月20日</div> -->
+                                                <div class="sanjyou-jikan">2017/04/20</div>
+                                                <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                            </div>
+                                            <div class="sanjyou-title2"></div>
+
+                                            <div class="sanjyou-honben">
+                                                <textarea id="sanjyou-honben-txt" cols="30" class="sanjyou-honben-txt">【物件ラチシを印刷しました】&#13;・ジュピター高崎（1301号室）&#13;・ジュピター高崎（1302号室）&#13;・ジュピター高崎（1303号室）</textarea>
+
+                                            </div>
+                                            <div class="sanjyou-henshu">編&nbsp;&nbsp;集</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sanjyou1">
+                                            <div class="sanjyou-title1">
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+                                                <!-- <div class="sanjyou-kuhen">来&nbsp;&nbsp;店</div> -->
+                                                <div class="sanjyou-kuhen">再&nbsp;来&nbsp;店</div>
+                                                <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+                                                <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                                <!-- <div class="sanjyou-jikan">2017年4月20日</div> -->
+                                                <div class="sanjyou-jikan">2017/04/20</div>
+                                                <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                            </div>
+                                            <div class="sanjyou-title2"></div>
+
+                                            <div class="sanjyou-honben">
+                                                <textarea id="sanjyou-honben-txt" cols="30" class="sanjyou-honben-txt">【物件ラチシを印刷しました】&#13;・ジュピター高崎（1301号室）&#13;・ジュピター高崎（1302号室）&#13;・ジュピター高崎（1303号室）</textarea>
+
+                                            </div>
+                                            <div class="sanjyou-henshu">編&nbsp;&nbsp;集</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="soudan-syoukai">
+                <!-- 2019/01/30 権晨元(SYS) DEL START C42036-2_不具合対応-BUG86 -->
+                <!-- <div>
+                    <div class="soudan-topbar2"></div>
+                </div> -->
+                <!--  2019/01/30 権晨元(SYS) DEL END C42036-2_不具合対応-BUG86-->
+                <div class="syoukai1">
+                    <!-- 2019/01/30 ADD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    <div class="syoukai-anken-title">
+                        <div>お客様ご紹介物件</div>
+                    </div>
+                    <!-- 2019/01/30 ADD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    <div class="nyuryouku-top"></div>
+                    <div class="syoukai2">
+                        <div class="syoukai-title">
+                            <div class="syoukai-title-left soudan-onasama-box syoukai-box-hyouken">
+                                <span class="syoukai-box-mae">表示条件</span> <label class="lblSelect1"> <select id="sinntyoku2">
+                                        <option selected>お気に入り物件のみ表示</option>
+                                        <option>全物件を表示（非表示物件を含まない）</option>
+                                        <option>全物件を表示（非表示物件を含む）</option>
+                                        <option>現地案内物件のみ表示</option>
+                                        <option>仮押え物件のみ表示</option>
+                                        <option>見積書印刷した物件のみ表示</option>
+                                        <option>チラシ印刷した物件のみ表示</option>
+                                </select>
+                            </div>
+                            <!--  2018/08/13 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                            <!-- <div id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02040Icon.html">
+                                <div class="syoukai-mark-img cirTrDiv"><span>?</span></div>アイコンの説明
+                            </div> -->
+                            <div style="margin-top: 0rem;" id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02040Icon.html">
+                               <img class="syoukai-mark-img" src="../../image/common/icon/help.png">アイコンの説明
+                            </div>
+                            <!--  2018/08/13 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                        </div>
+                        <div>
+                            <table id="guest-view" class="syoukai-table">
+                                <colgroup>
+                                    <col class="colgroup-col1">
+                                    <col class="colgroup-col2">
+                                    <col class="colgroup-col3">
+                                    <col class="colgroup-col4">
+                                    <col class="colgroup-col5">
+                                    <col class="colgroup-col6">
+                                    <col class="colgroup-col7">
+                                    <col class="colgroup-col8">
+                                    <col class="colgroup-col9">
+                                    <col class="colgroup-col10">
+                                </colgroup>
+                                <tr class="table-tr1">
+                                    <td class="tr1-td1 font_normal_b sortBtn" id="time"><a>
+                                            <div class="title1" name="lblHeadpresentDay" id="title0">紹 介 日</div>
+                                    </a></td>
+                                    <td class="tr1-td2 font_normal_b sortBtn"><a>
+                                            <div class="title2" name="linkOtoiawaseBukkenNo" id="title1">ﾎｰﾑﾒｲﾄ物件№</div>
+                                    </a></td>
+                                    <td class="tr1-td3 font_normal_b sortBtn"><a>
+                                            <div class="title3" name="lblHeadBUkkenName" id="title2">物 件 名</div>
+                                    </a></td>
+                                    <td class="tr1-td4 font_normal_b font_small">
+                                        <div class="title4" id="lblOkiniIrido">お気に入り度</div>
+                                    </td>
+                                    <td class="tr1-td5 font_normal_b sortBtn"><a>
+                                            <div class="title5" name="lblHeadMatori" id="title3">間取り</div>
+                                    </a></td>
+                                    <td class="tr1-td6 font_normal_b sortBtn"><a>
+                                            <div class="title6" name="lblHeadYatin" id="title4">家&nbsp;賃</div>
+                                    </a></td>
+                                    <td class="tr1-td7 font_normal_b font_small" id="lblHeadMitumori">
+                                        <div>見&nbsp;積</div>
+                                    </td>
+                                    <td class="tr1-td8 font_normal_b font_small">
+                                        <div id="lblHeadTirashi">チラシ</div>
+                                    </td>
+                                    <td class="tr1-td9 font_normal_b font_small">
+                                        <div id="lblHeadAnnai">案&nbsp;内</div>
+                                    </td>
+                                    <td class="tr1-td10 font_normal_b font_small" id="lblHaedMemo">メ&nbsp;モ</td>
+                                </tr>
+                                <tr class="table-tr2">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年7月12日</td> -->
+                                    <td class="font_normal tr1-td1">2011/07/12</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0049-102</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <div class="width_two_point"><a class="a_line" title="ジュピター高崎">ジュピター高崎</a></div>
+                                            <!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                                            <div class="img_control_style"><img class="netto-hi-keisai_control" src="../../image/common/特典・割引サービス_相談履歴用.svg"></div>
+                                            <!-- 2019/06/25 熊振 C43100_お客様項目の入力簡素化対応 END-->                                
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1R</td>
+                                    <td class="font_normal tr1-td6"><span>78,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori">
+                                            <img src="../../image/ukg02040/mitumori.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <img src="../../image/ukg02040/tirasi.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai">
+                                            <img src="../../image/ukg02040/annai.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komenton input_btn">
+                                            <div class="memo_ico">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento.svg" /> -->
+                                                <img src="../../image/ukg02040/komento.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr3">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年4月28日</td> -->
+                                    <td class="font_normal tr1-td1">2011/04/28</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0168-102</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="エステムコート名古屋栄デュアルレジェント">エステムコート名古屋栄デュアルレジェント</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_d_grey tr1-td4">
+                                        <div class="mosikomi living_flg font_small">申込み</div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1DK</td>
+                                    <td class="font_normal tr1-td6"><span>60,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori">
+                                            <img src="../../image/ukg02040/mitumori.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <img src="../../image/ukg02040/tirasi.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai">
+                                            <img src="../../image/ukg02040/annai.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr4">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年4月28日</td> -->
+                                    <td class="font_normal tr1-td1">2011/04/28</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0160-100</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <!-- 2020/02/27 UPD START 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+                                        <!--<div class="pop_div">
+                                            <a class="a_line" title="エトワール千代田">エトワール千代田</a>
+                                        </div>-->
+                                        <div class="pop_kinshi">
+                                            <a class="a_line a_style" title="エトワール千代田">エトワール千代田</a>
+                                        </div>
+                                        <!-- 2020/02/27 UPD END 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+                                    </td>
+                                    <td class="font_d_grey tr1-td4">
+                                        <div class="nyukyotyu living_flg font_small">(入居中)</div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1LDK+S</td>
+                                    <td class="font_normal tr1-td6"><span>65,500</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <!-- <img src="../../image/ukg02040/tirasi.svg"/>-->
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr5">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年4月28日</td> -->
+                                    <td class="font_normal tr1-td1">2011/04/28</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0165-008</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="プレサンスSAKAEリバースタイル">プレサンスSAKAEリバースタイル</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_d_grey tr1-td4">
+                                        <div class="hihyouji living_flg font_small">(非表示)</div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1R</td>
+                                    <td class="font_normal tr1-td6"><span>68,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <!-- <img src="../../image/ukg02040/tirasi.svg"/>-->
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr6">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年4月20日</td> -->
+                                    <td class="font_normal tr1-td1">2011/04/20</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0357-230</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="スプリングイセヤマ">スプリングイセヤマ</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">2K</td>
+                                    <td class="font_normal tr1-td6"><span>75,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <!-- <img src="../../image/ukg02040/tirasi.svg"/>-->
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr7">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年4月19日</td> -->
+                                    <td class="font_normal tr1-td1">2011/04/19</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0823-114</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="プレサンス大須観音駅前サクシード">プレサンス大須観音駅前サクシード</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1R</td>
+                                    <td class="font_normal tr1-td6"><span>80,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <img src="../../image/ukg02040/tirasi.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr8">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年4月19日</td> -->
+                                    <td class="font_normal tr1-td1">2011/04/19</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0128-505</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="プレミアムコート名古屋金山">プレミアムコート名古屋金山</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1R</td>
+                                    <td class="font_normal tr1-td6"><span>63,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <img src="../../image/ukg02040/tirasi.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr9">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年5月5日</td> -->
+                                    <td class="font_normal tr1-td1">2011/05/05</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0070-003</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="ローレルコート金山">ローレルコート金山</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div class="table-kariosae living_flg font_small">仮押え</div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">2LDK</td>
+                                    <td class="font_normal tr1-td6"><span>64,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori">
+                                            <img src="../../image/ukg02040/mitumori.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <img src="../../image/ukg02040/tirasi.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai">
+                                            <img src="../../image/ukg02040/annai.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr10">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年7月20日</td> -->
+                                    <td class="font_normal tr1-td1">2011/07/20</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0101-111</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="ハイム竹橋">ハイム竹橋</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1LDK+S</td>
+                                    <td class="font_normal tr1-td6"><span>100,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori">
+                                            <img src="../../image/ukg02040/mitumori.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai">
+                                            <img src="../../image/ukg02040/annai.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr11">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年7月12日</td> -->
+                                    <td class="font_normal tr1-td1">2011/07/12</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0112-031</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="グローンコーボ名東引山">グローンコーボ名東引山</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">１R</td>
+                                    <td class="font_normal tr1-td6"><span>68,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori">
+                                            <img src="../../image/ukg02040/mitumori.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <img src="../../image/ukg02040/tirasi.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai">
+                                            <img src="../../image/ukg02040/annai.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr12">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年7月12日</td> -->
+                                    <td class="font_normal tr1-td1">2011/07/12</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0122-024</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="ジュピター高崎">ジュピター高崎</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">2K</td>
+                                    <td class="font_normal tr1-td6"><span>75,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <img src="../../image/ukg02040/tirasi.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr13">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年7月11日</td> -->
+                                    <td class="font_normal tr1-td1">2011/07/11</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0009-006</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="ジュピター高崎">ジュピター高崎</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1DK</td>
+                                    <td class="font_normal tr1-td6"><span>65,500</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori">
+                                            <img src="../../image/ukg02040/mitumori.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai">
+                                            <img src="../../image/ukg02040/annai.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr14">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年7月03日</td> -->
+                                    <td class="font_normal tr1-td1">2011/07/03</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">49-0009-301</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="ルネ鶴舞">ルネ鶴舞</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">2K</td>
+                                    <td class="font_normal tr1-td6"><span>65,500</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori">
+                                            <img src="../../image/ukg02040/mitumori.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr15">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年7月3日</td> -->
+                                    <td class="font_normal tr1-td1">2011/07/03</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">S00-0089-006</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="フレックスコート">フレックスコート</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">2LDK</td>
+                                    <td class="font_normal tr1-td6"><span>100,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi">
+                                            <img src="../../image/ukg02040/tirasi.svg" />
+                                        </div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+                                <tr class="table-tr16">
+                                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <!-- <td class="font_normal tr1-td1">2011年7月3日</td> -->
+                                    <td class="font_normal tr1-td1">2011/07/03</td>
+                                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                    <td class="font_normal tr1-td2">A1-5800-006</td>
+                                    <td class="font_normal tr1-td3" align="left">
+                                        <div class="pop_div">
+                                            <a class="a_line" title="グラースメゾン">グラースメゾン</a>
+                                        </div>
+                                    </td>
+                                    <td class="font_normal tr1-td4">
+                                        <div id="star" class="star_div"></div>
+                                    </td>
+                                    <td class="font_normal tr1-td5">1LDK+S</td>
+                                    <td class="font_normal tr1-td6"><span>80,000</span>円</td>
+                                    <td class="yoyaku font_normal tr1-td7">
+                                        <div class="img-mitumori"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td8">
+                                        <div class="img-tirasi"></div>
+                                    </td>
+                                    <td class="yoyaku font_normal tr1-td9">
+                                        <div class="img-annai"></div>
+                                    </td>
+                                    <td class="jissi font_normal tr1-td10"><a class="img-komento-off input_btn">
+                                            <div class="memo_ico_dis">
+                                                <!-- 2019/03/14 UPD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                                <!-- <img src="../../image/ukg02040/komento_off.svg" /> -->
+                                                <img src="../../image/ukg02040/komento_off.png" />
+                                                <!-- 2019/03/14 UPD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+                                            </div>
+                                    </a></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="soudan-migi">
+            <div class="soudan-onasama">
+                <div class="soudan-onasama-title">
+                    <div class="soudan-onasama-title-oblong"></div>
+                    お客様情報
+                </div>
+                <div class="soudan-onasama-naiyou">
+
+                    <div class="soudan-onasama-first">
+                        <div class="soudan-onasama-menu">・ 受付№</div><span class="soudan-onasama-second">41-000-007</span>
+                    </div>
+
+                    <div class="soudan-onasama-first">
+                        <div class="soudan-onasama-menu">・ 受付日時</div>
+                        <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                        <!-- <span class="soudan-onasama-second">2016年7月2日</span> -->
+                        <span class="soudan-onasama-second">2016/07/02</span>
+                        <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    </div>
+                    <!-- 2019/06/18 熊振 C43100_お客様項目の入力簡素化対応 START-->
+                    <div class="soudan-onasama-first">
+                        <div class="soudan-onasama-menu">・ お客様名</div>        
+                    </div>
+                    <div class="margin_bottom">
+                         <input class="txt-bukkenn-ichi_blue" type="text" maxlength=20 />
+                         <div class="yang_class">様</div>
+                    </div>
+                    <div class="soudan-onasama-first">
+                         <div class="soudan-onasama-menu_ano">・ お客様名カナ</div> 
+                    </div>
+                    <div class="margin_bottom">
+                            <input class="txt-bukkenn-ichi_blue" type="text" maxlength=20 />
+                            <div class="yang_class">様</div>
+                    </div>
+                    <div class="soudan-onasama-first">
+                            <div class="soudan-onasama-menu_ano">・ 電話番号</div> 
+                    </div>
+                    <div>
+                            <input class="txt-bukkenn-ichi_blue" type="text" maxlength=20 />
+                            <div class="yang_class"></div>
+                    </div>
+                    <div class="soudan-onasama-first">
+                            <div class="soudan-onasama-menu_ano">・ メールアドレス</div> 
+                    </div>
+                    <div>
+                            <input class="txt-bukkenn-ichi_blue_ano" type="text" maxlength=20 />
+                            <div class="yang_class"></div>
+                    </div>
+                    <div class="soudan-onasama-two">
+                        <div class="soudan-onasama-menu">・ 進捗状況 </div>
+                        <!--2020/07/01 UPD START セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                        <!--<span class="font_normal">商談中</span>-->
+                        <label class="lblSelect1">
+                            <select id="sinntyoku1" onchange="changesinchoku(this)">
+                                <option value="1" selected>商談中</option>
+                                <option value="6">他決</option>
+                                <option value="7">中止</option>
+                            </select>
+                        </label>
+                        <!--2020/07/01 UPD END セツ(SYS) C43040-2_法人の入力項目追加対応-->
+                        <!-- <label class="lblSelect1"> <select id="sinntyoku1">
+                                <option selected>申し込み</option>
+                                <option>他決</option>
+                                <option>中止</option>
+                        </select>
+                        </label> -->
+                    </div>
+                    <!-- 2019/06/18 熊振 C43100_お客様項目の入力簡素化対応 END-->
+                    <div class="soudan-onasama-two">
+                        <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                        <!-- <div class="soudan-onasama-menu">・ ご来店予定 </div>
+                        <div id="visit-btn" class="soudan-onasama-ratei font_blue">ご来店予約</div> -->
+                        <div class="soudan-onasama-menu">・ 来店予定 </div>
+                        <div id="visit-btn" class="soudan-onasama-ratei font_blue">来店予約</div>
+                        <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    </div>
+                    <!-- 2021/03/15 楊振華 START ADD C45032_オンライン仲介システムの導入 -->
+                    <div class="soudan-onasama-two soudan-onasama-top">
+                        <div class="soudan-onasama-menu">・ オンライン<br/><div class="soudan-center">仲 介</div></div>
+                        <div id="visit-btn" class="soudan-onasama-service font_blue">接客予約</div>
+                        <div class="kaijo-settei" style="display: none;">
+                        <span class="fontWeight">2021/03/11 18:30</span>
+                        </div>
+                        <div id="visit-btn" style="display: none;" class="soudan-onasama-start font_blue" onclick="window.open('UKG020401.html','_blank')" >開  始</div>
+                    </div>
+                    <!-- 2021/03/15 楊振華 START ADD C45032_オンライン仲介システムの導入 -->
+                </div>
+                <div class="soudan-onasama-tuikyaku">
+                    <div class="soudan-onasama-tuikyakuaramu">
+                        <span class="soudan-onasama-aranu-square"></span>業務アラーム
+                        <!-- 2019/02/18 DEL START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                        <!-- <div class="soudan-onasama-aranu">アラームの設定</div> -->
+                        <!--  2018/08/13 UPDATE START 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                        <!-- <div pageid="help_ukg02040Tuikyaku.html" class="soudan-onasama-mark cirTrDiv a_help"><span>?</span></div> -->
+                        <!-- <div style="margin-top: 0rem;" id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02040Tuikyaku.html">
+                            <img class="soudan-onasama-mark" src="../../image/common/icon/help.png">
+                        </div> -->
+                        <!-- <div style="margin-top: 0rem;" id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02040Tuikyaku.html">
+                            <img class="syoukai-mark-img" src="../../image/common/icon/help.png">
+                        </div> -->
+                        <!--  2018/08/13 UPDATE END 張陽陽(SYS) C42036-不具合対応-BUG36 -->
+                        <!-- 2019/02/18 DEL END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    </div>
+                    <!-- 2019/02/18 ADD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    <div class="aramu-button">
+                        <div class="soudan-onasama-aranu">アラームの設定</div>
+                        <!-- 2019/01/30 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                        <!-- <div style="margin-top: 0rem;" id="aikonSetumeiHelp" class="syoukai-mark a_help" pageid="help_ukg02040Tuikyaku.html"> -->
+                        <div id="aikonSetumeiHelp" class="syoukai-mark-one a_help" pageid="help_ukg02040Tuikyaku.html">
+                        <!-- 2019/01/30 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                            <img class="syoukai-mark-img" src="../../image/common/icon/help.png">
+                        </div>
+                    </div>
+                    <!-- 2019/02/18 ADD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    <div class="kaijo-settei-div">
+                        <div class="kaijo-settei">
+                        <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                        <!-- <span class="soudan-onasama-second">2017年10月20日</span> -->
+                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <span class="settei-date">2017/10/20</span>
+                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                            <span class="kaijo">解 除</span>
+                        </div>
+                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <div class="alarm-naiyou">「グランドメゾン城北」について、確認する。</div>
+                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                    </div>
+                    <!-- 2018/09/20 不具合対応-BUG70 START -->
+                    <!-- <div class="soudan-onasama-aranu-nayou">お客様との約束事などの期限を登録しておくと期限が近づくと トップページの｢追客アラーム｣に警告を表示することができます。</div> -->
+                    <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    <!-- <div class="soudan-onasama-aranu-nayou">お客様との約束事などの期限を登録しておくと、期限が近づいた際、トップページの「追客アラーム」に通知されます。</div> -->
+                    <!-- 2019/02/27 UPD START 権晨元(SYS) C42036-不具合対応-BUG88 -->
+                    <!-- <div class="soudan-onasama-aranu-nayou">お客様との約束事などの期限を登録しておくと、期限が近づくとトップページの｢業務アラーム｣に警告を表示できます。</div> -->
+                    <!-- 2020/03/16 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+                    <!-- <div class="soudan-onasama-aranu-nayou">お客様との約束事などの期限を登録しておくと、期限が近づくとトップページの｢業務アラーム｣にお知らせを表示できます。</div> -->
+                    <div class="soudan-onasama-aranu-nayou">お客様との約束事などの期限を登録して</div>
+                    <div class="soudan-onasama-aranu-nayouAno">ておくと、期限が近づくとトップページ</div>
+                    <div class="soudan-onasama-aranu-nayouAno">の｢業務アラーム｣にお知らせを表示でき</div>
+                    <div class="soudan-onasama-aranu-nayouAno">ます。</div>
+                     <!-- 2020/03/13 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+                    <!-- 2019/02/27 UPD END 権晨元(SYS) C42036-不具合対応-BUG88 -->
+                    <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                    <!-- 2018/09/20 不具合対応-BUG70 END -->
+                </div>
+                <div class="soudan-onasama-memo">
+                    <div class="soudan-onasama-tuikyakuaramu">
+                        <span class="soudan-onasama-aranu-square"></span>メモ
+                    </div>
+                    <div class="soudan-onasama-memo-txt" align="left">
+                        <textarea id="guest-memo" cols="20" class="txtmode1 memo" placeholder="メモを登録できます。"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="soudan-buken">
+                <div class="buken-title">
+                    <div class="buken-title-oblong"></div>
+                    物件のご案内状況
+                </div>
+                <div class="buken-naiyou">
+                    <div class="naiyou">
+                        <div class="kinihairi">
+                            <img class="kinihairi-img" src="../../image/ukg02040/kiboujyouken.svg" />
+                            <span class="kinihairi-span1">お気に入り物件数</span>
+                            <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                            <!-- <div id="OkiniiriSuuShow" style="width: 81px;"> -->
+                            <div id="OkiniiriSuuShow">
+                            <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                            <span class="kinihairi-span2">11</span> <span class="kinihairi-span3">件</span>
+                            </div>
+                        </div>
+                        <div class="sintyaku">
+                            <div class="sintyaku-div1">
+                                <img class="kinihairi-img" src="../../image/ukg02040/sityaku.svg" />
+                                <span class="kinihairi-span1">新着物件数</span>
+	                            <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+	                            <!-- <div id="lblsinchakuCountSuu" style="width: 81px;"> -->
+	                            <div id="OkiniiriSuuShow">
+	                            <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                <span class="kinihairi-span2">13</span> <span class="kinihairi-span3">件</span>
+                                </div>
+                            </div>
+                            <!-- 2019/01/30 権晨元(SYS) DEL START C42036-2_不具合対応-BUG86 -->
+                            <!-- <div class="sintyaku-div2">
+                                <div>※お客様のご希望にあう物件が 新たに空室となりました。</div>
+                            </div> -->
+                            <!-- 2019/01/30 権晨元(SYS) DEL END C42036-2_不具合対応-BUG86 -->
+
+                        </div>
+                        <div class="insatu">
+                            <img class="kinihairi-img" src="../../image/ukg02040/innsatsu-bukkenn-suuryou.svg" />
+                            <span class="kinihairi-span1">チラシ印刷物件数</span>
+                            <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                            <!-- <div id="lblTirashiPrintSuuShow" style="width: 81px;"> -->
+                            <div id="lblTirashiPrintSuuShow">
+                            <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                            <span class="kinihairi-span2">11</span> <span class="kinihairi-span3">件</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="kariosae">
+                        <div class="kariosae-title">
+                            <!-- 2019/01/30 権晨元(SYS) DEL START C42036-2_不具合対応-BUG86 -->
+                            <!-- <div class="kariosae-title-oblong"></div> -->
+                            <!-- 2019/01/30 権晨元(SYS) DEL END C42036-2_不具合対応-BUG86 -->
+                            <div>仮押え物件</div>
+                        </div>
+                        <div class="kariosae-naiyou">
+                            <div class="kariosae-naiyou-div">
+                                <img class="kariosae-div1" src="../../image/ukg02040/mejirusi.png" />
+                                <div class="kariosae-div2">
+                                    <div class="kariosae-moji1">ライオンズシティ代官町グランドホテル</div>
+                                    <div class="kariosae-moji2">102号室</div>
+                                    <div class="kariosae-moji3">有効期限 ： 10/15まで</div>
+                                </div>
+                            </div>
+                            <div class="kariosae-naiyou-line"></div>
+                            <div class="kariosae-naiyou-div">
+                                <img class="kariosae-div1" src="../../image/ukg02040/mejirusi.png" />
+                                <div class="kariosae-div2">
+                                    <div class="kariosae-moji1">グランドメゾン城北</div>
+                                    <div class="kariosae-moji2">102号室</div>
+                                    <div class="brackets">
+                                        <div class="brackets">(</div>
+                                        <div class="kariosae-moji4">期限切れ</div>
+                                        <div class="brackets">)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kariosae-naiyou-line"></div>
+                            <div class="kariosae-naiyou-div">
+                                <img class="kariosae-div1" src="../../image/ukg02040/mejirusi.png" />
+                                <div class="kariosae-div2">
+                                    <div class="kariosae-moji1">コーポ城之崎</div>
+                                    <div>
+                                        <div class="kariosae-moji2">102号室</div>
+                                        <div class="brackets">
+                                            <div class="brackets">(</div>
+                                            <div class="kariosae-moji4">仮押え解除</div>
+                                            <div class="brackets">)</div>
+                                        </div>
+                                        <!-- 2019/01/30 権晨元(SYS) DEL START C42036-2_不具合対応-BUG86 -->
+                                        <!-- <div class="genti-jisi1">確 認</div> -->
+                                        <!-- 2019/01/30 権晨元(SYS) DEL END C42036-2_不具合対応-BUG86 -->
+                                    </div>
+                                    <div class="genti-jisi1">確 認</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genti">
+                        <div class="kariosae-title">
+                            <!-- 2019/01/30 権晨元(SYS) DEL START C42036-2_不具合対応-BUG86 -->
+                            <!-- <div class="kariosae-title-oblong"></div> -->
+                            <!-- 2019/01/30 権晨元(SYS) DEL END C42036-2_不具合対応-BUG86 -->
+                            現地案内
+                        </div>
+                        <div class="genti-naiyou">
+                            <div class="genti-naiyou-div">
+                                <img class="genti-div1" src="../../image/ukg02040/mejirusi.png" />
+
+                                <div class="genti-div2">
+                                    <div class="genti-line1">
+                                        <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                        <!-- <span class="genti-jikan1">2017年8月1日 15:30</span> -->
+                                        <span class="genti-jikan1">2017/08/01 15:30</span>
+                                        <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                        <div class="genti-jisi">実 施</div>
+                                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <div class="font_normal_red genti-jisizumi genti-jisizumi-a">実施済</div>
+                                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    </div>
+                                    <div class="genti-div3">
+                                    <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    	<div style="display: flex;">
+                                    		<span style="margin-left: 0.03rem;">・</span>
+                                    		<div class="genti-moji">ライオンズシティ代官町グランドホテル</div>
+                                    	</div>
+                                        <div style="display: flex;">
+                                    		<span style="margin-left: 0.03rem;">・</span>
+                                    		<div class="genti-moji">グランドメゾン城北(102号室)</div>
+                                    	</div>
+                                    	<div style="display: flex;">
+                                    		<span style="margin-left: 0.03rem;">・</span>
+                                    		<div class="genti-moji">コーポ城之崎(102号室)</div>
+                                    	</div>
+                                    <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kariosae-naiyou-line"></div>
+                            <div class="genti-naiyou-div">
+                                <img class="genti-div1" src="../../image/ukg02040/mejirusi.png" />
+                                <div class="genti-div2">
+                                    <div class="genti-line1">
+                                        <!-- 2019/02/18 UPD START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                        <!-- <span class="genti-jikan1">2017年8月1日 15:30</span> -->
+                                        <span class="genti-jikan1">2017/08/01 15:30</span>
+                                        <!-- 2019/02/18 UPD END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+                                        <div class="genti-jisi genti-jisi-a">実 施</div>
+                                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                        <!--<div class="font_normal_red genti-jisizumi">※実施済</div>-->
+                                        <div class="font_normal_red genti-jisizumi">実施済</div>
+                                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    </div>
+                                    <div class="genti-div3">
+                                    	<!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                                    	<div style="display: flex;">
+                                    		<span style="margin-left: 0.03rem;">・</span>
+                                    		<div class="genti-moji">ライオンズシティ代官町グランドホテル</div>
+                                    	</div>
+                                    	<div style="display: flex;">
+                                    		<span style="margin-left: 0.03rem;">・</span>
+                                    		<div class="genti-moji">グランドメゾン城北(102号室)</div>
+                                    	</div>
+                                    	<div style="display: flex;">
+                                    		<span style="margin-left: 0.03rem;">・</span>
+                                    		<div class="genti-moji">コーポ城之崎(102号室)</div>
+                                    	</div>
+                                        <!-- 2019/10/22 李興麗 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 2019/03/12 ADD START 権晨元(SYS) C42036-不具合対応-BUG94 -->
+        </div>
+        <!-- 2019/03/12 ADD END 権晨元(SYS) C42036-不具合対応-BUG94 -->
+    </div>
+    <div class="soudan-insatu">
+        <!-- 2020/02/14 ADD START 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+        <div class="img-Bukken" onclick="clickBukken()">
+            <img class="thickbox thickbox-img" src="../../image/common/button/annai_tirasi_insatu_gray.png"></img>
+            <a class="thickbox thickbox-show" style="display: none;"> <img class="thickbox-img" src="../../image/common/button/annai_tirasi_insatu.png"></img>
+            </a>
+        </div>
+        <!-- 2020/02/14 ADD END 陳龍龍(SYS) C44041_物件チラシの一括作成 -->
+        <div class="img-insatu">
+            <!-- 2019/01/30 DEL START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+            <!-- <img src="../../image/common/button/kado_insatu.png"/> -->
+            <!-- 2019/01/30 DEL END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+        </div>
+        <div class="img-kyanseru">
+            <!-- 2019/01/30 DEL START 権晨元(SYS) C42036-不具合対応-BUG86 -->
+            <!-- <img src="../../image/common/button/kyanseru.png"/> -->
+            <!-- 2019/01/30 DEL END 権晨元(SYS) C42036-不具合対応-BUG86 -->
+        </div>
+    </div>
+    <!-- popup div -->
+    <table id="pop_message">
+        <tr>
+            <td valign="top"><img id="address_ico"></td>
+            <td>
+                <div class="bubble_div">
+                    <div id="kibo_bubble_div">
+                        <span class="font_normal_green">和室があるため、非表示にしました。</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!--pop_input 隠し項-->
+    <div id="pop_input" class="popinput">
+        <div class="popinput-div">
+            <textarea id="textMessage" class="popinput-div-text txtmode1 memo" rows="4" cols="20"></textarea>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <!-- ukg99006を遷移する -->
+    <div id="pop_one">
+        <iframe class="pop_one" src="UKG99006.html?keepThis=true&TB_iframe=true" name="content_frame"></iframe>
+    </div>
+    <!-- ukg02041を遷移する -->
+    <div id="pop_two">
+        <iframe class="pop_two" src="UKG02041.html?keepThis=true&TB_iframe=true" name="content_frame"></iframe>
+    </div>
+    <!-- ukg02043を遷移する -->
+    <div id="pop_ukg02043">
+        <iframe class="pop_ukg02043" src="UKG02043.html?keepThis=true&TB_iframe=true" name="content_frame"></iframe>
+    </div>
+    <!-- 2020/03/16 熊振 ADD C44030_お部屋探しNaviマルチブラウザ対応 START  -->
+    <input type="hidden" id="clickTab" value="0"/>    
+    <!-- 2020/03/16 熊振 ADD C44030_お部屋探しNaviマルチブラウザ対応 END  -->
+</body>
+
+</html>

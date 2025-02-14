@@ -1,0 +1,184 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG02034.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/jquery.autocomplete.css" />
+
+<script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="../../js/thickbox.js"></script>
+<script type="text/javascript" src="../../js/jquery.common.js"></script>
+<script type="text/javascript" src="../../js/UKG02034.js"></script>
+<script type='text/javascript' src="../../js/jquery.autocomplete.min.js"></script>
+
+<div class="tsuukinn-sannkakukei"></div>
+<div class="tsuukinn-joukenn-naiyou">
+    <div class="tsuukinn-hint">通勤&nbsp;&bull;&nbsp;通学地点の最寄駅と、所要時間&nbsp;&bull;&nbsp;乗換え回数等の条件を設定してください。</div>
+    <div class="tsuukinn-naiyou-select">
+        <input id="station" type="text" class="tsuukinn-select" onkeyup="stationCheck()" autocomplete="off"/>
+        <span class="font-local">駅まで</span>
+        <label class="tsuukinn-label tsuukinn-label-a">
+            <select class="tsuukinn-select tsuukinn-select-a">
+                <option value="1">5</option>
+                <option value="2">10</option>
+                <option value="3">15</option>
+                <option value="4">20</option>
+                <option value="5">25</option>
+                <option value="6">30</option>
+                <option value="7" selected="selected">35</option>
+                <option value="8">40</option>
+                <option value="9">45</option>
+                <option value="10">50</option>
+                <option value="11">55</option>
+                <option value="12">60</option>
+            </select>
+        </label>
+        <span class="font-local">分以内で通勤・通学可能な物件</span> <span class="font-local left-width">乗換許容回数：</span>
+        <label class="tsuukinn-label tsuukinn-label-b">
+            <select class="tsuukinn-select tsuukinn-select-b">
+                <option value="1">指定なし</option>
+                <option value="2">直通のみ</option>
+                <option value="3">1回以内</option>
+                <option value="4">2回以内</option>
+                <option value="5">3回以内</option>
+            </select>
+        </label>
+        <img class="basu-jousha" src="../../image/ukg02030/basu-jousha.svg">
+    </div>
+    <img class="rosenn-kakuninn" src="../../image/ukg02030/rosenn-kakuninn.svg" />
+    <div class="tsuukinn-search-hint">利用する路線を指定してください。</div>
+    <div class="tsuukinn-search-div">
+        <div class="gyou-div" id="tsuukinn-gyou-a">
+            <div class="tsuukinn-gyou">
+                <div id="checkboxAllA" class="checkbox-search"></div>
+                <span class="gyou gyou-a">西日本旅客鉄道</span>
+            </div>
+            <div class="gyou-line"></div>
+            <table class="duiqi">
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR山陽本線(神戸一門司)</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR播但線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR山陽新幹線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR山陽本線(神戸一門司)</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR播但線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-a"></div> <span class="font_normal font-normal-a">JR赤穗線</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="gyou-div" id="ka-gyou">
+            <div class="tsuukinn-gyou">
+                <div id="checkboxAllB" class="checkbox-search"></div>
+                <span class="gyou gyou-b">神戸市交通局</span>
+            </div>
+            <div class="gyou-line"></div>
+            <table class="duiqi">
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR山陽本線(神戸一門司)</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR播但線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR山陽新幹線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR山陽本線(神戸一門司)</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR播但線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-b"></div> <span class="font_normal font-normal-b">JR赤穗線</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="gyou-div" id="sa-gyou">
+            <div class="tsuukinn-gyou">
+                <div id="checkboxAllC" class="checkbox-search"></div>
+                <span class="gyou gyou-c">東海旅客鉄道</span>
+            </div>
+            <div class="gyou-line"></div>
+            <table class="duiqi">
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR山陽本線(神戸一門司)</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR播但線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR山陽新幹線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR山陽本線(神戸一門司)</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR播但線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-c"></div> <span class="font_normal font-normal-c">JR赤穗線</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="gyou-div" id="ta-gyou">
+            <div class="tsuukinn-gyou">
+                <div id="checkboxAllD" class="checkbox-search"></div>
+                <span class="gyou gyou-d">名古屋臨海高速鉄道</span>
+            </div>
+            <div class="gyou-line"></div>
+            <table class="duiqi">
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR山陽本線(神戸一門司)</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR播但線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR山陽新幹線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR山陽本線(神戸一門司)</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR赤穗線</span></td>
+                </tr>
+                <tr>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR播但線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR山陽線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR加古川線</span></td>
+                    <td class="duiqi-td"><div class="checkbox-search checkbox-search-d"></div> <span class="font_normal font-normal-d">JR赤穗線</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

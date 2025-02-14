@@ -1,0 +1,675 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG04013.css"></link>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+    <div class="maiDiv">
+        <!--物件の指定-->
+        <div class="bukken-sitei-div">
+            <div class="bukkenn-number-shitei">
+                <div class="seihoukei-red"></div>
+                <div>物件の指定</div>
+            </div>
+            <table id="bukkenSitei" class="UGK04013Table">
+                <tr>
+                    <td rowspan="2">
+                        <div class="bg-pink">
+                            <span class="font-normal"> ホームメイト物件No. </span>
+                        </div>
+                    </td>
+                    <td class="guest-view-font">
+                    	<!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!--<input class="txt-blur txt-a" type="text" maxlength=2 />-->
+                        <input class="txt-blur txt-a text-mode txt-homemateNo-first" type="text" id="txtHomemateBukkenNo1" name="txtHomemateBukkenNo1" maxlength="2"/>
+                        <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        <span class="center-line"></span>
+                        <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                        <!--<input class="txt-blur txt-b" type="text" maxlength=4 />&nbsp;&nbsp;&nbsp;-->
+                        <input class="txt-blur txt-b txt-homemateNo-beh" type="text" id="txtHomemateBukkenNo2" name="txtHomemateBukkenNo2" maxlength="4"/>&nbsp;&nbsp;&nbsp;
+                        <!-- 2019/10/24 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        <input id="inputcler" class="txt-blur txt-homemateNo-name" type="text" maxlength=5 placeholder="物件名から検索する場合は、ここに入力" /></td>
+                    <td class="guest-view-font">
+                        <div class="show-room-div">
+                            <div class="checkbox-search checked">
+                                <div class="checkbox-checked"></div>
+                            </div>
+                            <span id="showRoomSpan">入居中の部屋を表示する</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="bukken-sitei-hint">※物件NO.または物件名から物件を検索することができます。</span></td>
+                </tr>
+            </table>
+        </div>
+        <!--物件情報-->
+        <div class="bukkenn-gaiyou-div">
+            <div class="bukkenn-gaiyou">
+                <div class="seihoukei-green"></div>
+                <div>物件概要</div>
+            </div>
+            <table id="bukkenJouhou">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="bg-green bukkenn-gaiyou-td">
+                                <span>所&nbsp;在&nbsp;地</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>名古屋市千種区高見</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="bg-green koutsuu">
+                                <span>交&nbsp;&nbsp;&nbsp;&nbsp;通</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span title="名鉄名古屋本線 名鉄名古屋駅 まで徒歩4分">名鉄名古屋本線 名鉄名古屋駅 まで徒歩4分</span>
+                            </div>
+                            <div class="walking-time">
+                                <span title="名古屋市営地下鉄桜通線 国際センター駅  まで徒歩4分">名古屋市営地下鉄桜通線 国際センター駅 まで徒歩4分</span>
+                            </div>
+                            <div class="walking-time">
+                                <span title="名古屋市営地下鉄桜通線 国際センター駅  まで徒歩4分">名古屋市営地下鉄桜通線 国際センター駅 まで徒歩4分</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="bg-green bukkenn-gaiyou-td">
+                                <span>管理会社</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span id="kanrigaisya">株式会社リアルエステート</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="bg-green bukkenn-gaiyou-td">
+                                <span>完成年月</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>2008年9月</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bukkenjouhou-div">
+                <img class="bukkenjouhou-img" src="../../image/ukg04013/bukkenjouhou.jpg">
+            </div>
+        </div>
+        <div class="UKG04013-table">
+            <div class="jouhou-view-div">
+                <table class="jouhou-view">
+                    <tbody>
+                        <tr>
+                            <td id="title0" class="font-table-title sortBtn">
+                                <div class="color-blue">
+                                    <span>号&nbsp;室</span>
+                                    <div style="border-top: 0.1rem solid #3E8DCA;display:none;" class="sort-up"></div> <!-- 20180320 -->
+                                </div>
+                            </td>
+                            <td id="title1" class="font-table-title sortBtn">
+                                <div class="color-blue">
+                                    <span>間取り</span> <!-- 20180408 -->
+                                    <div style="border-top: 0.1rem solid #3E8DCA;display:none;" class="sort-up"></div> <!-- 20180320 -->
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>面&nbsp;積</span>
+                                </div>
+                            </td>
+                            <td id="title2" class="font-table-title sortBtn" >
+                                <div class="color-blue">
+                                    <span>家&nbsp;賃</span>
+                                    <div style="border-top: 0.1rem solid #3E8DCA;display:none;" class="sort-up"></div> <!-- 20180320 -->
+                                </div>
+                            </td>
+                            <td class="font-table-title" >
+                                <div>
+                                    <span>共&nbsp;益&nbsp;費</span>
+                                </div>
+                            </td>
+                            <td class="font-table-title" >
+                                <div>
+                                    <span>駐&nbsp;車&nbsp;場</span>
+                                </div>
+                            </td>
+                            <td class="font-table-title" >
+                                <div>
+                                    <span>入居状況</span>
+                                </div>
+                            </td>
+                            <td class="font-table-title" >
+                                <div>
+                                    <span>入居可能日 <!-- 20180408 -->
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="font-table-title" >
+                                <div>
+                                    <span>募集開始日 <!-- 20180408 -->
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="font-table-title" >
+                                <div>
+                                    <span>募集広告科 <!-- 20180408 -->
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="guest-view-div">
+                <table id="guest-view">
+                    <tbody>
+                        <tr>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <a class="a_line">101</a>
+                                </div>
+                            </td>
+                            <td class="guest-view-font"  title="4LDK + S">
+                                <div>
+                                    <span>4LDK + S</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>60.5㎡</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>99,999,999円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>99,999,999円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>99,999,999円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span id="kousitu1" class="kousitu">空&nbsp;室</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>99,999,999円</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <a class="a_line">104</a>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" title="4LDK + S">
+                                <div>
+                                    <span>4LDK + S</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>60.5㎡</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>45,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span id="kousitu2" class="kousitu">空&nbsp;室</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>－</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>－</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>15,000円</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <a class="a_line">103</a>
+                                </div>
+                            </td>
+                            <td class="guest-view-font"  title="4LDK + S">
+                                <div>
+                                    <span>4LDK + S</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>60.5㎡</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>45,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span id="kousitu3" class="kousitu">空&nbsp;室</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>15,000円</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <a class="a_line">106</a>
+                                </div>
+                            </td>
+                            <td class="guest-view-font"  title="4LDK + S">
+                                <div>
+                                    <span>4LDK + S</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>60.5㎡</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>45,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span id="kousitu4" class="kousitu">空&nbsp;室</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>15,000円</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <a class="a_line">105</a>
+                                </div>
+                            </td>
+                            <td class="guest-view-font"  title="4LDK + S">
+                                <div>
+                                    <span>4LDK + S</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>60.5㎡</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>45,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span id="kousitu5" class="kousitu">空&nbsp;室</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>15,000円</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <a class="a_line">109</a>
+                                </div>
+                            </td>
+                            <td class="guest-view-font"  title="4LDK + S">
+                                <div>
+                                    <span>4LDK + S</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>60.5㎡</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span >45,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span >5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span >5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span id="kousitu6" class="kousitu">空&nbsp;室</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013/01/02</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span >15,000円</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <a class="a_line">108</a>
+                                </div>
+                            </td>
+                            <td class="guest-view-font"  title="4LDK + S">
+                                <div>
+                                    <span>4LDK + S</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font">
+                                <div>
+                                    <span>60.5㎡</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span >45,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span >5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span >5,000円</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span id="kousitu7" class="kousitu">空&nbsp;室</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013年1月2日</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span>2013年1月2日</span>
+                                </div>
+                            </td>
+                            <td class="guest-view-font" >
+                                <div>
+                                    <span >15,000円</span>
+                                </div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-line"></div>
+        </div>
+        <div id="idHideJouhouDiv" class="hideJouhouDiv guest-view-font">
+            <div>
+                <div class="text-distance">
+                    <b>管理会社</b>
+                </div>
+                <table class="text-distance kannri-kaisha-table">
+                    <tbody>
+                        <tr>
+                            <td class="text-distance">管理者社名</td>
+                            <td class="text-distance">-</td>
+                            <td class="text-distance">ナゴヤビル管理株式会社</td>
+                        </tr>
+                        <tr>
+                            <td class="text-distance">住 所</td>
+                            <td class="text-distance">-</td>
+                            <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!--<td class="text-distance">愛知県名古屋市中区丸の内１丁目5-12 丸の内ビル13F</td>-->
+                            <td class="text-distance">愛知県名古屋市中区丸XXX</td>
+                            <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr>
+                            <td class="text-distance">電話番号</td>
+                            <td class="text-distance">-</td>
+                            <td class="text-distance">052-111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="text-distance">連絡先電話番号</td>
+                            <td class="text-distance">-</td>
+                            <td class="text-distance">052-111-1111</td>
+                        </tr>
+                        <tr>
+                        	<!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!--<td>&nbsp;</td>-->
+                            <td class="text-distance">E-Mail</td>
+                            <td class="text-distance">-</td>
+                            <td class="text-distance">XXXXX@XXXX.co.jp</td>
+                            <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 2019/10/25 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                <div class="Part1_line_dot"></div>
+                <!-- 2019/10/25 李龍涛 ADD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                <div class="text-distance">
+                    <b>賃貸人</b>
+                </div>
+                <table class="text-distance kannri-kaisha-table">
+                    <tbody>
+                        <tr>
+                            <td class="text-distance">賃貸人名</td>
+                            <td class="text-distance">-</td>
+                            <td class="text-distance">大家 はな (オオイエ ハナ)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-distance">住 所</td>
+                            <td class="text-distance">-</td>
+                            <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!--<td class="text-distance">愛知県名古屋市中区丸の内１丁目5-12 丸の内ビル13F</td>-->
+                            <td class="text-distance">愛知県名古屋市中区丸XXX</td>
+                            <!-- 2019/10/25 李龍涛 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr>
+                            <td class="text-distance">電話番号</td>
+                            <td class="text-distance">-</td>
+                            <td class="text-distance">052-111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="text-distance">・連絡先１</td>
+                        </tr>
+                        <tr>
+                            <td class="text-distance rennrakusaki" colspan="3">
+                                <table class="rennrakusaki-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>名 称</td>
+                                            <td>-</td>
+                                            <td>大家花店 (オオイエハナテン)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-distance">電話番号</td>
+                                            <td class="text-distance">-</td>
+                                            <td class="text-distance">052-111-1111</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="shikiru-line"></div>
+                <table class="shiire-table">
+                    <tbody>
+                        <tr>
+                            <td class="text-distance"><b>仕入日</b></td>
+                            <td class="text-distance">-</td>
+                            <td class="text-distance">2013年4月15日</td>
+                            <td class="nyukyochu" rowspan="2">
+                                <button id="nyuuKyoTyuu" title="オーナー様へ問い合わせた結果、すでに入居が決まっていた場合は、このボタンをクリックして、部屋情報を「入居中」に変更してください。" class="btn primary">
+                                    <div>入居中に変更する</div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-distance"><b>仕入担当者</b></td>
+                            <td class="text-distance">-</td>
+                            <td class="text-distance">東建&#12288;太郎</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="pop99007">
+        <iframe class="pop99007-iframe" src="UKG99007.html?keepThis=true&TB_iframe=true" name="content_frame"></iframe>
+    </div>
+</body>
+</html>

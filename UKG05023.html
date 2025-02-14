@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" type="text/css" href="../../css/ff/pageTab.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/UKG05023.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/content_zoom.css"></link>
+    <link rel="stylesheet" type="text/css" href="../../css/ff/twitter.css" />
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/help.js"></script>
+    <script type="text/javascript" src="../../js/UKG05023.js"></script>
+    <script type="text/javascript" src="../../js/artDialog.js"></script>
+    <script type="text/javascript" src="../../js/incontent_zoom.js"></script>
+</head>
+
+<body data-font="27.4">
+    <form id="form5023">
+        <div id="stadiv">
+            <div class="buken-shitei-area">
+                <div class="host_title"></div>
+                <div class="buken-shitei">
+                    <div class="align-center kensaku-bkg">
+                        <div class="align-center homemate-label"><span>ホームメイト物件№</span></div>
+                        <div class="align-center homemateNo-first">
+                            <input class="txt-homemateNo-first" type="text" id="test1" maxlength="2"/>
+                        </div>
+                        <div class="align-center homemateNo-div"></div>
+                        <div class="align-center homemateNo-beh">
+                            <input class="txt-homemateNo-beh" type="text" id="test2" maxlength="4"/>
+                        </div>
+                        <div class="align-center homemateNo-name">
+                            <!-- 2019/03/16 程旋 UPD C44030_お部屋探しNaviマルチブラウザ対応 START -->
+                            <input class="inputcler txt-homemateNo-name" type="text" id="test3" maxlength="20" placeholder="物件名がら検索する場合は、ここに入力"/>
+                            <!-- 2019/03/16 程旋 UPD C44030_お部屋探しNaviマルチブラウザ対応 END -->
+                        </div>
+                        <div class="hoshi-label">
+                            <span>※物件Noもしくは物件名から</span><br>
+                            <span class="spaadd">物件を検索することができます。</span>
+                        </div>
+                    </div>
+                    <div class="deadline-div"></div>
+                </div>
+                <div id="otherBukken" class="otherBukken">
+                    <div class="otherName"><span>330043 スターライズ</span></div>
+                    <div class="otherName"><span>260143 スターライズ</span></div>
+                    <div class="otherName"><span>330043 スターライズ</span></div>
+                    <div class="otherName"><span>260143 スターライズ</span></div>
+                    <div class="otherName"><span>330043 スターライズ</span></div>
+                    <div class="otherName"><span>260143 スターライズ</span></div>
+                </div>
+            </div>
+            <div class="tintai_area">
+                <div class="tintai_title"></div>
+                <div class="buken-list">
+                    <table id="guest-view" class="guest-view">
+                        <tr class="th mousenashi">
+                            <td class="font_normal_b sortBtn tdDashedLine tdWidth1">
+                                <a class="sort">
+                                    <div class="table_title table_title_col1">物件№</div>
+                                    <!--<div class="sannkakukei-top"></div>
+                                    <div class="sannkakukei-bottom"></div>-->
+                                </a>
+                            </td>
+                            <td class="font_normal_b sortBtn tdDashedLine tdWidth2">
+                                <a class="sort">
+                                    <div id="title0" class="table_title tab_title_col sort-div">号 室</div>
+                                    <div class="sannkakukei-top"></div>
+                                    <div class="sannkakukei-bottom"></div>
+                                </a>
+                            </td>
+                            <td class="tdSolidLine tdWidth3">
+                                <table class="bujyuu">
+                                    <tr class="mousenashi">
+                                        <td class="font_normal_b2 sortBtn tdWidth3">
+                                            <a class="sort">
+                                                 <div id="title1" class="table_title sort-div tab_title_col">物 件 名</div>
+                                                <div class="sannkakukei-top"></div>
+                                                <div class="sannkakukei-bottom"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="mousenashi">
+                                        <td class="font_normal_b2 sortBtn tdWidth2">
+                                            <a class="sort">
+                                                <div id="title2" class="table_title sort-div tab_title_col">住 所</div>
+                                                <div class="sannkakukei-top"></div>
+                                                <div class="sannkakukei-bottom"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="font_normal_b3 sortBtn tdDashedLine tdWidth4">
+                                <a class="sort">
+                                    <div id="title3" class="table_title sort-div tab_title_col">間取り</div>
+                                    <div class="sannkakukei-top"></div>
+                                    <div class="sannkakukei-bottom"></div>
+                                </a>
+                            </td>
+                            <td class="font_normal_b3 sortBtn tdSolidLine tdWidth5">
+                                <a class="sort">
+                                    <div id="title4" class="table_title sort-div tab_title_col">面 積</div>
+                                    <div class="sannkakukei-top"></div>
+                                    <div class="sannkakukei-bottom"></div>
+                                </a>
+                            </td>
+                            <td class="font_normal_b3 sortBtn tdDashedLine tdWidth6">
+                                <a class="sort">
+                                    <div id="title5" class="table_title sort-div tab_title_col">家 賃</div>
+                                    <div class="sannkakukei-top"></div>
+									<!-- 2019/03/16 程旋 UPD C44030_お部屋探しNaviマルチブラウザ対応 START -->
+                                    <div class="sannkakukei-bottom" style="display: inline-block;"></div>
+									<!-- 2019/03/16 程旋 UPD C44030_お部屋探しNaviマルチブラウザ対応 END -->
+                                </a>
+                            </td>
+                            <td class="font_normal_b4 tdDashedLine tdWidth7">
+                                <div class="table_title">共益費</div>
+                            </td>
+                            <td class="font_normal_b4 tdDashedLine tdWidth7">
+                                <div class="table_title">礼　金</div>
+                            </td>
+                            <!-- 2019/10/24 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <td class="font_normal_b4 tdSolidLine1 tdWidth7"> -->
+                            <td class="font_normal_b4 tdSolidLine1 tdWidth7 just_for_bear">
+                            <!-- 2019/10/24 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <div class="table_title">敷　金</div>
+                            </td>
+                        </tr>
+                        <tr id="12123412345_101" heyano="101" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">101</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr id="12123412345_102" heyano="102" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">102</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr id="12123412345_103" heyano="103" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">103</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr id="12123412345_104" heyano="104" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">104</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr id="12123412345_105" heyano="105" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">105</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr id="12123412345_106" heyano="106" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">106</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr id="12123412345_107" heyano="107" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">107</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr id="12123412345_108" heyano="108" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">108</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr id="12123412345_109" heyano="109" bukkenno="12123412345" bukkenname="グランチェスタⅡ" class="detail">
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="guest_view_naiyou">S00-1234</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div class="heyano heyano_col">109</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div class="buken-info-detail buken-name-label">
+                                    <div class="pop_div">
+                                        <a class="a_line a_line_col" title="エスポワール香南" target="_parent" href="#pop99007">エスポワール香南</a>
+                                    </div>
+                                </div>
+                                <div class="buken-info-detail guest_view_font1">名古屋市名東区香南</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <div>1LDK</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine">
+                                <div>49.5㎡</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>5,000円</div> -->
+                                <div class="text_a_right">5,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodyDashedLine">
+                                <!-- <div>162,000円</div> -->
+                                <div class="text_a_right">162,000円</div>
+                            </td>
+                            <td class="guest_view_font tdbodySolidLine1 just_for_bear">
+                            <!-- <td class="guest_view_font tdbodySolidLine1"> -->
+                                <!-- <div>62,000円</div> -->
+                                <div class="text_a_right">62,000円</div>
+                            </td>
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                        </tr>
+                        <tr class="foot">
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 START-->
+                            <!-- <td colspan=9> -->
+                                    <td colspan=9 class="just_for_bear">
+                            <!-- 2019/10/23 熊振 UPD C44030_お部屋探しNaviマルチブラウザ対応 END-->
+                                <table class="foot">
+                                    <tr>
+                                        <td>
+                                            <a href="javascript:view_first()" class="aiueo beginPageno">
+                                                <span id="sp_first" class="font_small_grey text_pos">《&nbsp;最初</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:view_prev()" class="aiueo">
+                                                <span id="sp_prev" class="font_small_grey">《&nbsp;前のページ</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="pageNum">
+                                                <span id="sp_show_no" class="text_normal" onclick="pejiDia()">1-9</span>
+                                                <span class="text_normal">/</span>
+                                                <span id="sp_show_no_total" class="text_normal">18件</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:view_next()" class="show_next">
+                                                <span id="sp_next" class="font_blue" class="next_table">次のページ&nbsp;》</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:view_last()">
+                                                <span id="sp_last" class="font_blue" class="end_table">最後&nbsp;》</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div id="pop99007">
+        <iframe id="pop99007_ifream" class="pop99007" src="UKG99007.html?keepThis=true&TB_iframe=true" name="content_frame"></iframe>
+    </div>
+</body>
+
+</html>

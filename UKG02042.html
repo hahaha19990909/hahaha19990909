@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Success21お部屋探しNAVI</title>
+<link rel="stylesheet" type="text/css" href="../../css/ff/bootstrap/bootstrap.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/common.css"></link>
+<link id="calendar_style" href="../../css/ff/simple.css" media="screen" rel="Stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+<script src="../../js/prototype.js" type="text/javascript"></script>
+<script src="../../js/protocalendar_min.js" type="text/javascript"></script>
+<script src="../../js/lang_ja.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/kana.js"></script>
+<style>
+.UGK2042Table td {
+    border-bottom: 1px dotted #BEBEC0;
+    border-style: none none dotted;
+}
+</style>
+</head>
+	</head>
+	<body>
+		<div class="headBar font_large_b_w font_bar">物件検索</div>
+		<form method="post">
+		<div style="width:336px;margin:-15px 0 0 5px">		
+		<table cellspacing=0 style="width:330px">										
+			<tr>
+				<td align="left" valign="top">
+					<div class="UGKvbarSh">
+						<table cellspacing=0 style="padding-left:6px;float:left;" width="20px">
+							<tr><td colspan=3><div class="houseTop"></div></td></tr>
+							<tr><td width=2></td><td class="houseLeft"></td><td width=2></td></tr>
+						</table>
+					<div class="font_normal_b_white" style="padding:6px 0 2px 4px;float:left"> 検索条件</div>
+					</div>
+					<div class="UGKvbarTr"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="UGKbarLine"></td>
+			</tr>
+			<tr>
+				<td align="left" style="border:2px solid #E5E7B8;border-top:0px;">
+					<div style="padding:5px 0 5px 0">
+					<table border="0" class="UGK2042Table" style="width:336px;margin-left:8px;margin-right:2px">
+						<col width="1%"/>
+						<col width="24%"/>
+						<col width="72%"/>
+						<tr>
+							<td height="33px" valign="top" align="right">
+								<div class="UGKcolorBar2"></div>
+							</td>
+							<td style="padding: 0px 0px 0px 10px;" align="left">
+								<span class="font_normal_b">
+									物&nbsp;件&nbsp;№
+								</span>
+							</td>										
+							<td class="font_normal" align="left">
+								<input type="text" value="123456789" style="width:70px;color:#000000"/>&nbsp;&nbsp;
+								&nbsp;<span>コーポ城之崎</span>
+							</td>
+						</tr>														
+					</table>
+					<table border="0" class="UGK2042Table" style="width:336px; margin:-3px 2px 0px 8px">
+						<col width="1%"/>
+						<col width="24%"/>
+						<col width="72%"/>
+						<tr>
+							<td height="33px" valign="top" align="right">
+								<div class="UGKcolorBar2"></div>
+							</td>
+							<td style="padding: 0px 0px 0px 10px;" align="left">
+								<span class="font_normal_b">
+									号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;室
+								</span>
+							</td>										
+							<td class="font_normal" align="left">
+								<select style="width:80px">
+									<option>102</option>
+								</select>
+							</td>
+						</tr>														
+					</table>
+					<table border="0" class="UGK2042Table" style="width:336px; margin:-3px 2px 0px 8px">
+						<col width="1%"/>
+						<col width="24%"/>
+						<col width="72%"/>
+						<tr>
+							<td valign="top" align="right">
+								<div class="UGKcolorBar3" style="height:55px"></div>
+							</td>
+							<td style="padding: 0px 0px 0px 10px;" align="left" valign="top">
+								<div style="padding-top:4px">
+								<span class="font_normal_b">
+									賃貸条件
+								</span>
+								</div>
+							</td>	
+							<td>		
+								<table cellspacing=4>
+									<tr>
+										<td class="font_normal_b"><span style="margin-left:-3px">家&nbsp;　賃</span></td><td>：</td>
+										<td  style="text-align:right">78,800</td>
+										<td>円</td>
+									</tr>
+									<tr>
+										<td class="font_normal_b"><span style="margin-left:-3px">共益費</span></td>
+										<td>：</td>
+										<td  style="text-align:right">5,000</td>
+										<td>円</td>
+									</tr>
+										<tr>
+										<td class="font_normal_b"><span style="margin-left:-3px">駐車場</td>
+										<td>：</td>
+										<td style="text-align:right">5,000</td>
+										<td>円</td>
+									</tr>
+								</table>														
+							</td>
+						</tr>														
+					</table>
+					<table border="0" class="UGK2042Table" style="width:346px;margin-left:8px;margin-right:2px">
+						<col width="1%"/>
+						<col width="23%"/>
+						<col width="73%"/>
+						<tr>
+							<td height="33px" valign="top" align="right" style="border:0px">
+								<div class="UGKcolorBar5"></div>
+							</td>
+							<td style="padding: 0px 0px 0px 10px;border:0px" align="left">
+								<span class="font_normal_b">
+									ご紹介日
+								</span>
+							</td>										
+							<td align="left" style="border:0px"> 
+								<input id="raiten_calendar" name="raiten_calendar"  type="text" 
+														style = "width:70px;margin-left:0px;"   class="txtmode2"/>	
+																			
+													   <script type="text/javascript">
+														
+														InputCalendar.createOnLoaded('raiten_calendar', 
+															{lang:'ja',weekFirstDay:ProtoCalendar.SUNDAY});
+													   </script>	
+							
+							</td>
+						</tr>
+						<tr><td　colspan=3 align="center">							
+						</td></tr>
+					</table>
+					</div>
+				</td>
+			</tr>
+			<tr><td align="center" style="height:35px"><a href="UKG02040.html" target="_parent" class="btn primary" style="width:85px;font-weight:bold;">選&nbsp;&nbsp;択</a></td></tr>
+		</table>		
+		</div>
+		</form>
+	</body>
+
+</html>

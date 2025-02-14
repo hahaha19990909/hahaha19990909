@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG04012.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/ff/UKG04014.css"></link>
+<!--2019/12/04 ADD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携-->
+<script>
+    
+    $(".image04014_sonata,.sonota_kategori").click(function(){
+        var t = this.title || this.name || null;
+        var a = "UKG99010.html?keepThis=true&TB_iframe=true&height=700&width=1134";
+        var g = this.rel || false;
+        tb_show(t, a, g);
+        this.blur();
+        return false;
+    });
+    
+</script>
+<!--2019/12/04 ADD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携-->
+</head>
+    <!--賃貸条件-->
+    <div class="senntaku-a"></div>
+    <div class="chinntai-joukenn-color" id="nikiKodawari">
+        <div class="chinntai-joukenn">
+            <div class="shadow"></div>
+            <div class="chinntai-joukenn-div chinntai-joukenn-a">
+                <div class="UKE4010-btn-div">
+                    <div id="kyojyuu" class="kyojyuu UKE4010-btn-a UKE4010-btn-a-checked">居&nbsp;住&nbsp;用</div>
+                    <div id="jgyou" class="jgyou UKE4010-btn-a">事&nbsp;業&nbsp;用</div>
+                </div>
+                <div class="sannkakukei-c"></div>
+                <div class="UKE4010-kyojuu-div">
+                    <div class="kyojuu-div">
+                        <div id="UKE4014-btn-1" class="UKE4010-btn-a UKE4010-btn-a-checked btn-position UKE4010-btn-one">シングル</div>
+                        <div id="UKE4014-btn-2" class="UKE4010-btn-a UKE4010-btn-one">ペ&nbsp;&nbsp;ア</div>
+                        <div id="UKE4014-btn-3" class="UKE4010-btn-a UKE4010-btn-one">ファミリー</div>
+                    </div>
+                    <div class="kyojuu-text">
+                        <span class="madori_lbl">【間取リ】</span>
+                        <span class="madori_txt">1R、1K、1DK、1LDK</span>
+                    </div>
+                </div>
+                <div class="sannkakukei-d"></div>
+            </div>
+            <div class="chinntai-joukenn-div chinntai-joukenn-b">
+                <div class="UKE4010-btn-div">
+                    <div id="kyojyuu" class="kyojyuu UKE4010-btn-a ">居&nbsp;住&nbsp;用</div>
+                    <div id="jgyou" class="jgyou UKE4010-btn-a UKE4010-btn-a-checked">事&nbsp;業&nbsp;用</div>
+                </div>
+                <div class="sannkakukei-c"></div>
+                <div class="kyojuu-div-b">
+                    <div id="jigyouyou0" class="UKE4010-btn-a UKE4010-btn-a-checked btn-position UKE4010-btn-one">店 舗</div>
+                    <div id="jigyouyou1" class="UKE4010-btn-a UKE4010-btn-one">事務所</div>
+                    <div id="jigyouyou2" class="UKE4010-btn-a UKE4010-btn-one">倉 庫</div>
+                    <div id="jigyouyou3" class="UKE4010-btn-a UKE4010-btn-one">工 場</div>
+                    <div id="jigyouyou4" class="UKE4010-btn-a UKE4010-btn-one">トランクルーム</div>
+                </div>
+                <div class="sannkakukei-d"></div>
+            </div>
+        </div>
+    </div>
+    <div class="step4_bottom">
+        <div class="kuusitu-bukkenn-div-lbl">
+            <span class="shuhem-map-lbl">※選択した施設を中心に、近隣の物件をチラシに掲載することができます。</br></span>
+            <span class="shuhem-map-lbl">&nbsp;&nbsp;&nbsp;地図上の任意の位置をクリックすると、その地点を施設として設定することができます。</span>
+        </div>
+        <div id="shuhemMapSetumeiHelp"  class="shuhem-map-mark" pageid="help_ukg04014.html">
+            <img class="syoukai-mark-img" src="../../image/common/icon/help.png"/>
+            <span class="shuhem-map-mark-text">施設と物件の選択について</span>
+        </div>
+		
+        <div class="kuusitu-bukkenn-div">
+            <div class="kuusitu-bukkenn-checkbox must">
+                <div class="kuusitu-bukkenn-checked"></div>
+            </div>
+            <span class="kuusitu-bukkenn-text">空室物件のみ表示する</span>
+        </div>
+        <div class="map-content">
+            <div class="buken-icon">
+                <img id="clickshow4014" class="show-img" src="../../image/ukg04012/buken_icon.jpg" />
+            </div>
+            <div class="bg-map">
+                <img class="show-img" src="../../image/ukg04012/map.jpg" />
+            </div>
+        </div>
+        <div id="buken-popblock4014">
+            <div class="s4show"></div>
+            <div class="boxshow">
+                <div id="103" heyaNo="103" class="buken-list4014">
+                    <div class="heya-img">
+                        <div class="align-center">
+                            <img class="show-img" src="../../image/ukg04012/haya.jpg" />
+                        </div>
+                        <div class="align-center madori-image">
+                            <img class="show-img" src="../../image/ukg04012/madori.jpg" />
+                        </div>
+                    </div>
+                    <div class="heya-content">
+                        <div class="align-center buken-name">GRANDE城西(103号室)</div>
+                        <div class="align-center buken-address">愛知県名古屋市中村町</div>
+                        <div class="fix-height">
+                            <div>
+                                <span class="info-title">[家賃]</span>
+                                <span class="info-content">7.8万円</span>
+                            </div>
+                            <span class="info-title">[完成年月]</span>
+                            <span class="info-content">2008年1月</span>
+                        </div>
+                        <div class="fix-height">
+                            <span class="info-title">[間取り]</span>
+                            <span class="info-content">2LDK(120㎡)</span>
+                        </div>
+                        <div class="fix-height">
+                            <span class="info-title">[募集広告料]</span>
+                            <span class="info-content">0円</span>
+                        </div>
+                        <div class="fix-height">
+                            <span class="info-title">[入居可能日]</span>
+                            <span class="info-content">即可</span>
+                        </div>
+                        <div class="button-block">
+                            <div class="kanri-kaisha">
+                                <span class="info-title">[管理会社]</span>
+                                <span id="ashow40141" class="font-blue info-content">あいうえお不動産</span>
+                            </div>
+                            <div bukenName="GRANDE城西" heyaNo="103" class="button-select4014">
+                                <img class="show-img" src="../../image/ukg04012/select.svg">
+                            </div>
+                            <div id="103" class="check-img4014" bukenName="GRANDE城西" heyaNo="103" title="もう一度クリックすると選択が解除されます。">
+                                <img class="show-img" src="../../image/ukg04012/check.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="104" heyaNo="104" class="buken-list4014">
+                    <div class="heya-img">
+                        <div class="align-center">
+                            <img class="show-img" src="../../image/ukg04012/haya.jpg" />
+                        </div>
+                        <div class="align-center madori-image">
+                            <img class="show-img" src="../../image/ukg04012/madori.jpg" />
+                        </div>
+                    </div>
+                    <div class="heya-content">
+                        <div class="align-center buken-name">GRANDE城西(104号室)</div>
+                        <div class="align-center buken-address">愛知県名古屋市中村町</div>
+                        <div class="fix-height">
+                            <div>
+                                <span class="info-title">[家賃]</span>
+                                <span class="info-content">7.8万円</span>
+                            </div>
+                            <span class="info-title">[完成年月]</span>
+                            <span class="info-content">2008年1月</span>
+                        </div>
+                        <div class="fix-height">
+                            <span class="info-title">[間取り]</span>
+                            <span class="info-content">2LDK(120㎡)</span>
+                        </div>
+                        <div class="fix-height">
+                            <span class="info-title">[募集広告料]</span>
+                            <span class="info-content">0円</span>
+                        </div>
+                        <div class="fix-height">
+                            <span class="info-title">[入居可能日]</span>
+                            <span class="info-content">即可</span>
+                        </div>
+                        <div class="button-block">
+                            <div class="kanri-kaisha">
+                                <span class="info-title">[管理会社]</span>
+                                <span id="ashow40142" class="font-blue info-content">あいうえお不動産</span>
+                            </div>
+                            <div bukenName="GRANDE城西" heyaNo="104" class="button-select4014">
+                                <img class="show-img" src="../../image/ukg04012/select.svg">
+                            </div>
+                            <div class="check-img4014" bukenName="GRANDE城西" heyaNo="104" title="もう一度クリックすると選択が解除されます。">
+                                <img class="show-img" src="../../image/ukg04012/check.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="idHideJouhouDiv4014" class="title_yellow">
+            <div class="pop-title">管理会社</div>
+            <table class="pop-kaisha">
+                <col width="25%" />
+                <col width="2%" />
+                <col width="73%" />
+                <tr>
+                    <td>管理者社名</td>
+                    <td>-</td>
+                    <td>ナゴヤビル管理株式会社</td>
+                </tr>
+                <tr>
+                    <td>住&nbsp;&nbsp;&nbsp;所</td>
+                    <td>-</td>
+                    <td>愛知県名古屋市中区丸の内１丁目5-12&nbsp;&nbsp;丸の内ビル13F</td>
+                </tr>
+                <tr>
+                    <td>担当者名</td>
+                    <td>-</td>
+                    <td>東原&nbsp;&nbsp;昭雄&nbsp;&nbsp;（ヒガシバラ&nbsp;&nbsp;アキオ）</td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td>-</td>
+                    <td>052-111-1111</td>
+                </tr>
+                <tr>
+                    <td>連絡先電話番号</td>
+                    <td>-</td>
+                    <td>052-111-1111</td>
+                </tr>
+                <tr>
+                    <td>ＦＡＸ番号</td>
+                    <td>-</td>
+                    <td>052-111-1111</td>
+                </tr>
+                <tr>
+                    <td>Ｅ-Ｍａｉｌ</td>
+                    <td>-</td>
+                    <td>nagoya_billding@yahoo.co.jp</td>
+                </tr>
+                <tr>
+                    <td>メ&nbsp;&nbsp;&nbsp;モ</td>
+                    <td>-</td>
+                    <td>休日は毎週水曜日</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <div  class="pop-title">賃貸人</div>
+            <table class="pop-kaisha">
+                <col width="25%" />
+                <col width="2%" />
+                <col width="73%" />
+                <tr>
+                    <td>賃貸人名</td>
+                    <td>-</td>
+                    <td>大家 はな&nbsp;&nbsp;(オオイエ&nbsp;&nbsp;ハナ)</td>
+                </tr>
+                <tr>
+                    <td>住&nbsp;&nbsp;&nbsp;所</td>
+                    <td>-</td>
+                    <td>愛知県名古屋市中区丸の内１丁目5-12&nbsp;&nbsp;丸の内ビル13F</td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td>-</td>
+                    <td>052-111-1111</td>
+                </tr>
+                <tr>
+                    <td>ＦＡＸ番号</td>
+                    <td>-</td>
+                    <td>052-111-1111</td>
+                </tr>
+                <tr>
+                    <td>Ｅ-Ｍａｉｌ</td>
+                    <td>-</td>
+                    <td>ooie_hana@yahoo.co.jp</td>
+                </tr>
+                <tr>
+                    <td>・連絡先１</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table class="pop-kaisha">
+                            <col width="27%" />
+                            <col width="2%" />
+                            <col width="71%" />
+                            <tr>
+                                <td>名&nbsp;&nbsp;称</td>
+                                <td>-</td>
+                                <td>大家花店&nbsp;&nbsp;(オオイエハナテン)</td>
+                            </tr>
+                            <tr>
+                                <td>電話番号</td>
+                                <td>-</td>
+                                <td>052-111-1111</td>
+                            </tr>
+                            <tr>
+                                <td>ＦＡＸ番号</td>
+                                <td>-</td>
+                                <td>052-111-1111</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>メ&nbsp;&nbsp;&nbsp;モ</td>
+                    <td>-</td>
+                    <td>連絡する場合は、18時以降に携帯電話にかけること</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <table class="pop-shiire">
+                <colgroup>
+                    <col width="26%">
+                    <col width="2%">
+                    <col width="36%">
+                    <col width="36%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="header-line" colspan="4">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="pop-title">仕入日</b></td>
+                        <td>-</td>
+                        <td>2013年4月15日</td>
+                        <td class="nyukyochu" rowspan="2">
+                            <button title="オーナー様へ問い合わせた結果、すでに入居が決まっていた場合は、このボタンをクリックして、部屋情報を「入居中」に変更してください。" onclick="#" class="btn primary">入居中に変更する</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pop-title">仕入担当者</td>
+                        <td>-</td>
+                        <td>東建&#12288;太郎</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mix-five-div">
+            <table id="mix-five">
+                <tr>
+                    <td width="7%">
+                        <div class="mix-five-siseru2" style="padding-top: 3px;">周辺施設</br>の表示</div>
+                    </td>
+                     <td colspan="3">
+                        <div class="mix-five-hyouji1 mix-five-hyouji">
+                            <div class="mix-five-sisetu mix-five-midori2 mix-five-midori">駅</div>
+                            <div class="mix-five-sisetu mix-five-midori1 mix-five-midori">バス停</div>
+                        </div>
+                        <div class="mix-five-hyouji2 mix-five-hyouji">
+                            <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">コンビニ</div>
+                            <!-- 2019/12/04 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                            <!--<div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">ビデオ・CD</div>
+                            <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">本 屋</div>-->
+                            <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">スーパー</div>
+                            <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">ドラッグ</br>ストア</div>
+                            <div class="mix-five-sisetu mix-five-pinku1 mix-five-pinku">ホーム</br>センター</div>
+                            <!-- 2019/12/04 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                        </div>
+                        <div class="mix-five-hyouji3 mix-five-hyouji">
+                        	<!-- 2019/12/04 UPD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                            <!--<div class="mix-five-sisetu mix-five-ao1 mix-five-ao">病 院</div>
+                            <div class="mix-five-sisetu mix-five-ao1 mix-five-ao">学 校</div>-->
+                            <div class="mix-five-sisetu mix-five-ao1 mix-five-ao">病院</div>
+                            <div class="mix-five-sisetu mix-five-ao1 mix-five-ao">学校</div>
+                            <!--<div class="mix-five-sisetu mix-five-ao1 mix-five-ao">公 園</div>-->
+                        </div>
+                        <div class="mix-five-hyouji4 mix-five-hyouji">
+                            <!--<div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">スーパー</div>
+                            <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">銀 行</div>
+                            <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">食 事</div>-->
+                            <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">公共施設</div>
+                            <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">銀行</div>
+                            <div class="mix-five-sisetu mix-five-kiiro1 mix-five-kiiro">飲食店</div>
+                            <!-- 2019/12/04 UPD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                        </div>
+                    </td>  
+                </tr>
+                <tr> 
+                    <td colspan="2">
+                    
+                    </td>
+                    <td>
+                <!--<div class="mix-five-hyouji5 mix-five-hyouji">
+                <img id="sutoritobyu" class="sutoritobyu-img" src="../../image/ukg03010/sutoritobyu.png"></img>
+                </div>-->
+                    <!-- 2019/12/04 ADD START 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                        <div>
+                            <img class="image04014_sonata" src="../../image/ukg03010/sonotanokategorika.png" />
+                        </div>
+                    <!-- 2019/12/04 ADD END 陳龍龍(SYS) C44033-1_ホームメイトリサーチと施設情報の連携 -->
+                    </td>
+                    
+                    <td>
+                     <div id="busHelp" class="mix-five-basu2" onclick="busPopup()" pageid="help_bus_stop.html">バス停の情報について</div>
+                         <div id="busHelp" class="mix-five-basu1" onclick="busPopup()" pageid="help_bus_stop.html">
+                           <img class="mix-five-basu1" src="../../image/common/icon/help.png" />
+                         </div>
+                    </td>
+                </tr>
+                
+                
+            </table>
+        </div>
+    </div>
+</html>
